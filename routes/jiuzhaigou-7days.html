@@ -641,6 +641,59 @@
 }
 .final-advice h2 { margin-bottom:10px; }
 .final-advice ul { margin-bottom:0; }
+.real-map {
+  margin:-2px -2px 13px;
+  border-radius:16px;
+  overflow:hidden;
+  border:1px solid #d6e9e7;
+  background:#eef5f4;
+  box-shadow:0 12px 28px rgba(16,49,63,.10);
+}
+.real-map img {
+  width:100%;
+  aspect-ratio:16/10;
+  height:auto;
+  object-fit:cover;
+  background:#eef5f4;
+}
+.map-source-note {
+  margin:8px 0 0;
+  color:var(--muted);
+  font-size:12.5px;
+  font-weight:800;
+}
+.ticket-table {
+  display:grid;
+  grid-template-columns:112px 1.2fr 1.1fr 1.1fr 1.05fr 1.15fr 96px 1.35fr;
+  gap:1px;
+  overflow:auto;
+  border:1px solid var(--line);
+  border-radius:18px;
+  background:var(--line);
+  box-shadow:var(--soft-shadow);
+}
+.ticket-table > div {
+  min-width:150px;
+  padding:11px;
+  background:#fff;
+}
+.ticket-table .head {
+  background:#e8f5f3;
+  color:#17394a;
+  font-weight:900;
+}
+.train-priority {
+  display:grid;
+  grid-template-columns:1.15fr .85fr;
+  gap:14px;
+  align-items:stretch;
+  margin:14px 0;
+}
+.station-note-grid {
+  display:grid;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:10px;
+}
     .source-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:8px 16px; }
     .source-grid li { margin-bottom:5px; }
     .toast { position:fixed; left:50%; bottom:24px; transform:translateX(-50%); padding:10px 14px; border-radius:999px; background:#10263f; color:#fff; opacity:0; transition:.2s; pointer-events:none; z-index:60; max-width:92vw; }
@@ -674,7 +727,9 @@
       body { font-size:15.5px; }
       .return-bar { align-items:flex-start; flex-direction:column; }
       .dashboard-hero,.dashboard-nav,.wrap { max-width:390px; margin-left:auto; margin-right:auto; }
-      .station-grid,.transport-grid,.hotel-map-grid,.budget-split,.dunhuang-grid,.route-choice-grid,.decision-band,.scenery-table { grid-template-columns:1fr; }
+      .station-grid,.transport-grid,.hotel-map-grid,.budget-split,.dunhuang-grid,.route-choice-grid,.decision-band,.scenery-table,.train-priority,.station-note-grid { grid-template-columns:1fr; }
+      .ticket-table { display:block; overflow:auto; }
+      .ticket-table > div { min-width:260px; border-bottom:1px solid var(--line); }
       .mega-plan,.decision-card,.station-card,.transport-card,.map-circle-card,.budget-line-card,.dunhuang-card { padding:14px; }
       .map-visual { min-height:132px; }
       .dashboard-hero { margin-top:12px; padding:0 12px; }
@@ -770,56 +825,98 @@
 </section>
 
 <section class="wrap" id="arrival-choice">
-  <div class="section-title"><h2>从广州/佛山怎么去成都？</h2><span class="lead">先把机场、高铁站和住宿逻辑讲清楚</span></div>
+  <div class="section-title"><h2>从广州/佛山怎么去成都？优先看下午/晚上火车</h2><span class="lead">出发日期按 2026年7月13日—7月17日弹性选择</span></div>
+  <div class="notice"><b>默认偏好：</b>下午或晚上出发，到成都后直接去酒店，吃清淡晚餐或外卖，洗漱睡觉；不安排到成都后的夜逛。只有下午很早到、不累、第二天不是特别早出发、酒店就在附近时，才把春熙路/太古里当低优先级备选。</div>
+
+  <div class="train-priority">
+    <article class="transport-card">
+      <span class="station-type rail">方案1｜普通火车/卧铺，优先查询</span>
+      <h3>广州北/广州白云/深圳东 → 成都西/成都东</h3>
+      <ul>
+        <li><b>适合：</b>想省钱、能接受长时间坐车、希望晚上出发并在车上睡的人。</li>
+        <li><b>重点查：</b>广州北 → 成都西；广州白云 → 成都东/成都西；广州站/广州东 → 成都方向；深圳东 → 成都西、广州北上车的车次。</li>
+        <li><b>本次查到的重点：</b>Z586 可关注，广州北约22:41出发，次日18:42到成都西，耗时约20小时；深圳东约20:58始发。</li>
+        <li><b>参考价：</b>12306价格接口对 Z586 广州北→成都西返回：硬座/无座约201元、硬卧约343元、软卧约613元；实际以12306付款页为准。</li>
+        <li><b>关键提醒：</b>如果普通火车次日下午/傍晚才到成都西，当天不能继续去黄龙；到成都后只住下休息，九寨沟行程要顺延，或删草原线/二进沟中的一个。</li>
+      </ul>
+      <p class="keyword"><span>12306 广州北 成都西 Z586</span><button class="copy-btn" data-copy="12306 广州北 成都西 Z586" type="button">复制</button></p>
+    </article>
+    <article class="transport-card">
+      <span class="station-type rail">方案2｜夜间动卧/夕发朝至，重点推荐</span>
+      <h3>广州南 → 成都东，晚上走、次早到</h3>
+      <ul>
+        <li><b>适合：</b>最符合你“下午/晚上出发、车上睡觉、省白天时间”的偏好。</li>
+        <li><b>本次查到：</b>7月15日、7月16日可重点看 D848 / D864，广州南约19:01/19:11出发，次日08:02/08:07到成都东。</li>
+        <li><b>参考价：</b>D848 二等座/无座约578元，动卧约670元，高级动卧约1190元；D864 二等座/无座约581元，动卧约910元。以12306付款页为准。</li>
+        <li><b>优点：</b>晚上出发、车上睡，次日上午到成都东；成都东就是第二天去黄龙九寨站最顺的高铁枢纽。</li>
+        <li><b>缺点：</b>不是每天都好买，卧铺价格不一定便宜；次早直接接黄龙会累。</li>
+      </ul>
+      <p class="keyword"><span>12306 广州南 成都东 D848 D864 动卧</span><button class="copy-btn" data-copy="12306 广州南 成都东 D848 D864 动卧" type="button">复制</button></p>
+    </article>
+  </div>
+
   <div class="transport-grid">
     <article class="transport-card">
-      <span class="station-type air">飞机方案</span>
+      <span class="station-type air">方案3｜飞机，对比方案</span>
       <h3>广州白云机场 → 成都天府/双流机场</h3>
       <ul>
-        <li><b>出发：</b>佛山/广州 → 广州白云国际机场 CAN，这是飞机场。</li>
-        <li><b>到达：</b>成都天府国际机场 TFU 或成都双流国际机场 CTU，二者都是飞机场，不是火车站。</li>
-        <li><b>参考价格：</b>你实查约1200元左右；暑期价格波动大，以航司/携程/飞猪实际出票为准。</li>
-        <li><b>用时：</b>飞行约2.5小时，另加去机场、安检、取行李、进城时间。</li>
-        <li><b>适合：</b>想省体力、不想第一天坐7-10小时高铁的人。</li>
-        <li><b>到达后：</b>按到达时间选成都东站圈、春熙路圈或天府广场圈。</li>
+        <li><b>广州白云国际机场 CAN：</b>飞机场，不是广州白云站。</li>
+        <li><b>成都天府机场 TFU：</b>飞机场，离市区较远；成都双流机场 CTU：飞机场，离市区相对近。</li>
+        <li><b>价格：</b>你实查往返约1200元左右，实际以航司/携程/飞猪为准。</li>
+        <li><b>执行：</b>下午/晚上飞成都，到达后直接住成都东站1-1.5公里圈或折中圈，第二天去成都东坐高铁。</li>
+        <li><b>判断：</b>如果卧铺不好买，且飞机往返约1200，飞机反而可能更划算。</li>
       </ul>
-      <p class="keyword"><span>广州白云机场 成都天府机场 成都双流机场</span><button class="copy-btn" data-copy="广州白云机场 成都天府机场 成都双流机场" type="button">复制</button></p>
+      <p class="keyword"><span>广州白云机场 成都天府机场 成都东站酒店</span><button class="copy-btn" data-copy="广州白云机场 成都天府机场 成都东站酒店" type="button">复制</button></p>
     </article>
     <article class="transport-card">
-      <span class="station-type rail">高铁方案</span>
+      <span class="station-type rail">方案4｜高铁，降级为备选</span>
       <h3>广州南站 → 成都东站</h3>
       <ul>
-        <li><b>出发：</b>佛山/广州 → 广州南站，广州南站是高铁站，不是机场。</li>
-        <li><b>到达：</b>成都东站，这是高铁站；第二天去黄龙九寨站也从这里坐车最顺。</li>
-        <li><b>参考价格：</b>二等座约666-743元/人，以12306付款页为准。</li>
-        <li><b>用时：</b>约7-10小时，车次不同差距较大。</li>
-        <li><b>优点：</b>价格相对稳，行李限制少。</li>
-        <li><b>缺点：</b>第一天比较累，晚上不建议再安排远距离逛街。</li>
+        <li><b>广州南站：</b>高铁站，不是机场。</li>
+        <li><b>成都东站：</b>高铁/动车站，第二天去黄龙九寨站最方便。</li>
+        <li><b>参考：</b>二等座约666-743元/人，用时约7-10小时，以12306为准。</li>
+        <li><b>缺点：</b>价格接近飞机，白天坐车久，第一天会很累。</li>
+        <li><b>适合：</b>机票太贵、买不到卧铺、想价格稳定的人。</li>
       </ul>
-      <p class="keyword"><span>12306 广州南 成都东</span><button class="copy-btn" data-copy="12306 广州南 成都东" type="button">复制</button></p>
+      <p class="keyword"><span>12306 广州南 成都东 高铁</span><button class="copy-btn" data-copy="12306 广州南 成都东 高铁" type="button">复制</button></p>
     </article>
     <article class="transport-card">
-      <span class="station-type rail">第二天衔接</span>
-      <h3>成都东 → 黄龙九寨站 / 松潘站</h3>
-      <ul>
-        <li><b>成都东站：</b>高铁站，D2 去黄龙九寨站建议从这里出发。</li>
-        <li><b>黄龙九寨站：</b>高铁站，是去黄龙和九寨沟的重要接驳点。</li>
-        <li><b>松潘站：</b>高铁站，可作为返程接驳选择；与黄龙九寨站相距不远，具体看车次和接驳。</li>
-        <li><b>住宿判断：</b>若D2早车，D1优先住成都东站1-1.5公里圈；若下午早到想吃饭逛街，可住春熙路/天府广场，但D2要更早出门。</li>
-      </ul>
-      <p class="keyword"><span>成都东 黄龙九寨站 松潘站</span><button class="copy-btn" data-copy="成都东 黄龙九寨站 松潘站" type="button">复制</button></p>
+      <span class="station-type rail">旅游管家判断</span>
+      <h3>按你的偏好排序</h3>
+      <ol>
+        <li>能买到晚上出发、次日上午到成都东的动卧/夜间车：优先。</li>
+        <li>只能买到普通火车且次日下午/晚上到成都西：不硬接黄龙，住成都休息，行程顺延或删减。</li>
+        <li>飞机往返约1200且卧铺不好买：飞机可能更划算。</li>
+        <li>高铁不默认主推，只作稳定备选。</li>
+      </ol>
     </article>
   </div>
-  <div class="station-grid" style="margin-top:14px">
-    <article class="station-card"><span class="station-type air">飞机场</span><h3>广州白云机场</h3><p>广州主要民航机场，适合飞成都天府/双流；国内航班建议提前2小时到机场。</p></article>
-    <article class="station-card"><span class="station-type rail">高铁站</span><h3>广州南站</h3><p>广州高铁枢纽，去成都东坐高铁从这里查票，不要和白云机场混淆。</p></article>
-    <article class="station-card"><span class="station-type air">飞机场</span><h3>成都天府机场</h3><p>成都主要机场之一，离市区较远，到成都东/春熙路要预留更长进城时间。</p></article>
-    <article class="station-card"><span class="station-type air">飞机场</span><h3>成都双流机场</h3><p>离市区相对近一些，但航班价格和时刻要按当天实际看。</p></article>
-    <article class="station-card"><span class="station-type rail">高铁站</span><h3>成都东站</h3><p>D2 去黄龙九寨站最关键的高铁站；赶早车时建议住东站附近。</p></article>
-    <article class="station-card"><span class="station-type rail">高铁站</span><h3>黄龙九寨站 / 松潘站</h3><p>两个站都可作为川北景区接驳点，实际选择看12306车次、接驳车和当天住宿。</p></article>
+
+  <section class="card-pad card" id="date-ticket-table" style="margin-top:14px">
+    <h3>7月13日—7月17日出发日怎么选？</h3>
+    <p class="lead">本表按本次对12306公开查询接口能看到的信息整理；余票会变化，最终以12306付款页为准。早上出发、凌晨出发不优先。</p>
+    <div class="ticket-table">
+      <div class="head">日期</div><div class="head">下午/晚上火车</div><div class="head">卧铺/动卧</div><div class="head">到达成都时间</div><div class="head">能否接D2黄龙</div><div class="head">参考价格</div><div class="head">推荐</div><div class="head">备注</div>
+      <div>7月13日</div><div>Z586：广州北约22:41 → 成都西18:42+1</div><div>普通卧铺可重点查；动卧需实时核</div><div>次日傍晚成都西</div><div>不能硬接，需住成都休息</div><div>Z586参考：硬座/无座约201，硬卧约343，软卧约613</div><div>中等</div><div>省钱但慢；九寨沟行程顺延或删减草原线/二进沟</div>
+      <div>7月14日</div><div>Z586同样重点查广州北晚发</div><div>普通卧铺优先；动卧需12306实时核</div><div>次日傍晚成都西</div><div>不能硬接，需住成都休息</div><div>同车次价格通常相近，以付款页为准</div><div>中等</div><div>适合不赶第一天景区、愿意车上睡的人</div>
+      <div>7月15日</div><div>D848/D864：广州南约19:01/19:11 → 成都东08:02/08:07+1；Z586也可查</div><div>夜间动卧重点推荐</div><div>次日上午成都东</div><div>理论可接，但会累；太累就成都休整一天</div><div>D848约578/670/1190；D864约581/910；以12306为准</div><div>高</div><div>最贴合“晚上出发、车上睡、到成都东”的偏好</div>
+      <div>7月16日</div><div>D848/D864同样重点查；Z586可备选</div><div>夜间动卧重点推荐</div><div>次日上午成都东</div><div>理论可接，但建议留体力</div><div>价格参考同上，以12306为准</div><div>高</div><div>如果能买动卧，是本段最顺选择之一</div>
+      <div>7月17日</div><div>广州南动卧需重点复核；Z586广州北晚发可查</div><div>卧铺/动卧都需实时看余票</div><div>动卧次早成都东；Z586次日傍晚成都西</div><div>动卧可考虑接；Z586不能接</div><div>按12306付款页</div><div>中等</div><div>若只有Z586，建议把黄龙/九寨沟整体顺延</div>
+    </div>
+  </section>
+
+  <div class="station-note-grid" style="margin-top:14px">
+    <article class="station-card"><span class="station-type air">飞机场</span><h3>广州白云机场</h3><p>民航机场，不是广州白云站。</p></article>
+    <article class="station-card"><span class="station-type rail">火车站</span><h3>广州白云站</h3><p>铁路车站，和白云机场不是一个地方。</p></article>
+    <article class="station-card"><span class="station-type rail">高铁站</span><h3>广州南站</h3><p>高铁/动车枢纽，查动卧和高铁。</p></article>
+    <article class="station-card"><span class="station-type rail">火车站</span><h3>广州北站</h3><p>火车站/高铁站，Z586等普速长途可关注。</p></article>
+    <article class="station-card"><span class="station-type rail">火车站</span><h3>深圳东站</h3><p>部分普速车始发站；可看广州北上车段。</p></article>
+    <article class="station-card"><span class="station-type air">飞机场</span><h3>成都天府/双流机场</h3><p>都是机场；天府远，双流相对近。</p></article>
+    <article class="station-card"><span class="station-type rail">铁路站</span><h3>成都东站 / 成都西站</h3><p>成都东是高铁/动车枢纽；成都西是部分普速车到达站。</p></article>
+    <article class="station-card"><span class="station-type rail">接驳站</span><h3>黄龙九寨站 / 松潘站</h3><p>去黄龙、九寨沟、返程中转的重要高铁站。</p></article>
   </div>
 </section>
-    <section class="wrap" id="overview">
+<section class="wrap" id="overview">
       <div class="section-title"><h2>方案A｜七天行程总览</h2><span class="lead">主推荐路线，详情在下方执行卡</span></div>
       <div class="day-overview">
         <article class="day-tile"><span class="day-no">D1</span><h3>广州/佛山 → 成都</h3><p><b>重点：</b>顺利抵达，不赶景点。</p><p><b>住宿：</b>成都东站/春熙路。</p></article>
@@ -913,46 +1010,27 @@
     </section>
     <section class="wrap" id="days"><div class="section-title"><h2>每日执行卡</h2><span class="lead">每天打开对应卡片照着走</span></div>
     <details class="day-card" id="j-d1">
-  <summary><img class="day-summary-img" loading="lazy" src="../assets/images/jiuzhaigou-cover.jpg" alt="D1 成都抵达"><div class="day-summary-copy"><span class="day-no">D1</span><b>广州/佛山 → 成都</b><div class="day-summary-meta"><span>重点：顺利抵达</span><span>住宿：成都东站/春熙路/天府广场</span><span>强度：轻松到中等</span></div></div><span class="day-toggle">展开</span></summary>
+  <summary><img class="day-summary-img" loading="lazy" src="../assets/images/jiuzhaigou-cover.jpg" alt="D1 成都抵达"><div class="day-summary-copy"><span class="day-no">D1</span><b>广州/佛山 → 成都｜火车/动卧优先</b><div class="day-summary-meta"><span>重点：晚上出发或到成都直接睡</span><span>住宿：成都东站圈/折中圈</span><span>强度：按车次浮动</span></div></div><span class="day-toggle">展开</span></summary>
   <div class="day-inner">
-    <div class="notice"><b>今日一句话：</b>今天只做一件事：安全到成都并住到方便明早出发的位置。D2早车优先住成都东站1-1.5公里圈；下午早到想吃饭逛街，再选春熙路/天府广场。</div>
+    <div class="notice"><b>今日一句话：</b>默认下午或晚上从佛山/广州出发；到成都后不安排夜逛，直接去酒店、吃清淡晚餐或外卖、洗漱睡觉。只有很早到成都且不累，才把春熙路/太古里作为低优先级备选。</div>
     <div class="mini">
-      <div><span>今日目标</span><b>抵达成都，确认D2成都东→黄龙九寨站车票和黄龙/九寨沟预约。</b></div>
-      <div><span>今日住宿</span><b>赶车优先：成都东站东广场/成都东客站地铁站；逛街优先：春熙路/太古里；折中：天府广场/骡马市/文殊院。</b></div>
-      <div><span>今日交通</span><b>飞机版：广州白云机场→成都天府/双流机场；高铁版：广州南站→成都东站。</b></div>
-      <div><span>今日强度</span><b>飞机轻松，高铁中等偏累。</b></div>
-      <div><span>今日预算</span><b>不含机票酒店；市内接驳+晚餐约180-420元/两人，实际以高德/餐厅为准。</b></div>
-      <div><span>今日必做</span><b>核对D2车票、酒店位置、黄龙预约、九寨沟门票、接驳车或拼车。</b></div>
-      <div><span>今日可删</span><b>晚到就删春熙路/太古里，只在酒店附近吃清淡晚餐。</b></div>
-      <div><span>今日风险</span><b>机场进城耗时、成都东赶车距离、第二天早起疲劳。</b></div>
+      <div><span>今日目标</span><b>用最稳的方式到成都或在火车上过夜，保证后面九寨沟行程不崩。</b></div>
+      <div><span>今日住宿</span><b>若当天到成都：优先成都东站1-1.5公里圈；折中选天府广场/骡马市/文殊院。</b></div>
+      <div><span>今日交通</span><b>优先夜间动卧/普通卧铺；飞机对比；高铁备选。</b></div>
+      <div><span>今日强度</span><b>动卧中等，普通火车较累，飞机轻松，高铁白天久坐较累。</b></div>
+      <div><span>今日预算</span><b>车票/机票按12306或航司实际；不含住宿，晚餐+市内接驳约120-350元/两人。</b></div>
+      <div><span>今日必做</span><b>查7月13-17余票、确认D2成都东→黄龙九寨站、订成都东站圈可取消酒店。</b></div>
+      <div><span>今日可删</span><b>删所有夜逛，只保留到站/入住/吃饭/睡觉。</b></div>
+      <div><span>今日风险</span><b>普通火车到成都西太晚会导致原D2黄龙行程必须顺延。</b></div>
     </div>
-    <div class="card-pad card"><b>今日不辣吃饭建议：</b>优先选清汤面、番茄鸡蛋面、粥、蒸蛋、炒青菜、菌汤锅。明确备注不要辣椒、不要红油、不要花椒、不要麻油。</div>
-    <div class="grid two" style="margin:12px 0">
-      <article class="transport-card">
-        <span class="station-type air">飞机版</span>
-        <h3>佛山/广州 → 广州白云机场 → 成都机场 → 酒店</h3>
-        <ul>
-          <li><b>07:00-09:30：</b>佛山/广州出发去广州白云机场，国内航班建议提前2小时到机场。</li>
-          <li><b>10:30-14:30：</b>广州白云机场飞成都天府/双流机场，飞行约2.5小时，票价以实际出票为准。</li>
-          <li><b>落地后60-120分钟：</b>机场取行李并进城。天府机场到市区更远，双流机场相对近。</li>
-          <li><b>住宿判断：</b>D2早车住成都东站1-1.5公里圈；下午早到且想逛街，可住春熙路/天府广场。</li>
-        </ul>
-        <p class="keyword"><span>广州白云机场 成都天府机场 成都东站酒店</span><button class="copy-btn" data-copy="广州白云机场 成都天府机场 成都东站酒店" type="button">复制</button></p>
-      </article>
-      <article class="transport-card">
-        <span class="station-type rail">高铁版</span>
-        <h3>佛山/广州 → 广州南站 → 成都东站 → 酒店</h3>
-        <ul>
-          <li><b>出发前：</b>从佛山/广州去广州南站，广州南是高铁站，不是机场。</li>
-          <li><b>全天：</b>广州南站到成都东站，高铁约7-10小时，二等座约666-743元/人，以12306为准。</li>
-          <li><b>到站后：</b>成都东站就是高铁站，优先打车或步行到东站酒店圈。</li>
-          <li><b>晚间安排：</b>高铁当天比较累，不建议再去远处逛；酒店附近吃清淡晚餐即可。</li>
-        </ul>
-        <p class="keyword"><span>广州南站 成都东站 成都东站东广场酒店</span><button class="copy-btn" data-copy="广州南站 成都东站 成都东站东广场酒店" type="button">复制</button></p>
-      </article>
+    <div class="card-pad card"><b>今日不辣吃饭建议：</b>清汤面、番茄鸡蛋面、粥、蒸蛋、炒青菜、菌汤锅。明确备注不要辣椒、不要红油、不要花椒、不要麻油。</div>
+    <div class="grid">
+      <article class="transport-card"><span class="station-type rail">D1-A｜夜间火车/动卧版，优先</span><h3>下午/晚上出发，车上睡觉</h3><ul><li><b>上车前：</b>佛山出发去广州南/广州北/广州白云站，按12306车次选择。</li><li><b>动卧：</b>广州南 D848/D864 约19点出发，次日上午到成都东；理论可接 D2 黄龙九寨站，但会累。</li><li><b>普通卧铺：</b>Z586 广州北约22:41出发，次日18:42到成都西；当天只能住成都休息，原行程顺延或删减。</li><li><b>到达后：</b>成都东住东站圈；成都西到达则打车/地铁去酒店，直接睡。</li></ul><p class="keyword"><span>12306 广州南 成都东 D864 动卧</span><button class="copy-btn" data-copy="12306 广州南 成都东 D864 动卧" type="button">复制</button></p></article>
+      <article class="transport-card"><span class="station-type air">D1-B｜飞机版</span><h3>下午/晚上飞成都，到达直接睡</h3><ul><li><b>出发：</b>佛山/广州 → 广州白云机场，注意这是飞机场。</li><li><b>航线：</b>广州白云 → 成都天府/双流，票价以航司/携程/飞猪为准；你实查往返约1200。</li><li><b>到达后：</b>天府进城更久，双流相对近；默认住成都东站圈或折中圈。</li><li><b>晚上：</b>不安排春熙路/太古里夜逛，吃清淡晚餐或外卖后休息。</li></ul><p class="keyword"><span>广州白云机场 成都天府机场 成都东站酒店</span><button class="copy-btn" data-copy="广州白云机场 成都天府机场 成都东站酒店" type="button">复制</button></p></article>
+      <article class="transport-card"><span class="station-type rail">D1-C｜高铁版，备选</span><h3>广州南 → 成都东，白天久坐</h3><ul><li><b>适合：</b>机票贵、卧铺买不到、想价格稳定时。</li><li><b>车程：</b>约7-10小时，二等座约666-743元/人。</li><li><b>缺点：</b>价格接近飞机，白天坐车会累。</li><li><b>到达后：</b>直接住下，不安排远距离夜逛。</li></ul><p class="keyword"><span>12306 广州南 成都东 高铁</span><button class="copy-btn" data-copy="12306 广州南 成都东 高铁" type="button">复制</button></p></article>
     </div>
-    <div><article class="step"><time>出发前一天</time><div><p>核对身份证、航司/12306、酒店订单、黄龙和九寨沟预约、D2接驳。把“不吃辣点餐话术”截图保存。</p><p class="keyword"><span>航司App / 12306 / 黄龙预约 / 九寨沟预约</span><button class="copy-btn" data-copy="航司App / 12306 / 黄龙预约 / 九寨沟预约" type="button">复制</button></p></div></article><article class="step"><time>抵达成都后</time><div><p>先去酒店放行李。D2早车优先住成都东站；想吃饭逛街且不赶早车，才住春熙路或天府广场。</p><p class="keyword"><span>成都东站东广场 酒店 评分4.5以上 可取消</span><button class="copy-btn" data-copy="成都东站东广场 酒店 评分4.5以上 可取消" type="button">复制</button></p></div></article><article class="step"><time>18:30-20:00</time><div><p>晚餐吃清淡，不碰火锅串串冒菜。明早要早起，晚上不要硬逛太久。</p><p class="keyword"><span>成都东站 清淡 家常菜 不辣</span><button class="copy-btn" data-copy="成都东站 清淡 家常菜 不辣" type="button">复制</button></p></div></article><article class="step"><time>20:30后</time><div><p>回酒店整理D2进景区小包：身份证、外套、雨具、水、轻食、充电宝、晕车药。</p><p class="keyword"><span>成都东站附近酒店</span><button class="copy-btn" data-copy="成都东站附近酒店" type="button">复制</button></p></div></article></div>
-    <details class="card-pad card" open><summary><b>晚点/下雨/太累怎么办</b></summary><ul><li><b>晚点：</b>取消春熙路/太古里，直奔成都东站酒店圈。</li><li><b>下雨：</b>不安排户外，只在酒店附近吃饭买补给。</li><li><b>太累：</b>只保留“到酒店、吃饭、睡觉、核对D2车票”四件事。</li></ul></details>
+    <div><article class="step"><time>出发前一天</time><div><p>用12306先查动卧/卧铺，再看飞机价格，最后看高铁。把成都酒店订成可免费取消，优先东站圈。</p><p class="keyword"><span>12306 广州南 成都东 动卧 广州北 成都西 Z586</span><button class="copy-btn" data-copy="12306 广州南 成都东 动卧 广州北 成都西 Z586" type="button">复制</button></p></div></article><article class="step"><time>下午/晚上</time><div><p>按车次/航班前往广州南、广州北、广州白云站或广州白云机场。注意广州白云站是火车站，广州白云机场是飞机场。</p><p class="keyword"><span>广州白云站 火车站 广州白云机场 飞机场</span><button class="copy-btn" data-copy="广州白云站 火车站 广州白云机场 飞机场" type="button">复制</button></p></div></article><article class="step"><time>到成都后</time><div><p>不夜逛。成都东到达就住东站圈；成都西到达就直接转酒店；机场到达按高德打车/地铁去酒店。</p><p class="keyword"><span>成都东站东广场 酒店 评分4.5以上 可取消</span><button class="copy-btn" data-copy="成都东站东广场 酒店 评分4.5以上 可取消" type="button">复制</button></p></div></article><article class="step"><time>睡前</time><div><p>核对D2成都东→黄龙九寨站、黄龙预约、九寨沟预约和接驳。普通火车晚到则不要硬接黄龙。</p><p class="keyword"><span>成都东 黄龙九寨站 12306</span><button class="copy-btn" data-copy="成都东 黄龙九寨站 12306" type="button">复制</button></p></div></article></div>
+    <details class="card-pad card" open><summary><b>晚点/太累/普通火车晚到怎么办</b></summary><ul><li><b>动卧次早到成都东：</b>可接D2，但如果睡不好或太累，成都休整一天更稳。</li><li><b>普通火车次日下午/晚上到成都西：</b>当天只住成都休息，不接黄龙；行程顺延，或后面删草原线/二进沟中的一个。</li><li><b>飞机晚到：</b>只住店睡觉，D2按成都东早车安排。</li></ul></details>
   </div>
 </details>
 <details class="day-card" id="j-d2">
@@ -1084,17 +1162,18 @@
   </div>
 </section>
 
-<section class="wrap" id="hotel"><div class="section-title"><h2>方案A｜住哪里最方便？按地图圈选酒店</h2><span class="lead">订房时用1-1.5公里圈，而不是只搜城市名</span></div>
+<section class="wrap" id="hotel"><div class="section-title"><h2>方案A｜住哪里最方便？真实地图圈选酒店</h2><span class="lead">真实高德地图截图 + 半透明推荐范围</span></div>
+  <div class="notice"><b>地图说明：</b>下列图片为高德网页地图底图截图，绿色半透明圆圈为本攻略叠加的推荐订房范围；订房仍以高德/美团/携程实际酒店位置、步行路线和评分为准。</div>
   <div class="hotel-map-grid">
-    <article class="map-circle-card"><div class="map-visual"><span class="map-label">成都东站 1-1.5公里圈</span></div><h3>成都赶车优先圈</h3><ul><li><b>中心点：</b>成都东站 / 成都东客站地铁站 / 成都东站东广场</li><li><b>半径：</b>1-1.5公里内</li><li><b>为什么：</b>D2早上坐高铁去黄龙九寨站最稳。</li><li><b>到下一站：</b>步行/短打车到成都东站进站。</li><li><b>价格风险：</b>东站旁暑期会涨，优先可取消。</li><li><b>避坑：</b>不要订到看似近、但被高架/铁路隔开的酒店。</li><li><b>适合谁：</b>晚到成都、第二天早车的人。</li></ul><div class="copy-row"><button class="copy-btn" data-copy="成都东站东广场 酒店 评分4.5以上 可取消" type="button">复制高德关键词</button><button class="copy-btn" data-copy="成都东客站地铁站 酒店 有电梯 可寄存" type="button">复制美团关键词</button><button class="copy-btn" data-copy="迎晖路 酒店 评分4.5以上 可免费取消" type="button">复制携程关键词</button></div></article>
-    <article class="map-circle-card"><div class="map-visual"><span class="map-label">春熙路/太古里 1-1.5公里圈</span></div><h3>成都逛街吃饭圈</h3><ul><li><b>中心点：</b>春熙路地铁站 / 太古里</li><li><b>半径：</b>1-1.5公里内</li><li><b>为什么：</b>下午或傍晚到成都，吃饭逛街方便。</li><li><b>到下一站：</b>D2去成都东要提前更久出门。</li><li><b>价格风险：</b>周末暑期价格高，房间可能小。</li><li><b>避坑：</b>不为了网红酒店绕远路；确认地铁或主路打车方便。</li><li><b>适合谁：</b>早到成都、想轻松吃饭逛街的人。</li></ul><div class="copy-row"><button class="copy-btn" data-copy="春熙路地铁站 酒店 评分4.5以上 不辣清淡餐" type="button">复制高德关键词</button><button class="copy-btn" data-copy="太古里附近酒店 可取消 有电梯" type="button">复制美团关键词</button><button class="copy-btn" data-copy="春熙路 酒店 近地铁 可寄存行李" type="button">复制携程关键词</button></div></article>
-    <article class="map-circle-card"><div class="map-visual"><span class="map-label">天府广场/骡马市/文殊院</span></div><h3>成都折中圈</h3><ul><li><b>中心点：</b>天府广场 / 骡马市 / 文殊院</li><li><b>半径：</b>1-1.5公里内</li><li><b>为什么：</b>兼顾价格、交通和吃饭，比春熙路可能更稳。</li><li><b>到下一站：</b>D2打车或地铁到成都东。</li><li><b>价格风险：</b>节假日仍会涨，提前订可取消房。</li><li><b>避坑：</b>避开巷子深处、夜间不好打车的位置。</li><li><b>适合谁：</b>想平衡预算和便利的人。</li></ul><div class="copy-row"><button class="copy-btn" data-copy="天府广场 酒店 评分4.5以上 可取消" type="button">复制高德关键词</button><button class="copy-btn" data-copy="骡马市地铁站 酒店 近主路 有电梯" type="button">复制美团关键词</button><button class="copy-btn" data-copy="文殊院 酒店 清淡餐 近地铁" type="button">复制携程关键词</button></div></article>
-    <article class="map-circle-card"><div class="map-visual"><span class="map-label">九寨沟入口 1-2公里圈</span></div><h3>九寨沟沟口住宿圈</h3><ul><li><b>中心点：</b>九寨沟景区入口 / 漳扎镇主路</li><li><b>半径：</b>距离入口1-2公里内，或打车10分钟内</li><li><b>为什么：</b>D3/D4早进沟方便，少耗体力。</li><li><b>到下一站：</b>步行、短打车或酒店接送到景区入口。</li><li><b>价格风险：</b>暑期沟口房价上浮明显。</li><li><b>避坑：</b>别订到山路深处、离入口远、热水/电梯评价差的酒店。</li><li><b>适合谁：</b>想两天进沟、早起少折腾的人。</li></ul><div class="copy-row"><button class="copy-btn" data-copy="九寨沟景区入口 酒店 有电梯 可寄存" type="button">复制高德关键词</button><button class="copy-btn" data-copy="九寨沟沟口 酒店 评分4.5以上 热水好" type="button">复制美团关键词</button><button class="copy-btn" data-copy="漳扎镇 酒店 近主路 可取消" type="button">复制携程关键词</button></div></article>
-    <article class="map-circle-card"><div class="map-visual"><span class="map-label">唐克看日落 / 若尔盖更稳</span></div><h3>唐克/若尔盖住宿圈</h3><ul><li><b>中心点：</b>唐克镇 / 若尔盖县城</li><li><b>半径：</b>唐克靠近黄河九曲第一湾；若尔盖县城选择更多。</li><li><b>为什么：</b>唐克适合看九曲日落，若尔盖住宿条件更稳。</li><li><b>到下一站：</b>D6去黄河九曲或松潘/川主寺。</li><li><b>价格风险：</b>草原线住宿条件和价格波动都比成都大。</li><li><b>避坑：</b>优先看热水、供暖、评价、是否靠主路。</li><li><b>适合谁：</b>想看日落选唐克；怕住宿不稳选若尔盖县城。</li></ul><div class="copy-row"><button class="copy-btn" data-copy="唐克 黄河九曲第一湾 酒店 热水 评分高" type="button">复制高德关键词</button><button class="copy-btn" data-copy="若尔盖县城 酒店 有电梯 可取消" type="button">复制美团关键词</button><button class="copy-btn" data-copy="唐克镇 酒店 靠主路 热水好" type="button">复制携程关键词</button></div></article>
-    <article class="map-circle-card"><div class="map-visual"><span class="map-label">松潘/川主寺主路中转圈</span></div><h3>松潘/川主寺住宿圈</h3><ul><li><b>中心点：</b>松潘古城主路 / 川主寺镇主路</li><li><b>半径：</b>主路步行吃饭方便，第二天好约车去车站。</li><li><b>为什么：</b>D7返程中转，重点不是景观房，而是交通稳。</li><li><b>到下一站：</b>酒店约车到松潘站或黄龙九寨站。</li><li><b>价格风险：</b>旺季主路好房紧张。</li><li><b>避坑：</b>确认能否帮约车到高铁站、是否有热水和电梯。</li><li><b>适合谁：</b>返程前一晚需要稳妥休息的人。</li></ul><div class="copy-row"><button class="copy-btn" data-copy="松潘古城 酒店 近主路 可约车" type="button">复制高德关键词</button><button class="copy-btn" data-copy="川主寺镇 酒店 热水 有电梯" type="button">复制美团关键词</button><button class="copy-btn" data-copy="黄龙九寨站 附近 酒店 可接送" type="button">复制携程关键词</button></div></article>
+    <article class="map-circle-card"><figure class="real-map"><img loading="lazy" src="../assets/images/maps/chengdu-east-hotel-map.jpg" alt="成都东站住宿圈高德地图截图"></figure><h3>成都赶车优先圈</h3><ul><li><b>中心点：</b>成都东站 / 成都东客站地铁站 / 成都东站东广场</li><li><b>半径：</b>1-1.5公里内</li><li><b>为什么：</b>D2早上坐高铁去黄龙九寨站最稳。</li><li><b>到下一站：</b>步行/短打车到成都东站进站。</li><li><b>价格风险：</b>东站旁暑期会涨，优先可取消。</li><li><b>避坑：</b>不要订到看似近、但被高架/铁路隔开的酒店。</li><li><b>适合谁：</b>晚到成都、第二天早车的人。</li></ul><div class="copy-row"><button class="copy-btn" data-copy="成都东站东广场 酒店 评分4.5以上 可取消" type="button">复制高德关键词</button><button class="copy-btn" data-copy="成都东客站地铁站 酒店 有电梯 可寄存" type="button">复制美团关键词</button><button class="copy-btn" data-copy="迎晖路 酒店 评分4.5以上 可免费取消" type="button">复制携程关键词</button></div></article>
+    <article class="map-circle-card"><figure class="real-map"><img loading="lazy" src="../assets/images/maps/chunxi-taikooli-hotel-map.jpg" alt="春熙路太古里住宿圈高德地图截图"></figure><h3>成都逛街吃饭圈</h3><ul><li><b>中心点：</b>春熙路地铁站 / 太古里</li><li><b>半径：</b>1-1.5公里内</li><li><b>为什么：</b>下午很早到成都且不累时，吃饭方便。</li><li><b>到下一站：</b>D2去成都东要提前更久出门。</li><li><b>价格风险：</b>周末暑期价格高，房间可能小。</li><li><b>避坑：</b>默认不夜逛；只有早到、不累、第二天不太早才考虑这里。</li><li><b>适合谁：</b>想兼顾晚餐便利的人。</li></ul><div class="copy-row"><button class="copy-btn" data-copy="春熙路地铁站 酒店 评分4.5以上 不辣清淡餐" type="button">复制高德关键词</button><button class="copy-btn" data-copy="太古里附近酒店 可取消 有电梯" type="button">复制美团关键词</button><button class="copy-btn" data-copy="春熙路 酒店 近地铁 可寄存行李" type="button">复制携程关键词</button></div></article>
+    <article class="map-circle-card"><figure class="real-map"><img loading="lazy" src="../assets/images/maps/tianfu-luomashi-wenshuyuan-hotel-map.jpg" alt="天府广场骡马市文殊院住宿圈高德地图截图"></figure><h3>成都折中圈</h3><ul><li><b>中心点：</b>天府广场 / 骡马市 / 文殊院</li><li><b>半径：</b>1-1.5公里内</li><li><b>为什么：</b>兼顾价格、交通和吃饭，比春熙路可能更稳。</li><li><b>到下一站：</b>D2打车或地铁到成都东。</li><li><b>价格风险：</b>节假日仍会涨，提前订可取消房。</li><li><b>避坑：</b>避开巷子深处、夜间不好打车的位置。</li><li><b>适合谁：</b>想平衡预算和便利的人。</li></ul><div class="copy-row"><button class="copy-btn" data-copy="天府广场 酒店 评分4.5以上 可取消" type="button">复制高德关键词</button><button class="copy-btn" data-copy="骡马市地铁站 酒店 近主路 有电梯" type="button">复制美团关键词</button><button class="copy-btn" data-copy="文殊院 酒店 清淡餐 近地铁" type="button">复制携程关键词</button></div></article>
+    <article class="map-circle-card"><figure class="real-map"><img loading="lazy" src="../assets/images/maps/jiuzhaigou-goukou-hotel-map.jpg" alt="九寨沟沟口住宿圈高德地图截图"></figure><h3>九寨沟沟口住宿圈</h3><ul><li><b>中心点：</b>九寨沟景区入口 / 漳扎镇主路</li><li><b>半径：</b>距离入口1-2公里内，或打车10分钟内</li><li><b>为什么：</b>D3/D4早进沟方便，少耗体力。</li><li><b>到下一站：</b>步行、短打车或酒店接送到景区入口。</li><li><b>价格风险：</b>暑期沟口房价上浮明显。</li><li><b>避坑：</b>别订到山路深处、离入口远、热水/电梯评价差的酒店。</li><li><b>适合谁：</b>想两天进沟、早起少折腾的人。</li></ul><div class="copy-row"><button class="copy-btn" data-copy="九寨沟景区入口 酒店 有电梯 可寄存" type="button">复制高德关键词</button><button class="copy-btn" data-copy="九寨沟沟口 酒店 评分4.5以上 热水好" type="button">复制美团关键词</button><button class="copy-btn" data-copy="漳扎镇 酒店 近主路 可取消" type="button">复制携程关键词</button></div></article>
+    <article class="map-circle-card"><figure class="real-map"><img loading="lazy" src="../assets/images/maps/tangke-ruoergai-hotel-map.jpg" alt="唐克若尔盖住宿圈高德地图截图"></figure><h3>唐克/若尔盖住宿圈</h3><ul><li><b>中心点：</b>唐克镇 / 若尔盖县城</li><li><b>半径：</b>唐克靠近黄河九曲第一湾；若尔盖县城选择更多。</li><li><b>为什么：</b>唐克适合看九曲日落，若尔盖住宿条件更稳。</li><li><b>到下一站：</b>D6去黄河九曲或松潘/川主寺。</li><li><b>价格风险：</b>草原线住宿条件和价格波动都比成都大。</li><li><b>避坑：</b>优先看热水、供暖、评价、是否靠主路。</li><li><b>适合谁：</b>想看日落选唐克；怕住宿不稳选若尔盖县城。</li></ul><div class="copy-row"><button class="copy-btn" data-copy="唐克 黄河九曲第一湾 酒店 热水 评分高" type="button">复制高德关键词</button><button class="copy-btn" data-copy="若尔盖县城 酒店 有电梯 可取消" type="button">复制美团关键词</button><button class="copy-btn" data-copy="唐克镇 酒店 靠主路 热水好" type="button">复制携程关键词</button></div></article>
+    <article class="map-circle-card"><figure class="real-map"><img loading="lazy" src="../assets/images/maps/songpan-chuanzhusi-hotel-map.jpg" alt="松潘川主寺住宿圈高德地图截图"></figure><h3>松潘/川主寺住宿圈</h3><ul><li><b>中心点：</b>松潘古城主路 / 川主寺镇主路</li><li><b>半径：</b>主路步行吃饭方便，第二天好约车去车站。</li><li><b>为什么：</b>D7返程中转，重点不是景观房，而是交通稳。</li><li><b>到下一站：</b>酒店约车到松潘站或黄龙九寨站。</li><li><b>价格风险：</b>旺季主路好房紧张。</li><li><b>避坑：</b>确认能否帮约车到高铁站、是否有热水和电梯。</li><li><b>适合谁：</b>返程前一晚需要稳妥休息的人。</li></ul><div class="copy-row"><button class="copy-btn" data-copy="松潘古城 酒店 近主路 可约车" type="button">复制高德关键词</button><button class="copy-btn" data-copy="川主寺镇 酒店 热水 有电梯" type="button">复制美团关键词</button><button class="copy-btn" data-copy="黄龙九寨站 附近 酒店 可接送" type="button">复制携程关键词</button></div></article>
   </div>
+  <p class="map-source-note">地图底图来源：高德地图网页截图；住宿圈为本攻略叠加的半透明范围标注。酒店最终位置请以高德/美团/携程实际页面为准。</p>
 </section>
-
 <section class="wrap" id="scenery-compare">
   <div class="section-title"><h2>后半程景色和九寨沟重复吗？</h2><span class="lead">结论：不完全重复，但不是沙漠戈壁那种强反差</span></div>
   <div class="notice"><b>判断：</b>花湖和黄河九曲第一湾提供的是草原、湿地、黄河大地景观，和九寨沟水色不同；但它们仍属于高原自然景观，不像敦煌大漠和戈壁那样有强烈视觉反差。</div>
@@ -1207,7 +1286,7 @@
         <li><a href="https://cd.bendibao.com/tour/2026324/206470.shtm" target="_blank" rel="noopener">九寨沟2026旺季开放参考</a></li>
         <li><a href="https://www.huanglong.com/" target="_blank" rel="noopener">黄龙景区官网</a></li>
         <li><a href="https://www.huanglong.com/cn/ylfw/lyxz?id=37735" target="_blank" rel="noopener">黄龙游览温馨提示</a></li>
-        <li><a href="https://www.12306.cn/" target="_blank" rel="noopener">铁路购票核对：12306</a></li>
+        <li><a href="https://www.12306.cn/" target="_blank" rel="noopener">铁路购票核对：12306（本页车次和价格区间按2026-07-05公开查询结果整理）</a></li>
         <li><a href="https://www.dha.ac.cn/skxl/mgk.htm" target="_blank" rel="noopener">莫高窟参观预约核对：敦煌研究院</a></li>
         <li><a href="https://www.mssyyq.com/" target="_blank" rel="noopener">鸣沙山月牙泉景区官网</a></li>
       </ul>
@@ -1223,7 +1302,7 @@
         <li><a href="https://commons.wikimedia.org/wiki/File:%E6%89%8E%E5%98%8E%E7%80%91%E5%B8%83.jpg" target="_blank" rel="noopener">牟尼沟扎嘎瀑布</a></li>
         <li><a href="https://commons.wikimedia.org/wiki/File:Songpan_Wall1.JPG" target="_blank" rel="noopener">松潘古城墙</a></li>
       </ul>
-      <div class="notice">本攻略用于旅行执行参考。航班、高铁、酒店、景区门票、开放时间、接驳车、餐厅营业时间、天气都会变化。出发前请以航司、12306、酒店平台、景区官方公众号、高德/美团实际页面为准。更新时间：2026-07-05。</div></section>
+      <div class="notice">本攻略用于旅行执行参考。航班、火车/动卧/高铁、酒店、景区门票、开放时间、接驳车、餐厅营业时间、天气都会变化。出发前请以航司、12306、酒店平台、景区官方公众号、高德/美团实际页面为准。地图截图来源为高德地图网页底图，本攻略叠加住宿范围圈；更新时间：2026-07-05。</div></section>
   </main>
   <div class="toast" id="toast">已复制</div>
   <script>
