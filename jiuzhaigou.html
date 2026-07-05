@@ -53,6 +53,14 @@
     .scheme-tabs { display:flex; gap:8px; overflow:auto; margin:10px 0; }
     .scheme-panel { display:none; }
     .scheme-panel.active { display:block; }
+    .route-map { display:flex; gap:8px; align-items:center; overflow:auto; padding:12px; border:1px solid var(--line); border-radius:16px; background:#fff; box-shadow:var(--shadow); margin:12px 0; }
+    .route-node { flex:0 0 auto; min-width:94px; padding:9px 10px; border-radius:999px; background:#edf7f4; color:#164c47; font-weight:900; text-align:center; }
+    .route-line { flex:0 0 32px; height:2px; background:var(--teal); position:relative; }
+    .route-line::after { content:""; position:absolute; right:-1px; top:-4px; border-left:8px solid var(--teal); border-top:5px solid transparent; border-bottom:5px solid transparent; }
+    .compare-table { display:grid; grid-template-columns:1.1fr repeat(3,minmax(0,1fr)); gap:1px; overflow:auto; border:1px solid var(--line); border-radius:16px; background:var(--line); box-shadow:var(--shadow); }
+    .compare-table > div { min-width:180px; padding:11px; background:#fff; }
+    .compare-table .head { background:#eaf3f2; font-weight:900; color:#17394a; }
+    .map-caption { color:var(--muted); font-size:13px; margin-top:-4px; }
     .photo-grid { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:12px; }
     .photo { position:relative; border-radius:16px; overflow:hidden; min-height:180px; background:#dbe7e6; }
     .photo img { height:100%; aspect-ratio:4/3; }
@@ -72,6 +80,8 @@
       .hero { min-height:58vh; }
       .hero h1 { font-size:28px; }
       .grid,.grid.two,.console,.mini,.photo-grid,.list-grid { grid-template-columns:1fr; }
+      .compare-table { display:block; border:0; background:transparent; box-shadow:none; }
+      .compare-table > div { min-width:0; border:1px solid var(--line); margin-bottom:8px; border-radius:12px; }
       .step { grid-template-columns:1fr; gap:3px; }
       .spot-card summary { grid-template-columns:96px 1fr; }
       .spot-card img { height:82px; }

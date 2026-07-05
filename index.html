@@ -52,6 +52,14 @@
     .scheme-tabs { display:flex; gap:8px; overflow:auto; margin:10px 0; }
     .scheme-panel { display:none; }
     .scheme-panel.active { display:block; }
+    .route-map { display:flex; gap:8px; align-items:center; overflow:auto; padding:12px; border:1px solid var(--line); border-radius:16px; background:#fff; box-shadow:var(--shadow); margin:12px 0; }
+    .route-node { flex:0 0 auto; min-width:94px; padding:9px 10px; border-radius:999px; background:#edf7f4; color:#164c47; font-weight:900; text-align:center; }
+    .route-line { flex:0 0 32px; height:2px; background:var(--teal); position:relative; }
+    .route-line::after { content:""; position:absolute; right:-1px; top:-4px; border-left:8px solid var(--teal); border-top:5px solid transparent; border-bottom:5px solid transparent; }
+    .compare-table { display:grid; grid-template-columns:1.1fr repeat(3,minmax(0,1fr)); gap:1px; overflow:auto; border:1px solid var(--line); border-radius:16px; background:var(--line); box-shadow:var(--shadow); }
+    .compare-table > div { min-width:180px; padding:11px; background:#fff; }
+    .compare-table .head { background:#eaf3f2; font-weight:900; color:#17394a; }
+    .map-caption { color:var(--muted); font-size:13px; margin-top:-4px; }
     .photo-grid { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:12px; }
     .photo { position:relative; border-radius:16px; overflow:hidden; min-height:180px; background:#dbe7e6; }
     .photo img { height:100%; aspect-ratio:4/3; }
@@ -71,6 +79,8 @@
       .hero { min-height:58vh; }
       .hero h1 { font-size:28px; }
       .grid,.grid.two,.console,.mini,.photo-grid,.list-grid { grid-template-columns:1fr; }
+      .compare-table { display:block; border:0; background:transparent; box-shadow:none; }
+      .compare-table > div { min-width:0; border:1px solid var(--line); margin-bottom:8px; border-radius:12px; }
       .step { grid-template-columns:1fr; gap:3px; }
       .spot-card summary { grid-template-columns:96px 1fr; }
       .spot-card img { height:82px; }
@@ -87,6 +97,15 @@
     </div>
   </header>
   <main class="wrap">
+    
+    <section id="departure-compare">
+      <div class="section-title"><h2>佛山/广州出发怎么去最划算</h2><span class="lead">飞机、高铁、火车的费用和取舍</span></div>
+      <div class="notice">下面价格是按2026年7月出行的查询口径做的预算区间，用来判断方案，不是最终成交价。机票、火车票会随日期、余票、行李额、退改规则变化，付款前以航司、12306、携程、飞猪、去哪儿实际页面为准。</div>
+      <div class="compare-table"><div class="head">路线</div><div class="head">飞机往返/开口</div><div class="head">火车/高铁往返</div><div class="head">取舍建议</div><div><b>山东—开封线</b><p class="map-caption">优先飞机去济南、郑州飞回广州；中间用高铁串城。</p></div><div>约1200-2600元/人；两人约2400-5200元。广州白云→济南遥墙，返程郑州新郑→广州白云，暑期和临近出发会涨。</div><div>约1500-2100元/人；两人约3000-4200元。广州南/广州白云→济南西约10-12小时，郑州东→广州南约6-7小时。</div><div><b>优点：</b>飞机省体力，适合7天；高铁稳定但首日太长，时间充裕才考虑。<br><b>缺点：</b>飞机价格波动大；高铁省不了太多钱，且第一天会被长途消耗。<br><b>核对：</b>航班看航司/携程/飞猪/去哪儿；火车看12306，优先确认上车站别买错。</div><div><b>九寨沟线</b><p class="map-caption">时间宽裕可高铁到成都；想省体力就飞成都，再高铁到黄龙九寨站。</p></div><div>约1500-3200元/人；两人约3000-6400元。广州白云↔成都天府/双流，成都再接高铁/拼车进九寨。</div><div>约1700-2400元/人；两人约3400-4800元。广州南→成都东二等座常见约645-670元/程，再加成都↔黄龙九寨站和接驳。</div><div><b>优点：</b>高铁价格更稳，时间充裕可省机票波动；飞机能把体力留给高原景区。<br><b>缺点：</b>高铁到成都当天已较累；九寨沟真正贵的是当地接驳、门票和住宿。<br><b>核对：</b>成都航班看航司/OTA；成都东/成都西到黄龙九寨站车次看12306。</div><div><b>张掖—敦煌线</b><p class="map-caption">推荐飞机或高铁先到兰州/张掖，再一路西行到敦煌；不建议全程硬坐。</p></div><div>约2200-4300元/人；两人约4400-8600元。广州到敦煌/张掖多为直飞少、经停或中转，灵活日期能明显省钱。</div><div>约1800-3200元/人；两人约3600-6400元。广州南→兰州西高铁二等座约1058元/程，普通卧铺可省钱但单程约30小时。</div><div><b>优点：</b>飞机节省两天路上时间；普通卧铺省钱且适合时间很宽裕的人。<br><b>缺点：</b>敦煌旺季机票贵；火车长距离转场多，行李和睡眠质量会影响体验。<br><b>核对：</b>长途火车看12306；机票看航司/携程/飞猪/去哪儿，优先比较广州白云到敦煌、张掖、兰州三种落点。</div></div>
+      <div class="grid"><article class="info-card card-pad"><h3>山东—开封线路线图</h3><div class="route-map" aria-label="路线图"><span class="route-node">佛山/广州</span><span class="route-line"></span><span class="route-node">济南</span><span class="route-line"></span><span class="route-node">青岛</span><span class="route-line"></span><span class="route-node">威海</span><span class="route-line"></span><span class="route-node">开封</span><span class="route-line"></span><span class="route-node">郑州机场</span><span class="route-line"></span><span class="route-node">广州/佛山</span></div></article><article class="info-card card-pad"><h3>九寨沟线路线图</h3><div class="route-map" aria-label="路线图"><span class="route-node">佛山/广州</span><span class="route-line"></span><span class="route-node">成都</span><span class="route-line"></span><span class="route-node">黄龙九寨站</span><span class="route-line"></span><span class="route-node">黄龙</span><span class="route-line"></span><span class="route-node">九寨沟</span><span class="route-line"></span><span class="route-node">若尔盖</span><span class="route-line"></span><span class="route-node">成都</span><span class="route-line"></span><span class="route-node">广州/佛山</span></div></article><article class="info-card card-pad"><h3>张掖—敦煌线路线图</h3><div class="route-map" aria-label="路线图"><span class="route-node">佛山/广州</span><span class="route-line"></span><span class="route-node">兰州/张掖</span><span class="route-line"></span><span class="route-node">张掖丹霞</span><span class="route-line"></span><span class="route-node">嘉峪关</span><span class="route-line"></span><span class="route-node">敦煌</span><span class="route-line"></span><span class="route-node">莫高窟</span><span class="route-line"></span><span class="route-node">鸣沙山</span><span class="route-line"></span><span class="route-node">广州/佛山</span></div></article></div>
+      <div class="notice"><b>从佛山出发建议：</b>飞机优先打车/城轨/地铁到广州白云机场；高铁优先广州南，佛山西只有在车次更顺或少换乘时再选。不要为了省几十块把出发站换得太复杂。</div>
+    </section>
+    
     <div class="section-title"><h2>已规划路线</h2><span class="lead">打开后进入对应详情页</span></div>
     <div class="grid two"><article class="route-card">
           <img loading="lazy" src="assets/images/shandong-badaguan.jpg" alt="山东—开封文化美食线">
@@ -105,6 +124,15 @@
             <p><b>天数：</b>7天6晚</p><p><b>适合：</b>喜欢不一样景色、水色、草原、瀑布、森林的人</p><p><b>预算：</b>当地两人约4200-14000元+，机酒另看</p>
             <p><b>看点：</b>水色奇观、钙化彩池、高原草原、不吃辣友好</p>
             <a class="route-btn primary" href="jiuzhaigou.html">查看路线</a>
+          </div>
+        </article><article class="route-card">
+          <img loading="lazy" src="assets/images/dunhuang-cover.svg" alt="张掖—敦煌七天西北奇观线">
+          <div class="body">
+            <div class="tags"><span class="tag">新增完成</span><span class="tag">中等偏累</span><span class="tag">可慢游省钱</span></div>
+            <h2>张掖—敦煌七天西北奇观线</h2><p class="lead">兰州/张掖、七彩丹霞、嘉峪关、莫高窟、鸣沙山月牙泉、阳关雅丹</p>
+            <p><b>天数：</b>7天6晚，可加1-2天</p><p><b>适合：</b>时间充裕、想看沙漠石窟丹霞戈壁的人</p><p><b>预算：</b>两人不含大交通约5200-13500元</p>
+            <p><b>看点：</b>丹霞、石窟、沙漠、关城、戈壁日落</p>
+            <a class="route-btn primary" href="dunhuang.html">查看路线</a>
           </div>
         </article></div>
     <div class="section-title"><h2>预留路线</h2><span class="lead">后续补充，不影响当前两条主线</span></div>
