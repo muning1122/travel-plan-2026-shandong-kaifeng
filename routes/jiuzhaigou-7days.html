@@ -656,6 +656,30 @@
   object-fit:cover;
   background:#eef5f4;
 }
+.route-overview-map {
+  max-width:760px;
+  margin:0 auto 12px;
+}
+.route-overview-map img {
+  max-height:430px;
+  object-fit:contain;
+  background:#fbfaf4;
+}
+.route-detail-strip {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(135px,1fr));
+  gap:8px;
+  margin:12px 0;
+}
+.route-detail-strip span {
+  border:1px solid #d8ece8;
+  border-radius:12px;
+  background:#f6fbfa;
+  padding:9px 10px;
+  color:#18394a;
+  font-weight:900;
+  line-height:1.35;
+}
 .map-source-note {
   margin:8px 0 0;
   color:var(--muted);
@@ -679,6 +703,26 @@
 }
 .ticket-table .head {
   background:#e8f5f3;
+  color:#17394a;
+  font-weight:900;
+}
+.budget-speed-table {
+  display:grid;
+  grid-template-columns:1fr 1.25fr 1.05fr 1.05fr 1fr 1fr 1fr 1.25fr;
+  gap:1px;
+  overflow:auto;
+  border:1px solid var(--line);
+  border-radius:18px;
+  background:var(--line);
+  box-shadow:var(--soft-shadow);
+}
+.budget-speed-table > div {
+  min-width:142px;
+  padding:11px;
+  background:#fff;
+}
+.budget-speed-table .head {
+  background:#fff3d7;
   color:#17394a;
   font-weight:900;
 }
@@ -728,10 +772,12 @@
       .return-bar { align-items:flex-start; flex-direction:column; }
       .dashboard-hero,.dashboard-nav,.wrap { max-width:390px; margin-left:auto; margin-right:auto; }
       .station-grid,.transport-grid,.hotel-map-grid,.budget-split,.dunhuang-grid,.route-choice-grid,.decision-band,.scenery-table,.train-priority,.station-note-grid { grid-template-columns:1fr; }
-      .ticket-table { display:block; overflow:auto; }
-      .ticket-table > div { min-width:260px; border-bottom:1px solid var(--line); }
+      .ticket-table,.budget-speed-table { display:block; overflow:auto; }
+      .ticket-table > div,.budget-speed-table > div { min-width:260px; border-bottom:1px solid var(--line); }
       .mega-plan,.decision-card,.station-card,.transport-card,.map-circle-card,.budget-line-card,.dunhuang-card { padding:14px; }
       .map-visual { min-height:132px; }
+      .route-overview-map img { max-height:320px; }
+      .route-detail-strip { grid-template-columns:1fr 1fr; }
       .dashboard-hero { margin-top:12px; padding:0 12px; }
       .hero-shell { border-radius:22px; padding:18px 14px; }
       .hero-title h1 { font-size:26px; }
@@ -782,7 +828,7 @@
           <h2>路线总览卡</h2>
           <div class="overview-list">
             <div><span>适合人群</span><b>喜欢水色、森林、瀑布、草原的人。</b></div>
-            <div><span>交通方式</span><b>飞机 + 高铁 + 接驳 + 拼车/包车。</b></div>
+            <div><span>交通方式</span><b>夜间动卧/普通卧铺优先 + 飞机对比 + 成都后接驳/拼车；高铁仅作备选。</b></div>
             <div><span>推荐季节</span><b>暑期水量好但人多，提前看票和天气。</b></div>
             <div><span>海拔提醒</span><b>黄龙、若尔盖、唐克海拔较高，慢走别硬扛。</b></div>
             <div><span>不吃辣</span><b>默认清淡、不辣、不红油、不花椒。</b></div>
@@ -823,6 +869,24 @@
     </article>
   </div>
   <div class="notice"><b>交通结论：</b>如果能买到7月15日或7月16日晚上出发、次日上午到成都东的动卧，这是当前最贴合偏好的方案；如果只能买到普通火车次日傍晚到成都西，就不要硬接原D2黄龙，必须顺延或删减。</div>
+</section>
+
+<section class="wrap" id="route-arrow-map">
+  <div class="section-title"><h2>七天路线箭头图</h2><span class="lead">红色箭头标出今天、明天、后天怎么走</span></div>
+  <article class="card-pad card">
+    <figure class="real-map route-overview-map">
+      <img loading="lazy" src="../assets/images/maps/jiuzhaigou-route-arrows-map.jpg" alt="九寨沟七天路线红箭头地图">
+    </figure>
+    <div class="route-detail-strip">
+      <span>D1｜到成都住一晚</span>
+      <span>D2｜成都→黄龙→九寨沟</span>
+      <span>D3-D4｜九寨沟二进沟</span>
+      <span>D5｜九寨沟→花湖/唐克</span>
+      <span>D6｜黄河九曲→松潘/川主寺</span>
+      <span>D7｜返成都→返程</span>
+    </div>
+    <div class="notice"><b>怎么看：</b>D1 到成都住一晚；D2 成都到黄龙再到九寨沟；D3-D4 九寨沟二进沟；D5 去花湖/唐克；D6 回松潘/川主寺；D7 返成都。地图用于方向感和住宿/转场理解，实际导航以高德/12306/当地接驳为准。</div>
+  </article>
 </section>
 
 <section class="wrap" id="arrival-choice">
@@ -993,25 +1057,12 @@
     <article class="mega-plan secondary">
       <span class="recommend-mark">方案B｜时间预算够时推荐</span>
       <h3>十天九寨沟 + 敦煌西北奇观游</h3>
-      <p><b>路线：</b>广州/佛山 → 成都 → 黄龙 → 九寨沟 → 成都/兰州中转 → 敦煌 → 莫高窟 → 鸣沙山月牙泉 → 敦煌西线/雅丹或返程 → 广州/佛山</p>
-      <p><b>适合：</b>特别想要强烈视觉反差的人：前半段看九寨沟蓝绿色水色、黄龙彩池，后半段看大漠、戈壁、莫高窟、鸣沙山月牙泉。</p>
+      <p><b>一句话：</b>时间和预算够时再考虑，视觉反差最强；默认仍以方案A七天九寨沟为主线。</p>
       <ul>
-        <li><b>特点：</b>视觉反差最强，更像“奇观游”。</li>
-        <li><b>缺点：</b>大交通更贵，中途转场更多，敦煌比较干、晒，需要更高预算。</li>
-        <li><b>推荐指数：</b>时间和预算够时推荐。</li>
+        <li><b>路线：</b>广州/佛山 → 成都 → 黄龙 → 九寨沟 → 成都/兰州中转 → 敦煌 → 返程。</li>
+        <li><b>提醒：</b>完整时间轴、交通和预算放在下方折叠加长方案里。</li>
       </ul>
-      <div class="plan-days">
-        <span>D1：广州/佛山 → 成都</span>
-        <span>D2：成都东 → 黄龙九寨站 → 黄龙 → 九寨沟沟口</span>
-        <span>D3：九寨沟一进沟，经典精华日</span>
-        <span>D4：九寨沟二进沟，补拍慢走日</span>
-        <span>D5：九寨沟/松潘/黄龙九寨站 → 成都，中转休息</span>
-        <span>D6：成都/兰州 → 敦煌，晚上沙洲夜市轻松逛</span>
-        <span>D7：莫高窟 + 鸣沙山月牙泉</span>
-        <span>D8：敦煌西线，阳关/玉门关/雅丹魔鬼城，或根据预算选择轻量版</span>
-        <span>D9：敦煌市区轻松补漏 / 博物馆 / 返程中转</span>
-        <span>D10：敦煌/兰州/成都 → 广州/佛山返程</span>
-      </div>
+      <p><a class="quick-card" href="#dunhuang10"><span class="quick-kicker">加长预案</span><b>展开看十天敦煌方案</b><small>不压进7天主线。</small></a></p>
     </article>
   </div>
   <div class="notice"><b>页面判断：</b>只有7天就按方案A执行；能安排10天再看方案B。不要把敦煌压进7天里做成赶路玩法。</div>
@@ -1041,7 +1092,7 @@
       <div class="section-title"><h2>快速导航</h2><span class="lead">手机上直接跳到要看的部分</span></div>
       <div class="quick-grid">
         <a class="quick-card" href="#days"><span class="quick-kicker">行程</span><b>查看每日详细行程</b><small>D1-D7 默认折叠，点当天展开。</small></a>
-        <a class="quick-card" href="#traffic"><span class="quick-kicker">交通</span><b>查看交通接驳指南</b><small>高铁、接驳、包车和晚点替代。</small></a>
+        <a class="quick-card" href="#traffic"><span class="quick-kicker">交通</span><b>查看交通接驳指南</b><small>动卧/普通火车、飞机对比、接驳和晚点替代。</small></a>
         <a class="quick-card" href="#spots"><span class="quick-kicker">景点</span><b>查看景点详细攻略</b><small>门票、路线、拍照点和避坑。</small></a>
         <a class="quick-card" href="#food"><span class="quick-kicker">不辣</span><b>查看不吃辣指南</b><small>点餐话术、可点菜和避雷清单。</small></a>
       </div>
@@ -1269,7 +1320,8 @@
       <div class="grid"><article class="food-card card-pad"><h3>D1｜广州/佛山 → 成都</h3><p>避开火锅、串串、冒菜、红油抄手；吃清汤抄手、炖汤、蒸菜、清汤面、粤菜/家常菜。</p></article><article class="food-card card-pad"><h3>D2｜成都东 → 黄龙九寨站 → 黄龙 → 九寨沟沟口</h3><p>晚餐吃清汤牦牛肉锅/菌汤锅/番茄鸡蛋面，不放辣椒和花椒。</p></article><article class="food-card card-pad"><h3>D3｜九寨沟一进沟经典精华日</h3><p>自带面包/饭团/牛奶/巧克力；晚餐回沟口吃清淡汤锅/面食。</p></article><article class="food-card card-pad"><h3>D4｜九寨沟二进沟补拍慢走日</h3><p>继续自带轻食；晚餐清淡，别点红油凉菜和麻辣牦牛肉干。</p></article><article class="food-card card-pad"><h3>D5｜九寨沟 → 若尔盖花湖 → 唐克/若尔盖</h3><p>清汤牦牛肉、面食、青稞饼、酸奶；烧烤和凉菜先问是否辣。</p></article><article class="food-card card-pad"><h3>D6｜黄河九曲第一湾 → 松潘/川主寺</h3><p>松潘吃菌汤锅/清汤牦牛肉/蒸菜，继续强调不要辣椒红油花椒。</p></article><article class="food-card card-pad"><h3>D7｜松潘/川主寺 → 黄龙九寨站/松潘站 → 成都 → 返程</h3><p>成都东/机场吃清淡简餐，别为了最后一顿跑远。</p></article></div>
     </section>
     <section class="wrap" id="dunhuang10">
-  <div class="section-title"><h2>如果加到10天，可以这样看敦煌</h2><span class="lead">这是加长版预案，不压进7天主线</span></div>
+  <details class="card-pad card">
+    <summary><b>十天九寨沟 + 敦煌西北奇观游</b><span class="lead">时间和预算够时再考虑，视觉反差最强</span></summary>
   <div class="decision-band">
     <article class="decision-card">
       <span class="tag warn">为什么要10天</span>
@@ -1295,8 +1347,18 @@
     <article class="dunhuang-card"><h3>不适合谁</h3><ul><li>预算很紧。</li><li>怕晒怕干。</li><li>不想连续转场。</li><li>想慢慢玩九寨沟和川北。</li></ul></article>
     <article class="dunhuang-card"><h3>执行底线</h3><p>方案B是10天加长版，不是把敦煌塞进7天。先保住九寨沟二进沟和中转休息，再谈敦煌。</p></article>
   </div>
+  </details>
 </section>
 <section class="wrap" id="budget"><div class="section-title"><h2>预算模块</h2><span class="lead">分方案A和方案B，全部按区间看</span></div>
+  <div class="card-pad card" style="margin-bottom:14px">
+    <h3>预算速算表</h3>
+    <div class="budget-speed-table">
+      <div class="head">版本</div><div class="head">适合谁</div><div class="head">两人大交通参考</div><div class="head">两人当地交通参考</div><div class="head">两人门票参考</div><div class="head">两人餐饮参考</div><div class="head">住宿风险</div><div class="head">总预算提醒</div>
+      <div><b>省钱火车版</b></div><div>普通火车/硬卧优先；适合预算紧、能接受晚到成都并调整行程的人。</div><div>重点查 Z586 等普速卧铺；硬卧约343元/人，软卧约613元/人，以12306为准。</div><div>成都后接驳 + 川北拼车/小团；草原线可能需压缩。</div><div>九寨沟、黄龙优先；预算紧时删草原线或二进沟。</div><div>清淡简餐、面食、进沟自带轻食。</div><div>晚到成都会多占一晚，沟口暑期房价仍可能上涨。</div><div>最省但最容易牺牲草原线或九寨沟二进沟；不要硬接黄龙。</div>
+      <div><b>动卧推荐版</b></div><div>D848/D864 或类似夜间动卧优先；适合晚上出发、车上睡、次日上午到成都东的人。</div><div>动卧价格以12306付款页为准，可能接近飞机。</div><div>到成都东后接黄龙九寨站，再做景区接驳/拼车。</div><div>保留九寨沟二进沟 + 黄龙核心，草原线看体力。</div><div>按标准清淡餐安排，不吃辣话术随身用。</div><div>成都东站圈和沟口房要提前订可取消。</div><div>最顺，但动卧票难抢；睡不好就成都休整一天。</div>
+      <div><b>飞机省心版</b></div><div>广州白云飞成都天府/双流；适合不想坐长火车、愿意接受约1200往返机票的人。</div><div>你实查往返约1200元左右，实际按航司/携程/飞猪。</div><div>机场进城 + 成都后接驳/拼车；省体力但要留机场时间。</div><div>门票核心不变，预算优先给九寨沟和黄龙。</div><div>到成都晚就外卖/酒店附近清淡餐，不夜逛。</div><div>若晚到成都，优先住成都东站圈；暑期房价浮动大。</div><div>最省心；晚到成都后直接睡觉，别加夜间行程。所有总价以实际出票、订房、景区为准。</div>
+    </div>
+  </div>
   <div class="budget-split">
     <article class="budget-line-card"><h3>方案A｜大交通</h3><ul><li><b>飞机：</b>广州/佛山 → 成都飞机，你实查往返约1200元左右，实际按航司/携程/飞猪。</li><li><b>夜间动卧：</b>广州南 → 成都东 D848/D864，动卧价格以12306付款页为准；优点是晚上走、车上睡、次日上午到成都东。</li><li><b>普通火车/卧铺：</b>广州北/广州白云/深圳东 → 成都西/成都东，重点查 Z586 等车次。参考：硬座/无座约201元、硬卧约343元、软卧约613元，以12306付款页为准。注意普通火车到成都较晚，不能硬接黄龙。</li><li><b>白天高铁：</b>广州南 → 成都东高铁，二等座约666-743元/人，以12306为准。价格接近飞机，所以不是默认推荐。</li><li><b>成都东 → 黄龙九寨站：</b>二等座常见约128-205元/人区间，以12306付款页为准。</li></ul></article>
     <article class="budget-line-card"><h3>方案A｜当地接驳</h3><ul><li>成都机场/成都东/酒店之间：地铁更省，打车按高德实时。</li><li>黄龙九寨站 → 黄龙 → 九寨沟沟口：接驳/拼车/包车按当日平台。</li><li>D5-D6草原线：两人约600-1800元浮动，取决于拼车人数、车型和线路。</li></ul></article>
