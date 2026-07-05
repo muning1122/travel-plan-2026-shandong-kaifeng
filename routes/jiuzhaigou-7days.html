@@ -84,7 +84,7 @@
       padding:32px;
       color:#fff;
       background:
-        linear-gradient(130deg,rgba(5,73,88,.97),rgba(12,146,133,.88) 47%,rgba(26,166,178,.78)),
+        linear-gradient(130deg,rgba(3,45,58,.96),rgba(8,104,107,.72) 50%,rgba(24,161,169,.42)),
         url("../assets/images/jiuzhaigou-cover.jpg") center/cover;
       box-shadow:0 24px 68px rgba(6,67,82,.24);
       isolation:isolate;
@@ -100,11 +100,12 @@
     }
     .hero-grid {
       display:grid;
-      grid-template-columns:minmax(0,1.15fr) minmax(310px,.85fr);
+      grid-template-columns:minmax(0,1.08fr) minmax(340px,.92fr);
       gap:24px;
-      align-items:end;
+      align-items:stretch;
       min-height:356px;
     }
+    .hero-title,.hero-side,.hero-overview { min-width:0; }
     .eyebrow {
       display:inline-flex;
       width:max-content;
@@ -117,8 +118,8 @@
       font-weight:900;
       margin-bottom:12px;
     }
-    .hero-title h1 { font-size:42px; line-height:1.12; margin:0 0 12px; }
-    .hero-route { max-width:780px; color:#ebfffb; font-size:17px; margin-bottom:18px; }
+    .hero-title h1 { font-size:42px; line-height:1.12; margin:0 0 12px; overflow-wrap:anywhere; word-break:break-all; }
+    .hero-route { max-width:780px; color:#ebfffb; font-size:17px; margin-bottom:18px; overflow-wrap:anywhere; word-break:break-all; }
     .tags { display:flex; flex-wrap:wrap; gap:8px; margin:10px 0; }
     .tag {
       display:inline-flex;
@@ -134,7 +135,47 @@
     .tag.warn { background:#fff3dc; color:#805319; }
     .tag.red { background:#feeceb; color:#9a3e36; }
     .tag.green { background:#e4f7e9; color:#25663b; }
+    .hero-side {
+      display:grid;
+      grid-template-rows:1fr auto;
+      gap:14px;
+      align-self:stretch;
+    }
+    .hero-photo-card {
+      position:relative;
+      min-height:190px;
+      margin:0;
+      overflow:hidden;
+      border-radius:22px;
+      border:1px solid rgba(255,255,255,.42);
+      box-shadow:0 18px 45px rgba(4,45,55,.22);
+      background:#c7e7e3;
+    }
+    .hero-photo-card img {
+      height:100%;
+      min-height:220px;
+      filter:saturate(1.04) contrast(1.02);
+    }
+    .hero-photo-card::after {
+      content:"";
+      position:absolute;
+      inset:0;
+      background:linear-gradient(180deg,transparent 50%,rgba(3,35,45,.58));
+    }
+    .hero-photo-card figcaption {
+      position:absolute;
+      left:14px;
+      bottom:12px;
+      z-index:1;
+      padding:6px 10px;
+      border-radius:999px;
+      background:rgba(255,255,255,.88);
+      color:#0e5660;
+      font-size:13px;
+      font-weight:900;
+    }
     .hero-overview {
+      overflow:hidden;
       background:rgba(255,255,255,.96);
       color:var(--ink);
       border:1px solid rgba(255,255,255,.6);
@@ -144,9 +185,9 @@
     }
     .hero-overview h2 { font-size:20px; margin-bottom:10px; }
     .overview-list { display:grid; gap:9px; }
-    .overview-list div { display:grid; grid-template-columns:82px 1fr; gap:9px; align-items:start; }
+    .overview-list div { display:grid; grid-template-columns:82px minmax(0,1fr); gap:9px; align-items:start; }
     .overview-list span { color:var(--muted); font-size:13px; font-weight:900; }
-    .overview-list b { font-size:14px; line-height:1.5; }
+    .overview-list b { min-width:0; font-size:14px; line-height:1.5; overflow-wrap:anywhere; word-break:break-all; }
     .hero-alert {
       margin-top:12px;
       padding:10px 12px;
@@ -215,6 +256,9 @@
     }
     .plan-card:nth-child(2) { border-top-color:var(--blue); }
     .plan-card:nth-child(3) { border-top-color:var(--yellow); }
+    .plan-a { background:linear-gradient(160deg,#ffffff 0%,#e9fbf6 100%); }
+    .plan-b { background:linear-gradient(160deg,#ffffff 0%,#edf7ff 100%); }
+    .plan-c { background:linear-gradient(160deg,#ffffff 0%,#fff5df 100%); }
     .plan-card h3 { margin-bottom:8px; font-size:19px; }
     .plan-card dl { display:grid; gap:8px; margin:0; }
     .plan-card dt { color:var(--muted); font-size:13px; font-weight:900; }
@@ -270,29 +314,79 @@
     }
     .quick-card {
       justify-content:flex-start;
-      min-height:82px;
+      align-items:flex-start;
+      flex-direction:column;
+      min-height:104px;
       padding:16px;
       border-radius:18px;
-      background:#fff;
+      background:linear-gradient(160deg,#ffffff,#f2fbf9);
       border:1px solid var(--line);
       box-shadow:var(--soft-shadow);
       color:var(--ink);
       white-space:normal;
+      transition:transform .18s ease, box-shadow .18s ease;
     }
+    .quick-card:hover { transform:translateY(-2px); box-shadow:0 18px 36px rgba(16,49,63,.13); }
+    .quick-kicker { color:var(--teal); font-size:13px; font-weight:900; }
+    .quick-card b { font-size:17px; }
+    .quick-card small { color:var(--muted); font-weight:800; line-height:1.45; }
     .grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:14px; }
     .grid.two { grid-template-columns:repeat(2,minmax(0,1fr)); }
     details > summary { cursor:pointer; list-style:none; }
     details > summary::-webkit-details-marker { display:none; }
     .day-card { margin-bottom:13px; }
     .day-card > summary {
-      padding:14px 16px;
-      display:flex;
-      justify-content:space-between;
-      gap:12px;
+      padding:12px;
+      display:grid;
+      grid-template-columns:150px minmax(0,1fr) auto;
+      gap:13px;
       align-items:center;
       background:linear-gradient(90deg,#e8f8f4,#f4fbfa);
     }
-    .day-card > summary b { font-size:20px; }
+    .day-summary-img {
+      height:104px;
+      border-radius:14px;
+      object-fit:cover;
+      box-shadow:0 10px 24px rgba(16,49,63,.10);
+    }
+    .day-summary-copy { min-width:0; }
+    .day-summary-copy b {
+      display:block;
+      font-size:20px;
+      line-height:1.35;
+      margin:3px 0 8px;
+    }
+    .day-no {
+      display:inline-flex;
+      padding:4px 9px;
+      border-radius:999px;
+      background:#dff5f1;
+      color:#0b6258;
+      font-weight:900;
+      font-size:13px;
+    }
+    .day-summary-meta { display:flex; flex-wrap:wrap; gap:6px; }
+    .day-summary-meta span {
+      padding:4px 8px;
+      border-radius:999px;
+      background:#fff;
+      border:1px solid #d7ebe8;
+      color:#425769;
+      font-size:12.5px;
+      font-weight:900;
+    }
+    .day-toggle {
+      padding:7px 10px;
+      border-radius:999px;
+      background:#0f766e;
+      color:#fff;
+      font-size:0;
+      font-weight:900;
+      white-space:nowrap;
+    }
+    .day-toggle::after { content:"展开"; font-size:13px; }
+    .day-card[open] .day-toggle { background:#dff0eb; color:#145f57; }
+    .day-card[open] .day-toggle::after { content:"收起"; }
     .day-inner { padding:15px; }
     .mini { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:10px; margin:12px 0; }
     .mini div { padding:10px; border:1px solid var(--line); border-radius:12px; background:#f8fbfb; }
@@ -300,7 +394,7 @@
     .step { display:grid; grid-template-columns:112px 1fr; gap:12px; padding:12px 0; border-top:1px dashed var(--line); }
     .step time { font-weight:900; color:var(--teal); }
     .keyword { display:flex; flex-wrap:wrap; align-items:center; gap:8px; padding:8px; border-radius:12px; background:#eef6f7; margin:8px 0 0; }
-    .copy-btn { padding:5px 9px; min-height:auto; background:#dff0eb; color:#146253; }
+    .copy-btn { padding:7px 11px; min-height:34px; background:#dff0eb; color:#146253; }
     .route-map { display:flex; gap:8px; align-items:center; overflow:auto; padding:12px; border:1px solid var(--line); border-radius:16px; background:#fff; box-shadow:var(--soft-shadow); margin:12px 0; }
     .route-node { flex:0 0 auto; min-width:94px; padding:9px 10px; border-radius:999px; background:#edf7f4; color:#164c47; font-weight:900; text-align:center; }
     .route-line { flex:0 0 32px; height:2px; background:var(--teal); position:relative; }
@@ -325,11 +419,28 @@
     .toast { position:fixed; left:50%; bottom:24px; transform:translateX(-50%); padding:10px 14px; border-radius:999px; background:#10263f; color:#fff; opacity:0; transition:.2s; pointer-events:none; z-index:60; max-width:92vw; }
     .toast.show { opacity:1; }
     @media (max-width:980px) {
+      .hero-side { grid-template-rows:auto auto; }
+      .hero-photo-card img { min-height:190px; }
       .hero-grid { grid-template-columns:1fr; align-items:start; }
       .hero-shell { min-height:auto; }
       .day-overview,.gallery-grid,.info-grid,.quick-grid,.scheme-grid,.grid,.grid.two,.mini,.photo-grid,.list-grid { grid-template-columns:1fr 1fr; }
     }
     @media (max-width:760px) {
+      .hero-shell { padding:20px; border-radius:22px; }
+      .hero-title h1 { font-size:28px; line-height:1.18; overflow-wrap:anywhere; word-break:break-all; }
+      .hero-route { font-size:14.5px; line-height:1.65; }
+      .hero-title .tags { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:7px; }
+      .hero-title .tag { justify-content:center; text-align:center; white-space:normal; padding:5px 7px; }
+      .hero-photo-card img { min-height:168px; }
+      .hero-overview { padding:14px; }
+      .overview-list { gap:12px; }
+      .overview-list div { grid-template-columns:1fr; gap:2px; }
+      .day-card > summary { grid-template-columns:96px minmax(0,1fr); gap:10px; }
+      .day-summary-img { height:82px; }
+      .day-summary-copy b { font-size:17px; }
+      .day-summary-meta span { font-size:12px; }
+      .day-toggle { grid-column:1 / -1; width:max-content; }
+      .quick-card { min-height:92px; }
       body { font-size:15.5px; }
       .return-bar { align-items:flex-start; flex-direction:column; }
       .dashboard-hero { margin-top:12px; padding:0 12px; }
@@ -371,17 +482,23 @@
             <span class="tag">不吃辣友好</span>
           </div>
         </div>
-        <aside class="hero-overview">
+        <aside class="hero-side">
+          <figure class="hero-photo-card">
+            <img loading="eager" src="../assets/images/jiuzhaigou-cover.jpg" alt="九寨沟蓝绿色海子实景">
+            <figcaption>九寨沟水色封面</figcaption>
+          </figure>
+          <div class="hero-overview">
           <h2>路线总览卡</h2>
           <div class="overview-list">
             <div><span>适合人群</span><b>喜欢水色、森林、瀑布、草原和自然风光的人。</b></div>
             <div><span>交通方式</span><b>飞机 + 高铁 + 景区接驳 + 拼车/包车，山区段不建议临时乱改。</b></div>
             <div><span>推荐季节</span><b>暑期水量好但人多，7月出发必须提前看票和天气。</b></div>
             <div><span>海拔提醒</span><b>黄龙、若尔盖、唐克海拔较高，走慢、少跑跳、别硬扛。</b></div>
-            <div><span>不吃辣</span><b>本路线已按不吃辣需求设计，默认推荐清淡饮食。</b></div>
+            <div><span>不吃辣</span><b>默认清淡、不辣、不红油、不花椒，点餐继续强调不要麻油。</b></div>
             <div><span>核对规则</span><b>所有票价、车次、时间、开放和演出信息以实际页面为准。</b></div>
           </div>
           <div class="hero-alert">点餐备注：不要辣椒、不要红油、不要花椒、不要麻油，蘸料也不要辣。</div>
+          </div>
         </aside>
       </div>
     </div>
@@ -410,175 +527,11 @@
         <article class="day-tile"><span class="day-no">D7</span><h3>松潘 → 成都 → 返程</h3><p><b>重点：</b>留足中转缓冲。</p><p><b>住宿：</b>返程日。</p></article>
       </div>
     </section>
-    <section class="wrap" id="gallery">
-      <div class="section-title"><h2>精华景点预览</h2><span class="lead">全部使用真实实景照片，页面不再放占位图</span></div>
-      <div class="gallery-grid">
-        <article class="gallery-card"><img loading="lazy" src="../assets/images/jiuzhaigou-wuhuahai.jpg" alt="九寨沟五花海"><div class="gallery-copy"><h3>九寨沟</h3><p>蓝绿海子、瀑布和栈道，是整条线的核心。</p></div></article>
-        <article class="gallery-card"><img loading="lazy" src="../assets/images/jiuzhaigou-waterfall.jpg" alt="九寨沟瀑布"><div class="gallery-copy"><h3>诺日朗/珍珠滩瀑布</h3><p>雨天也能看的强景点，水量和声音都很有记忆点。</p></div></article>
-        <article class="gallery-card"><img loading="lazy" src="../assets/images/huanglong-wucaichi.jpg" alt="黄龙五彩池"><div class="gallery-copy"><h3>黄龙</h3><p>五彩池和钙华池群，注意高海拔慢走。</p></div></article>
-        <article class="gallery-card"><img loading="lazy" src="../assets/images/huahu-lake.jpg" alt="若尔盖花湖湿地"><div class="gallery-copy"><h3>若尔盖花湖</h3><p>湿地、湖面、草原风，适合慢走栈道。</p></div></article>
-        <article class="gallery-card"><img loading="lazy" src="../assets/images/huanghe-jiuqu.jpg" alt="黄河九曲第一湾"><div class="gallery-copy"><h3>黄河九曲第一湾</h3><p>天气好看日落，天气差就短停不硬等。</p></div></article>
-        <article class="gallery-card"><img loading="lazy" src="../assets/images/songpan-old-town.jpg" alt="松潘古城"><div class="gallery-copy"><h3>松潘古城</h3><p>返程前的轻松中转点，适合住一晚恢复体力。</p></div></article>
-      </div>
-    </section>
-    <section class="wrap" id="fast-info">
-      <div class="section-title"><h2>重要信息速览</h2><span class="lead">旅行当天先扫这一排</span></div>
-      <div class="info-grid">
-        <article class="info-card"><h3>门票预约</h3><p>九寨沟、黄龙、花湖、黄河九曲第一湾均以官方/平台当期页面为准，暑期尽早看票。</p></article>
-        <article class="info-card"><h3>高原注意</h3><p>黄龙和草原线不要跑跳，头痛胸闷就减少游玩并休息。</p></article>
-        <article class="info-card"><h3>天气多变</h3><p>雨具、薄外套、防晒都要带，草原风大，日落别硬等。</p></article>
-        <article class="info-card"><h3>不吃辣友好</h3><p>默认选清汤、蒸菜、面食和家常菜，点餐必须强调不要辣椒红油花椒麻油。</p></article>
-        <article class="info-card"><h3>预算参考</h3><p>真正浮动最大的是包车、暑期住宿和二进沟，别把交通缓冲省掉。</p></article>
-      </div>
-    </section>
-    <section class="wrap" id="quick-jump">
-      <div class="section-title"><h2>快速导航</h2><span class="lead">手机上直接跳到要看的部分</span></div>
-      <div class="quick-grid">
-        <a class="quick-card" href="#days">查看每日详细行程</a>
-        <a class="quick-card" href="#traffic">查看交通接驳指南</a>
-        <a class="quick-card" href="#spots">查看景点详细攻略</a>
-        <a class="quick-card" href="#food">查看不吃辣指南</a>
-      </div>
-    </section>
-    <section class="wrap" id="days"><div class="section-title"><h2>每日执行卡</h2><span class="lead">每天打开对应卡片照着走</span></div>
-    <details class="day-card" id="j-d1" open>
-      <summary><span>D1</span><b>广州/佛山 → 成都</b></summary>
-      <div class="day-inner">
-        <div class="notice"><b>今日一句话：</b>今天只负责顺利到成都，不赶景点；住成都东站附近最省心，想逛再轻松去春熙路/太古里。</div>
-        <div class="mini">
-          <div><span>今日目标</span><b>抵达成都、住到方便第二天赶高铁的位置，晚上早睡。</b></div>
-          <div><span>今日住宿</span><b>成都东站附近优先；想逛街吃饭可选春熙路/天府广场。</b></div>
-          <div><span>今日交通</span><b>佛山/广州 → 广州白云机场/广州南站 → 成都机场/成都东 → 酒店。</b></div>
-          <div><span>今日强度</span><b>轻松</b></div>
-          <div><span>今日预算</span><b>不含机票酒店，当地交通+餐饮两人约180-420元；机酒以实际为准。</b></div>
-          <div><span>今日必做</span><b>确认D2成都东到黄龙九寨站车票、黄龙预约、沟口酒店。</b></div>
-          <div><span>今日可删</span><b>落地晚就删春熙路/太古里，直接酒店附近吃清淡晚餐。</b></div>
-          <div><span>今日风险</span><b>航班晚点、第二天早起赶高铁、成都晚餐容易误点辣菜。</b></div>
-        </div>
-        <div class="card-pad card"><b>今日不辣吃饭：</b>避开火锅、串串、冒菜、红油抄手；吃清汤抄手、炖汤、蒸菜、清汤面、粤菜/家常菜。</div>
-        <div><article class="step"><time>出发前</time><div><p>检查身份证、航班/高铁、酒店订单、黄龙和九寨沟预约、薄外套、雨具、充电宝。</p><p class="keyword"><span>航司App / 12306 / 酒店订单</span><button class="copy-btn" data-copy="航司App / 12306 / 酒店订单" type="button">复制</button></p></div></article><article class="step"><time>上午-下午</time><div><p>广州/佛山出发到成都，优先选择白天到达，别把D2早起压得太紧。</p><p class="keyword"><span>广州白云机场 成都天府机场 成都东站</span><button class="copy-btn" data-copy="广州白云机场 成都天府机场 成都东站" type="button">复制</button></p></div></article><article class="step"><time>到达后60-90分钟</time><div><p>机场/车站到酒店。若D2赶早车，成都东站附近最稳；若航班早到且想逛街，可春熙路。</p><p class="keyword"><span>成都东站 酒店 春熙路 酒店</span><button class="copy-btn" data-copy="成都东站 酒店 春熙路 酒店" type="button">复制</button></p></div></article><article class="step"><time>18:30-20:00</time><div><p>晚餐吃清淡，不吃辣；跟店员明确不要辣椒、红油、花椒、麻油。</p><p class="keyword"><span>成都东站 清淡 家常菜</span><button class="copy-btn" data-copy="成都东站 清淡 家常菜" type="button">复制</button></p></div></article><article class="step"><time>20:30后</time><div><p>回酒店休息，把D2行李收成轻装：身份证、雨具、外套、轻食、水。</p><p class="keyword"><span>成都东站附近酒店</span><button class="copy-btn" data-copy="成都东站附近酒店" type="button">复制</button></p></div></article></div>
-        <details class="card-pad card" open><summary><b>晚点/下雨/太累怎么办</b></summary><ul><li><b>正常版：</b>住成都东站附近，晚饭后早睡。</li><li><b>太累版：</b>落地后直接酒店，点清淡外卖，不进市区。</li><li><b>下雨/晚点版：</b>取消夜逛，优先保D2高铁和黄龙行程。</li></ul></details>
-      </div>
-    </details>
-    <details class="day-card" id="j-d2" >
-      <summary><span>D2</span><b>成都东 → 黄龙九寨站 → 黄龙 → 九寨沟沟口</b></summary>
-      <div class="day-inner">
-        <div class="notice"><b>今日一句话：</b>早上从成都东到黄龙九寨站，先玩黄龙五彩池，傍晚前往九寨沟沟口住宿。</div>
-        <div class="mini">
-          <div><span>今日目标</span><b>看黄龙五彩池，不赶路，晚上住到九寨沟沟口，为第二天进沟准备。</b></div>
-          <div><span>今日住宿</span><b>九寨沟沟口/漳扎镇，优先距离景区入口打车10分钟以内、有电梯、可寄存行李。</b></div>
-          <div><span>今日交通</span><b>成都东站 → 黄龙九寨站 → 黄龙景区游客中心 → 九寨沟沟口。</b></div>
-          <div><span>今日强度</span><b>中等偏累，高海拔慢走</b></div>
-          <div><span>今日预算</span><b>当地接驳+黄龙票索道+餐饮两人约700-1400元，按是否索道/包车浮动。</b></div>
-          <div><span>今日必做</span><b>黄龙索道上行+五彩池+慢慢下行；不舒服就缩短。</b></div>
-          <div><span>今日可删</span><b>高反或晚点就只看五彩池核心段，取消长距离下行拍照。</b></div>
-          <div><span>今日风险</span><b>黄龙海拔高、接驳衔接、下午天气变化。</b></div>
-        </div>
-        <div class="card-pad card"><b>今日不辣吃饭：</b>晚餐吃清汤牦牛肉锅/菌汤锅/番茄鸡蛋面，不放辣椒和花椒。</div>
-        <div><article class="step"><time>06:30</time><div><p>起床，检查身份证、12306、黄龙预约、雨具、薄外套、充电宝、轻食。</p><p class="keyword"><span>成都东站</span><button class="copy-btn" data-copy="成都东站" type="button">复制</button></p></div></article><article class="step"><time>07:00</time><div><p>酒店出发去成都东站，建议预留45-70分钟进站安检和找检票口。</p><p class="keyword"><span>成都东站 进站口</span><button class="copy-btn" data-copy="成都东站 进站口" type="button">复制</button></p></div></article><article class="step"><time>07:30-09:30</time><div><p>成都东 → 黄龙九寨站，具体车次和票价以12306为准。</p><p class="keyword"><span>12306 成都东 黄龙九寨</span><button class="copy-btn" data-copy="12306 成都东 黄龙九寨" type="button">复制</button></p></div></article><article class="step"><time>09:30-10:30</time><div><p>黄龙九寨站 → 黄龙景区，选景区接驳/拼车/包车，提前确认上车点。</p><p class="keyword"><span>黄龙九寨站 黄龙景区游客中心</span><button class="copy-btn" data-copy="黄龙九寨站 黄龙景区游客中心" type="button">复制</button></p></div></article><article class="step"><time>10:30-15:30</time><div><p>黄龙游玩：索道上行，走五彩池、争艳池等核心，慢慢下行；不跑不硬撑。</p><p class="keyword"><span>黄龙风景区 五彩池</span><button class="copy-btn" data-copy="黄龙风景区 五彩池" type="button">复制</button></p></div></article><article class="step"><time>16:00-18:30</time><div><p>黄龙 → 九寨沟沟口，建议天黑前到酒店。</p><p class="keyword"><span>九寨沟沟口 酒店</span><button class="copy-btn" data-copy="九寨沟沟口 酒店" type="button">复制</button></p></div></article><article class="step"><time>19:00</time><div><p>沟口晚餐，不辣清淡；买D3进沟轻食和水。</p><p class="keyword"><span>九寨沟沟口 清汤牦牛肉</span><button class="copy-btn" data-copy="九寨沟沟口 清汤牦牛肉" type="button">复制</button></p></div></article><article class="step"><time>20:30</time><div><p>回酒店休息，确认九寨沟门票、观光车、身份证。</p><p class="keyword"><span>九寨沟景区入口</span><button class="copy-btn" data-copy="九寨沟景区入口" type="button">复制</button></p></div></article></div>
-        <details class="card-pad card" open><summary><b>晚点/下雨/太累怎么办</b></summary><ul><li><b>正常版：</b>黄龙索道上行+五彩池+慢下行，傍晚到沟口。</li><li><b>太累版：</b>只看五彩池核心，坐索道/观光车减少步行。</li><li><b>下雨/高反版：</b>黄龙压缩到2-3小时，必要时直接去沟口休息。</li></ul></details>
-      </div>
-    </details>
-    <details class="day-card" id="j-d3" >
-      <summary><span>D3</span><b>九寨沟一进沟经典精华日</b></summary>
-      <div class="day-inner">
-        <div class="notice"><b>今日一句话：</b>早到景区入口，坐观光车走经典精华：五花海、珍珠滩瀑布、诺日朗、长海、五彩池、树正群海。</div>
-        <div class="mini">
-          <div><span>今日目标</span><b>把九寨沟最核心的水色和瀑布看完，不为了打卡所有点把体力耗光。</b></div>
-          <div><span>今日住宿</span><b>继续住九寨沟沟口。</b></div>
-          <div><span>今日交通</span><b>沟口酒店 → 九寨沟景区入口 → 景区观光车 → 酒店。</b></div>
-          <div><span>今日强度</span><b>中等，景区大但交通成熟</b></div>
-          <div><span>今日预算</span><b>九寨沟门票+观光车两人旺季约560元起，餐饮和打车另计；以官方为准。</b></div>
-          <div><span>今日必做</span><b>五花海、珍珠滩瀑布、诺日朗瀑布、长海、五彩池、树正群海。</b></div>
-          <div><span>今日可删</span><b>人多或下雨就删部分树正沟小点，每条沟只保留最精华。</b></div>
-          <div><span>今日风险</span><b>排队、人流、下午天气、景区内餐饮选择有限。</b></div>
-        </div>
-        <div class="card-pad card"><b>今日不辣吃饭：</b>自带面包/饭团/牛奶/巧克力；晚餐回沟口吃清淡汤锅/面食。</div>
-        <div><article class="step"><time>07:00</time><div><p>起床吃早餐，带身份证、水、轻食、雨具、充电宝。</p><p class="keyword"><span>九寨沟沟口 早餐</span><button class="copy-btn" data-copy="九寨沟沟口 早餐" type="button">复制</button></p></div></article><article class="step"><time>07:30-08:00</time><div><p>酒店到景区入口，尽量早到，避开大团高峰。</p><p class="keyword"><span>九寨沟景区入口</span><button class="copy-btn" data-copy="九寨沟景区入口" type="button">复制</button></p></div></article><article class="step"><time>08:00-11:30</time><div><p>日则沟精华：五花海、珍珠滩瀑布、镜海视天气补拍。</p><p class="keyword"><span>九寨沟 五花海 珍珠滩瀑布</span><button class="copy-btn" data-copy="九寨沟 五花海 珍珠滩瀑布" type="button">复制</button></p></div></article><article class="step"><time>11:30-12:30</time><div><p>诺日朗中心休息/简餐，景区内选择有限，别指望吃得很好。</p><p class="keyword"><span>诺日朗中心</span><button class="copy-btn" data-copy="诺日朗中心" type="button">复制</button></p></div></article><article class="step"><time>12:30-15:30</time><div><p>则查洼沟：长海、五彩池，重点看水色，不每个点停太久。</p><p class="keyword"><span>九寨沟 长海 五彩池</span><button class="copy-btn" data-copy="九寨沟 长海 五彩池" type="button">复制</button></p></div></article><article class="step"><time>15:30-17:30</time><div><p>树正沟：树正群海、芦苇海/盆景滩择一，体力差就提前出沟。</p><p class="keyword"><span>九寨沟 树正群海</span><button class="copy-btn" data-copy="九寨沟 树正群海" type="button">复制</button></p></div></article><article class="step"><time>18:30</time><div><p>沟口晚餐，不辣清淡，早睡。</p><p class="keyword"><span>九寨沟沟口 清淡晚餐</span><button class="copy-btn" data-copy="九寨沟沟口 清淡晚餐" type="button">复制</button></p></div></article></div>
-        <details class="card-pad card" open><summary><b>晚点/下雨/太累怎么办</b></summary><ul><li><b>正常版：</b>三条沟都看核心点。</li><li><b>太累版：</b>下午树正沟只看1-2个点，提前出沟。</li><li><b>下雨/人多版：</b>优先五花海、珍珠滩、长海、五彩池，其他随缘。</li></ul></details>
-      </div>
-    </details>
-    <details class="day-card" id="j-d4" >
-      <summary><span>D4</span><b>九寨沟二进沟补拍慢走日</b></summary>
-      <div class="day-inner">
-        <div class="notice"><b>今日一句话：</b>二进沟用来补天气、补拍照、补第一天没走舒服的地方；也可以改成沟口轻松日省预算。</div>
-        <div class="mini">
-          <div><span>今日目标</span><b>慢走补拍，不重复硬刷；预算紧可不二进沟。</b></div>
-          <div><span>今日住宿</span><b>九寨沟沟口。</b></div>
-          <div><span>今日交通</span><b>沟口酒店 → 九寨沟景区入口 / 或沟口周边轻松点。</b></div>
-          <div><span>今日强度</span><b>轻松到中等</b></div>
-          <div><span>今日预算</span><b>二进沟需再次购买门票/观光车；两人约560元起，按官方为准。</b></div>
-          <div><span>今日必做</span><b>二进沟则补五花海、镜海、树正沟、芦苇海、盆景滩。</b></div>
-          <div><span>今日可删</span><b>预算不想二进沟：改沟口轻松日/甲勿海/中查沟/九寨华美胜地，以开放和交通为准。</b></div>
-          <div><span>今日风险</span><b>二进沟成本、天气不稳定、审美疲劳。</b></div>
-        </div>
-        <div class="card-pad card"><b>今日不辣吃饭：</b>继续自带轻食；晚餐清淡，别点红油凉菜和麻辣牦牛肉干。</div>
-        <div><article class="step"><time>08:00</time><div><p>比D3晚一点出发，先看天气和体力。</p><p class="keyword"><span>九寨沟景区入口</span><button class="copy-btn" data-copy="九寨沟景区入口" type="button">复制</button></p></div></article><article class="step"><time>08:30-11:30</time><div><p>补五花海/镜海，晴天拍水色，阴天拍树林和瀑布。</p><p class="keyword"><span>九寨沟 镜海 五花海</span><button class="copy-btn" data-copy="九寨沟 镜海 五花海" type="button">复制</button></p></div></article><article class="step"><time>11:30-13:00</time><div><p>诺日朗休息，吃自带轻食。</p><p class="keyword"><span>诺日朗中心</span><button class="copy-btn" data-copy="诺日朗中心" type="button">复制</button></p></div></article><article class="step"><time>13:00-15:30</time><div><p>树正沟慢走：芦苇海、盆景滩、树正群海择重点。</p><p class="keyword"><span>九寨沟 芦苇海 盆景滩</span><button class="copy-btn" data-copy="九寨沟 芦苇海 盆景滩" type="button">复制</button></p></div></article><article class="step"><time>15:30-17:00</time><div><p>提前出沟休息，买D5草原线水和零食。</p><p class="keyword"><span>九寨沟沟口 超市</span><button class="copy-btn" data-copy="九寨沟沟口 超市" type="button">复制</button></p></div></article><article class="step"><time>备选全天</time><div><p>不二进沟：睡到自然醒，沟口休整，或查当天开放交通后选甲勿海/中查沟轻松点。</p><p class="keyword"><span>九寨沟沟口 甲勿海 中查沟</span><button class="copy-btn" data-copy="九寨沟沟口 甲勿海 中查沟" type="button">复制</button></p></div></article></div>
-        <details class="card-pad card" open><summary><b>晚点/下雨/太累怎么办</b></summary><ul><li><b>正常版：</b>二进沟补拍，下午早出。</li><li><b>太累版：</b>取消二进沟，沟口休整。</li><li><b>下雨/预算版：</b>不二进沟，改酒店休息+沟口散步。</li></ul></details>
-      </div>
-    </details>
-    <details class="day-card" id="j-d5" >
-      <summary><span>D5</span><b>九寨沟 → 若尔盖花湖 → 唐克/若尔盖</b></summary>
-      <div class="day-inner">
-        <div class="notice"><b>今日一句话：</b>从水景切换到高原草原，车程变长，建议拼车/包车/小团，晚上住唐克或若尔盖。</div>
-        <div class="mini">
-          <div><span>今日目标</span><b>看花湖湿地、草原、栈道、牛羊；不要夜路赶太远。</b></div>
-          <div><span>今日住宿</span><b>唐克或若尔盖镇中心；看九曲日落更偏唐克，怕条件一般可若尔盖镇。</b></div>
-          <div><span>今日交通</span><b>九寨沟沟口 → 若尔盖/花湖 → 唐克/若尔盖。</b></div>
-          <div><span>今日强度</span><b>较累，长车程</b></div>
-          <div><span>今日预算</span><b>拼车/包车/小团两人约600-1800元浮动；花湖门票观光车以实际为准。</b></div>
-          <div><span>今日必做</span><b>花湖栈道、湿地、草原远景；路上不催司机赶夜路。</b></div>
-          <div><span>今日可删</span><b>怕车程太累：取消花湖和九曲，改松潘/牟尼沟轻松版。</b></div>
-          <div><span>今日风险</span><b>晕车、草原天气、长距离交通、住宿条件落差。</b></div>
-        </div>
-        <div class="card-pad card"><b>今日不辣吃饭：</b>清汤牦牛肉、面食、青稞饼、酸奶；烧烤和凉菜先问是否辣。</div>
-        <div><article class="step"><time>08:00</time><div><p>退房出发，带晕车药、水、零食、外套。</p><p class="keyword"><span>九寨沟沟口</span><button class="copy-btn" data-copy="九寨沟沟口" type="button">复制</button></p></div></article><article class="step"><time>08:00-12:30</time><div><p>九寨沟到若尔盖方向，优先包车/拼车/小团，价格和路线出发前确认。</p><p class="keyword"><span>九寨沟 若尔盖 花湖</span><button class="copy-btn" data-copy="九寨沟 若尔盖 花湖" type="button">复制</button></p></div></article><article class="step"><time>12:30-13:30</time><div><p>路上或若尔盖简餐，不吃辣，别点凉拌牦牛肉。</p><p class="keyword"><span>若尔盖 清汤面</span><button class="copy-btn" data-copy="若尔盖 清汤面" type="button">复制</button></p></div></article><article class="step"><time>14:00-16:30</time><div><p>花湖游玩：湿地栈道、湖面、草原、牛羊，风大注意保暖。</p><p class="keyword"><span>若尔盖 花湖景区</span><button class="copy-btn" data-copy="若尔盖 花湖景区" type="button">复制</button></p></div></article><article class="step"><time>16:30-18:30</time><div><p>前往唐克/若尔盖住宿，尽量天黑前到。</p><p class="keyword"><span>唐克镇 酒店 / 若尔盖镇 酒店</span><button class="copy-btn" data-copy="唐克镇 酒店 / 若尔盖镇 酒店" type="button">复制</button></p></div></article><article class="step"><time>19:00</time><div><p>晚餐清淡，准备D6九曲第一湾和返松潘。</p><p class="keyword"><span>唐克 清汤牦牛肉</span><button class="copy-btn" data-copy="唐克 清汤牦牛肉" type="button">复制</button></p></div></article></div>
-        <details class="card-pad card" open><summary><b>晚点/下雨/太累怎么办</b></summary><ul><li><b>正常版：</b>花湖+唐克/若尔盖住宿。</li><li><b>太累版：</b>只做车观草原，花湖缩短到1小时。</li><li><b>下雨/晕车版：</b>取消草原线，改D5去松潘，D6牟尼沟+松潘古城。</li></ul></details>
-      </div>
-    </details>
-    <details class="day-card" id="j-d6" >
-      <summary><span>D6</span><b>黄河九曲第一湾 → 松潘/川主寺</b></summary>
-      <div class="day-inner">
-        <div class="notice"><b>今日一句话：</b>黄河九曲第一湾最好看日落，但天气影响很大；下午不要太晚返回，晚上住松潘/川主寺。</div>
-        <div class="mini">
-          <div><span>今日目标</span><b>看九曲第一湾和草原视野，然后回到返程中转区。</b></div>
-          <div><span>今日住宿</span><b>松潘/川主寺，靠主路、方便第二天去车站/接驳点。</b></div>
-          <div><span>今日交通</span><b>唐克/若尔盖 → 黄河九曲第一湾 → 松潘/川主寺。</b></div>
-          <div><span>今日强度</span><b>中等偏累</b></div>
-          <div><span>今日预算</span><b>交通+门票电梯/观景费用两人约500-1500元，按包车和景区实际浮动。</b></div>
-          <div><span>今日必做</span><b>天气好再为日落停留；阴雨天就不硬等。</b></div>
-          <div><span>今日可删</span><b>阴雨无日落就缩短九曲停留，早点回松潘古城轻逛。</b></div>
-          <div><span>今日风险</span><b>日落天气不确定、返程夜路、草原风大。</b></div>
-        </div>
-        <div class="card-pad card"><b>今日不辣吃饭：</b>松潘吃菌汤锅/清汤牦牛肉/蒸菜，继续强调不要辣椒红油花椒。</div>
-        <div><article class="step"><time>09:00</time><div><p>早餐后出发，不用太早赶，先看天气。</p><p class="keyword"><span>唐克镇 / 若尔盖镇</span><button class="copy-btn" data-copy="唐克镇 / 若尔盖镇" type="button">复制</button></p></div></article><article class="step"><time>09:30-12:00</time><div><p>黄河九曲第一湾游玩，走观景台/栈道/电梯按当日开放。</p><p class="keyword"><span>黄河九曲第一湾</span><button class="copy-btn" data-copy="黄河九曲第一湾" type="button">复制</button></p></div></article><article class="step"><time>12:00-13:30</time><div><p>午餐清淡，补水，防晒防风。</p><p class="keyword"><span>唐克 清淡餐</span><button class="copy-btn" data-copy="唐克 清淡餐" type="button">复制</button></p></div></article><article class="step"><time>14:00-17:30</time><div><p>前往松潘/川主寺，尽量天黑前到。</p><p class="keyword"><span>松潘古城 川主寺 酒店</span><button class="copy-btn" data-copy="松潘古城 川主寺 酒店" type="button">复制</button></p></div></article><article class="step"><time>18:00-20:00</time><div><p>松潘古城轻逛，别走太晚。</p><p class="keyword"><span>松潘古城</span><button class="copy-btn" data-copy="松潘古城" type="button">复制</button></p></div></article></div>
-        <details class="card-pad card" open><summary><b>晚点/下雨/太累怎么办</b></summary><ul><li><b>正常版：</b>九曲第一湾+松潘古城。</li><li><b>太累版：</b>九曲只看观景台，下午直接酒店。</li><li><b>下雨/无日落版：</b>不等日落，改松潘古城轻松晚饭。</li></ul></details>
-      </div>
-    </details>
-    <details class="day-card" id="j-d7" >
-      <summary><span>D7</span><b>松潘/川主寺 → 黄龙九寨站/松潘站 → 成都 → 返程</b></summary>
-      <div class="day-inner">
-        <div class="notice"><b>今日一句话：</b>这天不安排重景点，只做返程；高铁回成都后按航班时间去机场或在成都东附近吃饭休息。</div>
-        <div class="mini">
-          <div><span>今日目标</span><b>顺利返程，保留交通缓冲。</b></div>
-          <div><span>今日住宿</span><b>返程日不住宿；如航班晚点严重，备选成都机场/东站附近酒店。</b></div>
-          <div><span>今日交通</span><b>松潘/川主寺 → 黄龙九寨站/松潘站 → 成都东 → 成都机场/市区 → 广州/佛山。</b></div>
-          <div><span>今日强度</span><b>中等</b></div>
-          <div><span>今日预算</span><b>接驳+高铁+市内交通两人约300-900元，不含返程机票。</b></div>
-          <div><span>今日必做</span><b>高铁和航班之间至少留足3-4小时，别压线。</b></div>
-          <div><span>今日可删</span><b>航班早就取消松潘早餐慢逛，直接去车站。</b></div>
-          <div><span>今日风险</span><b>高铁/航班衔接、山区接驳、行李。</b></div>
-        </div>
-        <div class="card-pad card"><b>今日不辣吃饭：</b>成都东/机场吃清淡简餐，别为了最后一顿跑远。</div>
-        <div><article class="step"><time>出发前一天晚上</time><div><p>确认接驳车/包车到站时间，查12306和航班。</p><p class="keyword"><span>12306 黄龙九寨站 松潘站</span><button class="copy-btn" data-copy="12306 黄龙九寨站 松潘站" type="button">复制</button></p></div></article><article class="step"><time>上午</time><div><p>酒店退房，去黄龙九寨站/松潘站，按车次预留足够时间。</p><p class="keyword"><span>黄龙九寨站 / 松潘站</span><button class="copy-btn" data-copy="黄龙九寨站 / 松潘站" type="button">复制</button></p></div></article><article class="step"><time>中午-下午</time><div><p>高铁回成都东，车次和票价以12306为准。</p><p class="keyword"><span>成都东站</span><button class="copy-btn" data-copy="成都东站" type="button">复制</button></p></div></article><article class="step"><time>到成都后</time><div><p>航班早：直接去机场；航班晚：成都东附近吃饭休息，不跑远。</p><p class="keyword"><span>成都天府机场 / 成都双流机场</span><button class="copy-btn" data-copy="成都天府机场 / 成都双流机场" type="button">复制</button></p></div></article><article class="step"><time>返程</time><div><p>成都 → 广州/佛山，落地后再回家。</p><p class="keyword"><span>广州白云机场 / 佛山</span><button class="copy-btn" data-copy="广州白云机场 / 佛山" type="button">复制</button></p></div></article></div>
-        <details class="card-pad card" open><summary><b>晚点/下雨/太累怎么办</b></summary><ul><li><b>正常版：</b>高铁回成都+按航班返程。</li><li><b>太累版：</b>成都东站内/附近休息，不进市区。</li><li><b>下雨/晚点版：</b>所有吃饭游逛取消，只保交通。</li></ul></details>
-      </div>
-    </details></section>
-    <section class="wrap" id="schemes">
+<section class="wrap" id="schemes">
       <div class="section-title"><h2>这条路线可以怎么选？</h2><span class="lead">三张方案卡，一眼看取舍</span></div>
       <div class="scheme-grid">
-        <article class="plan-card">
-          <span class="tag">方案A｜推荐</span>
+        <article class="plan-card plan-a">
+          <span class="tag">方案A｜推荐 / 景色最丰富</span>
           <h3>七天水景+草原完整版</h3>
           <dl>
             <dt>适合谁</dt><dd>想同时看九寨沟水景和若尔盖草原，能接受两天长车程的人。</dd>
@@ -587,8 +540,8 @@
             <dt>简版路线</dt><dd>成都 → 黄龙 → 九寨沟2天 → 花湖 → 黄河九曲 → 松潘 → 成都</dd>
           </dl>
         </article>
-        <article class="plan-card">
-          <span class="tag">方案B｜舒服</span>
+        <article class="plan-card plan-b">
+          <span class="tag">方案B｜轻松 / 稳妥</span>
           <h3>七天舒服水景版</h3>
           <dl>
             <dt>适合谁</dt><dd>怕坐车、怕累、想稳稳看九寨沟和黄龙的人。</dd>
@@ -597,8 +550,8 @@
             <dt>简版路线</dt><dd>成都 → 黄龙 → 九寨沟2天 → 牟尼沟/松潘 → 成都</dd>
           </dl>
         </article>
-        <article class="plan-card">
-          <span class="tag warn">方案C｜草原加强</span>
+        <article class="plan-card plan-c">
+          <span class="tag warn">方案C｜草原优先</span>
           <h3>七天草原加强版</h3>
           <dl>
             <dt>适合谁</dt><dd>特别想看草原、花湖和黄河九曲的人。</dd>
@@ -628,6 +581,171 @@
         <div class="route-map"><span class="route-node">成都</span><span class="route-line"></span><span class="route-node">黄龙</span><span class="route-line"></span><span class="route-node">九寨沟1天</span><span class="route-line"></span><span class="route-node">若尔盖</span><span class="route-line"></span><span class="route-node">九曲</span><span class="route-line"></span><span class="route-node">松潘</span></div>
       </article>
     </section>
+
+    <section class="wrap" id="gallery">
+      <div class="section-title"><h2>精华景点预览</h2><span class="lead">全部使用真实实景照片，页面不再放占位图</span></div>
+      <div class="gallery-grid">
+        <article class="gallery-card"><img loading="lazy" src="../assets/images/jiuzhaigou-wuhuahai.jpg" alt="九寨沟五花海"><div class="gallery-copy"><h3>九寨沟</h3><p>蓝绿海子、瀑布和栈道，是整条线的核心。</p></div></article>
+        <article class="gallery-card"><img loading="lazy" src="../assets/images/jiuzhaigou-waterfall.jpg" alt="九寨沟瀑布"><div class="gallery-copy"><h3>诺日朗/珍珠滩瀑布</h3><p>雨天也能看的强景点，水量和声音都很有记忆点。</p></div></article>
+        <article class="gallery-card"><img loading="lazy" src="../assets/images/huanglong-wucaichi.jpg" alt="黄龙五彩池"><div class="gallery-copy"><h3>黄龙</h3><p>五彩池和钙华池群，注意高海拔慢走。</p></div></article>
+        <article class="gallery-card"><img loading="lazy" src="../assets/images/huahu-lake.jpg" alt="若尔盖花湖湿地"><div class="gallery-copy"><h3>若尔盖花湖</h3><p>湿地、湖面、草原风，适合慢走栈道。</p></div></article>
+        <article class="gallery-card"><img loading="lazy" src="../assets/images/huanghe-jiuqu.jpg" alt="黄河九曲第一湾"><div class="gallery-copy"><h3>黄河九曲第一湾</h3><p>天气好看日落，天气差就短停不硬等。</p></div></article>
+        <article class="gallery-card"><img loading="lazy" src="../assets/images/songpan-old-town.jpg" alt="松潘古城"><div class="gallery-copy"><h3>松潘古城</h3><p>返程前的轻松中转点，适合住一晚恢复体力。</p></div></article>
+      </div>
+    </section>
+    <section class="wrap" id="fast-info">
+      <div class="section-title"><h2>重要信息速览</h2><span class="lead">旅行当天先扫这一排</span></div>
+      <div class="info-grid">
+        <article class="info-card"><h3>门票预约</h3><p>九寨沟、黄龙、花湖、黄河九曲第一湾均以官方/平台当期页面为准，暑期尽早看票。</p></article>
+        <article class="info-card"><h3>高原注意</h3><p>黄龙和草原线不要跑跳，头痛胸闷就减少游玩并休息。</p></article>
+        <article class="info-card"><h3>天气多变</h3><p>雨具、薄外套、防晒都要带，草原风大，日落别硬等。</p></article>
+        <article class="info-card"><h3>不吃辣友好</h3><p>默认选清汤、蒸菜、面食和家常菜，点餐必须强调不要辣椒红油花椒麻油。</p></article>
+        <article class="info-card"><h3>预算参考</h3><p>真正浮动最大的是包车、暑期住宿和二进沟，别把交通缓冲省掉。</p></article>
+      </div>
+    </section>
+    <section class="wrap" id="quick-jump">
+      <div class="section-title"><h2>快速导航</h2><span class="lead">手机上直接跳到要看的部分</span></div>
+      <div class="quick-grid">
+        <a class="quick-card" href="#days"><span class="quick-kicker">行程</span><b>查看每日详细行程</b><small>D1-D7 默认折叠，点当天展开。</small></a>
+        <a class="quick-card" href="#traffic"><span class="quick-kicker">交通</span><b>查看交通接驳指南</b><small>高铁、接驳、包车和晚点替代。</small></a>
+        <a class="quick-card" href="#spots"><span class="quick-kicker">景点</span><b>查看景点详细攻略</b><small>门票、路线、拍照点和避坑。</small></a>
+        <a class="quick-card" href="#food"><span class="quick-kicker">不辣</span><b>查看不吃辣指南</b><small>点餐话术、可点菜和避雷清单。</small></a>
+      </div>
+    </section>
+    <section class="wrap" id="days"><div class="section-title"><h2>每日执行卡</h2><span class="lead">每天打开对应卡片照着走</span></div>
+    <details class="day-card" id="j-d1">
+      <summary><img class="day-summary-img" loading="lazy" src="../assets/images/jiuzhaigou-cover.jpg" alt="D1 成都抵达"><div class="day-summary-copy"><span class="day-no">D1</span><b>广州/佛山 → 成都</b><div class="day-summary-meta"><span>重点：顺利抵达</span><span>住宿：成都东站/春熙路</span><span>强度：轻松</span></div></div><span class="day-toggle">展开</span></summary>
+      <div class="day-inner">
+        <div class="notice"><b>今日一句话：</b>今天只负责顺利到成都，不赶景点；住成都东站附近最省心，想逛再轻松去春熙路/太古里。</div>
+        <div class="mini">
+          <div><span>今日目标</span><b>抵达成都、住到方便第二天赶高铁的位置，晚上早睡。</b></div>
+          <div><span>今日住宿</span><b>成都东站附近优先；想逛街吃饭可选春熙路/天府广场。</b></div>
+          <div><span>今日交通</span><b>佛山/广州 → 广州白云机场/广州南站 → 成都机场/成都东 → 酒店。</b></div>
+          <div><span>今日强度</span><b>轻松</b></div>
+          <div><span>今日预算</span><b>不含机票酒店，当地交通+餐饮两人约180-420元；机酒以实际为准。</b></div>
+          <div><span>今日必做</span><b>确认D2成都东到黄龙九寨站车票、黄龙预约、沟口酒店。</b></div>
+          <div><span>今日可删</span><b>落地晚就删春熙路/太古里，直接酒店附近吃清淡晚餐。</b></div>
+          <div><span>今日风险</span><b>航班晚点、第二天早起赶高铁、成都晚餐容易误点辣菜。</b></div>
+        </div>
+        <div class="card-pad card"><b>今日不辣吃饭：</b>避开火锅、串串、冒菜、红油抄手；吃清汤抄手、炖汤、蒸菜、清汤面、粤菜/家常菜。</div>
+        <div><article class="step"><time>出发前</time><div><p>检查身份证、航班/高铁、酒店订单、黄龙和九寨沟预约、薄外套、雨具、充电宝。</p><p class="keyword"><span>航司App / 12306 / 酒店订单</span><button class="copy-btn" data-copy="航司App / 12306 / 酒店订单" type="button">复制</button></p></div></article><article class="step"><time>上午-下午</time><div><p>广州/佛山出发到成都，优先选择白天到达，别把D2早起压得太紧。</p><p class="keyword"><span>广州白云机场 成都天府机场 成都东站</span><button class="copy-btn" data-copy="广州白云机场 成都天府机场 成都东站" type="button">复制</button></p></div></article><article class="step"><time>到达后60-90分钟</time><div><p>机场/车站到酒店。若D2赶早车，成都东站附近最稳；若航班早到且想逛街，可春熙路。</p><p class="keyword"><span>成都东站 酒店 春熙路 酒店</span><button class="copy-btn" data-copy="成都东站 酒店 春熙路 酒店" type="button">复制</button></p></div></article><article class="step"><time>18:30-20:00</time><div><p>晚餐吃清淡，不吃辣；跟店员明确不要辣椒、红油、花椒、麻油。</p><p class="keyword"><span>成都东站 清淡 家常菜</span><button class="copy-btn" data-copy="成都东站 清淡 家常菜" type="button">复制</button></p></div></article><article class="step"><time>20:30后</time><div><p>回酒店休息，把D2行李收成轻装：身份证、雨具、外套、轻食、水。</p><p class="keyword"><span>成都东站附近酒店</span><button class="copy-btn" data-copy="成都东站附近酒店" type="button">复制</button></p></div></article></div>
+        <details class="card-pad card" open><summary><b>晚点/下雨/太累怎么办</b></summary><ul><li><b>正常版：</b>住成都东站附近，晚饭后早睡。</li><li><b>太累版：</b>落地后直接酒店，点清淡外卖，不进市区。</li><li><b>下雨/晚点版：</b>取消夜逛，优先保D2高铁和黄龙行程。</li></ul></details>
+      </div>
+    </details>
+    <details class="day-card" id="j-d2">
+      <summary><img class="day-summary-img" loading="lazy" src="../assets/images/huanglong-wucaichi.jpg" alt="D2 黄龙五彩池"><div class="day-summary-copy"><span class="day-no">D2</span><b>成都东 → 黄龙九寨站 → 黄龙 → 九寨沟沟口</b><div class="day-summary-meta"><span>重点：黄龙五彩池</span><span>住宿：九寨沟沟口</span><span>强度：较累</span></div></div><span class="day-toggle">展开</span></summary>
+      <div class="day-inner">
+        <div class="notice"><b>今日一句话：</b>早上从成都东到黄龙九寨站，先玩黄龙五彩池，傍晚前往九寨沟沟口住宿。</div>
+        <div class="mini">
+          <div><span>今日目标</span><b>看黄龙五彩池，不赶路，晚上住到九寨沟沟口，为第二天进沟准备。</b></div>
+          <div><span>今日住宿</span><b>九寨沟沟口/漳扎镇，优先距离景区入口打车10分钟以内、有电梯、可寄存行李。</b></div>
+          <div><span>今日交通</span><b>成都东站 → 黄龙九寨站 → 黄龙景区游客中心 → 九寨沟沟口。</b></div>
+          <div><span>今日强度</span><b>中等偏累，高海拔慢走</b></div>
+          <div><span>今日预算</span><b>当地接驳+黄龙票索道+餐饮两人约700-1400元，按是否索道/包车浮动。</b></div>
+          <div><span>今日必做</span><b>黄龙索道上行+五彩池+慢慢下行；不舒服就缩短。</b></div>
+          <div><span>今日可删</span><b>高反或晚点就只看五彩池核心段，取消长距离下行拍照。</b></div>
+          <div><span>今日风险</span><b>黄龙海拔高、接驳衔接、下午天气变化。</b></div>
+        </div>
+        <div class="card-pad card"><b>今日不辣吃饭：</b>晚餐吃清汤牦牛肉锅/菌汤锅/番茄鸡蛋面，不放辣椒和花椒。</div>
+        <div><article class="step"><time>06:30</time><div><p>起床，检查身份证、12306、黄龙预约、雨具、薄外套、充电宝、轻食。</p><p class="keyword"><span>成都东站</span><button class="copy-btn" data-copy="成都东站" type="button">复制</button></p></div></article><article class="step"><time>07:00</time><div><p>酒店出发去成都东站，建议预留45-70分钟进站安检和找检票口。</p><p class="keyword"><span>成都东站 进站口</span><button class="copy-btn" data-copy="成都东站 进站口" type="button">复制</button></p></div></article><article class="step"><time>07:30-09:30</time><div><p>成都东 → 黄龙九寨站，具体车次和票价以12306为准。</p><p class="keyword"><span>12306 成都东 黄龙九寨</span><button class="copy-btn" data-copy="12306 成都东 黄龙九寨" type="button">复制</button></p></div></article><article class="step"><time>09:30-10:30</time><div><p>黄龙九寨站 → 黄龙景区，选景区接驳/拼车/包车，提前确认上车点。</p><p class="keyword"><span>黄龙九寨站 黄龙景区游客中心</span><button class="copy-btn" data-copy="黄龙九寨站 黄龙景区游客中心" type="button">复制</button></p></div></article><article class="step"><time>10:30-15:30</time><div><p>黄龙游玩：索道上行，走五彩池、争艳池等核心，慢慢下行；不跑不硬撑。</p><p class="keyword"><span>黄龙风景区 五彩池</span><button class="copy-btn" data-copy="黄龙风景区 五彩池" type="button">复制</button></p></div></article><article class="step"><time>16:00-18:30</time><div><p>黄龙 → 九寨沟沟口，建议天黑前到酒店。</p><p class="keyword"><span>九寨沟沟口 酒店</span><button class="copy-btn" data-copy="九寨沟沟口 酒店" type="button">复制</button></p></div></article><article class="step"><time>19:00</time><div><p>沟口晚餐，不辣清淡；买D3进沟轻食和水。</p><p class="keyword"><span>九寨沟沟口 清汤牦牛肉</span><button class="copy-btn" data-copy="九寨沟沟口 清汤牦牛肉" type="button">复制</button></p></div></article><article class="step"><time>20:30</time><div><p>回酒店休息，确认九寨沟门票、观光车、身份证。</p><p class="keyword"><span>九寨沟景区入口</span><button class="copy-btn" data-copy="九寨沟景区入口" type="button">复制</button></p></div></article></div>
+        <details class="card-pad card" open><summary><b>晚点/下雨/太累怎么办</b></summary><ul><li><b>正常版：</b>黄龙索道上行+五彩池+慢下行，傍晚到沟口。</li><li><b>太累版：</b>只看五彩池核心，坐索道/观光车减少步行。</li><li><b>下雨/高反版：</b>黄龙压缩到2-3小时，必要时直接去沟口休息。</li></ul></details>
+      </div>
+    </details>
+    <details class="day-card" id="j-d3">
+      <summary><img class="day-summary-img" loading="lazy" src="../assets/images/jiuzhaigou-wuhuahai.jpg" alt="D3 九寨沟五花海"><div class="day-summary-copy"><span class="day-no">D3</span><b>九寨沟一进沟经典精华日</b><div class="day-summary-meta"><span>重点：五花海/诺日朗</span><span>住宿：九寨沟沟口</span><span>强度：中等</span></div></div><span class="day-toggle">展开</span></summary>
+      <div class="day-inner">
+        <div class="notice"><b>今日一句话：</b>早到景区入口，坐观光车走经典精华：五花海、珍珠滩瀑布、诺日朗、长海、五彩池、树正群海。</div>
+        <div class="mini">
+          <div><span>今日目标</span><b>把九寨沟最核心的水色和瀑布看完，不为了打卡所有点把体力耗光。</b></div>
+          <div><span>今日住宿</span><b>继续住九寨沟沟口。</b></div>
+          <div><span>今日交通</span><b>沟口酒店 → 九寨沟景区入口 → 景区观光车 → 酒店。</b></div>
+          <div><span>今日强度</span><b>中等，景区大但交通成熟</b></div>
+          <div><span>今日预算</span><b>九寨沟门票+观光车两人旺季约560元起，餐饮和打车另计；以官方为准。</b></div>
+          <div><span>今日必做</span><b>五花海、珍珠滩瀑布、诺日朗瀑布、长海、五彩池、树正群海。</b></div>
+          <div><span>今日可删</span><b>人多或下雨就删部分树正沟小点，每条沟只保留最精华。</b></div>
+          <div><span>今日风险</span><b>排队、人流、下午天气、景区内餐饮选择有限。</b></div>
+        </div>
+        <div class="card-pad card"><b>今日不辣吃饭：</b>自带面包/饭团/牛奶/巧克力；晚餐回沟口吃清淡汤锅/面食。</div>
+        <div><article class="step"><time>07:00</time><div><p>起床吃早餐，带身份证、水、轻食、雨具、充电宝。</p><p class="keyword"><span>九寨沟沟口 早餐</span><button class="copy-btn" data-copy="九寨沟沟口 早餐" type="button">复制</button></p></div></article><article class="step"><time>07:30-08:00</time><div><p>酒店到景区入口，尽量早到，避开大团高峰。</p><p class="keyword"><span>九寨沟景区入口</span><button class="copy-btn" data-copy="九寨沟景区入口" type="button">复制</button></p></div></article><article class="step"><time>08:00-11:30</time><div><p>日则沟精华：五花海、珍珠滩瀑布、镜海视天气补拍。</p><p class="keyword"><span>九寨沟 五花海 珍珠滩瀑布</span><button class="copy-btn" data-copy="九寨沟 五花海 珍珠滩瀑布" type="button">复制</button></p></div></article><article class="step"><time>11:30-12:30</time><div><p>诺日朗中心休息/简餐，景区内选择有限，别指望吃得很好。</p><p class="keyword"><span>诺日朗中心</span><button class="copy-btn" data-copy="诺日朗中心" type="button">复制</button></p></div></article><article class="step"><time>12:30-15:30</time><div><p>则查洼沟：长海、五彩池，重点看水色，不每个点停太久。</p><p class="keyword"><span>九寨沟 长海 五彩池</span><button class="copy-btn" data-copy="九寨沟 长海 五彩池" type="button">复制</button></p></div></article><article class="step"><time>15:30-17:30</time><div><p>树正沟：树正群海、芦苇海/盆景滩择一，体力差就提前出沟。</p><p class="keyword"><span>九寨沟 树正群海</span><button class="copy-btn" data-copy="九寨沟 树正群海" type="button">复制</button></p></div></article><article class="step"><time>18:30</time><div><p>沟口晚餐，不辣清淡，早睡。</p><p class="keyword"><span>九寨沟沟口 清淡晚餐</span><button class="copy-btn" data-copy="九寨沟沟口 清淡晚餐" type="button">复制</button></p></div></article></div>
+        <details class="card-pad card" open><summary><b>晚点/下雨/太累怎么办</b></summary><ul><li><b>正常版：</b>三条沟都看核心点。</li><li><b>太累版：</b>下午树正沟只看1-2个点，提前出沟。</li><li><b>下雨/人多版：</b>优先五花海、珍珠滩、长海、五彩池，其他随缘。</li></ul></details>
+      </div>
+    </details>
+    <details class="day-card" id="j-d4">
+      <summary><img class="day-summary-img" loading="lazy" src="../assets/images/jiuzhaigou-waterfall.jpg" alt="D4 九寨沟瀑布"><div class="day-summary-copy"><span class="day-no">D4</span><b>九寨沟二进沟补拍慢走日</b><div class="day-summary-meta"><span>重点：瀑布/慢走补拍</span><span>住宿：九寨沟沟口</span><span>强度：中等</span></div></div><span class="day-toggle">展开</span></summary>
+      <div class="day-inner">
+        <div class="notice"><b>今日一句话：</b>二进沟用来补天气、补拍照、补第一天没走舒服的地方；也可以改成沟口轻松日省预算。</div>
+        <div class="mini">
+          <div><span>今日目标</span><b>慢走补拍，不重复硬刷；预算紧可不二进沟。</b></div>
+          <div><span>今日住宿</span><b>九寨沟沟口。</b></div>
+          <div><span>今日交通</span><b>沟口酒店 → 九寨沟景区入口 / 或沟口周边轻松点。</b></div>
+          <div><span>今日强度</span><b>轻松到中等</b></div>
+          <div><span>今日预算</span><b>二进沟需再次购买门票/观光车；两人约560元起，按官方为准。</b></div>
+          <div><span>今日必做</span><b>二进沟则补五花海、镜海、树正沟、芦苇海、盆景滩。</b></div>
+          <div><span>今日可删</span><b>预算不想二进沟：改沟口轻松日/甲勿海/中查沟/九寨华美胜地，以开放和交通为准。</b></div>
+          <div><span>今日风险</span><b>二进沟成本、天气不稳定、审美疲劳。</b></div>
+        </div>
+        <div class="card-pad card"><b>今日不辣吃饭：</b>继续自带轻食；晚餐清淡，别点红油凉菜和麻辣牦牛肉干。</div>
+        <div><article class="step"><time>08:00</time><div><p>比D3晚一点出发，先看天气和体力。</p><p class="keyword"><span>九寨沟景区入口</span><button class="copy-btn" data-copy="九寨沟景区入口" type="button">复制</button></p></div></article><article class="step"><time>08:30-11:30</time><div><p>补五花海/镜海，晴天拍水色，阴天拍树林和瀑布。</p><p class="keyword"><span>九寨沟 镜海 五花海</span><button class="copy-btn" data-copy="九寨沟 镜海 五花海" type="button">复制</button></p></div></article><article class="step"><time>11:30-13:00</time><div><p>诺日朗休息，吃自带轻食。</p><p class="keyword"><span>诺日朗中心</span><button class="copy-btn" data-copy="诺日朗中心" type="button">复制</button></p></div></article><article class="step"><time>13:00-15:30</time><div><p>树正沟慢走：芦苇海、盆景滩、树正群海择重点。</p><p class="keyword"><span>九寨沟 芦苇海 盆景滩</span><button class="copy-btn" data-copy="九寨沟 芦苇海 盆景滩" type="button">复制</button></p></div></article><article class="step"><time>15:30-17:00</time><div><p>提前出沟休息，买D5草原线水和零食。</p><p class="keyword"><span>九寨沟沟口 超市</span><button class="copy-btn" data-copy="九寨沟沟口 超市" type="button">复制</button></p></div></article><article class="step"><time>备选全天</time><div><p>不二进沟：睡到自然醒，沟口休整，或查当天开放交通后选甲勿海/中查沟轻松点。</p><p class="keyword"><span>九寨沟沟口 甲勿海 中查沟</span><button class="copy-btn" data-copy="九寨沟沟口 甲勿海 中查沟" type="button">复制</button></p></div></article></div>
+        <details class="card-pad card" open><summary><b>晚点/下雨/太累怎么办</b></summary><ul><li><b>正常版：</b>二进沟补拍，下午早出。</li><li><b>太累版：</b>取消二进沟，沟口休整。</li><li><b>下雨/预算版：</b>不二进沟，改酒店休息+沟口散步。</li></ul></details>
+      </div>
+    </details>
+    <details class="day-card" id="j-d5">
+      <summary><img class="day-summary-img" loading="lazy" src="../assets/images/huahu-lake.jpg" alt="D5 若尔盖花湖"><div class="day-summary-copy"><span class="day-no">D5</span><b>九寨沟 → 若尔盖花湖 → 唐克/若尔盖</b><div class="day-summary-meta"><span>重点：草原湿地</span><span>住宿：唐克/若尔盖</span><span>强度：较累</span></div></div><span class="day-toggle">展开</span></summary>
+      <div class="day-inner">
+        <div class="notice"><b>今日一句话：</b>从水景切换到高原草原，车程变长，建议拼车/包车/小团，晚上住唐克或若尔盖。</div>
+        <div class="mini">
+          <div><span>今日目标</span><b>看花湖湿地、草原、栈道、牛羊；不要夜路赶太远。</b></div>
+          <div><span>今日住宿</span><b>唐克或若尔盖镇中心；看九曲日落更偏唐克，怕条件一般可若尔盖镇。</b></div>
+          <div><span>今日交通</span><b>九寨沟沟口 → 若尔盖/花湖 → 唐克/若尔盖。</b></div>
+          <div><span>今日强度</span><b>较累，长车程</b></div>
+          <div><span>今日预算</span><b>拼车/包车/小团两人约600-1800元浮动；花湖门票观光车以实际为准。</b></div>
+          <div><span>今日必做</span><b>花湖栈道、湿地、草原远景；路上不催司机赶夜路。</b></div>
+          <div><span>今日可删</span><b>怕车程太累：取消花湖和九曲，改松潘/牟尼沟轻松版。</b></div>
+          <div><span>今日风险</span><b>晕车、草原天气、长距离交通、住宿条件落差。</b></div>
+        </div>
+        <div class="card-pad card"><b>今日不辣吃饭：</b>清汤牦牛肉、面食、青稞饼、酸奶；烧烤和凉菜先问是否辣。</div>
+        <div><article class="step"><time>08:00</time><div><p>退房出发，带晕车药、水、零食、外套。</p><p class="keyword"><span>九寨沟沟口</span><button class="copy-btn" data-copy="九寨沟沟口" type="button">复制</button></p></div></article><article class="step"><time>08:00-12:30</time><div><p>九寨沟到若尔盖方向，优先包车/拼车/小团，价格和路线出发前确认。</p><p class="keyword"><span>九寨沟 若尔盖 花湖</span><button class="copy-btn" data-copy="九寨沟 若尔盖 花湖" type="button">复制</button></p></div></article><article class="step"><time>12:30-13:30</time><div><p>路上或若尔盖简餐，不吃辣，别点凉拌牦牛肉。</p><p class="keyword"><span>若尔盖 清汤面</span><button class="copy-btn" data-copy="若尔盖 清汤面" type="button">复制</button></p></div></article><article class="step"><time>14:00-16:30</time><div><p>花湖游玩：湿地栈道、湖面、草原、牛羊，风大注意保暖。</p><p class="keyword"><span>若尔盖 花湖景区</span><button class="copy-btn" data-copy="若尔盖 花湖景区" type="button">复制</button></p></div></article><article class="step"><time>16:30-18:30</time><div><p>前往唐克/若尔盖住宿，尽量天黑前到。</p><p class="keyword"><span>唐克镇 酒店 / 若尔盖镇 酒店</span><button class="copy-btn" data-copy="唐克镇 酒店 / 若尔盖镇 酒店" type="button">复制</button></p></div></article><article class="step"><time>19:00</time><div><p>晚餐清淡，准备D6九曲第一湾和返松潘。</p><p class="keyword"><span>唐克 清汤牦牛肉</span><button class="copy-btn" data-copy="唐克 清汤牦牛肉" type="button">复制</button></p></div></article></div>
+        <details class="card-pad card" open><summary><b>晚点/下雨/太累怎么办</b></summary><ul><li><b>正常版：</b>花湖+唐克/若尔盖住宿。</li><li><b>太累版：</b>只做车观草原，花湖缩短到1小时。</li><li><b>下雨/晕车版：</b>取消草原线，改D5去松潘，D6牟尼沟+松潘古城。</li></ul></details>
+      </div>
+    </details>
+    <details class="day-card" id="j-d6">
+      <summary><img class="day-summary-img" loading="lazy" src="../assets/images/huanghe-jiuqu.jpg" alt="D6 黄河九曲第一湾"><div class="day-summary-copy"><span class="day-no">D6</span><b>黄河九曲第一湾 → 松潘/川主寺</b><div class="day-summary-meta"><span>重点：九曲观景</span><span>住宿：松潘/川主寺</span><span>强度：中等偏累</span></div></div><span class="day-toggle">展开</span></summary>
+      <div class="day-inner">
+        <div class="notice"><b>今日一句话：</b>黄河九曲第一湾最好看日落，但天气影响很大；下午不要太晚返回，晚上住松潘/川主寺。</div>
+        <div class="mini">
+          <div><span>今日目标</span><b>看九曲第一湾和草原视野，然后回到返程中转区。</b></div>
+          <div><span>今日住宿</span><b>松潘/川主寺，靠主路、方便第二天去车站/接驳点。</b></div>
+          <div><span>今日交通</span><b>唐克/若尔盖 → 黄河九曲第一湾 → 松潘/川主寺。</b></div>
+          <div><span>今日强度</span><b>中等偏累</b></div>
+          <div><span>今日预算</span><b>交通+门票电梯/观景费用两人约500-1500元，按包车和景区实际浮动。</b></div>
+          <div><span>今日必做</span><b>天气好再为日落停留；阴雨天就不硬等。</b></div>
+          <div><span>今日可删</span><b>阴雨无日落就缩短九曲停留，早点回松潘古城轻逛。</b></div>
+          <div><span>今日风险</span><b>日落天气不确定、返程夜路、草原风大。</b></div>
+        </div>
+        <div class="card-pad card"><b>今日不辣吃饭：</b>松潘吃菌汤锅/清汤牦牛肉/蒸菜，继续强调不要辣椒红油花椒。</div>
+        <div><article class="step"><time>09:00</time><div><p>早餐后出发，不用太早赶，先看天气。</p><p class="keyword"><span>唐克镇 / 若尔盖镇</span><button class="copy-btn" data-copy="唐克镇 / 若尔盖镇" type="button">复制</button></p></div></article><article class="step"><time>09:30-12:00</time><div><p>黄河九曲第一湾游玩，走观景台/栈道/电梯按当日开放。</p><p class="keyword"><span>黄河九曲第一湾</span><button class="copy-btn" data-copy="黄河九曲第一湾" type="button">复制</button></p></div></article><article class="step"><time>12:00-13:30</time><div><p>午餐清淡，补水，防晒防风。</p><p class="keyword"><span>唐克 清淡餐</span><button class="copy-btn" data-copy="唐克 清淡餐" type="button">复制</button></p></div></article><article class="step"><time>14:00-17:30</time><div><p>前往松潘/川主寺，尽量天黑前到。</p><p class="keyword"><span>松潘古城 川主寺 酒店</span><button class="copy-btn" data-copy="松潘古城 川主寺 酒店" type="button">复制</button></p></div></article><article class="step"><time>18:00-20:00</time><div><p>松潘古城轻逛，别走太晚。</p><p class="keyword"><span>松潘古城</span><button class="copy-btn" data-copy="松潘古城" type="button">复制</button></p></div></article></div>
+        <details class="card-pad card" open><summary><b>晚点/下雨/太累怎么办</b></summary><ul><li><b>正常版：</b>九曲第一湾+松潘古城。</li><li><b>太累版：</b>九曲只看观景台，下午直接酒店。</li><li><b>下雨/无日落版：</b>不等日落，改松潘古城轻松晚饭。</li></ul></details>
+      </div>
+    </details>
+    <details class="day-card" id="j-d7">
+      <summary><img class="day-summary-img" loading="lazy" src="../assets/images/songpan-old-town.jpg" alt="D7 松潘古城"><div class="day-summary-copy"><span class="day-no">D7</span><b>松潘/川主寺 → 黄龙九寨站/松潘站 → 成都 → 返程</b><div class="day-summary-meta"><span>重点：返程衔接</span><span>住宿：返程日</span><span>强度：中等</span></div></div><span class="day-toggle">展开</span></summary>
+      <div class="day-inner">
+        <div class="notice"><b>今日一句话：</b>这天不安排重景点，只做返程；高铁回成都后按航班时间去机场或在成都东附近吃饭休息。</div>
+        <div class="mini">
+          <div><span>今日目标</span><b>顺利返程，保留交通缓冲。</b></div>
+          <div><span>今日住宿</span><b>返程日不住宿；如航班晚点严重，备选成都机场/东站附近酒店。</b></div>
+          <div><span>今日交通</span><b>松潘/川主寺 → 黄龙九寨站/松潘站 → 成都东 → 成都机场/市区 → 广州/佛山。</b></div>
+          <div><span>今日强度</span><b>中等</b></div>
+          <div><span>今日预算</span><b>接驳+高铁+市内交通两人约300-900元，不含返程机票。</b></div>
+          <div><span>今日必做</span><b>高铁和航班之间至少留足3-4小时，别压线。</b></div>
+          <div><span>今日可删</span><b>航班早就取消松潘早餐慢逛，直接去车站。</b></div>
+          <div><span>今日风险</span><b>高铁/航班衔接、山区接驳、行李。</b></div>
+        </div>
+        <div class="card-pad card"><b>今日不辣吃饭：</b>成都东/机场吃清淡简餐，别为了最后一顿跑远。</div>
+        <div><article class="step"><time>出发前一天晚上</time><div><p>确认接驳车/包车到站时间，查12306和航班。</p><p class="keyword"><span>12306 黄龙九寨站 松潘站</span><button class="copy-btn" data-copy="12306 黄龙九寨站 松潘站" type="button">复制</button></p></div></article><article class="step"><time>上午</time><div><p>酒店退房，去黄龙九寨站/松潘站，按车次预留足够时间。</p><p class="keyword"><span>黄龙九寨站 / 松潘站</span><button class="copy-btn" data-copy="黄龙九寨站 / 松潘站" type="button">复制</button></p></div></article><article class="step"><time>中午-下午</time><div><p>高铁回成都东，车次和票价以12306为准。</p><p class="keyword"><span>成都东站</span><button class="copy-btn" data-copy="成都东站" type="button">复制</button></p></div></article><article class="step"><time>到成都后</time><div><p>航班早：直接去机场；航班晚：成都东附近吃饭休息，不跑远。</p><p class="keyword"><span>成都天府机场 / 成都双流机场</span><button class="copy-btn" data-copy="成都天府机场 / 成都双流机场" type="button">复制</button></p></div></article><article class="step"><time>返程</time><div><p>成都 → 广州/佛山，落地后再回家。</p><p class="keyword"><span>广州白云机场 / 佛山</span><button class="copy-btn" data-copy="广州白云机场 / 佛山" type="button">复制</button></p></div></article></div>
+        <details class="card-pad card" open><summary><b>晚点/下雨/太累怎么办</b></summary><ul><li><b>正常版：</b>高铁回成都+按航班返程。</li><li><b>太累版：</b>成都东站内/附近休息，不进市区。</li><li><b>下雨/晚点版：</b>所有吃饭游逛取消，只保交通。</li></ul></details>
+      </div>
+    </details></section>
     <section class="wrap" id="traffic"><div class="section-title"><h2>交通接驳卡</h2><span class="lead">所有车次票价以实时为准</span></div><div class="grid two"><article class="traffic-card card-pad"><h3>D1｜广州/佛山 → 成都</h3><ul><li><b>日期：</b>D1</li><li><b>起点：</b>广州/佛山</li><li><b>终点：</b>成都</li><li><b>推荐出发时间：</b>上午或中午出发</li><li><b>交通方式：</b>飞机优先，高铁备选</li><li><b>预计耗时：</b>飞机约2.5小时，市内接驳另计</li><li><b>预计费用：</b>机票以航司/OTA为准</li><li><b>购票/预约渠道：</b>航司/12306</li><li><b>上车点：</b>广州白云机场/广州南站</li><li><b>下车点：</b>成都天府/双流/成都东</li><li><b>到达后：</b>打车/地铁到成都东站或春熙路酒店</li><li><b>预留时间：</b>航班提前2小时到机场</li><li><b>晚点怎么办：</b>晚到取消夜逛</li><li><b>导航关键词：</b>广州白云机场 成都东站</li></ul><p class="keyword"><span>广州白云机场 成都东站</span><button class="copy-btn" data-copy="广州白云机场 成都东站" type="button">复制</button></p></article><article class="traffic-card card-pad"><h3>D1/D2｜成都酒店 → 成都东站</h3><ul><li><b>日期：</b>D1/D2</li><li><b>起点：</b>成都酒店</li><li><b>终点：</b>成都东站</li><li><b>推荐出发时间：</b>高铁前60-90分钟出发</li><li><b>交通方式：</b>地铁/打车</li><li><b>预计耗时：</b>约20-50分钟</li><li><b>预计费用：</b>约5-60元</li><li><b>购票/预约渠道：</b>高德/成都地铁</li><li><b>上车点：</b>酒店门口</li><li><b>下车点：</b>成都东站</li><li><b>到达后：</b>按12306检票口进站</li><li><b>预留时间：</b>预留安检和找站台</li><li><b>晚点怎么办：</b>堵车就改地铁或提前打车</li><li><b>导航关键词：</b>成都东站</li></ul><p class="keyword"><span>成都东站</span><button class="copy-btn" data-copy="成都东站" type="button">复制</button></p></article><article class="traffic-card card-pad"><h3>D2｜成都东 → 黄龙九寨站</h3><ul><li><b>日期：</b>D2</li><li><b>起点：</b>成都东</li><li><b>终点：</b>黄龙九寨站</li><li><b>推荐出发时间：</b>早班优先</li><li><b>交通方式：</b>动车/高铁</li><li><b>预计耗时：</b>最快约1.5-2小时，按车次</li><li><b>预计费用：</b>以12306实时为准</li><li><b>购票/预约渠道：</b>12306</li><li><b>上车点：</b>成都东站</li><li><b>下车点：</b>黄龙九寨站</li><li><b>到达后：</b>出站找景区接驳/包车</li><li><b>预留时间：</b>预留30-60分钟接驳</li><li><b>晚点怎么办：</b>没票看松潘站/黄胜关/前后车次</li><li><b>导航关键词：</b>12306 成都东 黄龙九寨</li></ul><p class="keyword"><span>12306 成都东 黄龙九寨</span><button class="copy-btn" data-copy="12306 成都东 黄龙九寨" type="button">复制</button></p></article><article class="traffic-card card-pad"><h3>D2｜黄龙九寨站 → 黄龙景区</h3><ul><li><b>日期：</b>D2</li><li><b>起点：</b>黄龙九寨站</li><li><b>终点：</b>黄龙景区</li><li><b>推荐出发时间：</b>到站后尽快衔接</li><li><b>交通方式：</b>景区接驳/拼车/包车</li><li><b>预计耗时：</b>约35-60分钟</li><li><b>预计费用：</b>以当地接驳/包车平台为准</li><li><b>购票/预约渠道：</b>景区直通车/包车平台</li><li><b>上车点：</b>黄龙九寨站出站接驳点</li><li><b>下车点：</b>黄龙游客中心</li><li><b>到达后：</b>存行李/入园</li><li><b>预留时间：</b>预留等车和买票时间</li><li><b>晚点怎么办：</b>晚点则缩短黄龙游玩</li><li><b>导航关键词：</b>黄龙九寨站 黄龙景区游客中心</li></ul><p class="keyword"><span>黄龙九寨站 黄龙景区游客中心</span><button class="copy-btn" data-copy="黄龙九寨站 黄龙景区游客中心" type="button">复制</button></p></article><article class="traffic-card card-pad"><h3>D2｜黄龙景区 → 九寨沟沟口</h3><ul><li><b>日期：</b>D2</li><li><b>起点：</b>黄龙景区</li><li><b>终点：</b>九寨沟沟口</li><li><b>推荐出发时间：</b>16:00前后离开</li><li><b>交通方式：</b>接驳/拼车/包车</li><li><b>预计耗时：</b>约2-2.5小时</li><li><b>预计费用：</b>以当地平台为准</li><li><b>购票/预约渠道：</b>包车/拼车/小团</li><li><b>上车点：</b>黄龙游客中心</li><li><b>下车点：</b>九寨沟沟口酒店</li><li><b>到达后：</b>先入住再晚餐买轻食</li><li><b>预留时间：</b>尽量天黑前到</li><li><b>晚点怎么办：</b>太晚直接沟口休息</li><li><b>导航关键词：</b>黄龙风景区 九寨沟沟口</li></ul><p class="keyword"><span>黄龙风景区 九寨沟沟口</span><button class="copy-btn" data-copy="黄龙风景区 九寨沟沟口" type="button">复制</button></p></article><article class="traffic-card card-pad"><h3>D3-D4｜沟口酒店 → 九寨沟景区入口</h3><ul><li><b>日期：</b>D3-D4</li><li><b>起点：</b>沟口酒店</li><li><b>终点：</b>九寨沟景区入口</li><li><b>推荐出发时间：</b>07:30-08:00</li><li><b>交通方式：</b>步行/打车/酒店接送</li><li><b>预计耗时：</b>约5-20分钟</li><li><b>预计费用：</b>约0-30元</li><li><b>购票/预约渠道：</b>高德/酒店前台</li><li><b>上车点：</b>酒店</li><li><b>下车点：</b>九寨沟景区入口</li><li><b>到达后：</b>刷身份证入园</li><li><b>预留时间：</b>旺季早点出门</li><li><b>晚点怎么办：</b>人多就先坐观光车进深处</li><li><b>导航关键词：</b>九寨沟景区入口</li></ul><p class="keyword"><span>九寨沟景区入口</span><button class="copy-btn" data-copy="九寨沟景区入口" type="button">复制</button></p></article><article class="traffic-card card-pad"><h3>D5｜九寨沟 → 若尔盖/花湖</h3><ul><li><b>日期：</b>D5</li><li><b>起点：</b>九寨沟</li><li><b>终点：</b>若尔盖/花湖</li><li><b>推荐出发时间：</b>08:00左右</li><li><b>交通方式：</b>拼车/包车/小团</li><li><b>预计耗时：</b>约4-6小时按路况</li><li><b>预计费用：</b>两人约600-1800元浮动</li><li><b>购票/预约渠道：</b>高德/包车平台/旅行社</li><li><b>上车点：</b>沟口酒店</li><li><b>下车点：</b>花湖景区/若尔盖镇</li><li><b>到达后：</b>先午餐或进景区</li><li><b>预留时间：</b>预留晕车休息</li><li><b>晚点怎么办：</b>太累取消草原线改松潘</li><li><b>导航关键词：</b>九寨沟 花湖 若尔盖</li></ul><p class="keyword"><span>九寨沟 花湖 若尔盖</span><button class="copy-btn" data-copy="九寨沟 花湖 若尔盖" type="button">复制</button></p></article><article class="traffic-card card-pad"><h3>D5｜花湖/若尔盖 → 唐克/黄河九曲第一湾</h3><ul><li><b>日期：</b>D5</li><li><b>起点：</b>花湖/若尔盖</li><li><b>终点：</b>唐克/黄河九曲第一湾</li><li><b>推荐出发时间：</b>16:30前后</li><li><b>交通方式：</b>包车/拼车</li><li><b>预计耗时：</b>约1.5-3小时</li><li><b>预计费用：</b>以实际为准</li><li><b>购票/预约渠道：</b>包车平台</li><li><b>上车点：</b>花湖游客中心</li><li><b>下车点：</b>唐克镇/九曲景区</li><li><b>到达后：</b>入住或看天气决定日落</li><li><b>预留时间：</b>不赶夜路</li><li><b>晚点怎么办：</b>天气差直接住镇上</li><li><b>导航关键词：</b>花湖 唐克 黄河九曲第一湾</li></ul><p class="keyword"><span>花湖 唐克 黄河九曲第一湾</span><button class="copy-btn" data-copy="花湖 唐克 黄河九曲第一湾" type="button">复制</button></p></article><article class="traffic-card card-pad"><h3>D6｜唐克/若尔盖 → 松潘/川主寺</h3><ul><li><b>日期：</b>D6</li><li><b>起点：</b>唐克/若尔盖</li><li><b>终点：</b>松潘/川主寺</li><li><b>推荐出发时间：</b>14:00前后</li><li><b>交通方式：</b>包车/拼车/小团</li><li><b>预计耗时：</b>约3-5小时</li><li><b>预计费用：</b>以实际为准</li><li><b>购票/预约渠道：</b>包车平台/旅行社</li><li><b>上车点：</b>酒店</li><li><b>下车点：</b>松潘/川主寺酒店</li><li><b>到达后：</b>先入住再轻逛</li><li><b>预留时间：</b>天黑前到</li><li><b>晚点怎么办：</b>晚点取消古城</li><li><b>导航关键词：</b>唐克 松潘 川主寺</li></ul><p class="keyword"><span>唐克 松潘 川主寺</span><button class="copy-btn" data-copy="唐克 松潘 川主寺" type="button">复制</button></p></article><article class="traffic-card card-pad"><h3>D7｜松潘/川主寺 → 黄龙九寨站/松潘站</h3><ul><li><b>日期：</b>D7</li><li><b>起点：</b>松潘/川主寺</li><li><b>终点：</b>黄龙九寨站/松潘站</li><li><b>推荐出发时间：</b>按车次提前90分钟</li><li><b>交通方式：</b>酒店约车/接驳/打车</li><li><b>预计耗时：</b>约20-60分钟</li><li><b>预计费用：</b>以实际为准</li><li><b>购票/预约渠道：</b>高德/酒店前台</li><li><b>上车点：</b>酒店</li><li><b>下车点：</b>车站</li><li><b>到达后：</b>进站候车</li><li><b>预留时间：</b>山区交通多留缓冲</li><li><b>晚点怎么办：</b>接驳不稳就提前约车</li><li><b>导航关键词：</b>黄龙九寨站 松潘站</li></ul><p class="keyword"><span>黄龙九寨站 松潘站</span><button class="copy-btn" data-copy="黄龙九寨站 松潘站" type="button">复制</button></p></article><article class="traffic-card card-pad"><h3>D7｜成都东 → 成都机场/市区</h3><ul><li><b>日期：</b>D7</li><li><b>起点：</b>成都东</li><li><b>终点：</b>成都机场/市区</li><li><b>推荐出发时间：</b>按航班倒推</li><li><b>交通方式：</b>地铁/打车</li><li><b>预计耗时：</b>约30-90分钟</li><li><b>预计费用：</b>以高德/地铁为准</li><li><b>购票/预约渠道：</b>高德/成都地铁</li><li><b>上车点：</b>成都东站</li><li><b>下车点：</b>天府机场/双流机场/市区</li><li><b>到达后：</b>航班早直奔机场</li><li><b>预留时间：</b>高铁到航班至少3-4小时</li><li><b>晚点怎么办：</b>晚点就改签/住成都</li><li><b>导航关键词：</b>成都东站 成都天府机场</li></ul><p class="keyword"><span>成都东站 成都天府机场</span><button class="copy-btn" data-copy="成都东站 成都天府机场" type="button">复制</button></p></article><article class="traffic-card card-pad"><h3>D7｜成都 → 广州/佛山</h3><ul><li><b>日期：</b>D7</li><li><b>起点：</b>成都</li><li><b>终点：</b>广州/佛山</li><li><b>推荐出发时间：</b>下午或晚上</li><li><b>交通方式：</b>飞机优先</li><li><b>预计耗时：</b>约2.5小时</li><li><b>预计费用：</b>以航司/OTA为准</li><li><b>购票/预约渠道：</b>航司App/OTA</li><li><b>上车点：</b>成都机场</li><li><b>下车点：</b>广州白云机场</li><li><b>到达后：</b>落地后回佛山</li><li><b>预留时间：</b>国内航班提前2小时</li><li><b>晚点怎么办：</b>航班晚点先看航司改签</li><li><b>导航关键词：</b>成都 广州 白云机场</li></ul><p class="keyword"><span>成都 广州 白云机场</span><button class="copy-btn" data-copy="成都 广州 白云机场" type="button">复制</button></p></article></div></section>
     <section class="wrap" id="spots"><div class="section-title"><h2>景点攻略卡</h2><span class="lead">入口、门票、路线、缩短方案</span></div>
     <details class="spot-card">
