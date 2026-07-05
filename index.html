@@ -1,161 +1,75 @@
 <!doctype html>
 <html lang="zh-CN">
 <head>
-  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>我的旅行路线管家</title>
-  <style>
-    :root { --ink:#142033; --muted:#637283; --line:#d9e5e8; --paper:#fff; --bg:#f4f8f7; --blue:#176b91; --teal:#0f766e; --green:#3b7a47; --yellow:#e0a62f; --red:#b64a3d; --shadow:0 12px 32px rgba(21,49,66,.10); }
-    * { box-sizing:border-box; }
-    html { scroll-behavior:smooth; }
-    body { margin:0; font-family:"Microsoft YaHei","PingFang SC",Arial,sans-serif; color:var(--ink); background:var(--bg); line-height:1.62; }
-    a { color:var(--blue); text-decoration:none; font-weight:800; }
-    img { display:block; width:100%; object-fit:cover; background:#dbe7e6; }
-    h1,h2,h3,p,ul { margin-top:0; }
-    .topnav { position:sticky; top:0; z-index:30; display:flex; gap:8px; overflow:auto; white-space:nowrap; padding:10px 14px; background:rgba(255,255,255,.96); border-bottom:1px solid var(--line); }
-    .topnav a,.back-btn,.route-btn,.copy-btn,.scheme-tab { border:0; border-radius:999px; padding:8px 12px; background:#eaf3f2; color:#17394a; font-weight:900; cursor:pointer; font-size:14px; display:inline-block; }
-    .route-btn.primary,.back-btn.primary,.scheme-tab.active { background:var(--teal); color:#fff; }
-    .wrap { max-width:1180px; margin:0 auto; padding:18px 14px; }
-    .hero { min-height:56vh; display:flex; align-items:flex-end; background:linear-gradient(180deg,rgba(12,42,51,.12),rgba(12,42,51,.72)), var(--hero) center/cover; color:#fff; }
-    .hero .wrap { width:100%; padding-top:80px; padding-bottom:28px; }
-    .hero h1 { font-size:34px; line-height:1.14; margin-bottom:10px; }
-    .hero p { max-width:820px; color:#eef7f7; }
-    .card,.route-card,.day-card,.spot-card,.traffic-card,.food-card,.hotel-card,.budget-card,.emergency-card,.info-card { background:var(--paper); border:1px solid var(--line); border-radius:16px; box-shadow:var(--shadow); overflow:hidden; }
-    .grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:14px; }
-    .grid.two { grid-template-columns:repeat(2,minmax(0,1fr)); }
-    .route-card img { aspect-ratio:16/9; }
-    .route-card .body,.card-pad { padding:14px; }
-    .tags { display:flex; flex-wrap:wrap; gap:7px; margin:10px 0; }
-    .tag { display:inline-flex; align-items:center; padding:5px 9px; border-radius:999px; background:#edf7f4; color:#16584f; font-size:13px; font-weight:900; }
-    .tag.warn { background:#fff3dc; color:#805319; }
-    .tag.red { background:#feeceb; color:#9a3e36; }
-    .console { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:10px; margin-top:14px; }
-    .metric { padding:12px; border-radius:14px; background:rgba(255,255,255,.92); color:var(--ink); }
-    .metric span { display:block; color:var(--muted); font-size:12px; font-weight:800; }
-    .metric b { display:block; font-size:15px; margin-top:2px; }
-    .quick { display:flex; flex-wrap:wrap; gap:8px; margin-top:14px; }
-    .section-title { display:flex; justify-content:space-between; align-items:flex-end; gap:12px; margin:10px 0 12px; }
-    .section-title h2 { margin:0; font-size:24px; }
-    .lead { color:var(--muted); }
-    details > summary { cursor:pointer; list-style:none; }
-    details > summary::-webkit-details-marker { display:none; }
-    .day-card { margin-bottom:12px; }
-    .day-card > summary { padding:14px; display:flex; justify-content:space-between; gap:12px; align-items:center; background:#eef8f6; }
-    .day-card > summary b { font-size:20px; }
-    .day-inner { padding:14px; }
-    .mini { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:10px; margin:12px 0; }
-    .mini div { padding:10px; border:1px solid var(--line); border-radius:12px; background:#f8fbfb; }
-    .mini span { display:block; color:var(--muted); font-size:12px; font-weight:900; }
-    .step { display:grid; grid-template-columns:112px 1fr; gap:12px; padding:12px 0; border-top:1px dashed var(--line); }
-    .step time { font-weight:900; color:var(--teal); }
-    .keyword { display:flex; flex-wrap:wrap; align-items:center; gap:8px; padding:8px; border-radius:12px; background:#eef5f7; margin:8px 0 0; }
-    .copy-btn { padding:5px 9px; background:#dff0eb; color:#146253; }
-    .scheme-tabs { display:flex; gap:8px; overflow:auto; margin:10px 0; }
-    .scheme-panel { display:none; }
-    .scheme-panel.active { display:block; }
-    .route-map { display:flex; gap:8px; align-items:center; overflow:auto; padding:12px; border:1px solid var(--line); border-radius:16px; background:#fff; box-shadow:var(--shadow); margin:12px 0; }
-    .route-node { flex:0 0 auto; min-width:94px; padding:9px 10px; border-radius:999px; background:#edf7f4; color:#164c47; font-weight:900; text-align:center; }
-    .route-line { flex:0 0 32px; height:2px; background:var(--teal); position:relative; }
-    .route-line::after { content:""; position:absolute; right:-1px; top:-4px; border-left:8px solid var(--teal); border-top:5px solid transparent; border-bottom:5px solid transparent; }
-    .compare-table { display:grid; grid-template-columns:1.1fr repeat(3,minmax(0,1fr)); gap:1px; overflow:auto; border:1px solid var(--line); border-radius:16px; background:var(--line); box-shadow:var(--shadow); }
-    .compare-table > div { min-width:180px; padding:11px; background:#fff; }
-    .compare-table .head { background:#eaf3f2; font-weight:900; color:#17394a; }
-    .map-caption { color:var(--muted); font-size:13px; margin-top:-4px; }
-    .photo-grid { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:12px; }
-    .photo { position:relative; border-radius:16px; overflow:hidden; min-height:180px; background:#dbe7e6; }
-    .photo img { height:100%; aspect-ratio:4/3; }
-    .photo span { position:absolute; left:10px; bottom:10px; padding:6px 10px; border-radius:999px; background:rgba(10,35,42,.72); color:#fff; font-weight:900; }
-    .spot-card { margin-bottom:12px; }
-    .spot-card summary { display:grid; grid-template-columns:148px 1fr; gap:12px; align-items:center; padding:10px; }
-    .spot-card img { height:112px; border-radius:12px; }
-    .spot-body { padding:0 14px 14px; }
-    .list-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:10px; }
-    .list-grid li { margin-bottom:5px; }
-    .notice { padding:12px 14px; border-left:5px solid var(--yellow); background:#fff8e9; border-radius:12px; margin:12px 0; }
-    .route-return { position:sticky; top:0; z-index:50; display:flex; gap:8px; overflow:auto; padding:9px 12px; background:rgba(255,255,255,.96); border-bottom:1px solid var(--line); }
-    .toast { position:fixed; left:50%; bottom:24px; transform:translateX(-50%); padding:10px 14px; border-radius:999px; background:#10263f; color:#fff; opacity:0; transition:.2s; pointer-events:none; z-index:60; }
-    .toast.show { opacity:1; }
-    @media (max-width:760px) {
-      body { font-size:15.5px; }
-      .hero { min-height:58vh; }
-      .hero h1 { font-size:28px; }
-      .grid,.grid.two,.console,.mini,.photo-grid,.list-grid { grid-template-columns:1fr; }
-      .compare-table { display:block; border:0; background:transparent; box-shadow:none; }
-      .compare-table > div { min-width:0; border:1px solid var(--line); margin-bottom:8px; border-radius:12px; }
-      .step { grid-template-columns:1fr; gap:3px; }
-      .spot-card summary { grid-template-columns:96px 1fr; }
-      .spot-card img { height:82px; }
-      .section-title { display:block; }
-    }
-</style>
+  <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-  <header class="hero" style="--hero:url('assets/images/jiuzhaigou-cover.svg')">
+  <header class="hero" style="--hero:url('../images/jiuzhaigou-cover.jpg')">
     <div class="wrap">
-      <div class="tags"><span class="tag">多路线选择</span><span class="tag">手机执行手册</span><span class="tag">预算和应急</span><span class="tag">导航可复制</span></div>
+      <div class="tags"><span class="tag">路线选择</span><span class="tag">手机执行手册</span><span class="tag">持续更新</span></div>
       <h1>我的旅行路线管家</h1>
       <p>选择一条路线，进入当天可执行的旅行手册：几点出发、怎么走、吃什么、住哪里、门票预约、预算和应急方案都在里面。</p>
     </div>
   </header>
   <main class="wrap">
+    <div class="section-title"><h2>选择路线</h2><span class="lead">首页只负责选择路线，详情进入独立页面查看</span></div>
+    <div class="grid">
+    <article class="route-card">
+      <img loading="lazy" src="assets/images/shandong-cover.jpg" alt="山东—开封文化美食线">
+      <div class="body">
+        <div class="tags"><span class="tag ">已规划</span><span class="tag">泉城</span><span class="tag">海滨</span><span class="tag">万岁山</span><span class="tag">美食</span><span class="tag">城市文化</span></div>
+        <h2>山东—开封文化美食线</h2>
+        <p class="lead">路线：济南、青岛、威海、开封、万岁山</p>
+        <p><b>天数：</b>7天6晚</p>
+        <p><b>预算提示：</b>两人约6900-11500元，随暑期机票酒店浮动</p>
+        <p><b>强度：</b>中等，城市转场为主</p>
+        <a class="route-btn primary" href="routes/shandong-kaifeng.html">查看路线</a>
+      </div>
+    </article>
     
-    <section id="departure-compare">
-      <div class="section-title"><h2>佛山/广州出发怎么去最划算</h2><span class="lead">飞机、高铁、火车的费用和取舍</span></div>
-      <div class="notice">下面价格是按2026年7月出行的查询口径做的预算区间，用来判断方案，不是最终成交价。机票、火车票会随日期、余票、行李额、退改规则变化，付款前以航司、12306、携程、飞猪、去哪儿实际页面为准。</div>
-      <div class="compare-table"><div class="head">路线</div><div class="head">飞机往返/开口</div><div class="head">火车/高铁往返</div><div class="head">取舍建议</div><div><b>山东—开封线</b><p class="map-caption">优先飞机去济南、郑州飞回广州；中间用高铁串城。</p></div><div>约1200-2600元/人；两人约2400-5200元。广州白云→济南遥墙，返程郑州新郑→广州白云，暑期和临近出发会涨。</div><div>约1500-2100元/人；两人约3000-4200元。广州南/广州白云→济南西约10-12小时，郑州东→广州南约6-7小时。</div><div><b>优点：</b>飞机省体力，适合7天；高铁稳定但首日太长，时间充裕才考虑。<br><b>缺点：</b>飞机价格波动大；高铁省不了太多钱，且第一天会被长途消耗。<br><b>核对：</b>航班看航司/携程/飞猪/去哪儿；火车看12306，优先确认上车站别买错。</div><div><b>九寨沟线</b><p class="map-caption">时间宽裕可高铁到成都；想省体力就飞成都，再高铁到黄龙九寨站。</p></div><div>约1500-3200元/人；两人约3000-6400元。广州白云↔成都天府/双流，成都再接高铁/拼车进九寨。</div><div>约1700-2400元/人；两人约3400-4800元。广州南→成都东二等座常见约645-670元/程，再加成都↔黄龙九寨站和接驳。</div><div><b>优点：</b>高铁价格更稳，时间充裕可省机票波动；飞机能把体力留给高原景区。<br><b>缺点：</b>高铁到成都当天已较累；九寨沟真正贵的是当地接驳、门票和住宿。<br><b>核对：</b>成都航班看航司/OTA；成都东/成都西到黄龙九寨站车次看12306。</div><div><b>张掖—敦煌线</b><p class="map-caption">推荐飞机或高铁先到兰州/张掖，再一路西行到敦煌；不建议全程硬坐。</p></div><div>约2200-4300元/人；两人约4400-8600元。广州到敦煌/张掖多为直飞少、经停或中转，灵活日期能明显省钱。</div><div>约1800-3200元/人；两人约3600-6400元。广州南→兰州西高铁二等座约1058元/程，普通卧铺可省钱但单程约30小时。</div><div><b>优点：</b>飞机节省两天路上时间；普通卧铺省钱且适合时间很宽裕的人。<br><b>缺点：</b>敦煌旺季机票贵；火车长距离转场多，行李和睡眠质量会影响体验。<br><b>核对：</b>长途火车看12306；机票看航司/携程/飞猪/去哪儿，优先比较广州白云到敦煌、张掖、兰州三种落点。</div></div>
-      <div class="grid"><article class="info-card card-pad"><h3>山东—开封线路线图</h3><div class="route-map" aria-label="路线图"><span class="route-node">佛山/广州</span><span class="route-line"></span><span class="route-node">济南</span><span class="route-line"></span><span class="route-node">青岛</span><span class="route-line"></span><span class="route-node">威海</span><span class="route-line"></span><span class="route-node">开封</span><span class="route-line"></span><span class="route-node">郑州机场</span><span class="route-line"></span><span class="route-node">广州/佛山</span></div></article><article class="info-card card-pad"><h3>九寨沟线路线图</h3><div class="route-map" aria-label="路线图"><span class="route-node">佛山/广州</span><span class="route-line"></span><span class="route-node">成都</span><span class="route-line"></span><span class="route-node">黄龙九寨站</span><span class="route-line"></span><span class="route-node">黄龙</span><span class="route-line"></span><span class="route-node">九寨沟</span><span class="route-line"></span><span class="route-node">若尔盖</span><span class="route-line"></span><span class="route-node">成都</span><span class="route-line"></span><span class="route-node">广州/佛山</span></div></article><article class="info-card card-pad"><h3>张掖—敦煌线路线图</h3><div class="route-map" aria-label="路线图"><span class="route-node">佛山/广州</span><span class="route-line"></span><span class="route-node">兰州/张掖</span><span class="route-line"></span><span class="route-node">张掖丹霞</span><span class="route-line"></span><span class="route-node">嘉峪关</span><span class="route-line"></span><span class="route-node">敦煌</span><span class="route-line"></span><span class="route-node">莫高窟</span><span class="route-line"></span><span class="route-node">鸣沙山</span><span class="route-line"></span><span class="route-node">广州/佛山</span></div></article></div>
-      <div class="notice"><b>从佛山出发建议：</b>飞机优先打车/城轨/地铁到广州白云机场；高铁优先广州南，佛山西只有在车次更顺或少换乘时再选。不要为了省几十块把出发站换得太复杂。</div>
-    </section>
+    <article class="route-card">
+      <img loading="lazy" src="assets/images/jiuzhaigou-cover.jpg" alt="九寨沟七天水景草原奇观线">
+      <div class="body">
+        <div class="tags"><span class="tag ">推荐</span><span class="tag">水色奇观</span><span class="tag">黄龙彩池</span><span class="tag">高原草原</span><span class="tag">瀑布</span><span class="tag">不能吃辣友好</span></div>
+        <h2>九寨沟七天水景草原奇观线</h2>
+        <p class="lead">路线：成都、黄龙、九寨沟、若尔盖花湖、黄河九曲第一湾、松潘</p>
+        <p><b>天数：</b>7天6晚</p>
+        <p><b>预算提示：</b>当地两人约4200-14000元，机票酒店另看</p>
+        <p><b>强度：</b>中等偏累，有高原和长车程</p>
+        <a class="route-btn primary" href="routes/jiuzhaigou-7days.html">查看路线</a>
+      </div>
+    </article>
     
-    <div class="section-title"><h2>已规划路线</h2><span class="lead">打开后进入对应详情页</span></div>
-    <div class="grid two"><article class="route-card">
-          <img loading="lazy" src="assets/images/shandong-badaguan.jpg" alt="山东—开封文化美食线">
-          <div class="body">
-            <div class="tags"><span class="tag">已规划</span><span class="tag">中等</span><span class="tag">可执行</span></div>
-            <h2>山东—开封文化美食线</h2><p class="lead">济南、青岛、威海、开封、万岁山</p>
-            <p><b>天数：</b>7天6晚</p><p><b>适合：</b>想看泉城、海滨、美食和万岁山演出的人</p><p><b>预算：</b>两人约6900-11500元，随机票酒店浮动</p>
-            <p><b>看点：</b>城市文化、美食、海滨、万岁山</p>
-            <a class="route-btn primary" href="shandong-kaifeng.html">查看路线</a>
-          </div>
-        </article><article class="route-card">
-          <img loading="lazy" src="assets/images/jiuzhaigou-cover.svg" alt="九寨沟七天水景草原奇观线">
-          <div class="body">
-            <div class="tags"><span class="tag">推荐</span><span class="tag">中等偏累</span><span class="tag">不吃辣可执行</span></div>
-            <h2>九寨沟七天水景草原奇观线</h2><p class="lead">成都、黄龙、九寨沟、若尔盖花湖、黄河九曲第一湾、松潘</p>
-            <p><b>天数：</b>7天6晚</p><p><b>适合：</b>喜欢不一样景色、水色、草原、瀑布、森林的人</p><p><b>预算：</b>当地两人约4200-14000元+，机酒另看</p>
-            <p><b>看点：</b>水色奇观、钙化彩池、高原草原、不吃辣友好</p>
-            <a class="route-btn primary" href="jiuzhaigou.html">查看路线</a>
-          </div>
-        </article><article class="route-card">
-          <img loading="lazy" src="assets/images/dunhuang-cover.svg" alt="张掖—敦煌七天西北奇观线">
-          <div class="body">
-            <div class="tags"><span class="tag">新增完成</span><span class="tag">中等偏累</span><span class="tag">可慢游省钱</span></div>
-            <h2>张掖—敦煌七天西北奇观线</h2><p class="lead">兰州/张掖、七彩丹霞、嘉峪关、莫高窟、鸣沙山月牙泉、阳关雅丹</p>
-            <p><b>天数：</b>7天6晚，可加1-2天</p><p><b>适合：</b>时间充裕、想看沙漠石窟丹霞戈壁的人</p><p><b>预算：</b>两人不含大交通约5200-13500元</p>
-            <p><b>看点：</b>丹霞、石窟、沙漠、关城、戈壁日落</p>
-            <a class="route-btn primary" href="dunhuang.html">查看路线</a>
-          </div>
-        </article></div>
-    <div class="section-title"><h2>预留路线</h2><span class="lead">后续补充，不影响当前两条主线</span></div>
-    <div class="grid"><article class="route-card card-pad">
-          <div class="photo" style="min-height:150px;background:linear-gradient(135deg,#d9edf1,#fff4d9);display:flex;align-items:center;justify-content:center;"><span>广西靖西德天瀑布线</span></div>
-          <div class="tags"><span class="tag">待规划</span></div><h2>广西靖西德天瀑布线</h2>
-          <p class="lead">瀑布、峡谷、边境风光，后续可做自驾/高铁版。</p><button class="route-btn" data-coming type="button">路线待补充</button>
-        </article><article class="route-card card-pad">
-          <div class="photo" style="min-height:150px;background:linear-gradient(135deg,#d9edf1,#fff4d9);display:flex;align-items:center;justify-content:center;"><span>张掖敦煌西北奇观线</span></div>
-          <div class="tags"><span class="tag">待规划</span></div><h2>张掖敦煌西北奇观线</h2>
-          <p class="lead">丹霞、沙漠、石窟、长距离西北线，适合单独规划。</p><button class="route-btn" data-coming type="button">路线待补充</button>
-        </article><article class="route-card card-pad">
-          <div class="photo" style="min-height:150px;background:linear-gradient(135deg,#d9edf1,#fff4d9);display:flex;align-items:center;justify-content:center;"><span>成都乐山峨眉线</span></div>
-          <div class="tags"><span class="tag">待规划</span></div><h2>成都乐山峨眉线</h2>
-          <p class="lead">成都休闲、美食、乐山大佛、峨眉山，适合短线。</p><button class="route-btn" data-coming type="button">路线待补充</button>
-        </article></div>
-    <section class="notice">信息核对提醒：本网站用于旅行执行参考，航班、高铁、酒店、景区开放、门票和餐厅营业时间都会变化，出发前以官方/12306/航司/景区公众号/高德/美团实际页面为准。更新时间：2026-07-05。</section>
+    <article class="route-card">
+      <img loading="lazy" src="assets/images/guangxi-cover.jpg" alt="广西靖西德天瀑布线">
+      <div class="body">
+        <div class="tags"><span class="tag warn">待规划</span><span class="tag">瀑布</span><span class="tag">峡谷</span><span class="tag">边境风光</span><span class="tag">田园</span></div>
+        <h2>广西靖西德天瀑布线</h2>
+        <p class="lead">路线：南宁、靖西、鹅泉、通灵大峡谷、德天瀑布、明仕田园</p>
+        <p><b>天数：</b>待定</p>
+        <p><b>预算提示：</b>待规划后按交通和住宿核算</p>
+        <p><b>强度：</b>待评估</p>
+        <a class="route-btn primary" href="routes/guangxi-jingxi.html">查看预览</a>
+      </div>
+    </article>
+    
+    <article class="route-card">
+      <img loading="lazy" src="assets/images/dunhuang-cover.jpg" alt="张掖敦煌西北奇观线">
+      <div class="body">
+        <div class="tags"><span class="tag warn">待规划</span><span class="tag">丹霞</span><span class="tag">石窟</span><span class="tag">沙漠</span><span class="tag">关城</span><span class="tag">西北</span></div>
+        <h2>张掖敦煌西北奇观线</h2>
+        <p class="lead">路线：兰州/西宁、张掖丹霞、嘉峪关、敦煌、鸣沙山月牙泉</p>
+        <p><b>天数：</b>待定</p>
+        <p><b>预算提示：</b>待规划后按机票、火车和包车核算</p>
+        <p><b>强度：</b>待评估</p>
+        <a class="route-btn primary" href="routes/dunhuang.html">查看预览</a>
+      </div>
+    </article>
+    </div>
+    <section class="notice">路线会持续更新。机票、火车、酒店、景区开放、门票和餐厅营业时间都会变化，出发前以官方/12306/航司/景区公众号/高德/美团实际页面为准。</section>
   </main>
-  <div class="toast" id="toast">路线待补充</div>
-  <script>
-    document.querySelectorAll('[data-coming]').forEach(btn => btn.addEventListener('click', () => {
-      const toast=document.getElementById('toast'); toast.classList.add('show'); setTimeout(()=>toast.classList.remove('show'),1300);
-    }));
-  </script>
 </body>
 </html>
