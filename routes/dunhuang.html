@@ -4,57 +4,295 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" href="../favicon.ico">
-  <title>张掖敦煌西北奇观线｜路线预览</title>
+  <title>张掖敦煌西北奇观线｜旅行管家</title>
   <link rel="stylesheet" href="../assets/css/style.css">
+  <style>
+    body{background:linear-gradient(180deg,#fff8ed 0%,#f4f8f7 46%,#eef6f3 100%)}
+    .dunhuang-hero{max-width:1120px;margin:18px auto 0;padding:0 14px}
+    .dunhuang-shell{display:grid;grid-template-columns:1.05fr .95fr;gap:18px;align-items:stretch;min-height:430px;padding:20px;border-radius:28px;background:linear-gradient(135deg,rgba(53,97,116,.88),rgba(201,123,38,.70)),url("../assets/images/dunhuang-cover.jpg") center/cover;box-shadow:0 24px 60px rgba(77,49,20,.18);overflow:hidden}
+    .dunhuang-shell>*{min-width:0}
+    .hero-copy{display:flex;flex-direction:column;justify-content:flex-end;color:#fff;padding:8px}
+    .hero-copy h1{font-size:38px;line-height:1.14;margin:8px 0 10px}
+    .hero-copy p{max-width:720px;color:#fff8e8;margin:0 0 10px}
+    .hero-copy h1,.hero-copy p{width:100%;white-space:normal!important;overflow-wrap:anywhere;word-break:break-all}
+    .hero-copy .tag{background:rgba(255,255,255,.18);color:#fff;border:1px solid rgba(255,255,255,.22)}
+    .overview-card{align-self:end;background:rgba(255,255,255,.94);border:1px solid rgba(255,255,255,.58);border-radius:22px;padding:18px;box-shadow:0 18px 44px rgba(50,28,10,.18)}
+    .overview-card h2{margin:0 0 8px;font-size:22px}
+    .overview-list{display:grid;gap:9px}
+    .overview-list div{display:grid;grid-template-columns:96px 1fr;gap:8px;border-top:1px solid #eadfcd;padding-top:8px}
+    .overview-list span{color:#8a6b3b;font-weight:900}
+    .overview-list b{white-space:normal!important;overflow-wrap:anywhere;word-break:break-all}
+    .d-nav{position:sticky;top:0;z-index:20;max-width:1120px;margin:0 auto;padding:10px 14px;display:flex;gap:8px;overflow:auto;background:rgba(255,249,240,.96);border-bottom:1px solid #eadfcd}
+    .d-nav a{flex:0 0 auto;border-radius:999px;background:#fff;color:#5c3d18;border:1px solid #eadfcd;padding:8px 12px;font-weight:900}
+    .route-overview-map{max-width:760px;margin:0 auto 12px}
+    .route-overview-map img{max-height:360px;object-fit:contain;background:#fbfaf4}
+    .day-flow,.stay-flow,.budget-table{display:grid;gap:1px;overflow:auto;border:1px solid var(--line);border-radius:18px;background:var(--line);box-shadow:var(--shadow)}
+    .day-flow{grid-template-columns:.65fr 1.05fr 1.2fr 1.1fr 1.05fr}
+    .stay-flow{grid-template-columns:.7fr .95fr 1fr 1.25fr 1.15fr 1.1fr 1.15fr 1.05fr 1.1fr}
+    .budget-table{grid-template-columns:1fr 1.15fr 1.1fr 1.1fr 1.1fr 1.25fr}
+    .day-flow>div,.stay-flow>div,.budget-table>div{min-width:142px;padding:11px;background:#fff}
+    .day-flow .head,.stay-flow .head,.budget-table .head{background:#fff2d8;color:#17394a;font-weight:900}
+    .desert-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+    .desert-card{background:#fff;border:1px solid var(--line);border-radius:18px;box-shadow:var(--shadow);padding:15px;overflow:hidden}
+    .desert-card h3{margin:0 0 8px;font-size:19px}
+    .desert-card figure{margin:-15px -15px 12px}
+    .desert-card img{aspect-ratio:16/9}
+    .plan-note{border-left:5px solid #ca7a24;background:#fff6e9;border-radius:14px;padding:13px 14px;margin:12px 0}
+    .day-card>summary{background:#fff3de}
+    .day-card>summary b{font-size:19px}
+    .map-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+    .map-card{background:#fff;border:1px solid var(--line);border-radius:18px;box-shadow:var(--shadow);padding:14px;overflow:hidden}
+    .map-card figure{margin:-14px -14px 12px;border-radius:18px;overflow:hidden}
+    .map-card img{aspect-ratio:16/10}
+    .food-script{border-left-color:#c64a2c;background:linear-gradient(135deg,#fff7df,#fff0ef);font-size:18px;color:#4b2d11}
+    .check-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+    .source-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px 16px}
+    @media(max-width:900px){.dunhuang-shell{grid-template-columns:1fr}.desert-grid,.map-grid,.check-grid{grid-template-columns:1fr 1fr}}
+    @media(max-width:760px){body{font-size:15.5px;overflow-x:hidden}.dunhuang-hero,.d-nav,.wrap{max-width:100vw;overflow-x:hidden}.dunhuang-shell{width:100%;max-width:calc(100vw - 28px);min-height:auto;padding:16px;border-radius:22px}.hero-copy,.overview-card{max-width:100%;overflow:hidden}.hero-copy h1{font-size:26px;line-height:1.2}.hero-copy .tags{display:grid;grid-template-columns:1fr}.overview-list div{grid-template-columns:1fr}.desert-grid,.map-grid,.check-grid{grid-template-columns:1fr}.day-flow,.stay-flow,.budget-table{display:block;overflow:auto}.day-flow>div,.stay-flow>div,.budget-table>div{min-width:260px;border-bottom:1px solid var(--line)}.route-overview-map img{max-height:300px}.source-grid{grid-template-columns:1fr}}
+  </style>
 </head>
-<body class="preview-page">
-  <nav class="route-return"><a class="back-btn primary" href="../index.html">← 返回路线选择</a><span class="lead">预览版：先看交通取舍，详细执行卡后续补全</span></nav>
-  <header class="preview-hero">
-    <section class="preview-hero-card">
-      <div class="preview-copy">
-        <div class="tags"><span class="tag warn">预览版</span><span class="tag">丹霞</span><span class="tag">石窟</span><span class="tag">沙漠</span><span class="tag">关城</span><span class="tag">西北</span></div>
-        <h1>张掖敦煌西北奇观线</h1>
-        <p class="lead">兰州/西宁 → 张掖丹霞 → 嘉峪关 → 敦煌 → 莫高窟 → 鸣沙山月牙泉</p>
-        <p>这条线的重点不是每天塞满景点，而是把大交通、火车衔接、沙漠高温和莫高窟预约处理好。</p>
-        <a class="route-btn primary" href="#outline">查看初版路线</a>
+<body>
+  <nav class="route-return"><a class="back-btn primary" href="../index.html">← 返回路线选择</a><span class="lead">正式执行手册：7天6晚，张掖丹霞—嘉峪关—敦煌</span></nav>
+
+  <header class="dunhuang-hero">
+    <section class="dunhuang-shell">
+      <div class="hero-copy">
+        <div class="tags"><span class="tag">已规划</span><span class="tag">7天6晚</span><span class="tag">丹霞</span><span class="tag">石窟</span><span class="tag">沙漠</span><span class="tag">防晒防干</span></div>
+        <h1>张掖敦煌西北奇观线<br>旅行管家</h1>
+        <p>广州/佛山 → 兰州/西宁 → 张掖七彩丹霞 → 嘉峪关关城 → 敦煌莫高窟 → 鸣沙山月牙泉 → 敦煌西线 → 返程。</p>
+        <p>这条线的核心是“视觉反差”：丹霞颜色、关城戈壁、石窟壁画、沙漠绿洲。节奏比城市线更硬，最重要的是提前锁莫高窟、避开正午暴晒、别把夜路排太满。</p>
       </div>
-      <figure class="preview-cover"><img loading="eager" src="../assets/images/dunhuang-cover.jpg" alt="敦煌鸣沙山月牙泉实景"><span>鸣沙山月牙泉 / 沙漠绿洲</span></figure>
+      <aside class="overview-card">
+        <h2>路线总控台</h2>
+        <div class="overview-list">
+          <div><span>适合人群</span><b>想看大漠、戈壁、石窟、丹霞，能接受长转场和干热天气的人。</b></div>
+          <div><span>不适合</span><b>怕晒怕干、讨厌连续坐车、不能接受预约抢票压力的人。</b></div>
+          <div><span>交通方式</span><b>飞机/火车到兰州或西宁，河西走廊用高铁/动车/火车，敦煌段打车/包车/小团。</b></div>
+          <div><span>住宿顺序</span><b>D1兰州/西宁，D2张掖，D3嘉峪关，D4-D6敦煌，D7返程。</b></div>
+          <div><span>预算提醒</span><b>两人约6500-15000元浮动；大交通、敦煌住宿、莫高窟票、敦煌西线包车最容易变。</b></div>
+          <div><span>核对规则</span><b>航班、火车、酒店、门票、开放和天气都以实际页面为准。</b></div>
+        </div>
+      </aside>
     </section>
   </header>
-  <main class="wrap">
-    <section class="notice"><b>核对提醒：</b>本页是预览版。莫高窟票务、鸣沙山开放时间、火车票、包车价格、住宿价格和天气均以官方/12306/航司/高德/美团实际页面为准。</section>
-    <section>
-      <div class="section-title"><h2>先看取舍</h2><span class="lead">西北线最容易超预算和超体力</span></div>
-      <div class="preview-grid">
-        <article class="preview-card"><h3>优点</h3><p>丹霞、长城关城、石窟、沙漠和绿洲风景差异大，旅行记忆点很强。</p></article>
-        <article class="preview-card"><h3>风险</h3><p>转场距离长，暑期热，莫高窟需要提前预约，临时买票可能影响核心体验。</p></article>
-        <article class="preview-card"><h3>推荐策略</h3><p>兰州或西宁进，敦煌出最顺；如果机票贵，就用兰州往返加火车，但时间会更长。</p></article>
+
+  <nav class="d-nav">
+    <a href="#answer">先看结论</a><a href="#route-map">路线图</a><a href="#traffic">交通</a><a href="#overview">每日总览</a><a href="#stay">住宿</a><a href="#days">每日执行</a><a href="#spots">景点攻略</a><a href="#food">吃饭</a><a href="#budget">预算</a><a href="#checklist">准备</a><a href="#emergency">应急</a><a href="#sources">来源</a>
+  </nav>
+
+  <main>
+    <section class="wrap" id="answer">
+      <div class="section-title"><h2>先给结论</h2><span class="lead">这条西北线怎么排最稳</span></div>
+      <div class="decision-band">
+        <article class="decision-card strong"><div class="tags"><span class="tag">推荐</span><span class="tag">最顺</span></div><h3>兰州/西宁进，敦煌出</h3><p>如果机票价格能接受，优先“兰州或西宁落地，沿河西走廊一路向西，敦煌返程”。这样不走回头路，D5-D6可以完整留给莫高窟、鸣沙山和敦煌西线。</p></article>
+        <article class="decision-card"><div class="tags"><span class="tag warn">省钱备选</span></div><h3>兰州往返也能走，但会多一段回头路</h3><p>如果敦煌返程机票太贵，可以敦煌火车/动车回兰州再返程，但需要多留半天到一天交通缓冲，不要把D7排太满。</p></article>
+      </div>
+      <div class="plan-note"><b>旅游管家建议：</b>这条线不建议压成“每天换城市+每天大景点”的极限玩法。张掖丹霞看光线、莫高窟看预约、鸣沙山看温度，三个点都不能赶。</div>
+    </section>
+
+    <section class="wrap" id="route-map">
+      <div class="section-title"><h2>大路线指示图</h2><span class="lead">红色箭头看每天往哪里走</span></div>
+      <figure class="route-overview-map real-map"><img loading="lazy" src="../assets/images/maps/dunhuang-route-arrows-map.jpg" alt="张掖敦煌七天路线红箭头地图"></figure>
+      <div class="route-detail-strip">
+        <span>D1 兰州/西宁落地</span><span>D2 张掖七彩丹霞</span><span>D3 嘉峪关关城</span><span>D4 转场敦煌</span><span>D5 莫高窟+鸣沙山</span><span>D6 敦煌西线</span><span>D7 返程</span>
       </div>
     </section>
-    <section id="outline">
-      <div class="section-title"><h2>初版路线骨架</h2><span class="lead">后续会拆成每日执行卡</span></div>
-      <div class="preview-timeline">
-        <article class="preview-day"><b>D1｜广州/佛山 → 兰州/西宁</b><span>住火车站或市中心，核第二天去张掖车次。</span></article>
-        <article class="preview-day"><b>D2｜张掖七彩丹霞</b><span>下午或傍晚看丹霞，住张掖。</span></article>
-        <article class="preview-day"><b>D3｜张掖 → 嘉峪关</b><span>嘉峪关关城/悬壁长城按体力二选一。</span></article>
-        <article class="preview-day"><b>D4｜嘉峪关 → 敦煌</b><span>长距离转场日，晚上只轻逛沙洲夜市。</span></article>
-        <article class="preview-day"><b>D5｜莫高窟 + 鸣沙山</b><span>莫高窟预约优先，傍晚去鸣沙山月牙泉。</span></article>
-        <article class="preview-day"><b>D6｜敦煌西线</b><span>阳关/玉门关/雅丹按包车和体力选择。</span></article>
-        <article class="preview-day"><b>D7｜敦煌返程</b><span>敦煌直飞或火车回兰州/西宁再返程。</span></article>
+
+    <section class="wrap" id="traffic">
+      <div class="section-title"><h2>出发交通怎么选</h2><span class="lead">从广州/佛山出发，先比大交通，再定城市顺序</span></div>
+      <div class="desert-grid">
+        <article class="desert-card"><h3>方案1｜兰州进，敦煌出</h3><ul><li><b>适合：</b>想少走回头路、预算能接受的人。</li><li><b>走法：</b>广州白云 → 兰州中川；兰州/张掖/嘉峪关/敦煌用火车串联；敦煌飞回广州或中转。</li><li><b>优点：</b>路线最顺。</li><li><b>缺点：</b>敦煌返程航班可能贵或中转。</li></ul><p class="keyword"><span>携程 广州 兰州 敦煌 广州 机票</span><button class="copy-btn" data-copy="携程 广州 兰州 敦煌 广州 机票" type="button">复制</button></p></article>
+        <article class="desert-card"><h3>方案2｜西宁进，敦煌出</h3><ul><li><b>适合：</b>西宁机票更便宜，或想从青海侧进入河西走廊的人。</li><li><b>走法：</b>广州 → 西宁；西宁 → 张掖；后续同样到敦煌返。</li><li><b>优点：</b>有时价格更好，西宁到张掖也顺。</li><li><b>缺点：</b>多一个西宁选择，订票前要比价。</li></ul><p class="keyword"><span>12306 西宁 张掖西 火车</span><button class="copy-btn" data-copy="12306 西宁 张掖西 火车" type="button">复制</button></p></article>
+        <article class="desert-card"><h3>方案3｜兰州往返省钱版</h3><ul><li><b>适合：</b>敦煌返程太贵、时间相对宽裕的人。</li><li><b>走法：</b>广州 → 兰州 → 张掖 → 嘉峪关 → 敦煌 → 兰州 → 广州。</li><li><b>优点：</b>大交通可能更好控。</li><li><b>缺点：</b>回程多坐一段火车，D7压力变大。</li></ul><p class="keyword"><span>12306 敦煌 兰州 火车 卧铺</span><button class="copy-btn" data-copy="12306 敦煌 兰州 火车 卧铺" type="button">复制</button></p></article>
+      </div>
+      <div class="notice"><b>站点解释：</b>广州白云机场是飞机场，广州南站是高铁站；兰州中川是机场，兰州西/兰州站是铁路站；张掖西、嘉峪关南、敦煌站/柳园南站都要按12306实际车次选择。不要把“机场”和“火车站”混在一个导航里。</div>
+    </section>
+
+    <section class="wrap" id="overview">
+      <div class="section-title"><h2>7天行程总览</h2><span class="lead">先看每天住哪里、明天怎么走</span></div>
+      <div class="day-flow">
+        <div class="head">天数</div><div class="head">路线</div><div class="head">当天重点</div><div class="head">今晚住哪里</div><div class="head">明天怎么走</div>
+        <div>D1</div><div>广州/佛山 → 兰州或西宁</div><div>落地，不赶景点，只做转场和补给</div><div>兰州市中心/兰州西站，或西宁市中心/西宁站</div><div>坐火车到张掖，下午/傍晚看丹霞</div>
+        <div>D2</div><div>兰州/西宁 → 张掖七彩丹霞</div><div>傍晚看丹霞色彩，避开正午</div><div>张掖市区/张掖西站附近</div><div>坐火车去嘉峪关，下午看关城</div>
+        <div>D3</div><div>张掖 → 嘉峪关</div><div>嘉峪关关城，体力好再补长城点</div><div>嘉峪关市区主路酒店</div><div>坐火车/动车去敦煌，晚上沙洲夜市</div>
+        <div>D4</div><div>嘉峪关 → 敦煌</div><div>长转场日，不排重景点</div><div>敦煌市区/沙洲夜市附近</div><div>上午莫高窟，傍晚鸣沙山</div>
+        <div>D5</div><div>莫高窟 + 鸣沙山月牙泉</div><div>本线核心日，预约优先</div><div>继续住敦煌市区或鸣沙山周边</div><div>敦煌西线包车/小团</div>
+        <div>D6</div><div>阳关/玉门关/雅丹西线</div><div>戈壁、关隘、雅丹，车程长</div><div>继续住敦煌市区</div><div>按航班/火车返程，保缓冲</div>
+        <div>D7</div><div>敦煌 → 广州/佛山</div><div>返程日，必要时中转兰州/西安/成都</div><div>正常不住，晚点备中转酒店</div><div>回家休整</div>
       </div>
     </section>
-    <section>
-      <div class="section-title"><h2>重点景点预览</h2><span class="lead">先保留这些核心点</span></div>
-      <div class="preview-grid">
-        <article class="preview-card"><h3>张掖七彩丹霞</h3><p>看日落更出片，天气和光线很关键，门票和观光车以景区为准。</p></article>
-        <article class="preview-card"><h3>嘉峪关关城</h3><p>适合作为中段文化景点，暑期要避开正午暴晒。</p></article>
-        <article class="preview-card"><h3>莫高窟</h3><p>本线核心，必须提前看预约规则；票种、场次和开放以官方为准。</p></article>
-        <article class="preview-card"><h3>鸣沙山月牙泉</h3><p>傍晚体验最好，白天沙漠暴晒，注意防晒补水。</p></article>
-        <article class="preview-card"><h3>敦煌西线</h3><p>阳关、玉门关、雅丹距离远，建议包车或一日团，别硬拼夜路。</p></article>
-        <article class="preview-card"><h3>沙洲夜市</h3><p>适合轻松吃饭和补给，不建议把贵价游客套餐当正餐主力。</p></article>
+
+    <section class="wrap" id="stay">
+      <div class="section-title"><h2>7天住宿流转总表</h2><span class="lead">订房按“明天顺路”来，不追贵景观房</span></div>
+      <div class="stay-flow">
+        <div class="head">第几晚</div><div class="head">城市</div><div class="head">推荐住宿圈</div><div class="head">搜索关键词</div><div class="head">为什么住这里</div><div class="head">吃饭补给</div><div class="head">第二天交通</div><div class="head">避坑</div><div class="head">订房检查</div>
+        <div>第1晚</div><div>兰州/西宁</div><div>兰州市中心/兰州西站；或西宁市中心/西宁站</div><div>兰州西站 酒店 近地铁；西宁站 酒店 可取消</div><div>第二天去张掖方便，落地后不用折腾远路</div><div>牛肉面备注不辣、清汤面、家常菜</div><div>火车去张掖西/张掖站</div><div>别订到机场附近太偏，第二天进城再去站麻烦</div><div>评分4.5以上、可取消、有电梯、靠主路</div>
+        <div>第2晚</div><div>张掖</div><div>张掖市区/张掖西站附近</div><div>张掖西站 酒店；张掖市区 鼓楼 酒店</div><div>丹霞傍晚回城方便，第二天去嘉峪关顺</div><div>清汤面、炒菜、牛肉面少辣/不辣</div><div>火车去嘉峪关南/嘉峪关站</div><div>丹霞景区周边夜间吃饭少，默认回城住</div><div>可寄存、热水稳定、评价看隔音</div>
+        <div>第3晚</div><div>嘉峪关</div><div>嘉峪关市区主路/大唐美食街附近</div><div>嘉峪关市区 酒店 近主路；嘉峪关南站 酒店</div><div>去关城和车站都方便，不住景区孤点</div><div>清汤面、家常炒菜、羊肉汤备注不辣</div><div>火车/动车去敦煌或柳园南再接驳敦煌</div><div>别把住宿订到离市区太远的关城附近</div><div>可取消、有电梯、能叫车</div>
+        <div>第4晚</div><div>敦煌</div><div>敦煌市区/沙洲夜市附近</div><div>敦煌 沙洲夜市 酒店；敦煌市区 酒店</div><div>D5去莫高窟和鸣沙山都好打车，吃饭补给最多</div><div>驴肉黄面不辣、杏皮水、清汤面、家常菜</div><div>上午去莫高窟数字展示中心</div><div>不要为了“沙漠房”牺牲吃饭和打车便利</div><div>空调好、可寄存、近主路</div>
+        <div>第5晚</div><div>敦煌</div><div>继续敦煌市区；想清晨/傍晚进沙漠可选鸣沙山周边</div><div>鸣沙山月牙泉 民宿；敦煌市区 可取消酒店</div><div>D6西线长车程，住市区更方便集合</div><div>夜市少量尝鲜，不点游客套餐</div><div>西线包车/小团酒店接送</div><div>鸣沙山周边吃饭不如市区，别订太偏</div><div>空调、洗衣、热水、停车/接送说明</div>
+        <div>第6晚</div><div>敦煌</div><div>敦煌市区/沙洲夜市附近</div><div>敦煌市区 酒店 近主路 可取消</div><div>D7返程或中转，市区去机场/火车站更稳</div><div>清淡家常菜，补水，早点睡</div><div>敦煌机场/敦煌站/柳园南站/中转城市</div><div>西线回城晚，不要再订换酒店</div><div>可延迟退房或寄存更好</div>
+        <div>第7晚</div><div>返程</div><div>正常不住宿；晚点备中转城市机场/车站酒店</div><div>兰州中川机场 酒店；敦煌机场 酒店</div><div>防止改签或晚点造成夜间疲劳</div><div>车站机场简餐</div><div>回广州/佛山</div><div>不要硬撑凌晨转场</div><div>临时订可取消，靠机场/车站</div>
+      </div>
+      <div class="map-grid" style="margin-top:14px">
+        <article class="map-card"><figure><img loading="lazy" src="../assets/images/maps/dunhuang-lanzhou-hotel-map.jpg" alt="兰州住宿圈地图"></figure><h3>兰州住宿圈</h3><p>市中心/兰州西站周边，第二天去张掖更稳。</p></article>
+        <article class="map-card"><figure><img loading="lazy" src="../assets/images/maps/dunhuang-xining-hotel-map.jpg" alt="西宁住宿圈地图"></figure><h3>西宁住宿圈</h3><p>如果西宁进更便宜，住市中心或西宁站圈。</p></article>
+        <article class="map-card"><figure><img loading="lazy" src="../assets/images/maps/dunhuang-zhangye-hotel-map.jpg" alt="张掖住宿圈地图"></figure><h3>张掖住宿圈</h3><p>住市区/西站，丹霞看完回城吃饭休息。</p></article>
+        <article class="map-card"><figure><img loading="lazy" src="../assets/images/maps/dunhuang-jiayuguan-hotel-map.jpg" alt="嘉峪关住宿圈地图"></figure><h3>嘉峪关住宿圈</h3><p>市区主路最稳，去关城和车站都方便。</p></article>
+        <article class="map-card"><figure><img loading="lazy" src="../assets/images/maps/dunhuang-city-hotel-map.jpg" alt="敦煌市区住宿圈地图"></figure><h3>敦煌市区住宿圈</h3><p>沙洲夜市/市区补给强，莫高窟和鸣沙山都好打车。</p></article>
+        <article class="map-card"><figure><img loading="lazy" src="../assets/images/maps/dunhuang-mingsha-hotel-map.jpg" alt="鸣沙山周边住宿圈地图"></figure><h3>鸣沙山周边住宿圈</h3><p>想傍晚或清晨进沙漠可选，但吃饭不如市区。</p></article>
+      </div>
+      <p class="map-source-note">地图底图来源：高德地图网页瓦片；住宿圈为本攻略叠加的半透明范围标注。酒店最终位置以高德/美团/携程实际页面为准。</p>
+    </section>
+
+    <section class="wrap" id="days">
+      <div class="section-title"><h2>每日执行卡</h2><span class="lead">默认折叠，旅行当天点开对应日期</span></div>
+
+      <details class="day-card">
+        <summary><span class="day-no">D1</span><b>广州/佛山 → 兰州/西宁｜落地休整</b><span class="day-toggle">展开</span></summary>
+        <div class="day-inner">
+          <div class="notice"><b>今日一句话：</b>只负责安全落地和住到交通方便的地方，不安排硬景点。</div>
+          <div class="mini"><div><span>今日目标</span><b>到兰州或西宁，确认D2去张掖车次。</b></div><div><span>今晚住</span><b>兰州西站/市中心，或西宁站/市中心。</b></div><div><span>今日交通</span><b>飞机优先；火车省钱但耗时长。</b></div><div><span>今日预算</span><b>大交通按实际出票；晚餐+接驳两人约150-500元。</b></div></div>
+          <div class="carry-card"><h4>今日要带什么</h4><ul class="carry-list"><li>身份证</li><li>航班/火车订单</li><li>酒店订单</li><li>充电宝</li><li>防晒衣</li><li>薄外套</li></ul></div>
+          <article class="step"><time>上午/下午</time><div><p>从佛山/广州去广州白云机场或广州南站，国内航班建议提前约2小时到机场，火车按12306检票时间预留。</p><p class="keyword"><span>广州白云机场 / 广州南站</span><button class="copy-btn" data-copy="广州白云机场 / 广州南站" type="button">复制</button></p></div></article>
+          <article class="step"><time>到达后</time><div><p>直接去酒店，吃清淡晚餐，核对D2兰州/西宁到张掖车次和张掖酒店。</p><p class="keyword"><span>兰州西站 酒店 / 西宁站 酒店</span><button class="copy-btn" data-copy="兰州西站 酒店 / 西宁站 酒店" type="button">复制</button></p></div></article>
+          <details class="card-pad card" open><summary><b>晚点/太累怎么办</b></summary><ul><li>到达超过21:00：取消所有夜逛，只吃酒店附近简餐。</li><li>如果兰州/西宁落地太晚：D2上午晚点出发，丹霞只看傍晚核心。</li></ul></details>
+        </div>
+      </details>
+
+      <details class="day-card">
+        <summary><span class="day-no">D2</span><b>兰州/西宁 → 张掖七彩丹霞｜傍晚看色彩</b><span class="day-toggle">展开</span></summary>
+        <div class="day-inner">
+          <div class="notice"><b>今日一句话：</b>上午转场到张掖，下午去七彩丹霞，尽量把最好的光线留给傍晚。</div>
+          <div class="mini"><div><span>今日目标</span><b>看丹霞颜色和观景台，不正午暴晒硬走。</b></div><div><span>今晚住</span><b>张掖市区/张掖西站附近。</b></div><div><span>今日交通</span><b>火车到张掖后打车/小团去丹霞。</b></div><div><span>今日可删</span><b>如果到得晚，只看核心观景台和日落。</b></div></div>
+          <div class="carry-card"><h4>今日要带什么</h4><ul class="carry-list"><li>身份证</li><li>防晒霜</li><li>帽子</li><li>墨镜</li><li>水</li><li>充电宝</li><li>薄外套</li></ul></div>
+          <article class="step"><time>08:00-12:00</time><div><p>兰州/西宁坐火车到张掖，具体车次和票价以12306为准。</p><p class="keyword"><span>12306 兰州 张掖西 / 西宁 张掖西</span><button class="copy-btn" data-copy="12306 兰州 张掖西 / 西宁 张掖西" type="button">复制</button></p></div></article>
+          <article class="step"><time>15:30-19:30</time><div><p>前往张掖七彩丹霞，按景区观光车路线走观景台。晴天傍晚更出片，阴天就缩短停留。</p><p class="keyword"><span>张掖七彩丹霞旅游景区 北门</span><button class="copy-btn" data-copy="张掖七彩丹霞旅游景区 北门" type="button">复制</button></p></div></article>
+          <details class="card-pad card" open><summary><b>下雨/太热怎么办</b></summary><ul><li>正午暴晒：在市区休息，晚些再去。</li><li>阴雨天：丹霞色彩会弱，改成核心观景台短游，早点回城。</li></ul></details>
+        </div>
+      </details>
+
+      <details class="day-card">
+        <summary><span class="day-no">D3</span><b>张掖 → 嘉峪关｜关城文化日</b><span class="day-toggle">展开</span></summary>
+        <div class="day-inner">
+          <div class="notice"><b>今日一句话：</b>上午去嘉峪关，下午看关城，体力好再补悬壁长城或长城第一墩。</div>
+          <div class="mini"><div><span>今日目标</span><b>关城为主，不把所有长城点硬塞满。</b></div><div><span>今晚住</span><b>嘉峪关市区主路酒店。</b></div><div><span>今日交通</span><b>张掖到嘉峪关火车，市内打车。</b></div><div><span>今日风险</span><b>暑期晒、景区空旷、步行累。</b></div></div>
+          <article class="step"><time>09:00-12:00</time><div><p>张掖到嘉峪关，按12306实际车次选择嘉峪关南/嘉峪关站。</p><p class="keyword"><span>12306 张掖西 嘉峪关南</span><button class="copy-btn" data-copy="12306 张掖西 嘉峪关南" type="button">复制</button></p></div></article>
+          <article class="step"><time>15:00-18:00</time><div><p>嘉峪关关城游玩，优先关城主景区；正午热就推迟出门。</p><p class="keyword"><span>嘉峪关关城 景区入口</span><button class="copy-btn" data-copy="嘉峪关关城 景区入口" type="button">复制</button></p></div></article>
+          <details class="card-pad card" open><summary><b>太累怎么办</b></summary><ul><li>只看关城主景区，悬壁长城和第一墩二选一或都删。</li><li>晚上不赶敦煌，住嘉峪关恢复体力。</li></ul></details>
+        </div>
+      </details>
+
+      <details class="day-card">
+        <summary><span class="day-no">D4</span><b>嘉峪关 → 敦煌｜长转场轻松日</b><span class="day-toggle">展开</span></summary>
+        <div class="day-inner">
+          <div class="notice"><b>今日一句话：</b>转场到敦煌，晚上只轻逛沙洲夜市，提前确认莫高窟预约。</div>
+          <div class="mini"><div><span>今日目标</span><b>安全到敦煌，准备D5核心日。</b></div><div><span>今晚住</span><b>敦煌市区/沙洲夜市附近。</b></div><div><span>今日交通</span><b>火车到敦煌/柳园南，再接驳市区。</b></div><div><span>今日必做</span><b>核对莫高窟场次和入场地点。</b></div></div>
+          <article class="step"><time>上午/下午</time><div><p>嘉峪关到敦煌方向，按12306选择敦煌站或柳园南站；柳园南到敦煌市区还需要接驳。</p><p class="keyword"><span>12306 嘉峪关 敦煌 柳园南</span><button class="copy-btn" data-copy="12306 嘉峪关 敦煌 柳园南" type="button">复制</button></p></div></article>
+          <article class="step"><time>晚上</time><div><p>沙洲夜市轻逛，买水和防晒补给，不吃太撑，不点游客套餐。</p><p class="keyword"><span>敦煌 沙洲夜市</span><button class="copy-btn" data-copy="敦煌 沙洲夜市" type="button">复制</button></p></div></article>
+        </div>
+      </details>
+
+      <details class="day-card" open>
+        <summary><span class="day-no">D5</span><b>莫高窟 + 鸣沙山月牙泉｜本线核心日</b><span class="day-toggle">展开</span></summary>
+        <div class="day-inner">
+          <div class="notice"><b>今日一句话：</b>上午按预约去莫高窟数字展示中心，傍晚再去鸣沙山月牙泉，避开沙漠正午暴晒。</div>
+          <div class="mini"><div><span>今日目标</span><b>莫高窟优先，鸣沙山放傍晚。</b></div><div><span>今晚住</span><b>继续敦煌市区或鸣沙山周边。</b></div><div><span>今日预算</span><b>门票/接驳/餐饮两人约600-1600元浮动。</b></div><div><span>今日可删</span><b>太热就删骑骆驼等额外项目。</b></div></div>
+          <div class="carry-card"><h4>今日要带什么</h4><ul class="carry-list"><li>身份证</li><li>莫高窟预约</li><li>充电宝</li><li>水</li><li>帽子</li><li>墨镜</li><li>防晒霜</li><li>口罩/魔术巾</li><li>舒服鞋</li></ul></div>
+          <article class="step"><time>预约前60分钟</time><div><p>前往莫高窟数字展示中心，不要直接导航去洞窟区。票种、检票、观影和摆渡以官方当日规则为准。</p><p class="keyword"><span>莫高窟数字展示中心</span><button class="copy-btn" data-copy="莫高窟数字展示中心" type="button">复制</button></p></div></article>
+          <article class="step"><time>16:30以后</time><div><p>去鸣沙山月牙泉，傍晚看沙丘和月牙泉，白天高温时不要硬进沙漠。</p><p class="keyword"><span>鸣沙山月牙泉 景区中门</span><button class="copy-btn" data-copy="鸣沙山月牙泉 景区中门" type="button">复制</button></p></div></article>
+        </div>
+      </details>
+
+      <details class="day-card">
+        <summary><span class="day-no">D6</span><b>敦煌西线｜阳关/玉门关/雅丹</b><span class="day-toggle">展开</span></summary>
+        <div class="day-inner">
+          <div class="notice"><b>今日一句话：</b>西线距离远，优先正规包车/小团；天气差就做轻量版，不硬赶雅丹夜景。</div>
+          <div class="mini"><div><span>今日目标</span><b>看戈壁、关隘、雅丹地貌。</b></div><div><span>今晚住</span><b>敦煌市区同一家酒店。</b></div><div><span>今日交通</span><b>包车/小团，提前确认路线和返回时间。</b></div><div><span>今日风险</span><b>晒、干、车程长、夜路。</b></div></div>
+          <article class="step"><time>09:00-19:00</time><div><p>阳关、玉门关、雅丹按预算和体力选择。想省钱可选阳关/玉门关轻量版；想完整看地貌再加雅丹。</p><p class="keyword"><span>敦煌西线 阳关 玉门关 雅丹魔鬼城</span><button class="copy-btn" data-copy="敦煌西线 阳关 玉门关 雅丹魔鬼城" type="button">复制</button></p></div></article>
+          <details class="card-pad card" open><summary><b>天气不好怎么办</b></summary><ul><li>大风沙尘：取消雅丹长线，只做市区休整或博物馆/夜市。</li><li>太晒太累：阳关/玉门关二选一，下午回酒店。</li></ul></details>
+        </div>
+      </details>
+
+      <details class="day-card">
+        <summary><span class="day-no">D7</span><b>敦煌 → 广州/佛山｜返程</b><span class="day-toggle">展开</span></summary>
+        <div class="day-inner">
+          <div class="notice"><b>今日一句话：</b>只保返程，不安排重景点；敦煌直飞贵就中转兰州/西安/成都。</div>
+          <div class="mini"><div><span>今日目标</span><b>顺利返程。</b></div><div><span>今晚住</span><b>正常不住；晚点备中转酒店。</b></div><div><span>今日交通</span><b>飞机或火车中转。</b></div><div><span>今日风险</span><b>中转时间不足、航班延误。</b></div></div>
+          <article class="step"><time>出发前</time><div><p>酒店退房，行李按航班/火车时间寄存；中转至少留足换乘和安检时间。</p><p class="keyword"><span>敦煌机场 / 敦煌站 / 柳园南站</span><button class="copy-btn" data-copy="敦煌机场 / 敦煌站 / 柳园南站" type="button">复制</button></p></div></article>
+        </div>
+      </details>
+    </section>
+
+    <section class="wrap" id="spots">
+      <div class="section-title"><h2>景点内部执行攻略</h2><span class="lead">进门前准备、进去后怎么走、累了删哪里</span></div>
+      <div class="notice"><b>统一提醒：</b>开放时间、门票、观光车、预约和临时管控以景区官方公众号/官网/现场公告/OTA实际页面为准。</div>
+      <div class="desert-grid">
+        <article class="desert-card"><figure><img loading="lazy" src="../assets/images/dunhuang-zhangye-danxia.jpg" alt="张掖七彩丹霞实景"></figure><h3>张掖七彩丹霞</h3><ul><li><b>安排：</b>D2下午/傍晚。</li><li><b>入口：</b>按门票和酒店位置选北门/西门等，以景区公告为准。</li><li><b>路线：</b>入园后坐观光车按站点走，优先观景台，不在每站耗太久。</li><li><b>必看：</b>七彩虹霞台、核心观景台、日落光线。</li><li><b>可删：</b>阴雨天或太热就缩短到2小时。</li><li><b>准备：</b>防晒、帽子、水、充电宝、薄外套。</li></ul></article>
+        <article class="desert-card"><figure><img loading="lazy" src="../assets/images/dunhuang-jiayuguan-pass.jpg" alt="嘉峪关关城实景"></figure><h3>嘉峪关关城</h3><ul><li><b>安排：</b>D3下午。</li><li><b>入口：</b>嘉峪关关城景区入口。</li><li><b>路线：</b>关城主楼 → 城墙 → 关城内外拍照，体力好再看周边长城点。</li><li><b>必看：</b>关城、城楼、戈壁背景。</li><li><b>可删：</b>悬壁长城/第一墩可按体力二选一。</li><li><b>准备：</b>防晒、防风外套、水、舒服鞋。</li></ul></article>
+        <article class="desert-card"><figure><img loading="lazy" src="../assets/images/mogao-caves.svg" alt="莫高窟"></figure><h3>莫高窟</h3><ul><li><b>安排：</b>D5上午。</li><li><b>入口：</b>莫高窟数字展示中心，不要直接去窟区。</li><li><b>路线：</b>检票/观影/摆渡 → 洞窟参观 → 返回数字展示中心。</li><li><b>必看：</b>官方安排开放洞窟和讲解内容。</li><li><b>可删：</b>特窟、文创店、长时间拍照都不是必须。</li><li><b>准备：</b>身份证、预约信息、充电宝、水；洞窟内遵守禁拍规则。</li></ul></article>
+        <article class="desert-card"><figure><img loading="lazy" src="../assets/images/mingsha-mountain.svg" alt="鸣沙山月牙泉"></figure><h3>鸣沙山月牙泉</h3><ul><li><b>安排：</b>D5傍晚。</li><li><b>入口：</b>中门/东门按实际购票入口和交通选择。</li><li><b>路线：</b>入园 → 月牙泉 → 沙丘观景 → 日落后适时离开。</li><li><b>必看：</b>月牙泉、沙丘日落、夜色灯光。</li><li><b>可删：</b>骆驼、滑沙、鞋套等项目按预算体力选择。</li><li><b>准备：</b>防晒、墨镜、口罩/魔术巾、水、充电宝。</li></ul></article>
+        <article class="desert-card"><figure><img loading="lazy" src="../assets/images/yangguan-pass.svg" alt="敦煌西线"></figure><h3>敦煌西线</h3><ul><li><b>安排：</b>D6。</li><li><b>入口：</b>阳关/玉门关/雅丹按包车路线。</li><li><b>路线：</b>阳关或玉门关 → 戈壁路段 → 雅丹；轻量版只做阳关/玉门关。</li><li><b>必看：</b>戈壁开阔感、关隘遗址、雅丹地貌。</li><li><b>可删：</b>雅丹距离远，预算/体力不够可删。</li><li><b>准备：</b>防晒防风、水、零食、晕车药、充电宝。</li></ul></article>
+        <article class="desert-card"><figure><img loading="lazy" src="../assets/images/crescent-spring.svg" alt="沙洲夜市"></figure><h3>沙洲夜市</h3><ul><li><b>安排：</b>D4/D5晚上轻逛。</li><li><b>路线：</b>酒店 → 夜市 → 便利店补给 → 回酒店。</li><li><b>必吃：</b>杏皮水、驴肉黄面不辣版、清淡面食。</li><li><b>可删：</b>贵价游客套餐、过度排队网红店。</li><li><b>提醒：</b>第二天有重行程，不要吃太撑或太油。</li></ul></article>
       </div>
     </section>
-    <section class="notice">后续补全方向：飞机/火车往返对比、莫高窟预约时间、敦煌住宿圈、包车/一日团预算、每日避暑节奏、餐饮和应急方案。</section>
+
+    <section class="wrap" id="food">
+      <div class="section-title"><h2>吃饭与不辣提醒</h2><span class="lead">西北线默认清淡，不为网红店绕远路</span></div>
+      <div class="notice food-script"><b>拿给店员看的话术：</b>我们完全不能吃辣，辣椒、红油、花椒、麻油都不要，蘸料也不要辣，麻烦做清淡一点。</div>
+      <div class="desert-grid">
+        <article class="desert-card"><h3>兰州/西宁</h3><p>牛肉面可备注不辣、不要辣油；清汤面、炒青菜、手抓羊肉少蘸料、酸奶相对稳。</p><p class="keyword"><span>兰州 牛肉面 不辣 清汤</span><button class="copy-btn" data-copy="兰州 牛肉面 不辣 清汤" type="button">复制</button></p></article>
+        <article class="desert-card"><h3>张掖/嘉峪关</h3><p>优先家常菜、面片、清汤面、炒菜；烧烤、凉拌菜、蘸料先问辣不辣。</p><p class="keyword"><span>张掖 市区 家常菜 不辣</span><button class="copy-btn" data-copy="张掖 市区 家常菜 不辣" type="button">复制</button></p></article>
+        <article class="desert-card"><h3>敦煌</h3><p>驴肉黄面备注不辣、羊肉汤、胡羊焖饼少辣/不辣、杏皮水、清淡家常菜。夜市边走边吃，不要第一家吃饱。</p><p class="keyword"><span>敦煌 沙洲夜市 驴肉黄面 不辣</span><button class="copy-btn" data-copy="敦煌 沙洲夜市 驴肉黄面 不辣" type="button">复制</button></p></article>
+      </div>
+    </section>
+
+    <section class="wrap" id="budget">
+      <div class="section-title"><h2>预算速算表</h2><span class="lead">不写死总价，按实际出票订房浮动</span></div>
+      <div class="budget-table">
+        <div class="head">版本</div><div class="head">适合谁</div><div class="head">两人大交通</div><div class="head">当地交通</div><div class="head">门票/项目</div><div class="head">总预算提醒</div>
+        <div>省钱火车版</div><div>时间宽裕、能接受卧铺和回头路</div><div>广州往返兰州/西宁火车或低价机票，按12306/航司</div><div>河西走廊火车 + 敦煌公交/打车/少量小团</div><div>保莫高窟、鸣沙山、丹霞、关城；西线可轻量</div><div>两人约6500-9500元起，牺牲舒适度和时间</div>
+        <div>标准顺路版</div><div>想少走回头路、体验完整</div><div>兰州/西宁进，敦煌出或中转返</div><div>城市间火车 + 敦煌西线小团/拼车</div><div>核心景点都保留，额外项目少点</div><div>两人约9000-13000元，暑期酒店机票会拉高</div>
+        <div>舒服省心版</div><div>不想折腾交通，愿意多花一点</div><div>飞机优先，敦煌返程中转时间留足</div><div>敦煌段包车/正规小团，酒店位置更好</div><div>莫高窟优先好场次，鸣沙山按体力加项目</div><div>两人约12000-15000元或更高，以实际为准</div>
+      </div>
+      <div class="notice"><b>最容易超预算：</b>敦煌返程机票、暑期敦煌住宿、莫高窟票种、敦煌西线包车/小团、鸣沙山额外项目。省钱先压酒店和额外项目，不要压缩莫高窟预约和返程缓冲。</div>
+    </section>
+
+    <section class="wrap" id="checklist">
+      <div class="section-title"><h2>准备清单</h2><span class="lead">西北线重点是防晒、防干、防风沙</span></div>
+      <div class="check-grid">
+        <article class="desert-card"><h3>证件票务</h3><ul><li>身份证</li><li>12306</li><li>航司/OTA订单</li><li>酒店订单</li><li>莫高窟预约</li><li>景区二维码</li></ul></article>
+        <article class="desert-card"><h3>防晒防干</h3><ul><li>防晒霜</li><li>帽子</li><li>墨镜</li><li>防晒衣</li><li>润唇膏</li><li>保湿用品</li><li>口罩/魔术巾</li></ul></article>
+        <article class="desert-card"><h3>电子与药品</h3><ul><li>充电宝</li><li>充电器</li><li>备用数据线</li><li>晕车药</li><li>肠胃药</li><li>创可贴</li><li>感冒药</li></ul></article>
+      </div>
+    </section>
+
+    <section class="wrap" id="emergency">
+      <div class="section-title"><h2>应急方案</h2><span class="lead">别只说灵活调整，直接给替代动作</span></div>
+      <details class="emergency-card card-pad" open><summary><b>莫高窟没票怎么办</b></summary><p>先查官方是否有其他票种/场次；仍无票则把D5改为鸣沙山+敦煌博物馆/市区休整，D6西线不变。不要找不明代购。</p></details>
+      <details class="emergency-card card-pad"><summary><b>鸣沙山太热怎么办</b></summary><p>改到傍晚更晚时段或第二天清晨；取消骑骆驼/滑沙，只走月牙泉和近处沙丘。</p></details>
+      <details class="emergency-card card-pad"><summary><b>火车没票怎么办</b></summary><p>先查相邻站和相邻时间；张掖/嘉峪关/敦煌之间可改动车、普通火车、顺风拼车或正规小团接驳，别临时坐黑车。</p></details>
+      <details class="emergency-card card-pad"><summary><b>沙尘/大风怎么办</b></summary><p>取消鸣沙山和雅丹长线，改市区休整、博物馆、夜市短逛；戴口罩/魔术巾，眼睛不舒服就回酒店。</p></details>
+      <details class="emergency-card card-pad"><summary><b>预算超了怎么办</b></summary><p>先删鸣沙山额外项目，再把西线包车改小团/轻量版，酒店从景区周边改市区。不要删莫高窟和交通缓冲。</p></details>
+      <details class="emergency-card card-pad"><summary><b>身体太累怎么办</b></summary><p>D3只看嘉峪关关城，D6西线改轻量版，D7不安排任何补漏。西北线体感消耗大，午休比多打卡重要。</p></details>
+    </section>
+
+    <section class="wrap" id="sources">
+      <div class="section-title"><h2>来源与核对入口</h2><span class="lead">出发前按这些渠道再核一遍</span></div>
+      <ul class="source-grid">
+        <li><a href="https://www.dha.ac.cn/skxl/mgk.htm" target="_blank" rel="noopener">敦煌研究院｜莫高窟参观与票务信息</a></li>
+        <li><a href="https://www.dhafund.cn/cms/dhkx/484.html" target="_blank" rel="noopener">中国敦煌石窟保护研究基金会｜2026莫高窟开放公告</a></li>
+        <li><a href="https://www.mssyyq.com/GZWM/" target="_blank" rel="noopener">鸣沙山月牙泉景区官方网站</a></li>
+        <li><a href="https://www.zydanxia.com/" target="_blank" rel="noopener">张掖七彩丹霞旅游景区官网</a></li>
+        <li><a href="https://commons.wikimedia.org/wiki/File:Colourful_mountains_of_the_Zhangye_National_Geopark.jpg" target="_blank" rel="noopener">图片来源｜张掖丹霞实景图 Wikimedia Commons</a></li>
+        <li><a href="https://commons.wikimedia.org/wiki/File:20080716_Jiayuguan_Pass_03.jpg" target="_blank" rel="noopener">图片来源｜嘉峪关实景图 Wikimedia Commons</a></li>
+        <li><a href="https://www.12306.cn/" target="_blank" rel="noopener">12306｜火车票与车站核对</a></li>
+        <li>高德/美团/携程：酒店位置、餐厅营业、打车价格、景区预约以实际页面为准。</li>
+      </ul>
+      <section class="notice">本攻略用于旅行执行参考。航班、高铁/火车、酒店、景区门票、开放时间、接驳车、餐厅营业时间、天气都会变化。出发前请以航司、12306、酒店平台、景区官方公众号、高德/美团实际页面为准。</section>
+    </section>
   </main>
+
+  <script src="../assets/js/main.js"></script>
 </body>
 </html>
