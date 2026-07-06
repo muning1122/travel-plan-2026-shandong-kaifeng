@@ -1,8 +1,6 @@
 name: Deploy static travel planner
 
 on:
-  push:
-    branches: ["main"]
   workflow_dispatch:
 
 permissions:
