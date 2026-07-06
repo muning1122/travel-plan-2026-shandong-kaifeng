@@ -251,6 +251,63 @@
     }
     .day-tile h3 { font-size:16px; line-height:1.35; margin-bottom:8px; }
     .day-tile p { margin:0 0 6px; color:#435568; font-size:13.5px; }
+    .control-overview {
+      grid-template-columns:repeat(7,minmax(190px,1fr));
+      overflow-x:auto;
+      padding-bottom:8px;
+      scroll-snap-type:x proximity;
+    }
+    .control-tile {
+      min-height:170px;
+      display:flex;
+      flex-direction:column;
+      gap:9px;
+      scroll-snap-align:start;
+    }
+    .control-head {
+      display:flex;
+      align-items:center;
+      gap:8px;
+      min-height:28px;
+    }
+    .control-day {
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      min-width:34px;
+      padding:4px 9px;
+      border-radius:999px;
+      background:#dff5f1;
+      color:#0b6258;
+      font-size:13px;
+      font-weight:900;
+    }
+    .control-type {
+      font-size:16px;
+      font-weight:900;
+      color:var(--ink);
+      line-height:1.2;
+    }
+    .control-line {
+      margin:0;
+      color:#32475b;
+      font-size:13.5px;
+      line-height:1.45;
+    }
+    .control-line span {
+      display:inline-flex;
+      margin-right:6px;
+      padding:2px 7px;
+      border-radius:999px;
+      background:#eef8f5;
+      color:#0b6258;
+      font-size:12px;
+      font-weight:900;
+    }
+    .control-line.tonight {
+      color:#0b6258;
+      font-weight:900;
+    }
     .scheme-grid {
       display:grid;
       grid-template-columns:repeat(3,minmax(0,1fr));
@@ -857,6 +914,7 @@
       .hero-grid { grid-template-columns:1fr; align-items:start; }
       .hero-shell { min-height:auto; }
       .day-overview,.gallery-grid,.info-grid,.quick-grid,.scheme-grid,.grid,.grid.two,.mini,.photo-grid,.list-grid,.station-grid,.transport-grid,.hotel-map-grid,.budget-split,.dunhuang-grid { grid-template-columns:1fr 1fr; }
+      .control-overview { grid-template-columns:repeat(7,minmax(210px,1fr)); }
       .decision-band,.route-choice-grid { grid-template-columns:1fr; }
     }
     @media (max-width:760px) {
@@ -899,6 +957,12 @@
       .dashboard-nav { padding:0 12px; }
       .wrap { padding:16px 12px; }
       .day-overview,.gallery-grid,.info-grid,.quick-grid,.scheme-grid,.grid,.grid.two,.mini,.photo-grid,.list-grid,.source-grid { grid-template-columns:1fr; }
+      .control-overview {
+        grid-template-columns:repeat(7,minmax(230px,82vw));
+        margin-left:-2px;
+        padding-left:2px;
+      }
+      .control-tile { min-height:164px; }
       .section-title { display:block; }
       .section-title h2 { font-size:23px; }
       .compare-table { display:block; border:0; background:transparent; box-shadow:none; }
@@ -986,14 +1050,49 @@
 
 <section class="wrap" id="one-screen">
   <div class="section-title"><h2>一屏看懂：九寨沟七日飞机版怎么走？</h2><span class="lead">先看这张总控台，再看每日详细卡</span></div>
-  <div class="day-overview">
-    <article class="day-tile"><span>D1｜飞成都</span><b>广州白云机场 → 成都天府/双流机场</b><small>住：成都东站1-1.5公里圈优先；晚上直接睡觉。</small></article>
-    <article class="day-tile"><span>D2｜成都 → 黄龙 → 九寨沟</span><b>成都东站 → 黄龙九寨站</b><small>玩黄龙五彩池；住九寨沟沟口，第1晚，共3晚。</small></article>
-    <article class="day-tile"><span>D3｜九寨沟一进沟</span><b>五花海、珍珠滩、诺日朗、长海、五彩池</b><small>住九寨沟沟口，第2晚，共3晚。</small></article>
-    <article class="day-tile"><span>D4｜二进沟/休整</span><b>补拍水色、树正沟，累了就沟口休整</b><small>住九寨沟沟口，第3晚，共3晚；晚上确认草原线司机/小团。</small></article>
-    <article class="day-tile"><span>D5｜九寨沟 → 花湖 → 唐克/若尔盖</span><b>包车/拼车/正规小团</b><small>重点：花湖、草原湿地；住唐克或若尔盖。</small></article>
-    <article class="day-tile"><span>D6｜黄河九曲 → 松潘/川主寺</span><b>黄河九曲第一湾</b><small>住松潘或川主寺；天气差不硬等日落。</small></article>
-    <article class="day-tile"><span>D7｜返程</span><b>松潘站/黄龙九寨站 → 成都东 → 成都机场 → 广州/佛山</b><small>只保返程，不补重景点。</small></article>
+  <div class="day-overview control-overview">
+    <article class="day-tile control-tile">
+      <div class="control-head"><span class="control-day">D1</span><b class="control-type">飞成都</b></div>
+      <p class="control-line"><span>路线</span>广州白云 → 成都天府/双流</p>
+      <p class="control-line tonight"><span>今晚</span>成都东站圈优先</p>
+      <p class="control-line"><span>关键</span>落地后直接睡觉，不夜逛</p>
+    </article>
+    <article class="day-tile control-tile">
+      <div class="control-head"><span class="control-day">D2</span><b class="control-type">黄龙转场日</b></div>
+      <p class="control-line"><span>路线</span>成都东 → 黄龙九寨站 → 黄龙 → 九寨沟</p>
+      <p class="control-line tonight"><span>今晚</span>九寨沟沟口｜第1晚/共3晚</p>
+      <p class="control-line"><span>关键</span>买上午车次，黄龙别拖太晚</p>
+    </article>
+    <article class="day-tile control-tile">
+      <div class="control-head"><span class="control-day">D3</span><b class="control-type">九寨沟一进沟</b></div>
+      <p class="control-line"><span>路线</span>沟口酒店 → 九寨沟景区</p>
+      <p class="control-line tonight"><span>今晚</span>九寨沟沟口｜第2晚/共3晚</p>
+      <p class="control-line"><span>关键</span>五花海、珍珠滩、诺日朗优先</p>
+    </article>
+    <article class="day-tile control-tile">
+      <div class="control-head"><span class="control-day">D4</span><b class="control-type">二进沟/休整</b></div>
+      <p class="control-line"><span>路线</span>九寨沟二进沟或沟口休整</p>
+      <p class="control-line tonight"><span>今晚</span>九寨沟沟口｜第3晚/共3晚</p>
+      <p class="control-line"><span>关键</span>晚上确认草原线司机/小团</p>
+    </article>
+    <article class="day-tile control-tile">
+      <div class="control-head"><span class="control-day">D5</span><b class="control-type">花湖草原线</b></div>
+      <p class="control-line"><span>路线</span>九寨沟 → 花湖 → 唐克/若尔盖</p>
+      <p class="control-line tonight"><span>今晚</span>唐克或若尔盖</p>
+      <p class="control-line"><span>关键</span>08:00退房，别走夜路</p>
+    </article>
+    <article class="day-tile control-tile">
+      <div class="control-head"><span class="control-day">D6</span><b class="control-type">黄河九曲</b></div>
+      <p class="control-line"><span>路线</span>唐克/若尔盖 → 九曲 → 松潘/川主寺</p>
+      <p class="control-line tonight"><span>今晚</span>松潘或川主寺</p>
+      <p class="control-line"><span>关键</span>天气差不硬等日落</p>
+    </article>
+    <article class="day-tile control-tile">
+      <div class="control-head"><span class="control-day">D7</span><b class="control-type">返程</b></div>
+      <p class="control-line"><span>路线</span>松潘/黄龙九寨站 → 成都东 → 机场</p>
+      <p class="control-line tonight"><span>今晚</span>正常不住，晚点备酒店</p>
+      <p class="control-line"><span>关键</span>只保返程，不补重景点</p>
+    </article>
   </div>
 </section>
 
