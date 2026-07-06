@@ -830,6 +830,26 @@
   color:#17394a;
   font-weight:900;
 }
+.quote-table {
+  grid-template-columns:repeat(15,minmax(170px,1fr));
+  margin-top:12px;
+}
+.quote-table > div {
+  min-width:170px;
+}
+.quote-table .head {
+  background:#eef8f5;
+}
+.quote-cell {
+  min-height:42px;
+  outline:none;
+}
+.quote-cell:focus {
+  box-shadow:inset 0 0 0 2px rgba(10,132,123,.28);
+}
+.quote-judge {
+  margin-top:12px;
+}
 .budget-speed-table {
   display:grid;
   grid-template-columns:1fr 1.25fr 1.05fr 1.05fr 1fr 1fr 1fr 1.25fr;
@@ -1195,6 +1215,91 @@
   <div class="grid two">
     <article class="card-pad card"><h3>复制模板｜问平台/旅行社</h3><p class="keyword"><span>你好，我们两个人从九寨沟沟口出发，想D5去若尔盖花湖后住唐克或若尔盖，D6去黄河九曲第一湾后送到松潘/川主寺。请问是拼车还是包车？两人总价多少？是否含油费、过路费、停车费、司机餐费和住宿？是否含花湖、九曲门票/观光车/电梯？几点接、几点到、是否走夜路？天气差能否取消或改线？能否平台下单或提供订单凭证？</span><button class="copy-btn" data-copy="你好，我们两个人从九寨沟沟口出发，想D5去若尔盖花湖后住唐克或若尔盖，D6去黄河九曲第一湾后送到松潘/川主寺。请问是拼车还是包车？两人总价多少？是否含油费、过路费、停车费、司机餐费和住宿？是否含花湖、九曲门票/观光车/电梯？几点接、几点到、是否走夜路？天气差能否取消或改线？能否平台下单或提供订单凭证？" type="button">复制</button></p></article>
     <article class="card-pad card"><h3>复制模板｜问酒店前台</h3><p class="keyword"><span>你好，我们两个人明天想从九寨沟沟口去若尔盖花湖，晚上住唐克或若尔盖，后天再去黄河九曲第一湾并送到松潘/川主寺。酒店有没有正规合作司机或小团？请帮忙确认司机姓名、电话、车牌、接送时间、两人总价、是否含司机食宿和停车费、是否走夜路、天气差能不能改线。</span><button class="copy-btn" data-copy="你好，我们两个人明天想从九寨沟沟口去若尔盖花湖，晚上住唐克或若尔盖，后天再去黄河九曲第一湾并送到松潘/川主寺。酒店有没有正规合作司机或小团？请帮忙确认司机姓名、电话、车牌、接送时间、两人总价、是否含司机食宿和停车费、是否走夜路、天气差能不能改线。" type="button">复制</button></p></article>
+  </div>
+</section>
+<section class="wrap" id="grassland-quote-record">
+  <div class="section-title"><h2>草原线报价记录表：问完直接填这里</h2><span class="lead">联系携程、飞猪、马蜂窝、美团、酒店前台、旅行社或司机后，用来对比报价</span></div>
+  <div class="notice"><b>用途：</b>这不是攻略正文，是草原线询价后的记录表。空白格可以临时点进去填写，重要报价建议再截图或同步到备忘录。</div>
+  <div class="ticket-table quote-table">
+    <div class="head">平台/司机来源</div>
+    <div class="head">联系人/电话/微信</div>
+    <div class="head">车型/是否拼车</div>
+    <div class="head">路线是否完整</div>
+    <div class="head">两人总价</div>
+    <div class="head">含油费/过路费/停车费</div>
+    <div class="head">含司机餐费</div>
+    <div class="head">含司机住宿</div>
+    <div class="head">含门票/观光车/电梯</div>
+    <div class="head">D5几点到酒店接</div>
+    <div class="head">D6几点送到松潘/川主寺</div>
+    <div class="head">是否走夜路</div>
+    <div class="head">天气差能否改线/取消</div>
+    <div class="head">平台下单/订单凭证</div>
+    <div class="head">备注</div>
+    <div contenteditable="true" class="quote-cell">报价1：携程/飞猪/马蜂窝/美团/酒店前台/旅行社/司机个人</div>
+    <div contenteditable="true" class="quote-cell"></div>
+    <div contenteditable="true" class="quote-cell">5座车/7座车/拼车/小团/包车</div>
+    <div contenteditable="true" class="quote-cell">D5沟口→花湖→唐克/若尔盖；D6唐克/若尔盖→九曲→松潘/川主寺</div>
+    <div contenteditable="true" class="quote-cell"></div>
+    <div contenteditable="true" class="quote-cell"></div>
+    <div contenteditable="true" class="quote-cell"></div>
+    <div contenteditable="true" class="quote-cell"></div>
+    <div contenteditable="true" class="quote-cell"></div>
+    <div contenteditable="true" class="quote-cell"></div>
+    <div contenteditable="true" class="quote-cell"></div>
+    <div contenteditable="true" class="quote-cell"></div>
+    <div contenteditable="true" class="quote-cell"></div>
+    <div contenteditable="true" class="quote-cell"></div>
+    <div contenteditable="true" class="quote-cell"></div>
+    <div contenteditable="true" class="quote-cell">报价2：</div>
+    <div contenteditable="true" class="quote-cell"></div>
+    <div contenteditable="true" class="quote-cell"></div>
+    <div contenteditable="true" class="quote-cell"></div>
+    <div contenteditable="true" class="quote-cell"></div>
+    <div contenteditable="true" class="quote-cell"></div>
+    <div contenteditable="true" class="quote-cell"></div>
+    <div contenteditable="true" class="quote-cell"></div>
+    <div contenteditable="true" class="quote-cell"></div>
+    <div contenteditable="true" class="quote-cell"></div>
+    <div contenteditable="true" class="quote-cell"></div>
+    <div contenteditable="true" class="quote-cell"></div>
+    <div contenteditable="true" class="quote-cell"></div>
+    <div contenteditable="true" class="quote-cell"></div>
+    <div contenteditable="true" class="quote-cell"></div>
+    <div contenteditable="true" class="quote-cell">报价3：</div>
+    <div contenteditable="true" class="quote-cell"></div>
+    <div contenteditable="true" class="quote-cell"></div>
+    <div contenteditable="true" class="quote-cell"></div>
+    <div contenteditable="true" class="quote-cell"></div>
+    <div contenteditable="true" class="quote-cell"></div>
+    <div contenteditable="true" class="quote-cell"></div>
+    <div contenteditable="true" class="quote-cell"></div>
+    <div contenteditable="true" class="quote-cell"></div>
+    <div contenteditable="true" class="quote-cell"></div>
+    <div contenteditable="true" class="quote-cell"></div>
+    <div contenteditable="true" class="quote-cell"></div>
+    <div contenteditable="true" class="quote-cell"></div>
+    <div contenteditable="true" class="quote-cell"></div>
+    <div contenteditable="true" class="quote-cell"></div>
+    <div contenteditable="true" class="quote-cell">报价4：</div>
+    <div contenteditable="true" class="quote-cell"></div>
+    <div contenteditable="true" class="quote-cell"></div>
+    <div contenteditable="true" class="quote-cell"></div>
+    <div contenteditable="true" class="quote-cell"></div>
+    <div contenteditable="true" class="quote-cell"></div>
+    <div contenteditable="true" class="quote-cell"></div>
+    <div contenteditable="true" class="quote-cell"></div>
+    <div contenteditable="true" class="quote-cell"></div>
+    <div contenteditable="true" class="quote-cell"></div>
+    <div contenteditable="true" class="quote-cell"></div>
+    <div contenteditable="true" class="quote-cell"></div>
+    <div contenteditable="true" class="quote-cell"></div>
+    <div contenteditable="true" class="quote-cell"></div>
+    <div contenteditable="true" class="quote-cell"></div>
+  </div>
+  <div class="grid two quote-judge">
+    <article class="info-card card-pad"><h3>优先选</h3><p>平台下单、有明确订单、路线完整、费用包含项写清楚、不过度走夜路、天气差可改线的方案。</p></article>
+    <article class="info-card card-pad"><h3>慎选</h3><p>只口头报价、费用包含不清、要求额外承担司机食宿、夜路过多、没有订单凭证的方案。</p></article>
   </div>
 </section>
 <section class="wrap" id="gallery">
