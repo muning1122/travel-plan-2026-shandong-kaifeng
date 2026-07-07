@@ -872,14 +872,34 @@
   background:linear-gradient(135deg,#eef8f5,#fff8e5);
 }
 .quote-card summary::-webkit-details-marker { display:none; }
-.quote-card summary b {
+.quote-summary-main {
+  display:grid;
+  gap:3px;
+  min-width:0;
+}
+.quote-card summary b,
+.quote-title {
   color:#123041;
   font-size:17px;
 }
-.quote-card summary span {
+.quote-card summary span,
+.quote-save-state {
   color:var(--muted);
   font-size:13px;
   font-weight:800;
+}
+.quote-save-state {
+  white-space:nowrap;
+}
+.quote-module-actions {
+  display:flex;
+  justify-content:flex-end;
+  margin:10px 0 12px;
+}
+.quote-clear-all-btn {
+  background:#fff5f3;
+  color:#a63c2d;
+  border-color:#ffd2ca;
 }
 .quote-form {
   display:grid;
@@ -897,6 +917,7 @@
   font-weight:900;
 }
 .quote-field input,
+.quote-field select,
 .quote-field textarea {
   width:100%;
   border:1px solid #cfe2df;
@@ -912,6 +933,7 @@
   resize:vertical;
 }
 .quote-field input:focus,
+.quote-field select:focus,
 .quote-field textarea:focus {
   outline:none;
   border-color:#56b5a8;
@@ -919,6 +941,32 @@
 }
 .quote-field.full {
   grid-column:1 / -1;
+}
+.quote-check-list {
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:8px;
+  padding:12px;
+  border:1px solid #d7ebe7;
+  border-radius:14px;
+  background:#fbfefd;
+}
+.quote-check-item {
+  display:flex;
+  align-items:flex-start;
+  gap:8px;
+  color:#26495f;
+  font-size:14px;
+  font-weight:750;
+  line-height:1.45;
+}
+.quote-check-item input {
+  width:18px;
+  height:18px;
+  min-height:18px;
+  margin-top:1px;
+  accent-color:#0a847b;
+  flex:0 0 auto;
 }
 .quote-actions {
   display:flex;
@@ -928,6 +976,26 @@
 }
 .quote-actions .copy-btn {
   min-width:112px;
+}
+.quote-risk {
+  margin:0 14px 14px;
+  padding:11px 12px;
+  border-radius:14px;
+  border:1px solid #d8ebe6;
+  background:#f5fbf9;
+  color:#24485d;
+  font-weight:850;
+  line-height:1.55;
+}
+.quote-risk.ok {
+  border-color:#bfe6d6;
+  background:#effaf4;
+  color:#0e684b;
+}
+.quote-risk.warn {
+  border-color:#ffe0aa;
+  background:#fff8e8;
+  color:#8a5a00;
 }
 .budget-speed-table {
   display:grid;
@@ -1041,6 +1109,9 @@
       .ticket-table,.budget-speed-table,.stay-flow-table { display:block; overflow:auto; }
       .ticket-table > div,.budget-speed-table > div,.stay-flow-table > div { min-width:260px; border-bottom:1px solid var(--line); }
       .quote-form { grid-template-columns:1fr; }
+      .quote-check-list { grid-template-columns:1fr; }
+      .quote-card summary { align-items:flex-start; }
+      .quote-save-state { white-space:normal; text-align:right; }
       .stay-action-grid { grid-template-columns:1fr; }
       .mega-plan,.decision-card,.station-card,.transport-card,.map-circle-card,.budget-line-card,.dunhuang-card { padding:14px; }
       .map-visual { min-height:132px; }
@@ -1300,92 +1371,8 @@
 <section class="wrap" id="grassland-quote-record">
   <div class="section-title"><h2>草原线报价记录表：问完直接填这里</h2><span class="lead">联系携程、飞猪、马蜂窝、美团、酒店前台、旅行社或司机后，用来对比报价</span></div>
   <div class="notice"><b>用途：</b>这不是攻略正文，是草原线询价后的记录表。每个报价是一张折叠卡，填写后会自动保存在本机浏览器里，刷新页面不会丢。</div>
-  <div class="quote-card-list" data-quote-records>
-    <details class="quote-card" open data-quote-card="1">
-      <summary><b>报价1</b><span>点开填写 / 自动保存</span></summary>
-      <div class="quote-form">
-        <div class="quote-field"><label>平台/司机来源</label><input data-quote-field="source" placeholder="携程、飞猪、酒店前台、司机个人"></div>
-        <div class="quote-field"><label>联系人/电话/微信</label><input data-quote-field="contact" placeholder="姓名、电话或微信"></div>
-        <div class="quote-field"><label>车型/是否拼车</label><input data-quote-field="car" placeholder="5座车、7座车、拼车、小团、包车"></div>
-        <div class="quote-field"><label>路线是否完整</label><textarea data-quote-field="route" placeholder="D5九寨沟沟口→花湖→唐克/若尔盖；D6唐克/若尔盖→九曲→松潘/川主寺"></textarea></div>
-        <div class="quote-field"><label>两人总价</label><input data-quote-field="price" placeholder="例如：1200元/两人"></div>
-        <div class="quote-field"><label>是否含油费/停车费</label><input data-quote-field="oilParking" placeholder="含/不含/待确认"></div>
-        <div class="quote-field"><label>是否含司机餐费</label><input data-quote-field="driverMeal" placeholder="含/不含/待确认"></div>
-        <div class="quote-field"><label>是否含司机住宿</label><input data-quote-field="driverHotel" placeholder="含/不含/待确认"></div>
-        <div class="quote-field"><label>是否含门票/观光车/电梯</label><input data-quote-field="tickets" placeholder="含哪些，不含哪些"></div>
-        <div class="quote-field"><label>D5几点接</label><input data-quote-field="d5Pickup" placeholder="例如：08:00酒店接"></div>
-        <div class="quote-field"><label>D6几点送到松潘/川主寺</label><input data-quote-field="d6Dropoff" placeholder="例如：18:00前送到"></div>
-        <div class="quote-field"><label>是否走夜路</label><input data-quote-field="nightRoad" placeholder="不走/可能走/待确认"></div>
-        <div class="quote-field"><label>天气差能否改线</label><input data-quote-field="weatherChange" placeholder="可改/不可改/怎么退费"></div>
-        <div class="quote-field"><label>是否平台下单/订单凭证</label><input data-quote-field="orderProof" placeholder="平台订单、合同、聊天记录"></div>
-        <div class="quote-field full"><label>备注</label><textarea data-quote-field="note" placeholder="额外费用、司机态度、付款方式、取消规则"></textarea></div>
-      </div>
-      <div class="quote-actions"><button class="copy-btn quote-copy-btn" type="button">复制本报价</button><button class="copy-btn quote-clear-btn" type="button">清空本报价</button></div>
-    </details>
-    <details class="quote-card" data-quote-card="2">
-      <summary><b>报价2</b><span>点开填写 / 自动保存</span></summary>
-      <div class="quote-form">
-        <div class="quote-field"><label>平台/司机来源</label><input data-quote-field="source" placeholder="携程、飞猪、酒店前台、司机个人"></div>
-        <div class="quote-field"><label>联系人/电话/微信</label><input data-quote-field="contact" placeholder="姓名、电话或微信"></div>
-        <div class="quote-field"><label>车型/是否拼车</label><input data-quote-field="car" placeholder="5座车、7座车、拼车、小团、包车"></div>
-        <div class="quote-field"><label>路线是否完整</label><textarea data-quote-field="route" placeholder="D5九寨沟沟口→花湖→唐克/若尔盖；D6唐克/若尔盖→九曲→松潘/川主寺"></textarea></div>
-        <div class="quote-field"><label>两人总价</label><input data-quote-field="price" placeholder="例如：1200元/两人"></div>
-        <div class="quote-field"><label>是否含油费/停车费</label><input data-quote-field="oilParking" placeholder="含/不含/待确认"></div>
-        <div class="quote-field"><label>是否含司机餐费</label><input data-quote-field="driverMeal" placeholder="含/不含/待确认"></div>
-        <div class="quote-field"><label>是否含司机住宿</label><input data-quote-field="driverHotel" placeholder="含/不含/待确认"></div>
-        <div class="quote-field"><label>是否含门票/观光车/电梯</label><input data-quote-field="tickets" placeholder="含哪些，不含哪些"></div>
-        <div class="quote-field"><label>D5几点接</label><input data-quote-field="d5Pickup" placeholder="例如：08:00酒店接"></div>
-        <div class="quote-field"><label>D6几点送到松潘/川主寺</label><input data-quote-field="d6Dropoff" placeholder="例如：18:00前送到"></div>
-        <div class="quote-field"><label>是否走夜路</label><input data-quote-field="nightRoad" placeholder="不走/可能走/待确认"></div>
-        <div class="quote-field"><label>天气差能否改线</label><input data-quote-field="weatherChange" placeholder="可改/不可改/怎么退费"></div>
-        <div class="quote-field"><label>是否平台下单/订单凭证</label><input data-quote-field="orderProof" placeholder="平台订单、合同、聊天记录"></div>
-        <div class="quote-field full"><label>备注</label><textarea data-quote-field="note" placeholder="额外费用、司机态度、付款方式、取消规则"></textarea></div>
-      </div>
-      <div class="quote-actions"><button class="copy-btn quote-copy-btn" type="button">复制本报价</button><button class="copy-btn quote-clear-btn" type="button">清空本报价</button></div>
-    </details>
-    <details class="quote-card" data-quote-card="3">
-      <summary><b>报价3</b><span>点开填写 / 自动保存</span></summary>
-      <div class="quote-form">
-        <div class="quote-field"><label>平台/司机来源</label><input data-quote-field="source" placeholder="携程、飞猪、酒店前台、司机个人"></div>
-        <div class="quote-field"><label>联系人/电话/微信</label><input data-quote-field="contact" placeholder="姓名、电话或微信"></div>
-        <div class="quote-field"><label>车型/是否拼车</label><input data-quote-field="car" placeholder="5座车、7座车、拼车、小团、包车"></div>
-        <div class="quote-field"><label>路线是否完整</label><textarea data-quote-field="route" placeholder="D5九寨沟沟口→花湖→唐克/若尔盖；D6唐克/若尔盖→九曲→松潘/川主寺"></textarea></div>
-        <div class="quote-field"><label>两人总价</label><input data-quote-field="price" placeholder="例如：1200元/两人"></div>
-        <div class="quote-field"><label>是否含油费/停车费</label><input data-quote-field="oilParking" placeholder="含/不含/待确认"></div>
-        <div class="quote-field"><label>是否含司机餐费</label><input data-quote-field="driverMeal" placeholder="含/不含/待确认"></div>
-        <div class="quote-field"><label>是否含司机住宿</label><input data-quote-field="driverHotel" placeholder="含/不含/待确认"></div>
-        <div class="quote-field"><label>是否含门票/观光车/电梯</label><input data-quote-field="tickets" placeholder="含哪些，不含哪些"></div>
-        <div class="quote-field"><label>D5几点接</label><input data-quote-field="d5Pickup" placeholder="例如：08:00酒店接"></div>
-        <div class="quote-field"><label>D6几点送到松潘/川主寺</label><input data-quote-field="d6Dropoff" placeholder="例如：18:00前送到"></div>
-        <div class="quote-field"><label>是否走夜路</label><input data-quote-field="nightRoad" placeholder="不走/可能走/待确认"></div>
-        <div class="quote-field"><label>天气差能否改线</label><input data-quote-field="weatherChange" placeholder="可改/不可改/怎么退费"></div>
-        <div class="quote-field"><label>是否平台下单/订单凭证</label><input data-quote-field="orderProof" placeholder="平台订单、合同、聊天记录"></div>
-        <div class="quote-field full"><label>备注</label><textarea data-quote-field="note" placeholder="额外费用、司机态度、付款方式、取消规则"></textarea></div>
-      </div>
-      <div class="quote-actions"><button class="copy-btn quote-copy-btn" type="button">复制本报价</button><button class="copy-btn quote-clear-btn" type="button">清空本报价</button></div>
-    </details>
-    <details class="quote-card" data-quote-card="4">
-      <summary><b>报价4</b><span>点开填写 / 自动保存</span></summary>
-      <div class="quote-form">
-        <div class="quote-field"><label>平台/司机来源</label><input data-quote-field="source" placeholder="携程、飞猪、酒店前台、司机个人"></div>
-        <div class="quote-field"><label>联系人/电话/微信</label><input data-quote-field="contact" placeholder="姓名、电话或微信"></div>
-        <div class="quote-field"><label>车型/是否拼车</label><input data-quote-field="car" placeholder="5座车、7座车、拼车、小团、包车"></div>
-        <div class="quote-field"><label>路线是否完整</label><textarea data-quote-field="route" placeholder="D5九寨沟沟口→花湖→唐克/若尔盖；D6唐克/若尔盖→九曲→松潘/川主寺"></textarea></div>
-        <div class="quote-field"><label>两人总价</label><input data-quote-field="price" placeholder="例如：1200元/两人"></div>
-        <div class="quote-field"><label>是否含油费/停车费</label><input data-quote-field="oilParking" placeholder="含/不含/待确认"></div>
-        <div class="quote-field"><label>是否含司机餐费</label><input data-quote-field="driverMeal" placeholder="含/不含/待确认"></div>
-        <div class="quote-field"><label>是否含司机住宿</label><input data-quote-field="driverHotel" placeholder="含/不含/待确认"></div>
-        <div class="quote-field"><label>是否含门票/观光车/电梯</label><input data-quote-field="tickets" placeholder="含哪些，不含哪些"></div>
-        <div class="quote-field"><label>D5几点接</label><input data-quote-field="d5Pickup" placeholder="例如：08:00酒店接"></div>
-        <div class="quote-field"><label>D6几点送到松潘/川主寺</label><input data-quote-field="d6Dropoff" placeholder="例如：18:00前送到"></div>
-        <div class="quote-field"><label>是否走夜路</label><input data-quote-field="nightRoad" placeholder="不走/可能走/待确认"></div>
-        <div class="quote-field"><label>天气差能否改线</label><input data-quote-field="weatherChange" placeholder="可改/不可改/怎么退费"></div>
-        <div class="quote-field"><label>是否平台下单/订单凭证</label><input data-quote-field="orderProof" placeholder="平台订单、合同、聊天记录"></div>
-        <div class="quote-field full"><label>备注</label><textarea data-quote-field="note" placeholder="额外费用、司机态度、付款方式、取消规则"></textarea></div>
-      </div>
-      <div class="quote-actions"><button class="copy-btn quote-copy-btn" type="button">复制本报价</button><button class="copy-btn quote-clear-btn" type="button">清空本报价</button></div>
-    </details>
-  </div>
+  <div class="quote-module-actions"><button class="copy-btn quote-clear-all-btn" type="button" data-clear-all-quotes>清空全部报价</button></div>
+  <div class="quote-card-list" data-quote-records></div>
   <div class="grid two quote-judge">
     <article class="info-card card-pad"><h3>优先选</h3><p>平台下单、有明确订单、路线完整、费用包含项写清楚、不过度走夜路、天气差可改线的方案。</p></article>
     <article class="info-card card-pad"><h3>慎选</h3><p>只口头报价、费用包含不清、要求额外承担司机食宿、夜路过多、没有订单凭证的方案。</p></article>
@@ -2031,21 +2018,30 @@
       try { await navigator.clipboard.writeText(text); } catch(e) { const i=document.createElement('input'); i.value=text; document.body.appendChild(i); i.select(); document.execCommand('copy'); i.remove(); }
       showToast('已复制：'+text);
     }));
-    const quoteLabels = {
-      source:'平台/司机来源',
-      contact:'联系人/电话/微信',
-      car:'车型/是否拼车',
-      route:'路线是否完整',
+    const quoteRouteFields = [
+      ['routeD5Pickup','D5 九寨沟沟口酒店接'],
+      ['routeHuahu','D5 去若尔盖花湖'],
+      ['routeD5Stay','D5 送到唐克或若尔盖住宿'],
+      ['routeJiuqu','D6 去黄河九曲第一湾'],
+      ['routeD6Dropoff','D6 送到松潘或川主寺住宿']
+    ];
+    const quoteCostFields = ['oil','toll','parking','driverMeal','driverHotel','tickets'];
+    const quoteCopyLabels = {
+      source:'平台/来源',
+      contact:'联系人',
+      car:'车型',
       price:'两人总价',
-      oilParking:'是否含油费/停车费',
-      driverMeal:'是否含司机餐费',
-      driverHotel:'是否含司机住宿',
-      tickets:'是否含门票/观光车/电梯',
-      d5Pickup:'D5几点接',
-      d6Dropoff:'D6几点送到松潘/川主寺',
+      oil:'油费',
+      toll:'过路费',
+      parking:'停车费',
+      driverMeal:'司机餐费',
+      driverHotel:'司机住宿',
+      tickets:'门票/观光车',
+      d5Pickup:'D5接人时间',
+      d6Dropoff:'D6送达时间',
       nightRoad:'是否走夜路',
-      weatherChange:'天气差能否改线',
-      orderProof:'是否平台下单/订单凭证',
+      weatherChange:'天气差改线',
+      orderProof:'订单凭证',
       note:'备注'
     };
     const quoteStorageKey = 'jiuzhaigou_grassland_quotes_v1';
@@ -2053,38 +2049,175 @@
       try { return JSON.parse(localStorage.getItem(quoteStorageKey) || '{}'); } catch(e) { return {}; }
     };
     const writeQuotes = (quotes) => localStorage.setItem(quoteStorageKey, JSON.stringify(quotes));
+    const quoteHasValue = (data) => Object.values(data || {}).some(value => {
+      const text = String(value || '').trim();
+      return value === true || (text && text !== '未确认');
+    });
+    const quoteFormatPrice = (value) => {
+      const text = String(value || '').trim();
+      if (!text) return '';
+      if (/^[\d.]+$/.test(text)) return `¥${text}`;
+      if (text.includes('¥') || text.includes('元')) return text;
+      return `¥${text}`;
+    };
+    const quoteSelect = (key, label, options) => `
+      <div class="quote-field">
+        <label>${label}</label>
+        <select data-quote-field="${key}">${options.map(option => `<option value="${option}">${option}</option>`).join('')}</select>
+      </div>`;
+    const quoteInput = (key, label, placeholder = '', type = 'text') => `
+      <div class="quote-field">
+        <label>${label}</label>
+        <input data-quote-field="${key}" type="${type}" placeholder="${placeholder}">
+      </div>`;
+    const quoteBuildCard = (number) => `
+      <details class="quote-card" ${number === 1 ? 'open' : ''} data-quote-card="${number}">
+        <summary>
+          <span class="quote-summary-main"><b class="quote-title" data-quote-title>报价${number}｜未填写</b><span>点开填写 / 自动保存 / 可复制</span></span>
+          <span class="quote-save-state" data-quote-save-state>自动保存</span>
+        </summary>
+        <div class="quote-form">
+          ${quoteInput('source','平台/司机来源','携程 / 飞猪 / 马蜂窝 / 美团 / 酒店前台 / 旅行社 / 司机个人')}
+          ${quoteInput('contact','联系人 / 电话 / 微信','姓名、电话或微信')}
+          ${quoteInput('car','车型 / 是否拼车','5座车 / 7座车 / 拼车 / 小团 / 包车')}
+          <div class="quote-field full">
+            <label>路线是否完整</label>
+            <div class="quote-check-list">
+              ${quoteRouteFields.map(([key,label]) => `<label class="quote-check-item"><input data-quote-field="${key}" type="checkbox">${label}</label>`).join('')}
+            </div>
+          </div>
+          ${quoteInput('price','两人总价','例如：1200')}
+          ${quoteSelect('oil','是否含油费',['未确认','含','不含'])}
+          ${quoteSelect('toll','是否含过路费',['未确认','含','不含'])}
+          ${quoteSelect('parking','是否含停车费',['未确认','含','不含'])}
+          ${quoteSelect('driverMeal','是否含司机餐费',['未确认','含','不含'])}
+          ${quoteSelect('driverHotel','是否含司机住宿',['未确认','含','不含'])}
+          ${quoteSelect('tickets','是否含门票 / 观光车 / 电梯',['未确认','含','不含'])}
+          ${quoteInput('d5Pickup','D5 几点到九寨沟沟口酒店接','例如：08:00')}
+          ${quoteInput('d6Dropoff','D6 几点送到松潘 / 川主寺','例如：18:00左右')}
+          ${quoteSelect('nightRoad','是否走夜路',['未确认','不走夜路','可能走夜路'])}
+          ${quoteSelect('weatherChange','天气差能否改线或取消',['未确认','可以','不可以'])}
+          ${quoteSelect('orderProof','是否平台下单 / 是否有订单凭证',['未确认','平台下单','私下转账','只有口头约定'])}
+          <div class="quote-field full"><label>备注</label><textarea data-quote-field="note" placeholder="额外费用、司机态度、付款方式、取消规则"></textarea></div>
+        </div>
+        <div class="quote-risk" data-quote-risk>填写后自动判断报价风险。</div>
+        <div class="quote-actions"><button class="copy-btn quote-copy-btn" type="button">复制本报价</button><button class="copy-btn quote-clear-btn" type="button">清空本报价</button></div>
+      </details>`;
+    const quoteRecords = document.querySelector('[data-quote-records]');
+    if (quoteRecords) quoteRecords.innerHTML = [1,2,3,4].map(quoteBuildCard).join('');
     const collectQuote = (card) => {
       const data = {};
-      card.querySelectorAll('[data-quote-field]').forEach(field => data[field.dataset.quoteField] = field.value.trim());
+      card.querySelectorAll('[data-quote-field]').forEach(field => {
+        data[field.dataset.quoteField] = field.type === 'checkbox' ? field.checked : field.value.trim();
+      });
       return data;
     };
+    const normalizeQuoteData = (data = {}) => {
+      const copy = {...data};
+      if (copy.oilParking && !copy.oil && !copy.toll && !copy.parking) {
+        copy.oil = copy.oilParking;
+        copy.toll = copy.oilParking;
+        copy.parking = copy.oilParking;
+      }
+      return copy;
+    };
     const fillQuote = (card, data) => {
-      card.querySelectorAll('[data-quote-field]').forEach(field => field.value = data?.[field.dataset.quoteField] || '');
+      const normalized = normalizeQuoteData(data);
+      card.querySelectorAll('[data-quote-field]').forEach(field => {
+        const value = normalized?.[field.dataset.quoteField];
+        if (field.type === 'checkbox') field.checked = Boolean(value);
+        else if (field.tagName === 'SELECT') field.value = value || '未确认';
+        else field.value = value || '';
+      });
+      updateQuoteCard(card);
+    };
+    const updateQuoteCard = (card, savedText = '') => {
+      const data = collectQuote(card);
+      const title = card.querySelector('[data-quote-title]');
+      const status = card.querySelector('[data-quote-save-state]');
+      const risk = card.querySelector('[data-quote-risk]');
+      const titleParts = [`报价${card.dataset.quoteCard}`];
+      if (data.source) titleParts.push(data.source);
+      if (data.price) titleParts.push(`两人 ${quoteFormatPrice(data.price)}`);
+      title.textContent = titleParts.length === 1 ? `报价${card.dataset.quoteCard}｜未填写` : titleParts.join('｜');
+      if (status) status.textContent = savedText || (quoteHasValue(data) ? '已读取本地保存' : '自动保存');
+      if (!risk) return;
+      const routeComplete = quoteRouteFields.every(([key]) => data[key]);
+      const unconfirmedCostCount = quoteCostFields.filter(key => (data[key] || '未确认') === '未确认').length;
+      const warnings = [];
+      if (!quoteHasValue(data)) warnings.push('填写后自动判断报价风险。');
+      if (quoteHasValue(data) && !routeComplete) warnings.push('⚠️ 路线不完整，可能不包含花湖、九曲或送达松潘/川主寺。');
+      if (['私下转账','只有口头约定'].includes(data.orderProof)) warnings.push('⚠️ 风险较高，建议优先选择平台订单或有明确凭证的方案。');
+      if (data.nightRoad === '可能走夜路') warnings.push('⚠️ 草原线不建议长时间夜路，请确认D6到松潘/川主寺的时间。');
+      if (quoteHasValue(data) && unconfirmedCostCount >= 3) warnings.push('⚠️ 费用包含项不清楚，下单前必须继续问清楚。');
+      if (routeComplete && data.orderProof === '平台下单' && unconfirmedCostCount <= 2 && data.nightRoad === '不走夜路') {
+        risk.className = 'quote-risk ok';
+        risk.innerHTML = '✅ 这个方案比较稳，可以优先考虑。';
+      } else {
+        if (quoteHasValue(data) && warnings.length === 0) warnings.push('继续确认平台下单、费用包含项和到达时间后再定。');
+        risk.className = warnings.length > 1 || quoteHasValue(data) ? 'quote-risk warn' : 'quote-risk';
+        risk.innerHTML = warnings.join('<br>');
+      }
     };
     const saveQuoteCard = (card) => {
       const quotes = readQuotes();
       quotes[card.dataset.quoteCard] = collectQuote(card);
       writeQuotes(quotes);
+      updateQuoteCard(card, '已自动保存');
+    };
+    const quoteIncluded = (value) => value ? '已包含' : '未确认';
+    const quoteCopyText = (card) => {
+      const data = collectQuote(card);
+      return [
+        `【草原线报价${card.dataset.quoteCard}】`,
+        `${quoteCopyLabels.source}：${data.source || '未填写'}`,
+        `${quoteCopyLabels.contact}：${data.contact || '未填写'}`,
+        `${quoteCopyLabels.car}：${data.car || '未填写'}`,
+        '路线：',
+        `D5 九寨沟沟口酒店接：${quoteIncluded(data.routeD5Pickup)}`,
+        `D5 九寨沟沟口 → 花湖 → 唐克/若尔盖：${data.routeHuahu && data.routeD5Stay ? '已包含' : '未完整确认'}`,
+        `D6 唐克/若尔盖 → 黄河九曲 → 松潘/川主寺：${data.routeJiuqu && data.routeD6Dropoff ? '已包含' : '未完整确认'}`,
+        `${quoteCopyLabels.price}：${quoteFormatPrice(data.price) || '未填写'}`,
+        `${quoteCopyLabels.oil}：${data.oil || '未确认'}`,
+        `${quoteCopyLabels.toll}：${data.toll || '未确认'}`,
+        `${quoteCopyLabels.parking}：${data.parking || '未确认'}`,
+        `${quoteCopyLabels.driverMeal}：${data.driverMeal || '未确认'}`,
+        `${quoteCopyLabels.driverHotel}：${data.driverHotel || '未确认'}`,
+        `${quoteCopyLabels.tickets}：${data.tickets || '未确认'}`,
+        `${quoteCopyLabels.d5Pickup}：${data.d5Pickup || '未填写'}`,
+        `${quoteCopyLabels.d6Dropoff}：${data.d6Dropoff || '未填写'}`,
+        `${quoteCopyLabels.nightRoad}：${data.nightRoad || '未确认'}`,
+        `${quoteCopyLabels.weatherChange}：${data.weatherChange || '未确认'}`,
+        `${quoteCopyLabels.orderProof}：${data.orderProof || '未确认'}`,
+        `${quoteCopyLabels.note}：${data.note || '未填写'}`
+      ].join('\n');
     };
     document.querySelectorAll('[data-quote-card]').forEach(card => {
       const quotes = readQuotes();
       fillQuote(card, quotes[card.dataset.quoteCard]);
-      card.querySelectorAll('[data-quote-field]').forEach(field => field.addEventListener('input', () => saveQuoteCard(card)));
+      card.querySelectorAll('[data-quote-field]').forEach(field => {
+        field.addEventListener('input', () => saveQuoteCard(card));
+        field.addEventListener('change', () => saveQuoteCard(card));
+      });
       card.querySelector('.quote-copy-btn')?.addEventListener('click', async () => {
-        const data = collectQuote(card);
-        const lines = [`报价${card.dataset.quoteCard}`];
-        Object.keys(quoteLabels).forEach(key => lines.push(`${quoteLabels[key]}：${data[key] || '未填写'}`));
-        const text = lines.join('\n');
+        const text = quoteCopyText(card);
         try { await navigator.clipboard.writeText(text); } catch(e) { const i=document.createElement('textarea'); i.value=text; document.body.appendChild(i); i.select(); document.execCommand('copy'); i.remove(); }
         showToast(`已复制报价${card.dataset.quoteCard}`);
       });
       card.querySelector('.quote-clear-btn')?.addEventListener('click', () => {
+        if (!confirm(`确定清空报价${card.dataset.quoteCard}吗？`)) return;
         fillQuote(card, {});
         const quotes = readQuotes();
         delete quotes[card.dataset.quoteCard];
         writeQuotes(quotes);
         showToast(`已清空报价${card.dataset.quoteCard}`);
       });
+    });
+    document.querySelector('[data-clear-all-quotes]')?.addEventListener('click', () => {
+      if (!confirm('确定清空全部4个报价吗？这个操作不能撤销。')) return;
+      localStorage.removeItem(quoteStorageKey);
+      document.querySelectorAll('[data-quote-card]').forEach(card => fillQuote(card, {}));
+      showToast('已清空全部报价');
     });
     document.querySelectorAll('.scheme-tab').forEach(tab => tab.addEventListener('click', () => {
       document.querySelectorAll('.scheme-tab').forEach(t=>t.classList.remove('active'));
