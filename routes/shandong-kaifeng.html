@@ -12,6 +12,13 @@
     @media(max-width:860px){.hero-inner{grid-template-columns:1fr}.grid,.grid.two{grid-template-columns:1fr}.quick-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.mini{grid-template-columns:repeat(2,minmax(0,1fr))}}
     .check label{display:block;margin:7px 0;color:#38596a}.check input{margin-right:7px;accent-color:var(--teal)}.exec-card{padding:15px}.exec-card h3{margin:0 0 8px;font-size:19px}.exec-card ul{margin:8px 0;padding-left:20px}.exec-card li{margin:6px 0}.emergency-card{padding:15px}.emergency-card summary{font-weight:900;cursor:pointer}.emergency-card p{margin:10px 0 0;color:#38596a}.budget-details{border:1px solid var(--line);border-radius:18px;background:#fff;box-shadow:var(--shadow);overflow:hidden}.budget-details>summary{padding:15px 16px;cursor:pointer;font-weight:900;color:#355f6a;background:#f5f9f8}.budget-inner{padding:0 16px 16px}
     @media(max-width:620px){body{font-size:15.5px}.wrap{padding:16px 12px}.hero{margin:0 -2px;border-radius:19px}.hero-inner{min-height:auto;padding:32px 18px 18px}.hero h1{font-size:31px}.hero-card{padding:15px}.section-title{display:block;margin-top:25px}.section-title .lead{margin-top:5px}.quick-grid,.check-grid,.stay-grid,.plan-grid{grid-template-columns:1fr}.day-tile{grid-template-columns:1fr;gap:5px;padding:13px 14px}.day-tile p span{display:inline;margin-right:7px}.day-card>summary{grid-template-columns:94px minmax(0,1fr);gap:10px;align-items:start}.day-summary-img{height:80px}.day-summary-copy strong{font-size:18px}.day-summary-copy p{font-size:14px;line-height:1.45}.day-toggle{display:none}.day-inner{padding:13px}.time-row{grid-template-columns:1fr;gap:3px}.spot-card>summary{grid-template-columns:102px minmax(0,1fr);gap:10px}.spot-card img{height:79px}.spot-body h3{font-size:19px}.topnav{top:auto;bottom:0;border-top:1px solid var(--line);border-bottom:0}section{scroll-margin-bottom:62px}.keyword{align-items:flex-start}.copy-btn{padding:7px 10px}}
+    /* 总控区沿用每日详情卡的卡头层级，但不使用图片。 */
+    .day-tile{grid-template-columns:100px minmax(0,1fr);gap:17px;align-items:center;padding:14px 18px}
+    .overview-day-no{display:grid;place-items:center;min-height:62px;border-radius:13px;background:#edf8f6;color:#087d78;font-size:23px;font-weight:900}
+    .day-tile:nth-child(2n) .overview-day-no{background:#eef5fb;color:#196da6}.day-tile:nth-child(3n) .overview-day-no{background:#fff6e7;color:#b77912}
+    .overview-copy{min-width:0}.overview-copy strong{display:block;font-size:20px;line-height:1.25}.overview-copy p{margin:4px 0 8px;color:#3c5b69;font-size:15px;font-weight:800}
+    .overview-meta{display:flex;flex-wrap:wrap;gap:7px}.overview-meta span{display:inline-flex;max-width:100%;padding:4px 8px;border-radius:8px;font-size:12px;font-weight:900;line-height:1.35}.overview-stay{background:#eaf5f2;color:#17695f}.overview-key{background:#fff7e9;color:#8c5516}
+    @media(max-width:620px){.day-tile{grid-template-columns:68px minmax(0,1fr);gap:11px;padding:12px}.overview-day-no{min-height:70px;font-size:19px}.overview-copy strong{font-size:18px}.overview-copy p{font-size:14px;line-height:1.42}.overview-meta{gap:5px}.overview-meta span{font-size:11.5px}}
   </style>
 </head>
 <body>
@@ -40,13 +47,13 @@
     <section id="one-screen">
       <div class="section-title"><h2>30秒看懂｜今天去哪、今晚住哪</h2><p class="lead">简洁版总控。详细走法在后面的折叠卡。</p></div>
       <div class="day-overview">
-        <article class="day-tile"><b>D1｜飞青岛</b><p><span>路线</span>广州白云 → 青岛胶东</p><p class="stay"><span>今晚</span>五四广场/浮山所｜第1晚/共2晚</p><p class="key"><span>关键</span>落地后直接睡觉，不夜逛</p></article>
-        <article class="day-tile"><b>D2｜青岛海岸</b><p><span>路线</span>八大关 → 二浴 → 石老人</p><p class="stay"><span>今晚</span>青岛｜第2晚/共2晚</p><p class="key"><span>关键</span>中午午休，下午短停看海</p></article>
-        <article class="day-tile"><b>D3｜转场威海</b><p><span>路线</span>青岛北 → 威海</p><p class="stay"><span>今晚</span>威高/幸福门｜第1晚/共2晚</p><p class="key"><span>关键</span>先放行李，下午只轻走海边</p></article>
-        <article class="day-tile"><b>D4｜威海看海</b><p><span>路线</span>半月湾 → 猫头山 → 火炬八街</p><p class="stay"><span>今晚</span>威海｜第2晚/共2晚</p><p class="key"><span>关键</span>租车短停，不徒步、不夜路</p></article>
-        <article class="day-tile"><b>D5｜转场济南</b><p><span>路线</span>威海 → 济南东</p><p class="stay"><span>今晚</span>泉城路/宽厚里｜第1晚/共1晚</p><p class="key"><span>关键</span>下午留白，夜景只作备选</p></article>
-        <article class="day-tile"><b>D6｜泉城到开封</b><p><span>路线</span>趵突泉 → 郑州东 → 开封</p><p class="stay"><span>今晚</span>万岁山/龙亭圈｜第1晚/共1晚</p><p class="key"><span>关键</span>赶车优先，17:30前进夜场</p></article>
-        <article class="day-tile"><b>D7｜万岁山返程</b><p><span>路线</span>万岁山 → 郑州新郑机场</p><p class="stay"><span>今晚</span>正常不住，晚点备酒店</p><p class="key"><span>关键</span>只保返程，不补重景点</p></article>
+        <article class="day-tile"><div class="overview-day-no">D1</div><div class="overview-copy"><strong>飞青岛</strong><p>广州白云 → 青岛胶东</p><div class="overview-meta"><span class="overview-stay">今晚：五四广场/浮山所｜第1晚/共2晚</span><span class="overview-key">关键：落地后直接睡觉，不夜逛</span></div></div></article>
+        <article class="day-tile"><div class="overview-day-no">D2</div><div class="overview-copy"><strong>青岛海岸</strong><p>八大关 → 二浴 → 石老人</p><div class="overview-meta"><span class="overview-stay">今晚：青岛｜第2晚/共2晚</span><span class="overview-key">关键：中午午休，下午短停看海</span></div></div></article>
+        <article class="day-tile"><div class="overview-day-no">D3</div><div class="overview-copy"><strong>转场威海</strong><p>青岛北 → 威海</p><div class="overview-meta"><span class="overview-stay">今晚：威高/幸福门｜第1晚/共2晚</span><span class="overview-key">关键：先放行李，下午只轻走海边</span></div></div></article>
+        <article class="day-tile"><div class="overview-day-no">D4</div><div class="overview-copy"><strong>威海看海</strong><p>半月湾 → 猫头山 → 火炬八街</p><div class="overview-meta"><span class="overview-stay">今晚：威海｜第2晚/共2晚</span><span class="overview-key">关键：租车短停，不徒步、不夜路</span></div></div></article>
+        <article class="day-tile"><div class="overview-day-no">D5</div><div class="overview-copy"><strong>转场济南</strong><p>威海 → 济南东</p><div class="overview-meta"><span class="overview-stay">今晚：泉城路/宽厚里｜第1晚/共1晚</span><span class="overview-key">关键：下午留白，夜景只作备选</span></div></div></article>
+        <article class="day-tile"><div class="overview-day-no">D6</div><div class="overview-copy"><strong>泉城到开封</strong><p>趵突泉 → 郑州东 → 开封</p><div class="overview-meta"><span class="overview-stay">今晚：万岁山/龙亭圈｜第1晚/共1晚</span><span class="overview-key">关键：赶车优先，17:30前进夜场</span></div></div></article>
+        <article class="day-tile"><div class="overview-day-no">D7</div><div class="overview-copy"><strong>万岁山返程</strong><p>万岁山 → 郑州新郑机场</p><div class="overview-meta"><span class="overview-stay">今晚：正常不住，晚点备酒店</span><span class="overview-key">关键：只保返程，不补重景点</span></div></div></article>
       </div>
     </section>
 
