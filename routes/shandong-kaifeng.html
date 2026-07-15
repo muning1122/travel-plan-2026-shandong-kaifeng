@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="广州佛山出发的7天精华版与8天舒适版青岛、威海、开封万岁山旅行执行手册。">
-  <title>7/8天海岸慢游｜青岛—威海—开封万岁山</title>
+  <meta name="description" content="广州佛山出发的6天威海开封双城版与8天青岛威海开封完整版旅行执行手册。">
+  <title>6/8天海岸慢游｜威海—开封 / 青岛—威海—开封</title>
   <link rel="stylesheet" href="../assets/css/style.css">
   <style>
     :root{--ink:#13324a;--muted:#5e7585;--line:#d8e5e9;--paper:#fff;--bg:#f2f7f7;--teal:#087d78;--blue:#196da6;--sun:#f0ad35;--coral:#d36b51;--shadow:0 12px 30px rgba(17,48,72,.10)}
@@ -19,54 +19,56 @@
     .day-tile:nth-child(2n) .overview-day-no{background:#eef5fb;color:#196da6}.day-tile:nth-child(3n) .overview-day-no{background:#fff6e7;color:#b77912}
     .overview-copy{min-width:0}.overview-copy strong{display:block;font-size:20px;line-height:1.25}.overview-copy p{margin:4px 0 8px;color:#3c5b69;font-size:15px;font-weight:800}
     .overview-meta{display:flex;flex-wrap:wrap;gap:7px}.overview-meta span{display:inline-flex;max-width:100%;padding:4px 8px;border-radius:8px;font-size:12px;font-weight:900;line-height:1.35}.overview-stay{background:#eaf5f2;color:#17695f}.overview-key{background:#fff7e9;color:#8c5516}
-    .plan-switch{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.plan-choice{display:block;width:100%;padding:18px;border:2px solid transparent;border-radius:18px;background:#fff;color:var(--ink);text-align:left;box-shadow:var(--shadow);cursor:pointer}.plan-choice strong{display:block;margin-bottom:5px;font-size:21px}.plan-choice span{display:block;color:var(--muted);font:700 14px/1.55 inherit}.plan-choice .plan-badge{display:inline-flex;width:auto;margin-bottom:10px;padding:4px 9px;border-radius:999px;background:#edf5f4;color:#17695f;font-size:12px;font-weight:900}.plan-choice.active{border-color:var(--teal);background:#f2fbf9}.plan-choice[data-plan-select="b"].active{border-color:var(--blue);background:#f2f8fc}.plan-status{margin:12px 0 0;padding:11px 14px;border-radius:12px;background:#eaf5f2;color:#155b5b;font-weight:900}.priority-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-top:12px}.priority-item{padding:14px;border:1px solid var(--line);border-radius:14px;background:#fff}.priority-item b{display:block;color:var(--teal);font-size:18px}.fatigue{display:inline-flex;padding:3px 8px;border-radius:8px;background:#fff2d9!important;color:#80500d!important}.notice.danger{border-left-color:#d66b51;background:#fff0ec}.plan-subtitle{margin:0 0 10px;color:#355f6a;font-weight:900}.budget-columns{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.budget-box{padding:14px;border:1px solid var(--line);border-radius:14px;background:#fbfdfd}.budget-box h3{margin:0 0 8px}.budget-total{margin:10px 0 0;padding:10px;border-radius:11px;background:#eaf8f5;color:#08685f;font-size:22px;font-weight:900}
+    .plan-switch{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.plan-choice{display:block;width:100%;padding:18px;border:2px solid transparent;border-radius:18px;background:#fff;color:var(--ink);text-align:left;box-shadow:var(--shadow);cursor:pointer}.plan-choice strong{display:block;margin-bottom:5px;font-size:21px}.plan-choice span{display:block;color:var(--muted);font:700 14px/1.55 inherit}.plan-choice .plan-badge{display:inline-flex;width:auto;margin-bottom:10px;padding:4px 9px;border-radius:999px;background:#edf5f4;color:#17695f;font-size:12px;font-weight:900}.plan-choice.active{border-color:var(--teal);background:#f2fbf9}.plan-choice[data-plan-select="b"].active{border-color:var(--blue);background:#f2f8fc}.plan-status{margin:12px 0 0;padding:11px 14px;border-radius:12px;background:#eaf5f2;color:#155b5b;font-weight:900}.priority-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-top:12px}.priority-item{padding:14px;border:1px solid var(--line);border-radius:14px;background:#fff}.priority-item b{display:block;color:var(--teal);font-size:18px}.fatigue{display:inline-flex;padding:3px 8px;border-radius:8px;background:#fff2d9!important;color:#80500d!important}.notice.danger{border-left-color:#d66b51;background:#fff0ec}.plan-subtitle{margin:0 0 10px;color:#355f6a;font-weight:900}.budget-columns{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.budget-box{padding:14px;border:1px solid var(--line);border-radius:14px;background:#fbfdfd}.budget-box h3{margin:0 0 8px}.budget-total{margin:10px 0 0;padding:10px;border-radius:11px;background:#eaf8f5;color:#08685f;font-size:22px;font-weight:900}.fare-total{display:inline-flex;margin-top:7px;padding:5px 9px;border-radius:9px;background:#eaf8f5;color:#087069;font-size:14px;font-weight:900}.segment-list{margin:8px 0 0;padding-left:20px;color:#38596a}.segment-list li{margin:5px 0}
     @media(max-width:860px){.plan-switch,.priority-grid,.budget-columns{grid-template-columns:1fr}}
     @media(max-width:620px){.day-tile{grid-template-columns:68px minmax(0,1fr);gap:11px;padding:12px}.overview-day-no{min-height:70px;font-size:19px}.overview-copy strong{font-size:18px}.overview-copy p{font-size:14px;line-height:1.42}.overview-meta{gap:5px}.overview-meta span{font-size:11.5px}}
   </style>
 </head>
-<body data-plan="a">
+<body data-plan="b">
   <nav class="topnav"><a href="#one-screen">30秒总控</a><a href="#plans">版本选择</a><a href="#quick">今日快捷</a><a href="#booking">大交通</a><a href="#tickets">景点预约</a><a href="#stay-flow">住宿流转</a><a href="#days">详细版</a><a href="#traffic">交通</a><a href="#hotel">住宿</a><a href="#spots">景点</a><a href="#food">吃饭</a><a href="#pack">准备</a><a href="#emergency">应急</a><a href="#check">核对</a></nav>
   <main class="wrap">
     <a class="back" href="../index.html">← 返回路线选择</a>
     <header class="hero">
       <div class="hero-inner">
         <div>
-          <p class="eyebrow">方案A：7月20—26日｜方案B：7月20—27日｜广州/佛山出发</p>
-          <h1>7/8天海岸慢游<br>青岛—威海—开封万岁山</h1>
-          <p>同一条路线，两种节奏：时间有限选7天精华版，更看重睡眠与完整体验选8天舒适版；全程不爬山。</p>
-          <div class="tags"><span class="tag white">7天6晚 / 8天7晚</span><span class="tag white">08:00后起床</span><span class="tag white">刘公岛地标</span><span class="tag white">威海沿海分段打车</span><span class="tag white">万岁山不压缩</span></div>
+          <p class="eyebrow">方案A：7月20—25日｜方案B：7月20—27日｜广州/佛山出发</p>
+          <h1>6/8天海岸慢游<br>威海—开封万岁山</h1>
+          <p data-plan-only="a" hidden>六天版以八天版为母版，只删除青岛两天；去程改坐软卧到威海，威海3晚、开封2晚和全部核心体验原样保留。</p>
+          <p data-plan-only="b">八天版保留青岛2晚、威海3晚、开封2晚，是内容最完整的三城版本；全程不爬山。</p>
+          <div class="tags"><span class="tag white" data-plan-only="a" hidden>6天5晚｜威海 + 开封</span><span class="tag white" data-plan-only="b">8天7晚｜青岛 + 威海 + 开封</span><span class="tag white">08:00后起床</span><span class="tag white">刘公岛地标</span><span class="tag white">威海海岸慢游</span><span class="tag white">万岁山1.5天</span></div>
         </div>
-        <aside class="hero-card"><h2>路线总控台</h2><p><b>主线：</b>广州/佛山 → 青岛 → 威海 → 开封 → 郑州新郑 → 广州/佛山</p><p><b>方案A：</b>7天精华版，D5为高强度转场日。</p><p><b>方案B：</b>8天舒适版，多住威海1晚，默认推荐。</p><p><b>威海海岸：</b>分段打车196元，比租车总成本300元少104元。</p><p><b>硬原则：</b>万岁山完整时间、威海核心海岸体验都不压缩。</p><p><b>核对：</b>航班、12306、轮船、观光车和节目单以出发前实际页面为准。</p></aside>
+        <aside class="hero-card"><h2>路线总控台</h2><div data-plan-only="a" hidden><p><b>主线：</b>广州/佛山 → 软卧到威海 → 开封 → 郑州新郑飞广州/佛山</p><p><b>住宿：</b>威海3晚 + 开封2晚。</p><p><b>到站：</b>同等车次优先威海北站；若830元软卧票面只到威海站，就直接在威海站下车。</p><p><b>定位：</b>从八天版直接砍掉青岛两天，其余不压缩。</p></div><div data-plan-only="b"><p><b>主线：</b>广州/佛山 → 青岛 → 威海 → 开封 → 郑州新郑 → 广州/佛山</p><p><b>住宿：</b>青岛2晚 + 威海3晚 + 开封2晚。</p><p><b>定位：</b>三城内容最完整，默认展示。</p></div><p><b>威海海岸：</b>分段打车168元，比租车总成本300元少132元。</p><p><b>硬原则：</b>刘公岛、威海核心海岸和万岁山1.5天都不压缩。</p><p><b>核对：</b>航班、12306、轮船、观光车和节目单以出发前实际页面为准。</p></aside>
       </div>
     </header>
 
     <section id="decision">
       <div class="section-title"><h2>先给结论</h2><p class="lead">少而精，不赶路，把最喜欢的地方玩透。</p></div>
-      <div class="notice good"><b>默认推荐方案B：</b>只多1天、不增加城市，把威海沿海慢游和跨省转场拆开，睡眠、看海和万岁山体验都更完整。</div>
-      <div class="notice danger" data-plan-only="a"><b>方案A醒目提醒：</b>今天不是轻松日。D5上午看海、下午长距离移动、午夜后入住开封；如果不接受午夜入住，请切换方案B。</div>
-      <div class="priority-grid"><div class="priority-item"><b>第一｜开封万岁山</b>主景点，完整日和补节目时间都不能压缩。</div><div class="priority-item"><b>第二｜威海海岸线</b>刘公岛与沿海分段打车观看方式不同，两段都保留。</div><div class="priority-item"><b>第三｜青岛建筑海岸</b>八大关、二浴和小麦岛够用，不再追加远途景点。</div></div>
-      <div class="route-flow"><span class="node">广州白云</span><span class="arrow"></span><span class="node">青岛胶东</span><span class="arrow"></span><span class="node">威海</span><span class="arrow"></span><span class="node">开封</span><span class="arrow"></span><span class="node">郑州新郑</span></div>
+      <div class="notice good" data-plan-only="a" hidden><b>六天版怎么来的：</b>完整照搬八天版的威海3晚与开封2晚，只删除青岛D1—D2。去程按12306票面时间坐软卧，D1抵达威海后开始行程；返程仍从郑州新郑机场飞广州。</div>
+      <div class="notice good" data-plan-only="b"><b>八天版怎么走：</b>青岛建筑海岸2天之后，再完整执行威海3晚和开封2晚；适合预算允许、三个城市都想去的人。</div>
+      <div class="priority-grid" data-plan-only="a" hidden><div class="priority-item"><b>第一｜开封万岁山</b>完整日和返程日上午补节目都保留。</div><div class="priority-item"><b>第二｜威海海岸线</b>刘公岛、城市地标和整日沿海慢游全部保留。</div><div class="priority-item"><b>删除｜青岛两天</b>八大关、二浴和小麦岛不在六天版出现。</div></div>
+      <div class="priority-grid" data-plan-only="b"><div class="priority-item"><b>第一｜开封万岁山</b>主景点，完整日和补节目时间都不能压缩。</div><div class="priority-item"><b>第二｜威海海岸线</b>刘公岛与沿海慢游观看方式不同，两段都保留。</div><div class="priority-item"><b>第三｜青岛建筑海岸</b>八大关、二浴和小麦岛够用，不再追加远途景点。</div></div>
+      <div class="route-flow" data-plan-only="a" hidden><span class="node">广州出发站</span><span class="arrow"></span><span class="node">软卧830元/人</span><span class="arrow"></span><span class="node">威海北优先</span><span class="arrow"></span><span class="node">威海3晚</span><span class="arrow"></span><span class="node">开封2晚</span><span class="arrow"></span><span class="node">郑州飞广州</span></div>
+      <div class="route-flow" data-plan-only="b"><span class="node">广州白云</span><span class="arrow"></span><span class="node">青岛胶东</span><span class="arrow"></span><span class="node">威海</span><span class="arrow"></span><span class="node">开封</span><span class="arrow"></span><span class="node">郑州新郑</span></div>
     </section>
 
     <section id="plans">
       <div class="section-title"><h2>选择旅行节奏</h2><p class="lead">点击后，总控、住宿、详细日程、交通和费用会同步切换。</p></div>
       <div class="plan-switch" role="group" aria-label="旅行版本选择">
-        <button class="plan-choice active" type="button" data-plan-select="a" aria-pressed="true"><span class="plan-badge">时间有限</span><strong>方案A｜7天精华版</strong><span>青岛2晚 + 威海2晚 + 开封2晚。保留全部核心，但D5是较累的跨省转场日。</span></button>
-        <button class="plan-choice" type="button" data-plan-select="b" aria-pressed="false"><span class="plan-badge">默认推荐</span><strong>方案B｜8天舒适深度版</strong><span>青岛2晚 + 威海3晚 + 开封2晚。D5只看海，D6单独转场，节奏最符合“少而精”。</span></button>
+        <button class="plan-choice" type="button" data-plan-select="a" aria-pressed="false"><span class="plan-badge">预算优先</span><strong>方案A｜6天双城版</strong><span>去程软卧 + 威海3晚 + 开封2晚。以八天版为基础，只砍掉青岛两天，其余安排不变。</span></button>
+        <button class="plan-choice active" type="button" data-plan-select="b" aria-pressed="true"><span class="plan-badge">内容最全</span><strong>方案B｜8天舒适深度版</strong><span>青岛2晚 + 威海3晚 + 开封2晚。保留三城全部详细内容，默认展示。</span></button>
       </div>
-      <p class="plan-status" id="plan-status" role="status">当前显示：方案A｜7天精华版</p>
+      <p class="plan-status" id="plan-status" role="status">当前显示：方案B｜8天舒适深度版</p>
     </section>
 
     <section id="one-screen">
       <div class="section-title"><h2>30秒看懂｜今天去哪、今晚住哪</h2><p class="lead">疲劳指数：轻松 ⭐｜正常 ⭐⭐｜较累 ⭐⭐⭐。</p></div>
-      <div class="day-overview" data-plan-only="a">
-        <article class="day-tile"><div class="overview-day-no">D1</div><div class="overview-copy"><strong>飞青岛</strong><p>广州白云 → 青岛胶东</p><div class="overview-meta"><span class="overview-stay">今晚：五四广场/浮山所｜第1晚/共2晚</span><span class="fatigue">轻松 ⭐</span><span class="overview-key">关键：落地后直接睡觉，不夜逛</span></div></div></article>
-        <article class="day-tile"><div class="overview-day-no">D2</div><div class="overview-copy"><strong>青岛海岸</strong><p>八大关 → 二浴堤坝/洞口 → 小麦岛</p><div class="overview-meta"><span class="overview-stay">今晚：青岛｜第2晚/共2晚</span><span class="fatigue">正常 ⭐⭐</span><span class="overview-key">关键：看潮汐与警示，不冒险上堤坝</span></div></div></article>
-        <article class="day-tile"><div class="overview-day-no">D3</div><div class="overview-copy"><strong>睡足再转威海</strong><p>青岛北 → 威海 → 城市海岸地标</p><div class="overview-meta"><span class="overview-stay">今晚：威高/幸福门｜第1晚/共2晚</span><span class="fatigue">轻松 ⭐</span><span class="overview-key">关键：08:00起床，选10:20后车次</span></div></div></article>
-        <article class="day-tile"><div class="overview-day-no">D4</div><div class="overview-copy"><strong>刘公岛代表性一日</strong><p>旅游码头 → 刘公岛 → 返航休息</p><div class="overview-meta"><span class="overview-stay">今晚：威海｜第2晚/共2晚</span><span class="fatigue">正常 ⭐⭐</span><span class="overview-key">关键：观光车代步，晚上1小时自由安排</span></div></div></article>
-        <article class="day-tile"><div class="overview-day-no">D5</div><div class="overview-copy"><strong>沿海分段打车 + 下午转开封</strong><p>半月湾 → 猫头山观光车 → 火炬八街 → 郑州东</p><div class="overview-meta"><span class="overview-stay">今晚：开封｜第1晚/共2晚</span><span class="fatigue">较累 ⭐⭐⭐</span><span class="overview-key">关键：打车约196元，午夜后入住</span></div></div></article>
-        <article class="day-tile"><div class="overview-day-no">D6</div><div class="overview-copy"><strong>万岁山完整日</strong><p>酒店 → 万岁山全天/夜场</p><div class="overview-meta"><span class="overview-stay">今晚：万岁山/龙亭圈｜第2晚/共2晚</span><span class="fatigue">正常 ⭐⭐</span><span class="overview-key">关键：睡足后入园，午间避暑</span></div></div></article>
-        <article class="day-tile"><div class="overview-day-no">D7</div><div class="overview-copy"><strong>万岁山返程</strong><p>万岁山 → 郑州新郑机场</p><div class="overview-meta"><span class="overview-stay">今晚：正常不住，晚点备酒店</span><span class="fatigue">轻松 ⭐</span><span class="overview-key">关键：只保返程，不补重景点</span></div></div></article>
+      <div class="day-overview" data-plan-only="a" hidden>
+        <article class="day-tile"><div class="overview-day-no">D1</div><div class="overview-copy"><strong>软卧抵威海 + 城市海岸</strong><p>广州出发站 → 威海北优先 → 幸福门/大相框/悦海灯塔</p><div class="overview-meta"><span class="overview-stay">今晚：威高/幸福门｜第1晚/共3晚</span><span class="fatigue">轻松 ⭐</span><span class="overview-key">关键：到站晚就删地标，先入住</span></div></div></article>
+        <article class="day-tile"><div class="overview-day-no">D2</div><div class="overview-copy"><strong>刘公岛代表性一日</strong><p>旅游码头 → 刘公岛 → 返航休息</p><div class="overview-meta"><span class="overview-stay">今晚：威海｜第2晚/共3晚</span><span class="fatigue">正常 ⭐⭐</span><span class="overview-key">关键：观光车代替爬坡</span></div></div></article>
+        <article class="day-tile"><div class="overview-day-no">D3</div><div class="overview-copy"><strong>威海海岸慢游日</strong><p>半月湾 → 猫头山 → 午休 → 火炬八街 → 国际海水浴场</p><div class="overview-meta"><span class="overview-stay">今晚：威海｜第3晚/共3晚</span><span class="fatigue">正常 ⭐⭐</span><span class="overview-key">关键：两段看海，中午回酒店</span></div></div></article>
+        <article class="day-tile"><div class="overview-day-no">D4</div><div class="overview-copy"><strong>单独转场 + 可选夜场</strong><p>威海北 → 郑州东 → 开封 → 万岁山</p><div class="overview-meta"><span class="overview-stay">今晚：开封｜第1晚/共2晚</span><span class="fatigue">正常 ⭐⭐</span><span class="overview-key">关键：17:30后入住就删夜场</span></div></div></article>
+        <article class="day-tile"><div class="overview-day-no">D5</div><div class="overview-copy"><strong>万岁山完整日</strong><p>白天核心节目 → 午间休息 → 夜场</p><div class="overview-meta"><span class="overview-stay">今晚：开封｜第2晚/共2晚</span><span class="fatigue">正常 ⭐⭐</span><span class="overview-key">关键：主景点完整玩透</span></div></div></article>
+        <article class="day-tile"><div class="overview-day-no">D6</div><div class="overview-copy"><strong>补节目后返程</strong><p>万岁山 → 郑州新郑机场</p><div class="overview-meta"><span class="overview-stay">今晚：正常不住，晚点备酒店</span><span class="fatigue">轻松 ⭐</span><span class="overview-key">关键：中午收手，下午送机</span></div></div></article>
       </div>
       <div class="day-overview" data-plan-only="b" hidden>
         <article class="day-tile"><div class="overview-day-no">D1</div><div class="overview-copy"><strong>飞青岛</strong><p>广州白云 → 青岛胶东</p><div class="overview-meta"><span class="overview-stay">今晚：五四广场/浮山所｜第1晚/共2晚</span><span class="fatigue">轻松 ⭐</span><span class="overview-key">关键：落地后直接睡觉</span></div></div></article>
@@ -82,8 +84,8 @@
 
     <section id="quick">
       <div class="section-title"><h2>旅行现场快捷执行卡</h2><p class="lead">路上先看这一组，想看细节再展开当天。</p></div>
-      <div class="quick-grid" data-plan-only="a">
-        <article class="quick-card"><b>D1 睡前｜轻松 ⭐</b><p>确认青岛酒店和机场接驳，晚到就直接休息。</p><a href="#sd-d1">查看 D1 详细版</a></article><article class="quick-card"><b>D2 重点｜正常 ⭐⭐</b><p>八大关、二浴安全机位、小麦岛，正午回酒店。</p><a href="#sd-d2">查看 D2 详细版</a></article><article class="quick-card"><b>D3 重点｜轻松 ⭐</b><p>08:00起床，选10:20后车次；傍晚看城市海岸地标。</p><a href="#sd-d3">查看 D3 详细版</a></article><article class="quick-card"><b>D4 重点｜正常 ⭐⭐</b><p>刘公岛乘船、观光车和一处老建筑；晚上收好行李。</p><a href="#sd-d4">查看 D4 详细版</a></article><article class="quick-card"><b>D5 高强度｜较累 ⭐⭐⭐</b><p>酒店寄存行李，沿海分段打车，13:20前到威海站。</p><a href="#sd-d5">查看 D5 详细版</a></article><article class="quick-card"><b>D6 重点｜正常 ⭐⭐</b><p>睡足后进万岁山，完整保留白天节目与夜场。</p><a href="#sd-d6">查看 D6 详细版</a></article><article class="quick-card"><b>D7 返程｜轻松 ⭐</b><p>上午补节目，中午收手，13:30送机。</p><a href="#sd-d7">查看 D7 详细版</a></article>
+      <div class="quick-grid" data-plan-only="a" hidden>
+        <article class="quick-card"><b>D1 抵威海｜轻松 ⭐</b><p>软卧到站后先入住；同等车次优先威海北站。</p><a href="#sd-a-d1">查看 D1 详细版</a></article><article class="quick-card"><b>D2 刘公岛｜正常 ⭐⭐</b><p>乘船、观光车和一处老建筑，不走长坡。</p><a href="#sd-a-d2">查看 D2 详细版</a></article><article class="quick-card"><b>D3 看海｜正常 ⭐⭐</b><p>上午半月湾和猫头山，午休后看火炬八街与海水浴场。</p><a href="#sd-a-d3">查看 D3 详细版</a></article><article class="quick-card"><b>D4 转场｜正常 ⭐⭐</b><p>08:00起床，去威海北坐上午车；准点才看万岁山夜场。</p><a href="#sd-a-d4">查看 D4 详细版</a></article><article class="quick-card"><b>D5 主景点｜正常 ⭐⭐</b><p>完整一天只围绕万岁山节目单执行。</p><a href="#sd-a-d5">查看 D5 详细版</a></article><article class="quick-card"><b>D6 返程｜轻松 ⭐</b><p>上午补节目，中午收手，下午送机。</p><a href="#sd-a-d6">查看 D6 详细版</a></article>
       </div>
       <div class="quick-grid" data-plan-only="b" hidden>
         <article class="quick-card"><b>D1 睡前｜轻松 ⭐</b><p>确认青岛酒店和机场接驳，晚到就直接休息。</p><a href="#sd-d1">查看 D1 详细版</a></article><article class="quick-card"><b>D2 重点｜正常 ⭐⭐</b><p>八大关、二浴安全机位、小麦岛，正午回酒店。</p><a href="#sd-d2">查看 D2 详细版</a></article><article class="quick-card"><b>D3 重点｜轻松 ⭐</b><p>08:00起床，选10:20后车次；抵威海先入住休息。</p><a href="#sd-d3">查看 D3 详细版</a></article><article class="quick-card"><b>D4 重点｜正常 ⭐⭐</b><p>刘公岛慢看，返航后休息，晚上只留1小时自由安排。</p><a href="#sd-d4">查看 D4 详细版</a></article><article class="quick-card"><b>D5 看海｜正常 ⭐⭐</b><p>上午半月湾和猫头山，午休后看火炬八街与海水浴场。</p><a href="#sd-b-d5">查看 D5 详细版</a></article><article class="quick-card"><b>D6 转场｜正常 ⭐⭐</b><p>08:00起床，去威海北坐上午车，傍晚进万岁山夜场。</p><a href="#sd-b-d6">查看 D6 详细版</a></article><article class="quick-card"><b>D7 主景点｜正常 ⭐⭐</b><p>完整一天只围绕万岁山节目单执行。</p><a href="#sd-b-d7">查看 D7 详细版</a></article><article class="quick-card"><b>D8 返程｜轻松 ⭐</b><p>上午补节目，中午收手，下午送机。</p><a href="#sd-b-d8">查看 D8 详细版</a></article>
@@ -92,68 +94,125 @@
 
     <section id="booking">
       <div class="section-title"><h2>票务与预约总表</h2><p class="lead">先锁跨城交通和万岁山，其他景点按当天状态取舍。</p></div>
-      <div class="table-wrap" data-plan-only="a"><table><thead><tr><th>项目</th><th>何时确认</th><th>在哪里查</th><th>关键动作</th><th>没票/晚点怎么处理</th></tr></thead><tbody><tr><td>广州白云 → 青岛胶东</td><td>现在出票</td><td>航司 App / OTA</td><td>确认落地时间、行李额、青岛酒店接驳。</td><td>晚到即入住，不安排夜景。</td></tr><tr><td>D3 青岛北 → 威海</td><td>D1 晚前</td><td>12306</td><td>优先查10:20—11:50出发车次；酒店到车站留60—90分钟。</td><td>到威海晚就删灯塔。</td></tr><tr><td>D4 刘公岛</td><td>D3 晚上</td><td>官方公众号</td><td>确认船舶、返航、观光车和天气。</td><td>停航就改城市海岸轻游。</td></tr><tr><td>D5 威海 → 郑州东</td><td>现在查票</td><td>12306</td><td>锁定G2076或同类15:20—16:20出发的晚车。</td><td>不接受午夜入住就切换方案B。</td></tr><tr><td>D5 郑州东 → 开封酒店</td><td>车票确认后</td><td>正规接送平台</td><td>预订接站车并备注午夜入住。</td><td>晚点时同步司机和酒店。</td></tr><tr><td>万岁山门票/节目</td><td>D5上车后</td><td>官方公众号</td><td>确认三日入园政策、预约剧目和节目单。</td><td>D6保全天，D7上午补漏。</td></tr><tr><td>D7 开封 → 新郑机场</td><td>D5晚上</td><td>正规送机平台</td><td>13:30左右出发，匹配18:30后航班。</td><td>航班晚点才考虑兜底住宿。</td></tr><tr><td>三城酒店</td><td>现在锁可取消</td><td>酒店平台</td><td>青岛2晚、威海2晚、开封2晚。</td><td>开封酒店确认午夜入住。</td></tr></tbody></table></div>
+      <div class="table-wrap" data-plan-only="a" hidden><table><thead><tr><th>项目</th><th>何时确认</th><th>在哪里查</th><th>关键动作</th><th>没票/晚点怎么处理</th></tr></thead><tbody><tr><td>广州出发站 → 威海</td><td>现在出票</td><td>12306</td><td>软卧830元/人，两人1660元；确认真实上车站、到达日期和终点站。相同到达时段优先威海北站。</td><td>若票面只到威海站就直接下车；到站晚只入住，不补城市地标。</td></tr><tr><td>D2 刘公岛</td><td>D1晚上</td><td>官方公众号</td><td>确认船班、返航、观光车、天气与身份证入园。</td><td>停航就改幸福门、大相框、悦海灯塔。</td></tr><tr><td>D3 海岸分段打车</td><td>D2晚上</td><td>高德/滴滴 + 官方观光车</td><td>确认半月湾下客点、猫头山观光车和返程叫车。</td><td>天气差先删猫头山。</td></tr><tr><td>D4 威海北 → 郑州东</td><td>现在查票</td><td>12306</td><td>优先查10:00左右出发、16:00前抵达的车次；公开参考可查G3170。</td><td>到开封晚于17:30就删万岁山夜场。</td></tr><tr><td>D4 郑州东 → 开封酒店</td><td>车票确认后</td><td>正规接送平台</td><td>预订接站车直达万岁山/龙亭圈。</td><td>晚点同步司机与酒店，D5完整日不动。</td></tr><tr><td>万岁山门票/节目</td><td>D4上车后</td><td>官方公众号</td><td>核对票种、入园规则和当日节目单；D4夜场只在准点时执行。</td><td>D5完整日 + D6上午补漏。</td></tr><tr><td>D6 开封 → 新郑机场</td><td>D4晚上</td><td>正规送机平台</td><td>13:30左右出发，匹配18:30后航班。</td><td>航班明显晚点才启用兜底酒店。</td></tr><tr><td>两城酒店</td><td>现在锁可取消</td><td>酒店平台</td><td>威海3晚、开封2晚；不拆连住订单。</td><td>确认寄存行李、24小时前台和门口叫车。</td></tr></tbody></table></div>
       <div class="table-wrap" data-plan-only="b" hidden><table><thead><tr><th>项目</th><th>何时确认</th><th>在哪里查</th><th>关键动作</th><th>没票/晚点怎么处理</th></tr></thead><tbody><tr><td>广州白云 → 青岛胶东</td><td>现在出票</td><td>航司 App / OTA</td><td>确认落地时间、行李额、青岛酒店接驳。</td><td>晚到即入住。</td></tr><tr><td>D3 青岛北 → 威海</td><td>D1晚前</td><td>12306</td><td>优先查10:20—11:50出发车次。</td><td>到威海晚就删灯塔。</td></tr><tr><td>D4 刘公岛</td><td>D3晚上</td><td>官方公众号</td><td>确认船舶、返航、观光车和天气。</td><td>停航就改城市海岸轻游。</td></tr><tr><td>D5 海岸分段打车</td><td>D4晚上</td><td>高德/滴滴 + 官方观光车</td><td>确认半月湾上下车点、猫头山观光车和返程打车。</td><td>天气差就取消猫头山。</td></tr><tr><td>D6 威海北 → 郑州东</td><td>现在查票</td><td>12306</td><td>优先查10:00左右从威海北出发、16:00前到郑州东的车次；近期公开时刻可见G3170。</td><td>到郑州东晚于17:30就取消当晚万岁山。</td></tr><tr><td>D6 郑州东 → 开封酒店</td><td>车票确认后</td><td>正规接送平台</td><td>预订接站车，争取17:30前入住。</td><td>晚点时夜场可删，D7完整日不动。</td></tr><tr><td>万岁山门票/节目</td><td>D6上车后</td><td>官方公众号</td><td>确认三日不限次入园政策仍有效，再排D6夜场、D7全天、D8上午。</td><td>政策有变就以D7完整日为核心。</td></tr><tr><td>D8 开封 → 新郑机场</td><td>D6晚上</td><td>正规送机平台</td><td>13:30左右出发，匹配18:30后航班。</td><td>航班晚点才考虑兜底住宿。</td></tr><tr><td>三城酒店</td><td>现在锁可取消</td><td>酒店平台</td><td>青岛2晚、威海3晚、开封2晚。</td><td>优先连住，不拆订单。</td></tr></tbody></table></div>
     </section>
 
     <section id="tickets">
       <div class="section-title"><h2>景点预约与额外消费总表</h2><p class="lead">按两名普通成年游客计算；免费街区也明确写出，避免临场找不存在的门票。</p></div>
       <div class="table-wrap"><table><thead><tr><th>景点</th><th>两名成人票</th><th>在哪里预约/购买</th><th>建议提前</th><th>一票包含什么</th><th>另付项目与执行建议</th></tr></thead><tbody>
-        <tr><td><b>八大关街区</b><br>居庸关路、公主楼/花石楼外观</td><td>0元</td><td>公共街区，无需预约；直接导航“八大关 居庸关路”。</td><td>0天</td><td>林荫街区及建筑外观。</td><td>花石楼内部公开参考8.5元/人，两人17元，通常现场购票；本路线只看外观，不列入核心票。其他建筑联票不为本路线必买，先看现场开放与价格。</td></tr>
-        <tr><td><b>第二海水浴场</b></td><td>岸边游览0元</td><td>无需预约；直接到开放公共岸线。</td><td>0天</td><td>沙滩、礁石与岸边观景。</td><td>游泳季管理费、冲淋、更衣、寄存和停车按现场公示另付；本路线不下水。洞口、礁石、堤坝从不视作收费保证项目，只按潮汐和围挡决定能否靠近。</td></tr>
-        <tr><td><b>小麦岛公园</b></td><td>0元</td><td>免费免预约；导航“小麦岛公园 西门”。</td><td>0天</td><td>草坪、花地、海岸步道。</td><td>商业摄影、餐饮及周边停车另付；本路线只走40—60分钟平缓短线。</td></tr>
-        <tr><td><b>五四广场/奥帆中心公共区</b></td><td>0元</td><td>公共区域无需预约。</td><td>0天</td><td>广场、海岸和夜景公共空间。</td><td>游船、帆船等体验均另收费且非本路线必做，累了直接删除。</td></tr>
+        <tr data-plan-only="b"><td><b>八大关街区</b><br>居庸关路、公主楼/花石楼外观</td><td>0元</td><td>公共街区，无需预约；直接导航“八大关 居庸关路”。</td><td>0天</td><td>林荫街区及建筑外观。</td><td>花石楼内部公开参考8.5元/人，两人17元，通常现场购票；本路线只看外观，不列入核心票。其他建筑联票不为本路线必买，先看现场开放与价格。</td></tr>
+        <tr data-plan-only="b"><td><b>第二海水浴场</b></td><td>岸边游览0元</td><td>无需预约；直接到开放公共岸线。</td><td>0天</td><td>沙滩、礁石与岸边观景。</td><td>游泳季管理费、冲淋、更衣、寄存和停车按现场公示另付；本路线不下水。洞口、礁石、堤坝从不视作收费保证项目，只按潮汐和围挡决定能否靠近。</td></tr>
+        <tr data-plan-only="b"><td><b>小麦岛公园</b></td><td>0元</td><td>免费免预约；导航“小麦岛公园 西门”。</td><td>0天</td><td>草坪、花地、海岸步道。</td><td>商业摄影、餐饮及周边停车另付；本路线只走40—60分钟平缓短线。</td></tr>
+        <tr data-plan-only="b"><td><b>五四广场/奥帆中心公共区</b></td><td>0元</td><td>公共区域无需预约。</td><td>0天</td><td>广场、海岸和夜景公共空间。</td><td>游船、帆船等体验均另收费且非本路线必做，累了直接删除。</td></tr>
         <tr><td><b>幸福门外广场、威海公园、悦海公园</b></td><td>0元</td><td>公共空间无需预约。</td><td>0天</td><td>门形地标、大相框、灯塔和海草房外观。</td><td>幸福门登高、停车及商业项目若开放则另付；本路线只在地面拍照，不购买登高票。</td></tr>
         <tr><td><b>刘公岛</b></td><td><b>244元</b><br>122元/人</td><td>微信搜索官方公众号“刘公岛景区” → “智慧旅游” → 在线预定；也可在“自在威海智慧旅游”或美团、抖音、携程、高德购买。购票成功即预约成功，刷身份证入园。</td><td>暑期建议3—5天；周末建议5—7天</td><td>景点门票91元/人 + 往返船票31元/人。</td><td>不含环岛交通。按不爬山路线选1号游览车60元/人，两人120元；2号线80元/人。环岛游船60元/人、潜艇30元/人、讲解另付，不重复购买。</td></tr>
-        <tr><td><b>半月湾</b></td><td>0元</td><td>公共沙滩无需预约。</td><td>0天</td><td>弧形海湾和公共岸线。</td><td>停车、餐饮另付；D5采用打车，不产生停车费。</td></tr>
+        <tr><td><b>半月湾</b></td><td>0元</td><td>公共沙滩无需预约。</td><td>0天</td><td>弧形海湾和公共岸线。</td><td>停车、餐饮另付；本路线采用分段打车，不产生停车费。</td></tr>
         <tr><td><b>猫头山观景线</b></td><td>景观0元<br><b>观光车两人40元</b></td><td>到半月湾北岸停车场/景区站点扫描现场官方二维码购票；班次和线路看“半月湾景区”及威海公交当天公告。</td><td>前1天查运营；车票当天买</td><td>当前公开参考20元/人，可按线路站点上下车；最终以现场二维码为准。</td><td>2026年4月25日至10月7日部分辅线限制社会车辆进入，打车只到外围换乘点；全景观光巴士等其他线路可能价格不同。</td></tr>
         <tr><td><b>火炬八街、国际海水浴场</b></td><td>0元</td><td>公共街区/海滩无需预约。</td><td>0天</td><td>坡路入海机位、公共沙滩与浪线。</td><td>停车、寄存、冲淋、餐饮和水上项目另付；本路线步行连接两点，不下水、不买项目。</td></tr>
         <tr><td><b>万岁山武侠城</b></td><td><b>200元</b><br>100元/人</td><td>优先微信搜索官方公众号“开封万岁山武侠城”进入购票；也可用景区官方合作OTA。入园后立即查看当天电子/纸质节目单，并按官方入口预约《三打祝家庄》《沙场打铁花》等需预约场次。</td><td>门票建议3—5天；热门演出入园后立即约</td><td>当前常规票为三日内万岁山、中国翰园碑林、开封城墙三景区不限次入园；常规演出随门票观看。法定节假日和特殊活动可能调整。</td><td>汉服妆造、摄影、餐饮、游戏、纪念品和官方标注的独立收费体验另付。本路线不买套票、不加游乐项目，优先保核心演出。</td></tr>
       </tbody></table></div>
-      <div class="notice good"><b>两人核心票务合计604元：</b>刘公岛基础票244元 + 刘公岛1号游览车120元 + 猫头山观光车40元 + 万岁山200元。八大关、二浴、小麦岛和威海城市海岸均按免费外观/公共区执行；若临时进入花石楼内部，再另加17元。</div>
+      <div class="notice good" data-plan-only="a" hidden><b>六天版两人核心票务合计604元：</b>刘公岛基础票244元 + 刘公岛1号游览车120元 + 猫头山观光车40元 + 万岁山200元。威海城市海岸均按免费公共区执行。</div>
+      <div class="notice good" data-plan-only="b"><b>八天版两人核心票务合计604元：</b>刘公岛基础票244元 + 刘公岛1号游览车120元 + 猫头山观光车40元 + 万岁山200元。八大关、二浴、小麦岛和威海城市海岸按免费外观/公共区执行；若临时进入花石楼内部，再另加17元。</div>
     </section>
 
     <section id="stay-flow">
-      <div class="section-title"><h2>住宿流转总表</h2><p class="lead">版本切换后，只显示对应的6晚或7晚安排。</p></div>
-      <div class="table-wrap" data-plan-only="a"><table><thead><tr><th>日期</th><th>今晚住哪里</th><th>连住</th><th>为什么住这里</th><th>明天第一件事</th></tr></thead><tbody><tr><td>D1</td><td>青岛五四广场/浮山所</td><td>第1晚 / 共2晚</td><td>落地接驳和D2出行都顺。</td><td>08:00起床去八大关。</td></tr><tr><td>D2</td><td>青岛五四广场/浮山所</td><td>第2晚 / 共2晚</td><td>午休避晒，不换酒店。</td><td>按车次倒推去青岛北。</td></tr><tr><td>D3</td><td>威海威高广场/幸福门</td><td>第1晚 / 共2晚</td><td>城市海岸与刘公岛码头都近。</td><td>08:00起床查船班。</td></tr><tr><td>D4</td><td>威海威高广场/幸福门</td><td>第2晚 / 共2晚</td><td>返航后休息并收好行李。</td><td>08:00起床，退房寄存行李后分段打车。</td></tr><tr><td>D5</td><td>开封万岁山/龙亭圈</td><td>第1晚 / 共2晚</td><td>午夜接站后直接入住。</td><td>睡足后去万岁山。</td></tr><tr><td>D6</td><td>开封万岁山/龙亭圈</td><td>第2晚 / 共2晚</td><td>夜场后不换酒店。</td><td>D7上午补漏后送机。</td></tr><tr><td>D7</td><td>正常不住</td><td>返程日</td><td>只保航班。</td><td>按航班动态处理。</td></tr></tbody></table></div>
+      <div class="section-title"><h2>住宿流转总表</h2><p class="lead">版本切换后，只显示对应的5晚或7晚安排。</p></div>
+      <div class="table-wrap" data-plan-only="a" hidden><table><thead><tr><th>日期</th><th>今晚住哪里</th><th>连住</th><th>为什么住这里</th><th>明天第一件事</th></tr></thead><tbody><tr><td>D1</td><td>威海威高广场/幸福门</td><td>第1晚 / 共3晚</td><td>去城市地标、刘公岛码头和吃饭都方便。</td><td>08:00起床查刘公岛船班。</td></tr><tr><td>D2</td><td>威海威高广场/幸福门</td><td>第2晚 / 共3晚</td><td>返航后继续住，不换酒店。</td><td>08:00起床，分段打车看半月湾与猫头山。</td></tr><tr><td>D3</td><td>威海威高广场/幸福门</td><td>第3晚 / 共3晚</td><td>沿海慢游后回原酒店休息。</td><td>08:00起床，去威海北站。</td></tr><tr><td>D4</td><td>开封万岁山/龙亭圈</td><td>第1晚 / 共2晚</td><td>傍晚入住后按准点情况决定夜场。</td><td>D5完整玩万岁山。</td></tr><tr><td>D5</td><td>开封万岁山/龙亭圈</td><td>第2晚 / 共2晚</td><td>完整日结束不换酒店。</td><td>D6上午补漏后送机。</td></tr><tr><td>D6</td><td>正常不住</td><td>返程日</td><td>只保航班。</td><td>按航班动态处理。</td></tr></tbody></table></div>
       <div class="table-wrap" data-plan-only="b" hidden><table><thead><tr><th>日期</th><th>今晚住哪里</th><th>连住</th><th>为什么住这里</th><th>明天第一件事</th></tr></thead><tbody><tr><td>D1</td><td>青岛五四广场/浮山所</td><td>第1晚 / 共2晚</td><td>落地接驳和D2出行都顺。</td><td>08:00起床去八大关。</td></tr><tr><td>D2</td><td>青岛五四广场/浮山所</td><td>第2晚 / 共2晚</td><td>午休避晒，不换酒店。</td><td>按车次倒推去青岛北。</td></tr><tr><td>D3</td><td>威海威高广场/幸福门</td><td>第1晚 / 共3晚</td><td>城市海岸与刘公岛码头都近。</td><td>08:00起床查船班。</td></tr><tr><td>D4</td><td>威海威高广场/幸福门</td><td>第2晚 / 共3晚</td><td>返航后继续住，不换酒店。</td><td>08:00起床，分段打车看半月湾与猫头山。</td></tr><tr><td>D5</td><td>威海威高广场/幸福门</td><td>第3晚 / 共3晚</td><td>沿海慢游后原酒店休息。</td><td>08:00起床，去威海北。</td></tr><tr><td>D6</td><td>开封万岁山/龙亭圈</td><td>第1晚 / 共2晚</td><td>傍晚入住后可进夜场。</td><td>D7完整玩万岁山。</td></tr><tr><td>D7</td><td>开封万岁山/龙亭圈</td><td>第2晚 / 共2晚</td><td>完整日结束不用换酒店。</td><td>D8上午补漏后送机。</td></tr><tr><td>D8</td><td>正常不住</td><td>返程日</td><td>只保航班。</td><td>按航班动态处理。</td></tr></tbody></table></div>
     </section>
 
     <section id="days">
       <div class="section-title"><h2>详细版｜每天照着走</h2><p class="lead">参考九寨沟页的现场执行结构：卡片默认折叠，不让手机一打开就是长文。</p></div>
-      <details class="day-card" id="sd-d1">
-        <summary><img class="day-summary-img" src="../assets/images/shandong-badaguan.jpg" alt="青岛八大关建筑实景"><div class="day-summary-copy"><strong>D1｜广州/佛山 → 青岛</strong><p>平安落地、住进交通方便的酒店，不硬加夜景。</p><div class="summary-meta"><span>五四广场/浮山所</span><span>轻松</span><span>机场接驳</span></div></div><span class="day-toggle">展开</span></summary>
+      <div data-plan-only="a" hidden>
+        <details class="day-card" id="sd-a-d1">
+          <summary><img class="day-summary-img" src="../assets/images/weihai-xingfumen.jpg" alt="威海幸福门城市海岸实景"><div class="day-summary-copy"><strong>D1｜软卧抵威海 → 入住</strong><p>同等车次优先威海北站；到站时间合适才去城市海岸地标。</p><div class="summary-meta"><span>威海｜第1晚/共3晚</span><span>轻松 ⭐</span><span>软卧1660元 + 接站36元</span></div></div><span class="day-toggle">展开</span></summary>
+          <div class="day-inner"><div class="mini"><div><span>今日一句话</span><b>坐软卧抵达威海，先入住再决定是否看地标。</b></div><div><span>今晚住</span><b>威高广场/幸福门｜第1晚/共3晚</b></div><div><span>今日重点</span><b>确认到站 + 平稳入住</b></div><div><span>可删</span><b>到站晚就删除全部城市地标</b></div></div>
+            <div class="timeline"><div class="time-row"><time class="time">出发日前</time><div><h4>佛山/广州 → 12306票面广州出发站</h4><p>软卧按830元/人、两人1660元执行。购票时确认真正的上车站、开车日期、到达日期、换乘方式和票面终点，不凭城市名猜车站。</p><p class="keyword"><span>12306：广州 → 威海 软卧</span><button class="copy-btn" data-copy="12306 广州 威海 软卧">复制</button></p></div></div><div class="time-row"><time class="time">D1到站</time><div><h4>威海北站优先 → 威高/幸福门酒店</h4><p>相同到达时段优先威海北站：到酒店圈通常约16—19分钟；若830元软卧订单只到威海站，就直接在威海站下车，约20—23分钟到酒店，不额外绕去北站。</p><p class="keyword"><span>导航：威海北站 → 威高广场 幸福门 酒店</span><button class="copy-btn" data-copy="威海北站 威高广场 幸福门 酒店">复制</button></p></div></div><div class="time-row"><time class="time">到店后2小时</time><div><h4>按到站时间选：幸福门 → 大相框 → 悦海灯塔</h4><p>15:00前住进酒店才执行完整三点；看门形地标、巨型画框和白色灯塔/海草房，三点之间打车，不沿海暴走。到站较晚只保幸福门，晚于17:30就全部删掉。</p></div></div><div class="time-row"><time class="time">睡前</time><div><h4>晚饭 + 核对刘公岛</h4><p>确认D2船班、观光车、天气和身份证入园；手机与充电宝充满。</p></div></div></div>
+            <div class="notice good"><b>D1用车账：</b>威海北站到威高/幸福门酒店圈按约9公里、4元/公里列36元；若完整走城市地标，酒店→幸福门2公里8元、幸福门→大相框5公里20元、大相框→悦海5公里20元、悦海→酒店10公里40元，市内共88元。若票面终点为威海站，按实际里程结算，差额从机动金出。</div>
+            <div class="stay-grid"><div><b>今晚住哪里</b>威高广场/幸福门1—1.5公里圈，连续住3晚，不住偏远海景房。</div><div><b>明天怎么走</b>08:00起床查船班，08:30左右打车去刘公岛客运中心。</div></div>
+          </div>
+        </details>
+
+        <details class="day-card" id="sd-a-d2">
+          <summary><img class="day-summary-img" src="../assets/images/weihai-liugong-island.jpg" alt="乘船前往威海刘公岛的真实海景"><div class="day-summary-copy"><strong>D2｜刘公岛代表性一日</strong><p>坐船看威海湾、海岛与北洋海军老建筑，观光车代替爬坡。</p><div class="summary-meta"><span>威海｜第2晚/共3晚</span><span>正常 ⭐⭐</span><span>往返打车24元</span></div></div><span class="day-toggle">展开</span></summary>
+          <div class="day-inner"><div class="mini"><div><span>今日一句话</span><b>船、岛、历史建筑和海湾全景。</b></div><div><span>今晚住</span><b>威高广场/幸福门｜第2晚/共3晚</b></div><div><span>今日重点</span><b>观光车代替爬坡</b></div><div><span>可删</span><b>山顶炮台和长展馆</b></div></div>
+            <div class="timeline"><div class="time-row"><time class="time">08:00—09:00</time><div><h4>起床 → 早餐 → 刘公岛客运中心</h4><p>08:30左右从酒店打车，预留安检、检票与候船；船班、停航和最晚返航只认景区当天公告。</p><p class="keyword"><span>导航：威海 刘公岛客运中心</span><button class="copy-btn" data-copy="威海 刘公岛客运中心">复制</button></p></div></div><div class="time-row"><time class="time">09:00—14:30</time><div><h4>乘船看湾 → 码头舰船 → 一处老建筑 → 环岛观光车</h4><p>船上回望城市天际线；上岛先看码头和海湾，再选北洋海军公所或丁汝昌寓所一处，最后坐1号游览车看黑松林、岛礁和老建筑外观。12:00前后在游客服务区休息补水。</p></div></div><div class="time-row"><time class="time">14:30—16:00</time><div><h4>返航 → 酒店休息</h4><p>最晚返航前留足候船时间；大风停航直接改城市海岸，不在码头久等。</p></div></div><div class="time-row"><time class="time">晚上</time><div><h4>晚饭 + 休息</h4><p>确认D3猫头山观光车、天气与叫车；不把自由安排写成额外固定行程。</p></div></div></div>
+            <div class="notice good"><b>D2用车账｜6公里，24元：</b>酒店→刘公岛客运中心3公里12元，返航后原路3公里12元；船票和岛内观光车列入核心票务。</div>
+            <div class="stay-grid"><div><b>今晚住哪里</b>继续住原酒店，不搬行李。</div><div><b>明天怎么走</b>08:00起床；上午半月湾和猫头山，午休后再去火炬八街与国际海水浴场。</div></div>
+          </div>
+        </details>
+
+        <details class="day-card" id="sd-a-d3">
+          <summary><img class="day-summary-img" src="../assets/images/weihai-maotoushan.jpg" alt="威海猫头山层叠海岬实景"><div class="day-summary-copy"><strong>D3｜威海海岸慢游日</strong><p>上午半月湾与猫头山，午休后再看火炬八街和国际海水浴场。</p><div class="summary-meta"><span>威海｜第3晚/共3晚</span><span>正常 ⭐⭐</span><span>市内打车168元</span></div></div><span class="day-toggle">展开</span></summary>
+          <div class="day-inner"><div class="mini"><div><span>今日一句话</span><b>两段看海，中午回酒店避晒。</b></div><div><span>今晚住</span><b>威高广场/幸福门｜第3晚/共3晚</b></div><div><span>今日重点</span><b>猫头山海岬 + 火炬坡路</b></div><div><span>可删</span><b>天气差先删猫头山</b></div></div>
+            <div class="timeline"><div class="time-row"><time class="time">08:00—09:00</time><div><h4>起床 → 早餐 → 打车去半月湾</h4><p>不退房、不带大件行李；半月湾看弧形海湾后，按官方管制换乘猫头山观光车。</p></div></div><div class="time-row"><time class="time">09:00—11:40</time><div><h4>半月湾 → 猫头山观光车 → 酒店</h4><p>看3号观景台层叠海岬与环海公路，不走徒步线；线路、班次和停靠点以现场二维码为准。</p></div></div><div class="time-row"><time class="time">12:00—16:00</time><div><h4>午饭 + 酒店午休</h4><p>避开最热时段，手机和充电宝补满电。</p></div></div><div class="time-row"><time class="time">16:00—19:00</time><div><h4>火炬八街 → 步行国际海水浴场 → 回酒店</h4><p>火炬八街看彩色坡路直落大海，海水浴场看开阔沙滩和浪线；不站车道、不下水、不追日落到太晚。</p></div></div></div>
+            <div class="notice good"><b>D3用车账｜42公里，168元：</b>酒店→半月湾7公里28元；观光车返回换乘点→酒店7公里28元；酒店→火炬八街14公里56元；海水浴场→酒店14公里56元。猫头山观光车两人40元另列。</div>
+            <div class="stay-grid"><div><b>今晚住哪里</b>继续住原酒店，回来休息并收好行李。</div><div><b>明天怎么走</b>08:00起床，退房后打车去威海北站，坐上午车转开封。</div></div>
+          </div>
+        </details>
+
+        <details class="day-card" id="sd-a-d4">
+          <summary><img class="day-summary-img" src="../assets/images/kaifeng-wansui-night.jpg" alt="开封万岁山武侠城夜场实景"><div class="day-summary-copy"><strong>D4｜威海 → 开封 → 可选万岁山夜场</strong><p>跨省交通单独放一天，准点才进夜场，晚点就直接休息。</p><div class="summary-meta"><span>开封｜第1晚/共2晚</span><span>正常 ⭐⭐</span><span>接驳打车352元</span></div></div><span class="day-toggle">展开</span></summary>
+          <div class="day-inner"><div class="timeline"><div class="time-row"><time class="time">08:00—09:00</time><div><h4>起床 → 早餐 → 退房</h4><p>建议车次前60—90分钟离开酒店去威海北站，不安排早于08:00起床。</p></div></div><div class="time-row"><time class="time">约10:00—16:00</time><div><h4>威海北 → 郑州东</h4><p>优先查上午出发、16:00前到郑州东的车次；公开参考可查G3170，最终只认12306订单。</p><p class="keyword"><span>12306：威海北 → 郑州东</span><button class="copy-btn" data-copy="12306 威海北 郑州东">复制</button></p></div></div><div class="time-row"><time class="time">16:00—17:30</time><div><h4>郑州东 → 开封酒店</h4><p>提前约接站车直达万岁山/龙亭圈；晚于17:30入住就取消夜场。</p></div></div><div class="time-row"><time class="time">18:00—22:00</time><div><h4>可选万岁山夜场</h4><p>准点时只按当天节目单看1—2场；不为夜场压缩晚饭和睡眠。</p></div></div></div>
+            <div class="notice good"><b>D4用车账｜88公里，352元：</b>威海酒店→威海北站13公里52元；郑州东→开封酒店71公里284元；准点时酒店↔万岁山夜场4公里16元。取消夜场即少16元。</div>
+            <div class="stay-grid"><div><b>今晚住哪里</b>万岁山/龙亭圈｜第1晚/共2晚。</div><div><b>明天怎么走</b>08:00起床，按节目单完整玩万岁山。</div></div>
+          </div>
+        </details>
+
+        <details class="day-card" id="sd-a-d5">
+          <summary><img class="day-summary-img" src="../assets/images/kaifeng-wansui.jpg" alt="开封万岁山武侠城日间实景"><div class="day-summary-copy"><strong>D5｜万岁山完整一天</strong><p>完整保留白天节目、午间休息和夜场。</p><div class="summary-meta"><span>开封｜第2晚/共2晚</span><span>正常 ⭐⭐</span><span>往返打车16元</span></div></div><span class="day-toggle">展开</span></summary>
+          <div class="day-inner"><div class="timeline"><div class="time-row"><time class="time">08:00—09:30</time><div><h4>起床 → 早餐 → 查节目单</h4><p>先锁定需预约的核心演出，再倒推入园和移动。</p></div></div><div class="time-row"><time class="time">09:30—12:00</time><div><h4>第一组核心演出</h4><p>不在入口商业街消耗体力，按开演时间走。</p></div></div><div class="time-row"><time class="time">12:00—15:00</time><div><h4>午饭 + 遮阴休息</h4><p>高温时坐下补水，不横穿园区。</p></div></div><div class="time-row"><time class="time">15:00—22:00</time><div><h4>下午节目 + 夜场</h4><p>节目名、预约方式和场次只认当天官方公告；排队过长就换下一场。</p></div></div></div>
+            <div class="notice good"><b>D5用车账｜4公里，16元：</b>酒店→万岁山正门2公里8元；夜场结束→酒店2公里8元。全天其余移动在园内完成。</div>
+            <div class="stay-grid"><div><b>今晚住哪里</b>继续住万岁山/龙亭圈。</div><div><b>明天怎么走</b>08:00起床，上午补2—3项后送机。</div></div>
+          </div>
+        </details>
+
+        <details class="day-card" id="sd-a-d6">
+          <summary><img class="day-summary-img" src="../assets/images/kaifeng-wansui-night.jpg" alt="开封万岁山武侠城演出实景"><div class="day-summary-copy"><strong>D6｜上午补节目 → 郑州新郑返程</strong><p>中午准时收手，下午只保送机和航班。</p><div class="summary-meta"><span>正常不住</span><span>轻松 ⭐</span><span>市内16元 + 送机120元</span></div></div><span class="day-toggle">展开</span></summary>
+          <div class="day-inner"><div class="timeline"><div class="time-row"><time class="time">08:00—12:00</time><div><h4>退房寄存 → 万岁山补漏</h4><p>只补昨天冲突的2—3项；天气热或累了就不进园。</p></div></div><div class="time-row"><time class="time">12:00—13:20</time><div><h4>午饭 → 取行李</h4><p>核对身份证、航班和送机订单。</p></div></div><div class="time-row"><time class="time">13:30—航班前</time><div><h4>开封 → 郑州新郑机场</h4><p>优先匹配18:30后起飞航班，返程日不补其他景点。</p><p class="keyword"><span>导航：郑州新郑国际机场 T2</span><button class="copy-btn" data-copy="郑州新郑国际机场 T2">复制</button></p></div></div></div>
+            <div class="notice good"><b>D6用车账：</b>酒店↔万岁山补漏4公里16元；开封酒店→郑州新郑机场固定120元，当天共136元。若不补节目，省下市内16元。</div>
+          </div>
+        </details>
+      </div>
+
+      <details class="day-card" id="sd-d1" data-plan-only="b">
+        <summary><img class="day-summary-img" src="../assets/images/shandong-badaguan.jpg" alt="青岛八大关建筑实景"><div class="day-summary-copy"><strong>D1｜广州/佛山 → 青岛</strong><p>平安落地、住进交通方便的酒店，不硬加夜景。</p><div class="summary-meta"><span>五四广场/浮山所</span><span>轻松</span><span>机场接驳120元</span></div></div><span class="day-toggle">展开</span></summary>
         <div class="day-inner"><div class="mini"><div><span>今日一句话</span><b>落地只做入住和晚餐。</b></div><div><span>今晚住</span><b>五四广场/浮山所｜第1晚/共2晚</b></div><div><span>今日重点</span><b>落地接驳 + 早睡</b></div><div><span>可删</span><b>所有夜景</b></div></div>
           <div class="timeline"><div class="time-row"><time class="time">航班前</time><div><h4>佛山/广州 → 广州白云机场</h4><p>国内航班按起飞前至少2小时到机场倒推。带大行李或首飞不熟时，宁可早到。</p><p class="keyword"><span>导航：广州白云国际机场 出发层</span><button class="copy-btn" data-copy="广州白云国际机场 出发层">复制</button></p></div></div><div class="time-row"><time class="time">落地后</time><div><h4>青岛胶东机场 → 酒店</h4><p><b>主选：</b>打车/网约车直达五四广场或浮山所酒店。<b>省钱备选：</b>按高德实时地铁/机场线换乘，不拿晚到后的时间赌换乘。</p><p class="keyword"><span>导航：青岛 五四广场 浮山所 地铁站 酒店</span><button class="copy-btn" data-copy="青岛 五四广场 浮山所 地铁站 酒店">复制</button></p></div></div><div class="time-row"><time class="time">晚餐</time><div><h4>酒店步行10分钟内</h4><p>第一晚只吃海鲜水饺、家常海鲜或面食；不冲远处网红海鲜店。</p></div></div></div>
+          <div class="notice good"><b>D1用车账：</b>青岛胶东机场 → 五四广场/浮山所酒店，采用你指定的机场接驳固定口径120元，不再按4元/公里重复计算。落地晚时固定接驳比换乘更稳，今晚不产生其他市内打车费。</div>
           <div class="stay-grid"><div><b>今晚住哪里</b>浮山所地铁站/五四广场1—1.5公里圈，选可取消、电梯、可寄存行李、靠主路。</div><div><b>明天怎么走</b>08:00起床、08:30左右去八大关；今晚把身份证、防晒、薄外套、充电宝放一个小包。</div></div>
           <div class="plan-grid"><div><b>正常版</b>入住、吃饭、早睡。</div><div><b>晚点/太累版</b>机场买水和轻食，直接打车休息。</div></div></div>
       </details>
 
-      <details class="day-card" id="sd-d2">
-        <summary><img class="day-summary-img" src="../assets/images/qingdao-second-beach-dike.jpg" alt="青岛第二海水浴场海中防波堤实景"><div class="day-summary-copy"><strong>D2｜青岛建筑与海岸机位</strong><p>八大关看花石楼与林荫街，二浴找海中堤坝和洞口，下午看小麦岛草坪海岸。</p><div class="summary-meta"><span>青岛｜第2晚/共2晚</span><span>中等</span><span>标志机位</span></div></div><span class="day-toggle">展开</span></summary>
+      <details class="day-card" id="sd-d2" data-plan-only="b">
+        <summary><img class="day-summary-img" src="../assets/images/qingdao-second-beach-dike.jpg" alt="青岛第二海水浴场海中防波堤实景"><div class="day-summary-copy"><strong>D2｜青岛建筑与海岸机位</strong><p>八大关看花石楼与林荫街，二浴找海中堤坝和洞口，下午看小麦岛草坪海岸。</p><div class="summary-meta"><span>青岛｜第2晚/共2晚</span><span>中等</span><span>市内打车108元</span></div></div><span class="day-toggle">展开</span></summary>
         <div class="day-inner"><div class="mini"><div><span>今日一句话</span><b>老建筑、洞口堤坝、草坪海岸各看一种。</b></div><div><span>今晚住</span><b>五四广场/浮山所｜第2晚/共2晚</b></div><div><span>今日重点</span><b>08:00起床，不为拍照冒险</b></div><div><span>不做</span><b>崂山、黄岛长圈、正午海滩</b></div></div>
           <div class="timeline"><div class="time-row"><time class="time">08:00—08:30</time><div><h4>起床、早餐、轻装出发</h4><p>不用清晨赶路。带水、防晒、舒服鞋和充电宝，打车到八大关靠居庸关路一侧。</p></div></div><div class="time-row"><time class="time">08:45—10:15</time><div><h4>居庸关路树荫 → 公主楼外观 → 花石楼外观</h4><p><b>看点：</b>居庸关路的林荫轴线、公主楼彩色外墙、花石楼石墙与临海位置。建筑内部不是必做，不为排队买套票；这段的特色是“红瓦绿树 + 老别墅街区”，不是单纯散步。</p><p class="keyword"><span>导航：青岛 八大关 居庸关路</span><button class="copy-btn" data-copy="青岛 八大关 居庸关路">复制</button></p></div></div><div class="time-row"><time class="time">10:15—11:30</time><div><h4>第二海水浴场：洞口/礁石 → 西侧海中堤坝 → 花石楼海景</h4><p><b>看点：</b>退潮后礁石附近的洞口构图、伸入海中的防波堤和从沙滩回望花石楼。先在安全岸边外拍；只有潮位低、现场明确开放且无“禁止登坝”警示时才靠近，浪大或封闭绝不上堤、不钻洞。</p><p class="keyword"><span>导航：青岛 第二海水浴场 花石楼</span><button class="copy-btn" data-copy="青岛 第二海水浴场 花石楼">复制</button></p></div></div><div class="time-row"><time class="time">11:45—16:00</time><div><h4>午饭 + 酒店午休</h4><p>回五四广场/万象城一带吃饭，避开最热时段。</p></div></div><div class="time-row"><time class="time">16:30—18:15</time><div><h4>小麦岛：入口草坪 → 西侧城市天际线 → 近海礁石步道</h4><p><b>看点：</b>草坪和海面同框、隔海看城市天际线、贴近海岸的礁石层次。只走平缓短线，不绕全岛；日落人多时不排“孤独的树”机位。</p><p class="keyword"><span>导航：青岛 小麦岛公园 西门</span><button class="copy-btn" data-copy="青岛 小麦岛公园 西门">复制</button></p></div></div><div class="time-row"><time class="time">19:00—20:00</time><div><h4>晚饭后可选：奥帆中心/五月的风</h4><p>若体力好，在酒店圈附近看帆船桅杆、情人坝方向和“五月的风”夜景；累了直接删，不影响主线。</p></div></div></div>
+          <div class="notice good"><b>D2用车账｜27公里，108元：</b>酒店→八大关6公里24元；二浴→酒店6公里24元；酒店→小麦岛西门7公里28元；小麦岛→酒店8公里32元。八大关到二浴步行连接；晚间若看奥帆中心，只走酒店圈附近公共区，不再增加打车。</div>
           <div class="stay-grid"><div><b>潮汐与安全</b>洞口、礁石和堤坝不是固定开放项目；以当天潮汐、围挡、警示牌和救生员要求为准，绝不为照片越线。</div><div><b>明天怎么走</b>08:00起床，优先买10:20—11:50从青岛北出发的车次；车次前60—90分钟离开酒店。</div></div>
           <div class="plan-grid"><div><b>正常版</b>八大关建筑主线 + 二浴安全机位 + 午休 + 小麦岛。</div><div><b>暴晒/大浪版</b>二浴只在岸边看海，删太平角和晚间加项；下午只保小麦岛20—30分钟。</div></div></div>
       </details>
 
-      <details class="day-card" id="sd-d3">
-        <summary><img class="day-summary-img" src="../assets/images/weihai-xingfumen.jpg" alt="威海幸福门海滨实景"><div class="day-summary-copy"><strong>D3｜睡足后青岛 → 威海</strong><p>08:00起床，坐上午较晚车次；傍晚串联三处城市海岸地标。</p><div class="summary-meta"><span data-plan-only="a">威高/幸福门｜第1晚/共2晚</span><span data-plan-only="b" hidden>威高/幸福门｜第1晚/共3晚</span><span>轻松</span><span>不赶早班</span></div></div><span class="day-toggle">展开</span></summary>
+      <details class="day-card" id="sd-d3" data-plan-only="b">
+        <summary><img class="day-summary-img" src="../assets/images/weihai-xingfumen.jpg" alt="威海幸福门海滨实景"><div class="day-summary-copy"><strong>D3｜睡足后青岛 → 威海</strong><p>08:00起床，坐上午较晚车次；傍晚串联三处城市海岸地标。</p><div class="summary-meta"><span data-plan-only="a">威高/幸福门｜第1晚/共2晚</span><span data-plan-only="b" hidden>威高/幸福门｜第1晚/共3晚</span><span>轻松</span><span>接驳打车192元</span></div></div><span class="day-toggle">展开</span></summary>
         <div class="day-inner"><div class="mini"><div><span>今日一句话</span><b>不赶早班，睡足后转场。</b></div><div><span>今晚住</span><b data-plan-only="a">威高广场/幸福门｜第1晚/共2晚</b><b data-plan-only="b" hidden>威高广场/幸福门｜第1晚/共3晚</b></div><div><span>今日重点</span><b>城市地标，不去远郊</b></div><div><span>可删</span><b>悦海灯塔</b></div></div>
           <div class="timeline"><div class="time-row"><time class="time">08:00—09:00</time><div><h4>起床 → 早餐 → 退房</h4><p>最早08:00起床，行李收好后再去青岛北站，不赶早班。</p></div></div><div class="time-row"><time class="time">09:00—车次前</time><div><h4>酒店 → 青岛北站</h4><p><b>购票窗口：</b>优先查10:20—11:50从青岛北出发、约中午抵达威海的车次；近期公开时刻可见10:23和11:44左右班次，但最终只认12306付款订单。</p><p class="keyword"><span>导航：青岛北站</span><button class="copy-btn" data-copy="青岛北站">复制</button></p></div></div><div class="time-row"><time class="time">中午—15:30</time><div><h4>威海站 → 酒店 → 午饭/休息</h4><p>先放行李和吃饭，不把中午塞成景点。</p><p class="keyword"><span>导航：威海 幸福门 威高广场 酒店</span><button class="copy-btn" data-copy="威海 幸福门 威高广场 酒店">复制</button></p></div></div><div class="time-row"><time class="time">16:30—19:30</time><div><h4>幸福门 → 威海公园“大相框” → 悦海公园灯塔</h4><p><b>幸福门：</b>看威海城市门形地标与海湾；<b>大相框：</b>用巨型画框把海面和人框进照片；<b>悦海灯塔：</b>看白色灯塔、海草房和傍晚海岸。三点之间用打车连接，不沿海全程暴走。</p><p class="keyword"><span>导航：威海公园 大相框</span><button class="copy-btn" data-copy="威海公园 大相框">复制</button></p></div></div></div>
+          <div class="notice good"><b>D3用车账｜48公里，192元：</b>青岛酒店→青岛北站15公里60元；威海站→威高/幸福门酒店11公里44元；酒店→幸福门2公里8元；幸福门→威海公园5公里20元；威海公园→悦海公园5公里20元；悦海公园→酒店10公里40元。跨城火车票另计，不混入打车账。</div>
           <div class="stay-grid"><div><b>今晚住哪里</b>威高广场/幸福门1—1.5公里圈，晚上好吃饭，去刘公岛旅游码头也近；不住海景房。</div><div><b>明天怎么走</b>08:00起床，先查刘公岛当天船舶公告；08:30左右打车去刘公岛客运中心。</div></div>
           <div class="plan-grid"><div><b>正常版</b>幸福门 + 大相框 + 悦海灯塔。</div><div><b>晚点/下雨版</b>只保幸福门和威高晚饭。</div></div></div>
       </details>
 
-      <details class="day-card" id="sd-d4">
-        <summary><img class="day-summary-img" src="../assets/images/weihai-liugong-island.jpg" alt="乘船前往威海刘公岛的真实海景"><div class="day-summary-copy"><strong>D4｜刘公岛代表性一日</strong><p>坐船看威海湾、海岛与北洋海军老建筑；这是威海知名度最高、与D5最不重复的一天。</p><div class="summary-meta"><span data-plan-only="a">威海｜第2晚/共2晚</span><span data-plan-only="b" hidden>威海｜第2晚/共3晚</span><span>中等</span><span>5A海岛地标</span></div></div><span class="day-toggle">展开</span></summary>
+      <details class="day-card" id="sd-d4" data-plan-only="b">
+        <summary><img class="day-summary-img" src="../assets/images/weihai-liugong-island.jpg" alt="乘船前往威海刘公岛的真实海景"><div class="day-summary-copy"><strong>D4｜刘公岛代表性一日</strong><p>坐船看威海湾、海岛与北洋海军老建筑；这是威海知名度最高、与D5最不重复的一天。</p><div class="summary-meta"><span data-plan-only="a">威海｜第2晚/共2晚</span><span data-plan-only="b" hidden>威海｜第2晚/共3晚</span><span>中等</span><span>往返打车24元</span></div></div><span class="day-toggle">展开</span></summary>
         <div class="day-inner"><div class="mini"><div><span>今日一句话</span><b>坐船上岛，观光车代替爬坡。</b></div><div><span>今晚住</span><b data-plan-only="a">威高广场/幸福门｜第2晚/共2晚</b><b data-plan-only="b" hidden>威高广场/幸福门｜第2晚/共3晚</b></div><div><span>今日重点</span><b>海湾船景 + 老建筑</b></div><div><span>可删</span><b>山顶炮台和长展馆</b></div></div>
           <div class="timeline"><div class="time-row"><time class="time">08:00—09:00</time><div><h4>起床 → 早餐 → 刘公岛客运中心</h4><p>08:30左右从酒店打车，预留安检、检票与候船时间；船班、停航和最晚返航只认景区当天公告。</p><p class="keyword"><span>导航：威海 刘公岛客运中心</span><button class="copy-btn" data-copy="威海 刘公岛客运中心">复制</button></p></div></div><div class="time-row"><time class="time">09:00—09:40</time><div><h4>旅游码头 → 乘船进岛</h4><p><b>看什么：</b>离岸后回望幸福门方向的城市天际线、威海湾和追船海鸟；靠近岛时看海岛轮廓与岸边老建筑逐渐展开。</p><p><b>拍哪里：</b>在开放甲板或船窗安全区域拍“城市退远、海岛靠近”，不探身、不喂鸟、不为照片抢船边。</p></div></div><div class="time-row"><time class="time">09:40—14:30</time><div><h4>码头 → 舰船视角 → 北洋海军老建筑 → 环岛观光车</h4><p><b>先看：</b>码头附近的舰船、铁码头与海湾；<b>再看：</b>北洋海军公所、丁汝昌寓所等一处核心建筑；<b>最后：</b>坐观光车看黑松林、岛礁、村落和英租时期建筑外观。官方介绍的观光车可连接主要站点，适合用来替代爬坡和重复步行。</p><p><b>休息补给：</b>12:00前后在码头/游客服务区附近找座位吃简餐、补水和上厕所，不把四五小时连续走完。</p><p><b>可删：</b>旗顶山炮台、索道、长展馆和国家森林公园长线；本次重点是“乘船 + 环岛风光 + 一处历史建筑”，不是把博物馆看全。</p><p class="keyword"><span>导航/公众号：威海 刘公岛景区</span><button class="copy-btn" data-copy="威海 刘公岛景区">复制</button></p></div></div><div class="time-row"><time class="time">14:30—16:00</time><div><h4>返航 → 酒店休息</h4><p>最晚返航前留足候船时间；特殊天气、船班和观光车线路以当天公告为准。</p></div></div><div class="time-row"><time class="time">16:30—19:00</time><div><h4>休息、晚饭、把D5行李收好</h4><p>D5采用分段打车，不再提前取车。把大件行李收好，明早退房后寄存在酒店；证件、手机、充电宝和水装进随身小包。</p></div></div><div class="time-row"><time class="time">19:30—20:30</time><div><h4>自由安排</h4><p>只保留这一小时；20:30后回酒店确认D5高铁、猫头山观光车运营和打车预约。</p></div></div></div>
+          <div class="notice good"><b>D4用车账｜6公里，24元：</b>威高/幸福门酒店→刘公岛客运中心3公里12元；返航后客运中心→酒店3公里12元。刘公岛基础票、往返船票和岛内观光车属于核心票务604元的一部分，不重复并入打车。</div>
           <div class="stay-grid"><div><b>D4与D5不重复</b>D4是船、岛、历史建筑和海湾全景；D5是分段乘车看海蚀海岬、坡路入海与沙滩，观看方式完全不同。</div><div data-plan-only="a"><b>明天怎么走</b>08:00起床、退房并把大件行李寄存在酒店；按“酒店→半月湾→猫头山观光车→火炬八街→国际海水浴场→酒店取行李→威海站”走。</div><div data-plan-only="b" hidden><b>明天怎么走</b>08:00起床；上午半月湾和猫头山，回酒店午休，16:00后再去火炬八街与国际海水浴场。</div></div>
           <div class="plan-grid"><div><b>正常版</b>刘公岛4—5小时 + 返航休息 + 晚上收好行李。</div><div><b>停航版</b>不硬等船；改幸福门/环翠楼周边和酒店休息，D5车票与转场不动。</div></div></div>
       </details>
 
-      <details class="day-card" id="sd-d5" data-plan-only="a">
+      <details class="day-card" id="sd-d5" data-plan-only="legacy" hidden>
         <summary><img class="day-summary-img" src="../assets/images/weihai-huanhai-road.jpg" alt="威海北环海路真实海岸景观"><div class="day-summary-copy"><strong>D5｜威海海岸分段打车 → 下午转开封</strong><p>酒店寄存行李，打车接猫头山观光车看四个标志海岸点，再取行李进站。</p><div class="summary-meta"><span>开封｜第1晚/共2晚</span><span class="fatigue">较累 ⭐⭐⭐</span><span>打车196元</span></div></div><span class="day-toggle">展开</span></summary>
         <div class="day-inner"><div class="mini"><div><span>今日一句话</span><b>酒店寄存行李，分段打车看海后转场。</b></div><div><span>今晚住</span><b>万岁山/龙亭圈｜第1晚/共2晚</b></div><div><span>今日重点</span><b>13:20前到威海站</b></div><div><span>风险</span><b>午夜后入住开封</b></div></div>
           <div class="timeline">
@@ -172,73 +231,88 @@
           <div class="plan-grid"><div><b>主方案</b>酒店寄存行李 + 分段打车196元 + 猫头山观光车40元 + G2076方向晚车。</div><div><b>天气/拥堵版</b>删国际海水浴场，11:20前从火炬八街回酒店；跨城车票和进站缓冲不动。</div></div></div>
       </details>
 
-      <details class="day-card" id="sd-d6" data-plan-only="a">
-        <summary><img class="day-summary-img" src="../assets/images/kaifeng-wansui-night.jpg" alt="开封万岁山武侠城夜场实景"><div class="day-summary-copy"><strong>D6｜万岁山完整游玩日</strong><p>睡足后入园，白天看实景演出，正午休息，傍晚接夜场。</p><div class="summary-meta"><span>万岁山/龙亭圈｜第2晚/共2晚</span><span>中等</span><span>本次主景点</span></div></div><span class="day-toggle">展开</span></summary>
+      <details class="day-card" id="sd-d6" data-plan-only="legacy" hidden>
+        <summary><img class="day-summary-img" src="../assets/images/kaifeng-wansui-night.jpg" alt="开封万岁山武侠城夜场实景"><div class="day-summary-copy"><strong>D6｜万岁山完整游玩日</strong><p>睡足后入园，白天看实景演出，正午休息，傍晚接夜场。</p><div class="summary-meta"><span>万岁山/龙亭圈｜第2晚/共2晚</span><span>中等</span><span>往返打车16元</span></div></div><span class="day-toggle">展开</span></summary>
         <div class="day-inner"><div class="mini"><div><span>今日一句话</span><b>全天只围绕节目单走，不追求逛遍。</b></div><div><span>今晚住</span><b>万岁山/龙亭湖西侧｜第2晚/共2晚</b></div><div><span>今日重点</span><b>白天核心演出 + 夜场</b></div><div><span>可删</span><b>边缘街区与长排队项目</b></div></div>
           <div class="timeline"><div class="time-row"><time class="time">08:00—09:30</time><div><h4>睡足 → 早餐 → 查当天节目单</h4><p>D5午夜后入住，不安排早于08:00起床。先在官方公众号/酒店前台确认节目单、入园与二次入园规则。</p></div></div><div class="time-row"><time class="time">09:30—12:00</time><div><h4>酒店 → 万岁山正门 → 第一组核心演出</h4><p>进园先拿纸质/电子节目单，按时间锁定两场最想看的演出，再倒推移动；不要先在入口商业街消耗体力。</p><p class="keyword"><span>导航：开封 万岁山武侠城 正门</span><button class="copy-btn" data-copy="开封 万岁山武侠城 正门">复制</button></p></div></div><div class="time-row"><time class="time">12:00—15:00</time><div><h4>午饭 + 遮阴/室内休息</h4><p>正午只在餐饮、室内或有遮阴区域活动；演出间隔太长就坐下补水，不顶着高温横穿园区。</p></div></div><div class="time-row"><time class="time">15:00—22:00</time><div><h4>下午核心演出 → 晚饭 → 夜场</h4><p>优先当天主舞台、城寨实景与夜场大秀；具体节目名、时间和预约规则会变化，只按当天官方节目单执行。排队超过可接受时间就换下一场。</p></div></div></div>
+          <div class="notice good"><b>D6用车账｜4公里，16元：</b>万岁山/龙亭圈酒店→万岁山正门2公里8元；夜场结束→酒店2公里8元。园内不再叫车，午间原地遮阴休息。</div>
           <div class="stay-grid"><div><b>今晚住哪里</b>继续住万岁山/龙亭湖西侧，不搬房；夜场结束打车回酒店。</div><div><b>明天怎么走</b>08:00起床，09:00左右再入园补2—3项，12:00前离园取行李，13:30送机。</div></div>
           <div class="plan-grid"><div><b>正常版</b>10:00左右入园，白天节目 + 午间避暑 + 夜场。</div><div><b>高温/疲劳版</b>上午晚一点入园，12:00—15:30长休，只保下午两场和夜场主秀。</div></div></div>
       </details>
 
-      <details class="day-card" id="sd-d7" data-plan-only="a">
-        <summary><img class="day-summary-img" src="../assets/images/kaifeng-wansui.jpg" alt="开封万岁山实景"><div class="day-summary-copy"><strong>D7｜万岁山补重点 → 郑州新郑返程</strong><p>上午补万岁山，下午只保送机和返程。</p><div class="summary-meta"><span>正常不住｜晚点备酒店</span><span>轻松</span><span>送机返程</span></div></div><span class="day-toggle">展开</span></summary>
+      <details class="day-card" id="sd-d7" data-plan-only="legacy" hidden>
+        <summary><img class="day-summary-img" src="../assets/images/kaifeng-wansui.jpg" alt="开封万岁山实景"><div class="day-summary-copy"><strong>D7｜万岁山补重点 → 郑州新郑返程</strong><p>上午补万岁山，下午只保送机和返程。</p><div class="summary-meta"><span>正常不住｜晚点备酒店</span><span>轻松</span><span>市内16元 + 送机120元</span></div></div><span class="day-toggle">展开</span></summary>
         <div class="day-inner"><div class="mini"><div><span>今日一句话</span><b>上午万岁山，下午不再塞开封老城。</b></div><div><span>今晚住</span><b>正常不住；晚点备机场/郑州东酒店</b></div><div><span>今日重点</span><b>只保送机和返程</b></div><div><span>可删</span><b>所有附加景点</b></div></div>
           <div class="timeline"><div class="time-row"><time class="time">08:00—09:00</time><div><h4>起床 → 早餐 → 退房寄存</h4><p>不早起赶场；先确认返程航班与送机车，再轻装去万岁山。</p></div></div><div class="time-row"><time class="time">09:00—12:00</time><div><h4>万岁山补核心节目/轻拍照</h4><p>按昨天没看成的节目补两三项即可。炎热时优先短距离、有遮阴节目，不把园区走遍。</p><p class="keyword"><span>公众号搜索：开封万岁山武侠城</span><button class="copy-btn" data-copy="开封万岁山武侠城">复制</button></p></div></div><div class="time-row"><time class="time">12:00—13:20</time><div><h4>午饭 → 酒店取行李</h4><p>在酒店/龙亭附近吃饭，行李集中检查身份证、手机、充电宝、航班订单。</p></div></div><div class="time-row"><time class="time">13:30—航班前</time><div><h4>预订送机车：开封 → 郑州新郑机场</h4><p>建议选18:30后从郑州新郑机场起飞的返广州航班。开封直达新郑机场的早班城际不适配下午航班，不当主方案。</p><p class="keyword"><span>导航：郑州新郑国际机场 T2</span><button class="copy-btn" data-copy="郑州新郑国际机场 T2">复制</button></p></div></div></div>
+          <div class="notice good"><b>D7用车账｜市内4公里16元 + 送机120元：</b>酒店→万岁山正门2公里8元；万岁山→酒店取行李2公里8元；酒店→郑州新郑机场按你指定的固定接驳120元。当天交通合计136元。</div>
           <div class="stay-grid"><div><b>返程兜底</b>航班取消/明显晚点先在航司App办改签；超过深夜再考虑机场/郑州东酒店，别疲劳折返开封。</div><div><b>本次收尾</b>万岁山有夜场和上午两段体验；不再硬塞书店街白天暴晒和额外景点。</div></div>
           <div class="plan-grid"><div><b>正常版</b>上午万岁山，下午送机。</div><div><b>高温/晚点版</b>不补景点，直接送机场。</div></div></div>
       </details>
 
       <details class="day-card" id="sd-b-d5" data-plan-only="b" hidden>
-        <summary><img class="day-summary-img" src="../assets/images/weihai-maotoushan.jpg" alt="威海猫头山层叠海岬实景"><div class="day-summary-copy"><strong>D5｜威海海岸慢游日</strong><p>上午半月湾与猫头山，午休后再看火炬八街和国际海水浴场。</p><div class="summary-meta"><span>威海｜第3晚/共3晚</span><span class="fatigue">正常 ⭐⭐</span><span>不跨省转场</span></div></div><span class="day-toggle">展开</span></summary>
+        <summary><img class="day-summary-img" src="../assets/images/weihai-maotoushan.jpg" alt="威海猫头山层叠海岬实景"><div class="day-summary-copy"><strong>D5｜威海海岸慢游日</strong><p>上午半月湾与猫头山，午休后再看火炬八街和国际海水浴场。</p><div class="summary-meta"><span>威海｜第3晚/共3晚</span><span class="fatigue">正常 ⭐⭐</span><span>市内打车168元</span></div></div><span class="day-toggle">展开</span></summary>
         <div class="day-inner"><div class="mini"><div><span>今日一句话</span><b>两段看海，中午回酒店避晒。</b></div><div><span>今晚住</span><b>威高广场/幸福门｜第3晚/共3晚</b></div><div><span>今日重点</span><b>猫头山海岬 + 火炬坡路</b></div><div><span>可删</span><b>天气差先删猫头山</b></div></div>
           <div class="timeline"><div class="time-row"><time class="time">08:00—09:00</time><div><h4>起床 → 早餐 → 打车去半月湾</h4><p>不退房、不带大件行李；半月湾停20分钟后按官方管制换乘猫头山观光车。</p></div></div><div class="time-row"><time class="time">09:00—11:40</time><div><h4>半月湾 → 猫头山观光车 → 酒店</h4><p>看弧形海湾和3号观景台层叠海岬，不走徒步线；观光车两人40元，打车按实际里程计。</p></div></div><div class="time-row"><time class="time">12:00—16:00</time><div><h4>午饭 + 酒店午休</h4><p>避开最热时段，手机和充电宝补满电。</p></div></div><div class="time-row"><time class="time">16:00—19:00</time><div><h4>打车去火炬八街 → 步行国际海水浴场 → 打车回酒店</h4><p>火炬八街只看坡路入海主机位，海水浴场看沙滩浪线；不下水、不追日落到太晚。</p></div></div></div>
+          <div class="notice good"><b>方案B D5用车账｜42公里，168元：</b>酒店→半月湾7公里28元；猫头山观光车返回换乘点后→酒店7公里28元；酒店→火炬八街14公里56元；国际海水浴场→酒店14公里56元。猫头山观光车两人40元另列，仍比租车300元更省。</div>
           <div class="stay-grid"><div><b>今晚住哪里</b>继续住原酒店，不搬行李。</div><div><b>明天怎么走</b>08:00起床，退房后打车去威海北站，坐上午车转开封。</div></div>
         </div>
       </details>
 
       <details class="day-card" id="sd-b-d6" data-plan-only="b" hidden>
-        <summary><img class="day-summary-img" src="../assets/images/kaifeng-wansui-night.jpg" alt="开封万岁山武侠城夜场实景"><div class="day-summary-copy"><strong>D6｜威海 → 开封 → 万岁山夜场</strong><p>把跨省交通单独放一天，准点才进夜场，晚点就直接休息。</p><div class="summary-meta"><span>开封｜第1晚/共2晚</span><span>正常 ⭐⭐</span><span>转场优先</span></div></div><span class="day-toggle">展开</span></summary>
+        <summary><img class="day-summary-img" src="../assets/images/kaifeng-wansui-night.jpg" alt="开封万岁山武侠城夜场实景"><div class="day-summary-copy"><strong>D6｜威海 → 开封 → 万岁山夜场</strong><p>把跨省交通单独放一天，准点才进夜场，晚点就直接休息。</p><div class="summary-meta"><span>开封｜第1晚/共2晚</span><span>正常 ⭐⭐</span><span>接驳打车352元</span></div></div><span class="day-toggle">展开</span></summary>
         <div class="day-inner"><div class="timeline"><div class="time-row"><time class="time">08:00—09:00</time><div><h4>起床 → 早餐 → 退房</h4><p>按车次倒推，建议开车前60—90分钟离开酒店去威海北站。</p></div></div><div class="time-row"><time class="time">约10:00—16:00</time><div><h4>威海北 → 郑州东</h4><p>优先查上午出发、16:00前到郑州东的车次；所有时刻和票价只认12306付款订单。</p></div></div><div class="time-row"><time class="time">16:00—17:30</time><div><h4>郑州东 → 开封酒店</h4><p>提前约接站车，入住万岁山/龙亭圈；晚于17:30到酒店就取消夜场。</p></div></div><div class="time-row"><time class="time">18:00—22:00</time><div><h4>可选万岁山夜场</h4><p>只按当天节目单看1—2场，不为夜场压缩晚饭和睡眠。</p></div></div></div>
+          <div class="notice good"><b>方案B D6用车账｜88公里，352元：</b>威海酒店→威海北站13公里52元；郑州东站→开封酒店71公里284元；准点到店后酒店↔万岁山夜场4公里16元。若17:30后才入住，取消夜场并少支出16元。</div>
           <div class="stay-grid"><div><b>今晚住哪里</b>万岁山/龙亭圈｜第1晚/共2晚。</div><div><b>明天怎么走</b>08:00起床，按节目单完整玩万岁山。</div></div>
         </div>
       </details>
 
       <details class="day-card" id="sd-b-d7" data-plan-only="b" hidden>
-        <summary><img class="day-summary-img" src="../assets/images/kaifeng-wansui.jpg" alt="开封万岁山武侠城日间实景"><div class="day-summary-copy"><strong>D7｜万岁山完整一天</strong><p>不受午夜入住影响，完整保留白天节目、午间休息和夜场。</p><div class="summary-meta"><span>开封｜第2晚/共2晚</span><span>正常 ⭐⭐</span><span>本次主景点</span></div></div><span class="day-toggle">展开</span></summary>
+        <summary><img class="day-summary-img" src="../assets/images/kaifeng-wansui.jpg" alt="开封万岁山武侠城日间实景"><div class="day-summary-copy"><strong>D7｜万岁山完整一天</strong><p>不受午夜入住影响，完整保留白天节目、午间休息和夜场。</p><div class="summary-meta"><span>开封｜第2晚/共2晚</span><span>正常 ⭐⭐</span><span>往返打车16元</span></div></div><span class="day-toggle">展开</span></summary>
         <div class="day-inner"><div class="timeline"><div class="time-row"><time class="time">08:00—09:30</time><div><h4>起床 → 早餐 → 查节目单</h4><p>先锁定需预约的核心演出，再倒推入园和移动。</p></div></div><div class="time-row"><time class="time">09:30—12:00</time><div><h4>第一组核心演出</h4><p>不在入口商业街耗体力，按开演时间走。</p></div></div><div class="time-row"><time class="time">12:00—15:00</time><div><h4>午饭 + 遮阴休息</h4><p>高温时坐下补水，不横穿园区。</p></div></div><div class="time-row"><time class="time">15:00—22:00</time><div><h4>下午节目 + 夜场</h4><p>节目名、预约方式和场次只认当天官方公告。</p></div></div></div>
+          <div class="notice good"><b>方案B D7用车账｜4公里，16元：</b>酒店→万岁山正门2公里8元；夜场结束→酒店2公里8元。全天其余移动在园内完成。</div>
           <div class="stay-grid"><div><b>今晚住哪里</b>继续住万岁山/龙亭圈。</div><div><b>明天怎么走</b>08:00起床，上午补2—3项后送机。</div></div>
         </div>
       </details>
 
       <details class="day-card" id="sd-b-d8" data-plan-only="b" hidden>
-        <summary><img class="day-summary-img" src="../assets/images/kaifeng-wansui-night.jpg" alt="开封万岁山武侠城演出实景"><div class="day-summary-copy"><strong>D8｜上午补节目 → 郑州新郑返程</strong><p>中午准时收手，下午只保送机和航班。</p><div class="summary-meta"><span>正常不住</span><span>轻松 ⭐</span><span>返程</span></div></div><span class="day-toggle">展开</span></summary>
+        <summary><img class="day-summary-img" src="../assets/images/kaifeng-wansui-night.jpg" alt="开封万岁山武侠城演出实景"><div class="day-summary-copy"><strong>D8｜上午补节目 → 郑州新郑返程</strong><p>中午准时收手，下午只保送机和航班。</p><div class="summary-meta"><span>正常不住</span><span>轻松 ⭐</span><span>市内16元 + 送机120元</span></div></div><span class="day-toggle">展开</span></summary>
         <div class="day-inner"><div class="timeline"><div class="time-row"><time class="time">08:00—12:00</time><div><h4>退房寄存 → 万岁山补漏</h4><p>只补昨天冲突的2—3项；天气热或累了就不进园。</p></div></div><div class="time-row"><time class="time">12:00—13:20</time><div><h4>午饭 → 取行李</h4><p>核对证件、航班和送机订单。</p></div></div><div class="time-row"><time class="time">13:30—航班前</time><div><h4>开封 → 郑州新郑机场</h4><p>优先匹配18:30后起飞航班，返程日不补其他景点。</p></div></div></div>
+          <div class="notice good"><b>方案B D8用车账｜市内4公里16元 + 送机120元：</b>酒店→万岁山2公里8元；万岁山→酒店取行李2公里8元；酒店→郑州新郑机场固定120元，当天交通合计136元。若不补节目，直接省下市内16元。</div>
         </div>
       </details>
     </section>
 
     <section id="traffic">
       <div class="section-title"><h2>交通接驳卡</h2><p class="lead">车次和航班只作查票起点；付款前必须以航司、12306页面为准。</p></div>
-      <div class="grid two">
+      <div class="grid two" data-plan-only="a" hidden>
+        <article class="traffic-card pad"><h3>D1｜广州出发站 → 威海北站优先</h3><p><b>主选：</b>软卧830元/人，两人1660元；按12306订单确认上车站、开车/到达日期、是否换乘和票面终点。</p><p><b>为什么优先北站：</b>威高/幸福门酒店圈公开交通信息显示，威海北站通常约16—19分钟，威海站约20—23分钟；但若票面只到威海站，就直接在那里下车。</p><p><b>到站：</b>带行李打车去酒店，北站接站按9公里×4元列36元；先入住，到店晚就删城市地标。</p></article>
+        <article class="traffic-card pad"><h3>D2｜刘公岛客运中心往返</h3><p><b>去程：</b>08:30左右从酒店打车到刘公岛客运中心，预留检票和候船。</p><p><b>返程：</b>船班、停航和最晚返航以景区当天公告为准；大风停航改城市海岸轻游。</p></article>
+        <article class="traffic-card pad"><h3>D3｜海岸分段打车 + 猫头山观光车</h3><p><b>上午：</b>酒店→半月湾，换乘猫头山官方观光车后回酒店午休。</p><p><b>下午：</b>酒店→火炬八街，步行到国际海水浴场后打车回酒店；42公里按4元/公里为168元。</p><p><b>取舍：</b>比租车总成本300元少132元，因此正式方案仍采用打车。</p></article>
+        <article class="traffic-card pad"><h3>D4｜威海北 → 郑州东 → 开封</h3><p><b>推荐：</b>优先查10:00左右从威海北出发、16:00前到郑州东的车次；近期公开时刻可见G3170，最终只认12306。</p><p><b>接站：</b>郑州东提前约车直达开封；17:30前入住才考虑夜场。</p></article>
+        <article class="traffic-card pad"><h3>D6｜开封 → 郑州新郑机场</h3><p><b>主选：</b>正规平台预订送机车，13:30左右出发。</p><p><b>航班：</b>优先18:30后起飞；上午补漏不能影响送机。</p></article>
+      </div>
+      <div class="grid two" data-plan-only="b">
         <article class="traffic-card pad"><h3>D1｜广州/佛山 → 青岛胶东</h3><p><b>主选：</b>广州白云飞青岛胶东；出票时优先选不太晚抵达的班次。</p><p><b>落地：</b>带行李优先打车直达五四广场/浮山所；不安排落地后的远距离夜游。</p></article>
-        <article class="traffic-card pad"><h3>D3｜青岛北 → 威海</h3><p><b>推荐窗口：</b>按08:00起床倒推，优先查10:20—11:50从青岛北出发、约中午抵达威海的车次。</p><p><b>接驳：</b>酒店到青岛北站留60—90分钟；抵威海后先去威高/幸福门酒店放行李，晚点就删悦海灯塔。</p></article>
-        <article class="traffic-card pad" data-plan-only="a"><h3>D5｜威海 → 郑州东 → 开封酒店</h3><p><b>下午出发：</b>优先查G2076或同类15:20—16:20出发、23:05—23:15抵郑州东的车；公开时刻有差异，只认12306付款订单。</p><p><b>到站后：</b>提前约正规接站车直达开封万岁山/龙亭圈酒店，酒店备注午夜后入住；不赌末班公共交通。</p></article>
-        <article class="traffic-card pad" data-plan-only="a"><h3>D7｜开封 → 郑州新郑机场</h3><p><b>主选：</b>正规平台预订送机车，13:30出发更从容。</p><p><b>航班：</b>优先18:30后从郑州新郑起飞的返广州航班。</p></article>
-        <article class="traffic-card pad"><h3>D4｜刘公岛客运中心往返</h3><p><b>去程：</b>08:30左右从威高/幸福门酒店打车到海滨北路刘公岛客运中心，预留检票和候船。</p><p><b>返程：</b>船班、停航和最晚返航以景区当天公告为准；大风停航就改城市海岸轻游。</p></article>
-        <article class="traffic-card pad"><h3>D5｜威海海岸分段打车 + 猫头山观光车</h3><p><b>方案A里程：</b>酒店→半月湾7公里、半月湾→火炬八街17公里、国际海水浴场→酒店14公里、酒店→威海站11公里，合计49公里；按4元/公里为196元。</p><p><b>猫头山：</b>社会车辆只到外围，换乘官方观光车，两人40元。火炬八街与国际海水浴场步行连接；大件行李全程寄存在酒店。</p><p><b>取舍：</b>租车含保险、油费和停车为300元，打车省104元且没有取还车缓冲，因此正式方案采用打车。</p></article>
-        <article class="traffic-card pad" data-plan-only="b" hidden><h3>D6｜威海北 → 郑州东 → 开封</h3><p><b>推荐：</b>优先查10:00左右从威海北出发、16:00前到郑州东的车次；酒店到威海北站留60—90分钟。</p><p><b>夜场边界：</b>17:30前入住才考虑万岁山夜场，晚点就直接休息，D7完整日不动。</p></article>
-        <article class="traffic-card pad" data-plan-only="b" hidden><h3>D8｜开封 → 郑州新郑机场</h3><p><b>主选：</b>正规平台预订送机车，13:30左右出发。</p><p><b>航班：</b>优先18:30后起飞；上午补漏不能影响送机。</p></article>
+        <article class="traffic-card pad"><h3>D3｜青岛北 → 威海</h3><p><b>推荐窗口：</b>按08:00起床倒推，优先查10:20—11:50从青岛北出发、约中午抵达威海的车次。</p><p><b>接驳：</b>酒店到青岛北站留60—90分钟；抵威海后先入住，晚点就删悦海灯塔。</p></article>
+        <article class="traffic-card pad"><h3>D4｜刘公岛客运中心往返</h3><p><b>去程：</b>08:30左右从酒店打车到刘公岛客运中心，预留检票和候船。</p><p><b>返程：</b>船班、停航和最晚返航以景区当天公告为准；大风停航改城市海岸轻游。</p></article>
+        <article class="traffic-card pad"><h3>D5｜海岸分段打车 + 猫头山观光车</h3><p><b>上午：</b>半月湾与猫头山观光车；<b>下午：</b>火炬八街与国际海水浴场。42公里按4元/公里为168元。</p><p><b>取舍：</b>比租车总成本300元少132元，因此正式方案采用打车。</p></article>
+        <article class="traffic-card pad"><h3>D6｜威海北 → 郑州东 → 开封</h3><p><b>推荐：</b>优先查10:00左右出发、16:00前抵达的车次；酒店到威海北站留60—90分钟。</p><p><b>夜场边界：</b>17:30前入住才考虑万岁山夜场，晚点直接休息，D7完整日不动。</p></article>
+        <article class="traffic-card pad"><h3>D8｜开封 → 郑州新郑机场</h3><p><b>主选：</b>正规平台预订送机车，13:30左右出发。</p><p><b>航班：</b>优先18:30后起飞；上午补漏不能影响送机。</p></article>
       </div>
     </section>
 
     <section id="hotel">
-      <div class="section-title"><h2>住宿订房助手</h2><p class="lead">方案A共6晚；方案B共7晚，只在威海多住1晚。</p></div>
-      <div class="grid">
+      <div class="section-title"><h2>住宿订房助手</h2><p class="lead">六天版5晚，八天版7晚；版本切换时城市与日期同步变化。</p></div>
+      <div class="grid" data-plan-only="a" hidden>
+        <article class="hotel-card pad"><h3>威海｜威高广场/幸福门</h3><p><b>住三晚：</b>D1—D3；中心点威高广场/幸福门，半径1—1.5公里。</p><p><b>为什么：</b>去城市地标、刘公岛客运中心和晚饭都方便，D3中午可回房避晒。</p><p><b>订房词：</b>“威高广场 酒店”“幸福门 酒店”；避开偏远海景房。</p></article>
+        <article class="hotel-card pad"><h3>开封｜万岁山/龙亭圈</h3><p><b>住两晚：</b>D4—D5；龙亭湖西侧/万岁山2公里内或打车10分钟内。</p><p><b>必须确认：</b>24小时前台、可寄存行李，D4晚点仍保留房间。</p></article>
+        <article class="hotel-card pad"><h3>统一筛选</h3><p>评分4.5以上、可免费取消、有电梯、可寄存、靠主路、评论里无反复卫生或隔音差评。</p></article>
+      </div>
+      <div class="grid" data-plan-only="b">
         <article class="hotel-card pad"><h3>青岛｜五四广场/浮山所</h3><p><b>住两晚：</b>D1—D2；中心点浮山所地铁站/五四广场，半径1—1.5公里。</p><p><b>订房词：</b>“浮山所地铁站 酒店”“五四广场 酒店”。</p></article>
-        <article class="hotel-card pad"><h3>威海｜威高广场/幸福门</h3><p data-plan-only="a"><b>住两晚：</b>D3—D4；中心点威高广场/幸福门，半径1—1.5公里，去城市地标、刘公岛客运中心和晚饭都方便。</p><p data-plan-only="b" hidden><b>住三晚：</b>D3—D5；不拆订单，D5中午可回房避晒。</p><p><b>必须确认：</b>D5退房后可寄存大件行李、门口容易叫车；避开偏远海景房和难打车民宿。</p></article>
-        <article class="hotel-card pad"><h3>开封｜万岁山/龙亭圈</h3><p><b>住两晚：</b>龙亭湖西侧/万岁山2公里内或打车10分钟内。</p><p data-plan-only="a"><b>方案A：</b>D5—D6，必须24小时前台并备注D5午夜后到店。</p><p data-plan-only="b" hidden><b>方案B：</b>D6—D7，傍晚入住后按准点情况决定是否进夜场。</p><p><b>统一：</b>支持退房后寄存行李。</p></article>
-        <article class="hotel-card pad"><h3>统一筛选</h3><p>评分4.5以上、可免费取消、有电梯、可寄存行李、靠近主路、评论里无明显隔音/卫生反复差评。</p></article>
-        <article class="hotel-card pad"><h3>订完立即确认</h3><p>入住/退房时间、前台是否24小时、是否可寄存、停车位和费用、火车站或景区打车是否方便。</p></article>
+        <article class="hotel-card pad"><h3>威海｜威高广场/幸福门</h3><p><b>住三晚：</b>D3—D5；不拆订单，D5中午可回房避晒。</p><p><b>必须确认：</b>可寄存行李、门口容易叫车；避开偏远海景房和难打车民宿。</p></article>
+        <article class="hotel-card pad"><h3>开封｜万岁山/龙亭圈</h3><p><b>住两晚：</b>D6—D7；傍晚入住后按准点情况决定是否进夜场。</p><p><b>统一：</b>龙亭湖西侧/万岁山2公里内，支持退房后寄存行李。</p></article>
+        <article class="hotel-card pad"><h3>统一筛选</h3><p>评分4.5以上、可免费取消、有电梯、可寄存、靠主路、评论里无反复卫生或隔音差评。</p></article>
       </div>
     </section>
 
@@ -249,7 +323,7 @@
       <details class="spot-card"><summary><img src="../assets/images/qingdao-xiaomaidao.jpg" alt="青岛小麦岛花海与海岸实景"><div><h3>小麦岛｜草坪、花海、礁石与城市天际线</h3><p class="lead">D2傍晚｜用一条平缓短线看“公园感”海岸。</p></div></summary><div class="spot-body"><p><b>安排：</b>16:30左右从西门/主入口进入，只走入口草坪和花地 → 西侧看城市天际线 → 近海平缓步道，18:15前离开。</p><p><b>重点：</b>大片草坪与海面同框、季节花地、松树间露出的海、隔海城市楼群和近岸礁石；与八大关的建筑海岸完全不同。</p><p><b>拍照：</b>在草坪边缘低机位拍花海和海面，西侧用长焦压缩城市天际线；不为“孤独的树”排长队。</p><p><b>可删/避坑：</b>遮阴少，不绕全岛；人多时只保入口草坪和西侧海景30—40分钟，遇雷雨立即离岛。</p><p class="keyword"><span>导航：青岛 小麦岛公园 西门</span><button class="copy-btn" data-copy="青岛 小麦岛公园 西门">复制</button></p></div></details>
       <details class="spot-card"><summary><img src="../assets/images/weihai-xingfumen.jpg" alt="威海幸福门与城市海岸实景"><div><h3>幸福门 → 威海公园大相框</h3><p class="lead">D3傍晚前段｜两处威海城市名片，各拍一张就走。</p></div></summary><div class="spot-body"><p><b>幸福门：</b>看威海门形城市地标、幸福公园和威海湾开阔水面；在广场侧拍“门 + 海湾”，不把时间花在登高项目。</p><p><b>大相框：</b>到威海公园后直接找巨型画框，把人、海面和远处城市框进同一画面；这是比普通公园散步更明确的标志机位。</p><p><b>走法：</b>两点之间打车，幸福门约25分钟、大相框约20分钟；不沿海全程暴走，也不为等无人空景久晒。</p><p><b>可删：</b>列车晚点时只保幸福门；下雨时两点都只做车到短停。</p><p class="keyword"><span>导航：威海 幸福门 → 威海公园 大相框</span><button class="copy-btn" data-copy="威海 幸福门 威海公园 大相框">复制</button></p></div></details>
       <details class="spot-card"><summary><img src="../assets/images/weihai-yuehai-park.jpg" alt="威海悦海公园灯塔实景"><div><h3>悦海公园｜白色灯塔与海草房</h3><p class="lead">D3傍晚后段｜用一个清楚地标收住城市海岸日。</p></div></summary><div class="spot-body"><p><b>安排：</b>从威海公园打车前往，停25—35分钟；只走灯塔与海草房附近的平缓步道，不沿岸线长走。</p><p><b>重点：</b>白色灯塔、古朴海草房、蓝色海面和远岸城市共同形成“胶东海边”辨识度；不是再看一片普通沙滩。</p><p><b>拍照：</b>从灯塔侧前方拍灯塔全身与海面，转身再拍海草房；风大时远离临水边缘。</p><p><b>可删：</b>D3到威海晚、下雨或风大就删，直接回威高晚饭，不影响D4刘公岛。</p><p class="keyword"><span>导航：威海 悦海公园 灯塔</span><button class="copy-btn" data-copy="威海 悦海公园 灯塔">复制</button></p></div></details>
-      <details class="spot-card"><summary><img src="../assets/images/weihai-liugong-island.jpg" alt="乘船前往威海刘公岛实景"><div><h3>刘公岛｜船上看湾、岛上看历史与山海</h3><p class="lead">D4主景点｜威海代表性最强，也最不重复的一天。</p></div></summary><div class="spot-body"><p><b>进岛前：</b>在刘公岛客运中心核对船班、返航、观光车与天气；身份证、手机、充电宝、水、晕船用品随身。</p><p><b>第一段：</b>船上回看威海城市天际线与海湾，靠岛时看黑松林、岸线和老建筑；这段“从海上看威海”本身就是核心体验。</p><p><b>第二段：</b>上岛先看码头舰船与海湾，再选北洋海军公所或丁汝昌寓所一处，最后坐观光车看岛礁、林海、村落与英租时期建筑外观。</p><p><b>不爬山版：</b>不去旗顶山、不走长坡、不追求看全展馆；观光车线路与上下车点以当天公告为准。</p><p><b>停航：</b>大风停航直接改威海城市海岸轻游，不把刘公岛硬塞到D5。</p><p class="keyword"><span>导航：威海 刘公岛客运中心</span><button class="copy-btn" data-copy="威海 刘公岛客运中心">复制</button></p></div></details>
+      <details class="spot-card"><summary><img src="../assets/images/weihai-liugong-island.jpg" alt="乘船前往威海刘公岛实景"><div><h3>刘公岛｜船上看湾、岛上看历史与山海</h3><p class="lead">威海代表性最强，也最不重复的一天。</p></div></summary><div class="spot-body"><p><b>进岛前：</b>在刘公岛客运中心核对船班、返航、观光车与天气；身份证、手机、充电宝、水、晕船用品随身。</p><p><b>第一段：</b>船上回看威海城市天际线与海湾，靠岛时看黑松林、岸线和老建筑；这段“从海上看威海”本身就是核心体验。</p><p><b>第二段：</b>上岛先看码头舰船与海湾，再选北洋海军公所或丁汝昌寓所一处，最后坐观光车看岛礁、林海、村落与英租时期建筑外观。</p><p><b>不爬山版：</b>不去旗顶山、不走长坡、不追求看全展馆；观光车线路与上下车点以当天公告为准。</p><p><b>停航：</b>大风停航直接改威海城市海岸轻游，不把刘公岛顺延到次日海岸慢游。</p><p class="keyword"><span>导航：威海 刘公岛客运中心</span><button class="copy-btn" data-copy="威海 刘公岛客运中心">复制</button></p></div></details>
       <details class="spot-card"><summary><img src="../assets/images/weihai-half-moon-bay.jpg" alt="威海半月湾海岸实景"><div><h3>半月湾｜弧形海湾与向东开阔海面</h3><p class="lead">D5第一站｜不早起追日出，也能看清海湾形状。</p></div></summary><div class="spot-body"><p><b>安排：</b>从威高/幸福门酒店打车到半月湾开放下客区，停15—20分钟；随后步行到官方观光车换乘点。</p><p><b>重点：</b>湾口向东、弧形岸线、近岸浪线与城市背山面海的关系；不用下水，也不沿整片沙滩长走。</p><p><b>拍照：</b>在岸边平缓位置拍海湾弧线，广角带入沙滩和远山；太阳强时以看海为主，不久晒。</p><p><b>接驳：</b>打车只到合法下客点，不让司机停弯道；现场找不到观光车站点就询问景区工作人员。</p></div></details>
       <details class="spot-card"><summary><img src="../assets/images/weihai-maotoushan.jpg" alt="威海猫头山海蚀岬角实景"><div><h3>猫头山3号观景台｜层叠海岬与环海公路</h3><p class="lead">D5第二站｜用官方观光车看最有“山海公路感”的位置。</p></div></summary><div class="spot-body"><p><b>安排：</b>2026年4月25日至10月7日部分环海辅线限制社会车辆、出租车和网约车进入；从半月湾北岸停车场/官方站点换乘观光车，只去开放观景点，不走徒步线。</p><p><b>重点：</b>像猫探入海面的岬角轮廓、前后叠开的海湾、礁石和环海公路贴着山海转弯的视角。</p><p><b>拍照：</b>在护栏内用广角拍近处礁石与远处岬角；不要跨护栏、下礁石或站在车道弯道处。</p><p><b>管制/天气：</b>运营、线路和停靠点以现场二维码为准；浓雾、大雨或停运时直接跳过，回换乘点打车去火炬八街。</p></div></details>
       <details class="spot-card"><summary><img src="../assets/images/weihai-torch-eighth-street.jpg" alt="威海火炬八街坡路入海实景"><div><h3>火炬八街｜彩色坡路尽头就是海</h3><p class="lead">D5第三站｜看一眼最知名城市机位，不在人潮里耗时间。</p></div></summary><div class="spot-body"><p><b>安排：</b>在高德当天显示的合法下客区下车，步行进入核心坡路；停20分钟，随后步行去国际海水浴场。</p><p><b>重点：</b>街道自然坡度、两侧彩色建筑与道路尽头整片海面形成的透视画面；这是它区别于普通商业街的核心。</p><p><b>拍照：</b>在人行区靠边取景，用中长焦压缩坡路与海；绝不站车道中央，也不让同行人在车流中摆拍。</p><p><b>避坑：</b>人多时只拍街口全景，不排店铺机位、不买强制套餐；拥堵时直接步行去海水浴场。</p></div></details>
@@ -257,7 +331,7 @@
       <details class="spot-card"><summary><img src="../assets/images/kaifeng-wansui.jpg" alt="开封万岁山武侠城实景"><div><h3>万岁山武侠城｜按节目单追演出，不走遍园区</h3><p class="lead">D6全天 + D7上午｜本次主景点，留足1.5天。</p></div></summary><div class="spot-body"><p><b>进园第一步：</b>拿到当天纸质/电子节目单，先标出需预约的大型实景剧，再选两场次级节目，按开演时间倒推移动，不从入口商业街开始漫无目的逛。</p><p><b>D6上午：</b>优先一场城寨/武侠实景演出；<b>12:00—15:00：</b>午饭、补水和遮阴休息；<b>D6下午夜间：</b>接主舞台节目和夜场大秀。</p><p><b>官方当前重点：</b>官网票务说明提到《三打祝家庄》《沙场打铁花》需预约入场；具体场次、预约方式和当天是否演出，以公众号/现场节目单为准。</p><p><b>D7上午：</b>只补昨天冲突或没排到的2—3项，12:00前离园，不再塞鼓楼、书店街等附加景点。</p><p><b>高温/排队：</b>排队超过可接受时间就换场；正午不横穿园区，带水、充电宝、小风扇和轻便雨具。</p><p class="keyword"><span>公众号/导航：开封万岁山武侠城</span><button class="copy-btn" data-copy="开封万岁山武侠城">复制</button></p></div></details>
     </section>
 
-    <section id="qingdao-choice">
+    <section id="qingdao-choice" data-plan-only="b">
       <div class="section-title"><h2>青岛四处候选｜可行性取舍</h2><p class="lead">按 7 月高温、两晚青岛、不爬山和不赶网红人潮的原则筛过一遍。</p></div>
       <div class="grid two">
         <article class="card pad"><span class="tag">主推加入</span><h3>小麦岛公园</h3><p><b>为什么值得：</b>平缓草地、礁石和城市海景的组合，和八大关的老建筑不重复；不需要爬山，也适合下午短停。</p><p><b>怎么放：</b>D2 午休后 16:30 左右去，只走入口、草坪和近海平缓段，40 分钟左右收。</p><p><b>硬边界：</b>夏天遮阴少、周末/日落前易拥挤；不绕全岛、不追“孤独的树”排队，水和防晒必须带。</p></article>
@@ -280,9 +354,9 @@
     <section id="food">
       <div class="section-title"><h2>每天吃什么｜不绕路、不排过度网红店</h2><p class="lead">具体店铺营业和排队会变，优先用关键词找路线内评分稳定的店。</p></div>
       <div class="grid">
-        <article class="card pad"><h3>青岛｜D1—D2</h3><p><b>吃：</b>鲅鱼水饺、海鲜水饺、家常海鲜。</p><p><b>搜：</b>“浮山所 海鲜水饺 评分4.5以上”。</p></article>
-        <article class="card pad"><h3>威海｜D3—D5</h3><p><b>吃：</b>鲅鱼水饺、海菜包子、烤鱿鱼、小海鲜。</p><p><b>搜：</b>“威高广场 鲅鱼水饺”“韩乐坊 海菜包子”。不点游客海鲜套餐，D5不喝酒。</p></article>
-        <article class="card pad"><h3>开封｜D5—D7</h3><p><b>吃：</b>灌汤包、桶子鸡、羊肉炕馍、杏仁茶、炒凉粉。</p><p><b>原则：</b>D5在威海站上车前买好晚餐，午夜到开封不再吃宵夜；D6在万岁山园内/附近少量多次，D7午饭后送机。</p></article>
+        <article class="card pad" data-plan-only="b"><h3>青岛｜D1—D2</h3><p><b>吃：</b>鲅鱼水饺、海鲜水饺、家常海鲜。</p><p><b>搜：</b>“浮山所 海鲜水饺 评分4.5以上”。</p></article>
+        <article class="card pad"><h3><span data-plan-only="a" hidden>威海｜D1—D3</span><span data-plan-only="b">威海｜D3—D5</span></h3><p><b>吃：</b>鲅鱼水饺、海菜包子、烤鱿鱼、小海鲜。</p><p><b>搜：</b>“威高广场 鲅鱼水饺”“韩乐坊 海菜包子”。不点游客海鲜套餐，转场前一晚不喝酒。</p></article>
+        <article class="card pad"><h3><span data-plan-only="a" hidden>开封｜D4—D6</span><span data-plan-only="b">开封｜D6—D8</span></h3><p><b>吃：</b>灌汤包、桶子鸡、羊肉炕馍、杏仁茶、炒凉粉。</p><p><b>原则：</b>跨省转场在车上准备轻食；到开封若太晚不吃宵夜，万岁山完整日在园内/附近少量多次，返程日午饭后送机。</p></article>
         <article class="card pad"><h3>餐饮原则</h3><p>正餐以家常菜、小吃搭配为主，海鲜只做一顿小尝鲜；每次不点太满，转场日以轻食和面食为主。</p></article>
         <article class="card pad"><h3>排队替代</h3><p>超过30分钟直接搜“当前位置 + 目标菜 + 评分4.5以上”，限定步行10分钟，不为一间店绕城。</p></article>
       </div>
@@ -291,29 +365,46 @@
     <section id="pack">
       <div class="section-title"><h2>出发前准备清单</h2><p class="lead">按类别收进一个轻便背包，转场时不反复翻行李。</p></div>
       <div class="grid">
-        <article class="card exec-card"><h3>证件与订单</h3><ul><li>身份证、航班订单、12306订单、酒店订单。</li><li>万岁山票务/节目单截图、刘公岛与猫头山观光车信息。</li><li>三城酒店前台电话与寄存行李说明。</li></ul></article>
-        <article class="card exec-card"><h3>海边与打车</h3><ul><li>防晒霜、帽子、墨镜、舒服鞋。</li><li>水、纸巾、湿巾、充电宝和备用数据线。</li><li>D5只带随身小包；大件行李在酒店前台寄存并保留凭证。</li></ul></article>
+        <article class="card exec-card"><h3>证件与订单</h3><ul><li>身份证、航班订单、12306订单、酒店订单。</li><li>万岁山票务/节目单截图、刘公岛与猫头山观光车信息。</li><li><span data-plan-only="a" hidden>威海、开封两城</span><span data-plan-only="b">青岛、威海、开封三城</span>酒店前台电话与寄存行李说明。</li></ul></article>
+        <article class="card exec-card"><h3>海边与打车</h3><ul><li>防晒霜、帽子、墨镜、舒服鞋。</li><li>水、纸巾、湿巾、充电宝和备用数据线。</li><li>沿海慢游只带随身小包；大件行李留在酒店房间。</li></ul></article>
         <article class="card exec-card"><h3>高温与下雨</h3><ul><li>折叠伞/雨衣、薄外套、充电宝。</li><li>防暑用品、创可贴、晕车药和常用药。</li><li>每个海边点只带小包，别背大行李。</li></ul></article>
       </div>
     </section>
 
     <section id="emergency">
       <div class="section-title"><h2>应急替代方案</h2><p class="lead">晚点、下雨、太累时直接删改，不临场硬扛。</p></div>
-      <details class="card emergency-card"><summary>D1 航班晚点怎么办？</summary><p>直接去青岛酒店入住；取消所有夜景，只在酒店步行范围吃饭。不要在陌生城市晚到后再赶海边。</p></details>
-      <details class="card emergency-card"><summary>D3 / D5 高铁晚点怎么办？</summary><p>D3晚到威海就删悦海灯塔，只保入住和晚饭。D5列车晚点时立即把新到站时间发给接站司机和开封酒店；到店只睡觉，D6仍从08:00后起床，不压缩睡眠。</p></details>
-      <details class="card emergency-card"><summary>D4 刘公岛停航怎么办？</summary><p>大风、雷雨或官方停航就不去码头久等，改为幸福门、威海公园大相框、悦海灯塔三点打车轻游；晚上1小时自由安排不变，D5车票和分段打车不动。</p></details>
-      <details class="card emergency-card"><summary>D5 海岸线遇管制、叫车难或天气差怎么办？</summary><p>猫头山观光车停运就直接从半月湾打车去火炬八街；大雨或浓雾时只保火炬八街/海水浴场二选一。11:40必须回酒店取行李，跨城车不能因多看一个海边点而误掉。</p></details>
+      <div data-plan-only="a" hidden>
+        <details class="card emergency-card"><summary>D1 火车晚点或错过换乘怎么办？</summary><p>先在12306确认后续安排并通知酒店保留房间；到威海后直接入住，删除幸福门、大相框和悦海灯塔，不把地标硬塞到深夜。</p></details>
+        <details class="card emergency-card"><summary>D2 刘公岛停航怎么办？</summary><p>不去码头久等，改幸福门、大相框、悦海灯塔三点轻游；D3完整海岸日和D4车票不动。</p></details>
+        <details class="card emergency-card"><summary>D3 海岸线遇管制或天气差怎么办？</summary><p>猫头山停运就从半月湾回酒店午休，下午只保火炬八街/国际海水浴场二选一；不影响D4转场。</p></details>
+        <details class="card emergency-card"><summary>D4 高铁晚点怎么办？</summary><p>把新到站时间发给接站司机和酒店；17:30后入住就取消万岁山夜场，D5完整日不动。</p></details>
+        <details class="card emergency-card"><summary>D6 航班晚点或取消怎么办？</summary><p>先在航司App改签；明显晚到再订机场或郑州东附近酒店，返程日不补其他景点。</p></details>
+      </div>
+      <div data-plan-only="b">
+        <details class="card emergency-card"><summary>D1 航班晚点怎么办？</summary><p>直接去青岛酒店入住；取消所有夜景，只在酒店步行范围吃饭。</p></details>
+        <details class="card emergency-card"><summary>D3 / D6 高铁晚点怎么办？</summary><p>D3晚到威海就删悦海灯塔；D6到开封晚于17:30就删夜场，把新时间发给司机和酒店。</p></details>
+        <details class="card emergency-card"><summary>D4 刘公岛停航怎么办？</summary><p>大风、雷雨或官方停航就改为幸福门、大相框、悦海灯塔三点轻游；D5海岸慢游不动。</p></details>
+        <details class="card emergency-card"><summary>D5 海岸线遇管制或天气差怎么办？</summary><p>猫头山停运就从半月湾回酒店午休；下午只保火炬八街/海水浴场二选一。</p></details>
+        <details class="card emergency-card"><summary>D8 航班晚点或取消怎么办？</summary><p>先在航司App改签；明显晚到再订机场或郑州东附近酒店，返程日不补其他景点。</p></details>
+      </div>
       <details class="card emergency-card"><summary>万岁山高温或下雨怎么办？</summary><p>先看官方节目单，优先遮阴和短距离项目；高温不把园区走遍，下雨按景区公告换场或缩短停留。</p></details>
-      <details class="card emergency-card"><summary>D7 航班晚点或取消怎么办？</summary><p>先在航司 App 改签；明显晚到再订机场或郑州东附近酒店。返程日不补开封景点，也不疲劳折返。</p></details>
     </section>
 
     <section id="check">
       <div class="section-title"><h2>出发前48小时核对</h2><p class="lead">这张清单比死记攻略更重要。</p></div>
+      <div class="check-grid" data-plan-only="a" hidden>
+        <article class="check"><b>大交通</b>确认广州→威海软卧订单的上车站、日期、换乘与终点站；确认郑州新郑→广州航班、D4威海北→郑州东车票、郑州东接站车和D6送机车。</article>
+        <article class="check"><b>住宿</b>威海3晚、开封2晚均可取消或已核入住；开封酒店确认24小时前台。</article>
+        <article class="check"><b>刘公岛与海岸</b>查D2船班、返航与观光车；确认D3猫头山观光车、四段叫车和天气。</article>
+        <article class="check"><b>万岁山</b>核对D4可选夜场、D5完整日和D6上午的票种、节目单与入园规则。</article>
+      </div>
+      <div class="check-grid" data-plan-only="b">
+        <article class="check"><b>大交通</b>确认广州→青岛、郑州新郑→广州航班；D3青岛北→威海、D6威海→郑州东车票；D6接站车和D8送机车。</article>
+        <article class="check"><b>住宿</b>青岛2晚、威海3晚、开封2晚均可取消或已核入住。</article>
+        <article class="check"><b>刘公岛与海岸</b>查D4船班、返航与观光车；确认D5猫头山观光车、四段叫车和天气。</article>
+        <article class="check"><b>万岁山</b>核对D6可选夜场、D7完整日和D8上午的票种、节目单与入园规则。</article>
+      </div>
       <div class="check-grid">
-        <article class="check"><b>大交通</b>确认广州→青岛、郑州新郑→广州航班；D3青岛北→威海、D5威海→郑州东车票；D5郑州东接站车和D7开封送机车。所有时间以付款订单为准。</article>
-        <article class="check"><b>住宿</b>青岛2晚、威海2晚、开封2晚均可取消或已核入住；开封酒店确认24小时前台并备注D5午夜后到店。</article>
-        <article class="check"><b>刘公岛与威海海岸</b>查D4船班、返航与观光车；确认D5猫头山观光车、四段叫车、酒店寄存行李和13:20前到威海站。天气差先删猫头山。</article>
-        <article class="check"><b>万岁山</b>查官方公众号“开封万岁山武侠城”的节目单、票种、夜场、二次入园和天气提醒。</article>
         <article class="check"><b>随身物品</b>身份证、充电宝、数据线、雨具、防晒、薄外套、舒服鞋、晕车药、湿巾；海边分段打车时带水和轻便小包。</article>
       </div>
     </section>
@@ -322,19 +413,20 @@
       <div class="section-title"><h2>来源与最终提醒</h2><p class="lead">票务、开放和价格会变，网页不把它们写成永久事实。</p></div>
       <ul class="source-list">
         <li><a href="https://www.12306.cn/" target="_blank" rel="noopener">12306</a>：跨城车票、车次、席别和实时票价核对。</li>
-        <li><a href="https://www.weihai.gov.cn/art/2026/4/20/art_58956_6296646.html" target="_blank" rel="noopener">威海猫头山旺季交通管制</a>：部分环海辅线限制社会车辆、出租车和网约车进入，D5按外围换乘执行。</li>
+        <li data-plan-only="a" hidden><a href="https://hotels.ctrip.com/hotels/8508008.html" target="_blank" rel="noopener">威高/幸福门酒店圈交通距离参考</a>：公开信息显示威海北站到该酒店圈通常比威海站略近；实际下车站仍服从830元软卧的12306票面终点。</li>
+        <li><a href="https://trains.ctrip.com/TrainBooking/weihai-zhengzhou/gaotie/" target="_blank" rel="noopener">威海—郑州公开高铁参考</a>：可见G3170等上午出发车次；最终站点、票价和时刻只认12306。</li>
+        <li><a href="https://www.weihai.gov.cn/art/2026/4/20/art_58956_6296646.html" target="_blank" rel="noopener">威海猫头山旺季交通管制</a>：部分环海辅线限制社会车辆、出租车和网约车进入，海岸慢游日按外围换乘执行。</li>
         <li><a href="https://www.weihai.gov.cn/art/2024/4/16/art_58956_4494146.html" target="_blank" rel="noopener">威海政府环海路观光巴士说明</a>：公开参考20元/人、17个停靠站；2026实际票价、线路与班次仍以现场二维码为准。</li>
-        <li><a href="https://trains.ctrip.com/TrainSchedule/G2076" target="_blank" rel="noopener">G2076公开时刻参考</a>：仅用于比较下午出发与到达区间，余票、站点和最终时间以12306付款订单为准。</li>
-        <li><a href="https://www.liugongdao.com.cn/" target="_blank" rel="noopener">刘公岛官网</a>：D4船班、停航、观光车、票务和返航公告核对。</li>
+        <li><a href="https://www.liugongdao.com.cn/" target="_blank" rel="noopener">刘公岛官网</a>：核对游玩当日船班、停航、观光车、票务和返航公告。</li>
         <li><a href="https://qsyxxgk.weihai.gov.cn/art/2026/4/20/art_85585_2871057.html" target="_blank" rel="noopener">刘公岛景区2026票价公开</a>：成人122元/人，含91元景点门票与31元往返船票；1号/2号游览车及二消价格也在此核对。</li>
         <li><a href="https://wlj.weihai.gov.cn/art/2026/5/8/art_162556_4824985.html" target="_blank" rel="noopener">威海市文旅局2026年5A景区名单</a>：核对刘公岛作为本次威海代表性地标的官方等级信息。</li>
         <li><a href="https://www.weihai.gov.cn/art/2026/5/11/art_58820_5905366.html" target="_blank" rel="noopener">刘公岛2026船舶运行提醒</a>：特殊天气与临时停航仍以景区公众号当天通知为准。</li>
         <li><a href="https://www.weihai.gov.cn/art/2026/5/3/art_58817_6330665.html" target="_blank" rel="noopener">威海市政府山海点位指南</a>：猫头山、火炬八街、国际海水浴场、悦海公园和半月湾的实景与特色参考。</li>
-        <li><a href="https://www.weihai.gov.cn/art/2026/7/2/art_175940_6468286.html" target="_blank" rel="noopener">威海海水浴场2026开放信息</a>：泳区和便民设施以现场公告为准，本路线D5不安排下水。</li>
-        <li><a href="https://touch.travel.qunar.com/poi/702307" target="_blank" rel="noopener">青岛第二海水浴场参考页</a>：核对礁石、堤坝等现场看点；洞口和堤坝能否靠近以当天围挡、潮汐和救生员要求为准。</li>
-        <li><a href="https://epaper.qingdaonews.com/qdwb/resfile/2022-08-06/A08/qdwb20220806-A08.pdf" target="_blank" rel="noopener">青岛海边堤坝安全报道</a>：出现“浪大危险禁止登坝”等警示时绝不上堤，不把网红机位当开放承诺。</li>
-        <li><a href="https://you.ctrip.com/sight/qingdao5/5599355.html" target="_blank" rel="noopener">小麦岛公园参考页</a>：免费、全天开放等基础信息与近期游客反馈仅供出发前复查；入口公告和当天人流优先。</li>
-        <li><a href="https://qdlaoshan.cn/News-info-nid-6285.html" target="_blank" rel="noopener">崂山旺季官方通告</a>：旺季限流、预约与临时天气调整，说明它不适合本次临时塞入。</li>
+        <li><a href="https://www.weihai.gov.cn/art/2026/7/2/art_175940_6468286.html" target="_blank" rel="noopener">威海海水浴场2026开放信息</a>：泳区和便民设施以现场公告为准，本路线不安排下水。</li>
+        <li data-plan-only="b"><a href="https://touch.travel.qunar.com/poi/702307" target="_blank" rel="noopener">青岛第二海水浴场参考页</a>：核对礁石、堤坝等现场看点；洞口和堤坝能否靠近以当天围挡、潮汐和救生员要求为准。</li>
+        <li data-plan-only="b"><a href="https://epaper.qingdaonews.com/qdwb/resfile/2022-08-06/A08/qdwb20220806-A08.pdf" target="_blank" rel="noopener">青岛海边堤坝安全报道</a>：出现“浪大危险禁止登坝”等警示时绝不上堤，不把网红机位当开放承诺。</li>
+        <li data-plan-only="b"><a href="https://you.ctrip.com/sight/qingdao5/5599355.html" target="_blank" rel="noopener">小麦岛公园参考页</a>：免费、全天开放等基础信息与近期游客反馈仅供出发前复查；入口公告和当天人流优先。</li>
+        <li data-plan-only="b"><a href="https://qdlaoshan.cn/News-info-nid-6285.html" target="_blank" rel="noopener">崂山旺季官方通告</a>：旺季限流、预约与临时天气调整，说明它不适合本次临时塞入。</li>
         <li><a href="https://wansuishan.com.cn/contact.html" target="_blank" rel="noopener">万岁山官网票务页</a>：票种、预约剧目、开放时间与有效期仍以购票页和当天公告为准。</li>
         <li><a href="https://kf.bendibao.com/tour/2026429/24074.shtm" target="_blank" rel="noopener">万岁山2026票价与优惠汇总</a>：常规成人100元/人、非节假日三日规则；法定节假日以景区最新公告为准。</li>
         <li>实景图片来源见 <a href="../assets/images/shandong-image-sources.json" target="_blank" rel="noopener">图片来源清单</a>；不再复用同一张建筑图充当不同景点。</li>
@@ -345,34 +437,35 @@
     <section id="budget">
       <div class="section-title"><h2>费用参考</h2><p class="lead">放在行程最末，仅在需要核账时展开查看。</p></div>
       <details class="budget-details"><summary>展开当前方案两人费用明细</summary><div class="budget-inner">
-        <div data-plan-only="a">
-          <h3>方案A｜7天6晚</h3>
+        <div data-plan-only="a" hidden>
+          <h3>方案A｜6天5晚｜威海 + 开封</h3>
           <div class="table-wrap"><table><thead><tr><th>项目</th><th>两人金额</th><th>计算方式与边界</th></tr></thead><tbody>
-            <tr><td>往返机票</td><td class="expense">2408元</td><td>广州白云→青岛胶东：764×2=1528元；郑州新郑→广州白云：440×2=880元。</td></tr>
-            <tr><td>六晚住宿</td><td class="expense">1500元</td><td>250元/晚×6晚；青岛2晚、威海2晚、开封2晚，不住海景房。</td></tr>
-            <tr><td>跨城火车/高铁</td><td class="expense">1250元</td><td>青岛北→威海、威海→郑州东的规划预算。<b>不是固定票价</b>，最终按12306付款订单替换。</td></tr>
-            <tr><td>市内/城际打车</td><td class="expense">820元</td><td>约205公里×4元/公里：D2青岛27公里108元、D3约48公里192元、D4约6公里24元、D5威海海岸49公里196元、郑州东→开封71公里284元、D6开封约4公里16元。</td></tr>
-            <tr><td>两次机场接驳</td><td class="expense">240元</td><td>青岛胶东机场→酒店120元；开封→郑州新郑机场120元。与上方市内打车分开计，不重复。</td></tr>
+            <tr><td>去程软卧</td><td class="expense">1660元</td><td>用户确认830元/人×2；广州出发站、到达日期、是否换乘和票面终点以12306订单为准。</td></tr>
+            <tr><td>返程机票</td><td class="expense">880元</td><td>郑州新郑→广州白云：440元/人×2。</td></tr>
+            <tr><td>五晚住宿</td><td class="expense">1250元</td><td>250元/晚×5晚；威海3晚、开封2晚，不住海景房。</td></tr>
+            <tr><td>跨城高铁</td><td class="expense">938元</td><td>威海北→郑州东按公开参考469元/人×2；<b>不是固定票价</b>，最终按12306订单替换。</td></tr>
+            <tr><td>市内/城际打车</td><td class="expense">700元</td><td>D1威海北站接站36元+城市地标88元、D2刘公岛往返24元、D3海岸168元、D4威海北接驳52元+郑州东到开封284元+可选夜场16元、D5往返16元、D6市内16元。</td></tr>
+            <tr><td>返程机场接驳</td><td class="expense">120元</td><td>仅保留开封→郑州新郑机场一次120元；去程已改火车，不再计算威海机场接驳。</td></tr>
             <tr><td>核心票务</td><td class="expense">604元</td><td>刘公岛基础票244元 + 1号游览车120元 + 猫头山观光车40元 + 万岁山200元。两名成年人；以购票页为准。</td></tr>
-            <tr><td>七天餐饮</td><td class="expense">1050元</td><td>150元/天×7天。</td></tr>
-            <tr><td><b>基础合计</b></td><td class="expense">7872元</td><td>不含可选花石楼内部、游船、水上项目、汉服妆造和个人购物。</td></tr>
+            <tr><td>六天餐饮</td><td class="expense">900元</td><td>150元/天×6天。</td></tr>
+            <tr><td><b>基础合计</b></td><td class="expense">7052元</td><td>去程软卧、返程机票、住宿、跨城高铁、打车、返程机场接驳、核心票务和餐饮之和。</td></tr>
             <tr><td>机动备用</td><td class="expense">400元</td><td>用于叫车时段/拥堵费、铁路实付差额、天气改线或临时餐饮。</td></tr>
-            <tr><td><b>带机动金合计</b></td><td class="expense">8272元</td><td><b>按当前固定口径得出；出票后只替换真实订单金额，不重复增加项目。</b></td></tr>
+            <tr><td><b>带机动金合计</b></td><td class="expense">7452元</td><td><b>两人软卧1660元已经计入；返程飞机880元保持不变。若软卧票面终点为威海站，接站小额差价从400元机动金支出。</b></td></tr>
           </tbody></table></div>
         </div>
         <div data-plan-only="b" hidden>
           <h3>方案B｜8天7晚</h3>
           <div class="table-wrap"><table><thead><tr><th>项目</th><th>两人金额</th><th>计算方式与边界</th></tr></thead><tbody>
             <tr><td>往返机票</td><td class="expense">2408元</td><td>去程1528元 + 返程880元。</td></tr>
-            <tr><td>七晚住宿</td><td class="expense">1750元</td><td>250元/晚×7晚；只比方案A多住威海1晚。</td></tr>
+            <tr><td>七晚住宿</td><td class="expense">1750元</td><td>250元/晚×7晚；青岛2晚、威海3晚、开封2晚。</td></tr>
             <tr><td>跨城火车/高铁</td><td class="expense">1250元</td><td>继续按规划预算保留；不是固定票价，按12306实付替换。</td></tr>
-            <tr><td>市内/城际打车</td><td class="expense">828元</td><td>约207公里×4元/公里；D5海岸拆成上午、下午两段，D6增加酒店→威海北站。</td></tr>
+            <tr><td>市内/城际打车</td><td class="expense">876元</td><td>约219公里×4元/公里：D2 108元、D3 192元、D4 24元、D5 168元、D6 352元、D7 16元、D8 16元。</td></tr>
             <tr><td>两次机场接驳</td><td class="expense">240元</td><td>两次各120元。</td></tr>
             <tr><td>核心票务</td><td class="expense">604元</td><td>刘公岛、猫头山观光车和万岁山同方案A。</td></tr>
             <tr><td>八天餐饮</td><td class="expense">1200元</td><td>150元/天×8天。</td></tr>
-            <tr><td><b>基础合计</b></td><td class="expense">8280元</td><td>比方案A多1晚住宿、1天餐饮和少量打车。</td></tr>
+            <tr><td><b>基础合计</b></td><td class="expense">8328元</td><td>按当前固定机票、住宿、跨城预算和逐日打车口径计算。</td></tr>
             <tr><td>机动备用</td><td class="expense">400元</td><td>同方案A。</td></tr>
-            <tr><td><b>带机动金合计</b></td><td class="expense">8680元</td><td><b>多408元换来不在D5同时看海和跨省转场。</b></td></tr>
+            <tr><td><b>带机动金合计</b></td><td class="expense">8728元</td><td><b>八天版总价已按两名成年人和逐日里程重新核算。</b></td></tr>
           </tbody></table></div>
         </div>
       </div></details>
@@ -385,19 +478,48 @@
       function show(text){toast.textContent=text||'已复制';toast.classList.add('show');setTimeout(function(){toast.classList.remove('show');},1500);}
       function fallback(text){var t=document.createElement('textarea');t.value=text;t.style.position='fixed';t.style.opacity='0';document.body.appendChild(t);t.select();try{document.execCommand('copy');show('已复制');}catch(e){show('复制失败，请长按文字');}document.body.removeChild(t);}
       document.querySelectorAll('[data-copy]').forEach(function(btn){btn.addEventListener('click',function(){var text=btn.getAttribute('data-copy');if(navigator.clipboard&&window.isSecureContext){navigator.clipboard.writeText(text).then(function(){show('已复制');}).catch(function(){fallback(text);});}else{fallback(text);}});});
+      var spotCards=Array.prototype.slice.call(document.querySelectorAll('#spots .spot-card'));
+      spotCards.slice(0,3).forEach(function(card){card.setAttribute('data-plan-only','b');});
+      var playbookCards=Array.prototype.slice.call(document.querySelectorAll('#spot-playbook .exec-card'));
+      if(playbookCards[0])playbookCards[0].setAttribute('data-plan-only','b');
+      if(playbookCards.length>=5){
+        playbookCards[1].innerHTML='<summary><b>威海城市地标怎么走？</b></summary><h3>幸福门 → 威海公园大相框 → 悦海灯塔</h3><p><b>出发：</b>到威海后先入住、吃饭和休息，时间合适再开始；三点之间打车，不沿海全程步行。</p><p><b>必看：</b>幸福门的门形地标与海湾、大相框把人和海框进画面、悦海公园白色灯塔和海草房。</p><p><b>可删：</b>落地/列车晚点或风雨明显时先删悦海，再删大相框；只保幸福门和威高晚饭。</p><p><b>结束：</b>19:30前收，回酒店确认次日刘公岛船班。</p>';
+        playbookCards[2].innerHTML='<summary><b>刘公岛不爬山怎么走？</b></summary><h3>客运中心 → 乘船看湾 → 舰船/码头 → 一处历史建筑 → 环岛观光车 → 返航</h3><p><b>入岛前：</b>核对当天船班、观光车和最晚返航；带身份证、充电宝、水和晕船用品。</p><p><b>必看：</b>船上城市天际线、码头舰船、北洋海军老建筑、观光车沿线黑松林和岛礁。</p><p><b>可删：</b>旗顶山、索道、长展馆与长坡；只选一处核心建筑。</p><p><b>晚上：</b>返航后休息，确认次日猫头山观光车、天气和叫车。</p>';
+        playbookCards[3].innerHTML='<summary><b>威海沿海分段打车怎么走？</b></summary><h3>酒店 → 半月湾 → 猫头山观光车 → 酒店午休 → 火炬八街 → 国际海水浴场 → 酒店</h3><p><b>出发前：</b>不用退房、不带大件行李；确认猫头山观光车、网约车接单和天气。</p><p><b>执行：</b>上午看半月湾弧形岸线与猫头山层叠海岬；12:00—16:00回酒店午休，下午看火炬八街坡路入海和国际海水浴场。</p><p><b>费用：</b>四段车程42公里，按4元/公里为168元；猫头山观光车两人40元另列。比租车300元少132元。</p><p><b>结束：</b>19:00前回酒店吃饭休息，今晚收好行李，明早再单独转开封。</p>';
+        playbookCards[4].innerHTML='<summary><b>万岁山1.5天怎么安排？</b></summary><h3>完整日看核心演出与夜场，返程日上午补冲突节目</h3><p><b>入园前：</b>身份证、充电宝、水、小风扇、纸巾、轻便雨具；先看官方节目单、预约场次和入园规则。</p><p><b>完整日：</b>上午锁一场核心实景剧，12:00—15:00遮阴休息，下午接第二组节目和夜场；实际节目与预约以当天为准。</p><p><b>返程日上午：</b>09:00后补2—3项，12:00前离园取行李；不再加鼓楼夜市或开封老城。</p><p><b>可删：</b>边缘区、排队过长项目和与主节目冲突的小演出；高温时宁可坐着等下一场。</p>';
+      }
       var planButtons=document.querySelectorAll('[data-plan-select]');
       var planBlocks=document.querySelectorAll('[data-plan-only]');
       var planStatus=document.getElementById('plan-status');
+      function applyAdaptiveCopy(plan){
+        if(spotCards.length<11)return;
+        var leads=spotCards.map(function(card){return card.querySelector('.lead');});
+        var copyA=['','','','D1落地时间合适时｜两处威海城市名片，各拍一张就走。','D1落地早才去｜用一个清楚地标收住城市海岸日。','D2主景点｜威海代表性最强，也最不重复的一天。','D3第一站｜不早起追日出，也能看清海湾形状。','D3第二站｜用官方观光车看最有“山海公路感”的位置。','D3第三站｜看一眼最知名城市机位，不在人潮里耗时间。','D3第四站｜用20分钟收住威海看海段，再回酒店休息。','D5全天 + D6上午｜本次主景点，留足1.5天。'];
+        var copyB=['','','','D3傍晚前段｜两处威海城市名片，各拍一张就走。','D3傍晚后段｜用一个清楚地标收住城市海岸日。','D4主景点｜威海代表性最强，也最不重复的一天。','D5第一站｜不早起追日出，也能看清海湾形状。','D5第二站｜用官方观光车看最有“山海公路感”的位置。','D5第三站｜看一眼最知名城市机位，不在人潮里耗时间。','D5第四站｜用20分钟收住威海看海段，再回酒店休息。','D7全天 + D8上午｜本次主景点，留足1.5天。'];
+        (plan==='a'?copyA:copyB).forEach(function(value,index){if(value&&leads[index])leads[index].textContent=value;});
+        var cityPs=spotCards[3].querySelectorAll('.spot-body p');
+        if(cityPs[3])cityPs[3].innerHTML='<b>可删：</b>'+(plan==='a'?'D1落地晚':'D3到威海晚')+'、下雨或风大就删悦海，再删大相框；只保幸福门和威高晚饭。';
+        var lighthousePs=spotCards[4].querySelectorAll('.spot-body p');
+        if(lighthousePs[3])lighthousePs[3].innerHTML='<b>可删：</b>'+(plan==='a'?'D1落地晚':'D3到威海晚')+'、下雨或风大就删，直接回威高晚饭。';
+        var beachPs=spotCards[9].querySelectorAll('.spot-body p');
+        if(beachPs[0])beachPs[0].innerHTML='<b>安排：</b>从火炬八街步行到海水浴场，沿岸边平缓区域看海15—20分钟，随后打车回原酒店休息。';
+        if(beachPs[2])beachPs[2].innerHTML='<b>拍照：</b>顺着浪线拍开阔感，逆光时拍人物剪影；手机和相机注意防沙。';
+        if(beachPs[3])beachPs[3].innerHTML='<b>可删：</b>前面拥堵、天气差或体力不足，就在火炬八街尽头看一眼海后直接回酒店。';
+        var wansuiPs=spotCards[10].querySelectorAll('.spot-body p');
+        if(wansuiPs[1])wansuiPs[1].innerHTML='<b>'+(plan==='a'?'D5':'D7')+'完整日：</b>优先城寨/武侠实景演出；12:00—15:00午饭、补水和遮阴休息；下午接主舞台节目与夜场大秀。';
+        if(wansuiPs[3])wansuiPs[3].innerHTML='<b>'+(plan==='a'?'D6':'D8')+'上午：</b>只补昨天冲突或没排到的2—3项，12:00前离园，不再塞鼓楼、书店街等附加景点。';
+      }
       function setPlan(plan){
-        if(plan!=='a'&&plan!=='b')plan='a';
+        if(plan!=='a'&&plan!=='b')plan='b';
         document.body.setAttribute('data-plan',plan);
         planBlocks.forEach(function(block){block.hidden=block.getAttribute('data-plan-only')!==plan;});
         planButtons.forEach(function(button){var active=button.getAttribute('data-plan-select')===plan;button.classList.toggle('active',active);button.setAttribute('aria-pressed',active?'true':'false');});
-        if(planStatus)planStatus.textContent=plan==='a'?'当前显示：方案A｜7天精华版':'当前显示：方案B｜8天舒适深度版';
-        try{localStorage.setItem('shandong-kaifeng-plan',plan);}catch(e){}
+        applyAdaptiveCopy(plan);
+        if(planStatus)planStatus.textContent=plan==='a'?'当前显示：方案A｜6天双城版':'当前显示：方案B｜8天舒适深度版';
+        try{localStorage.setItem('shandong-kaifeng-plan-v2',plan);}catch(e){}
       }
       planButtons.forEach(function(button){button.addEventListener('click',function(){setPlan(button.getAttribute('data-plan-select'));});});
-      var savedPlan='a';try{savedPlan=localStorage.getItem('shandong-kaifeng-plan')||'a';}catch(e){}
+      var savedPlan='b';try{savedPlan=localStorage.getItem('shandong-kaifeng-plan-v2')||'b';}catch(e){}
       setPlan(savedPlan);
       document.querySelectorAll('.day-card').forEach(function(card){card.addEventListener('toggle',function(){var e=card.querySelector('.day-toggle');if(e)e.textContent=card.open?'收起':'展开';});});
     })();
