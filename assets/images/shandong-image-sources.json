@@ -1,0 +1,36 @@
+{
+  "shandong-badaguan.jpg": {
+    "location": "青岛八大关",
+    "source": "项目原有实景图片"
+  },
+  "qingdao-shilaoren.jpg": {
+    "location": "青岛石老人海水浴场",
+    "source": "Wikimedia Commons",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/e/ec/20240730_Shilaoren_Beach%2C_Qingdao.jpg"
+  },
+  "weihai-huanhai-road.jpg": {
+    "location": "威海北环海路",
+    "source": "Wikimedia Commons",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/%E5%B1%B1%E4%B8%9C_%E5%A8%81%E6%B5%B7_-%E5%8C%97%E7%8E%AF%E6%B5%B7%E8%B7%AF-%E6%97%A5%E5%87%BA_-_panoramio.jpg/1920px-%E5%B1%B1%E4%B8%9C_%E5%A8%81%E6%B5%B7_-%E5%8C%97%E7%8E%AF%E6%B5%B7%E8%B7%AF-%E6%97%A5%E5%87%BA_-_panoramio.jpg"
+  },
+  "jinan-baotu.jpg": {
+    "location": "济南趵突泉",
+    "source": "Wikimedia Commons",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Jinan_Baotu_Spring_pond-20150519-RM-174132.jpg/1920px-Jinan_Baotu_Spring_pond-20150519-RM-174132.jpg"
+  },
+  "jinan-daming-lake.jpg": {
+    "location": "济南大明湖超然楼",
+    "source": "Wikimedia Commons",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Chaoran_Tower%2C_Daming_Lake%2C_Jinan_in_October_2019.jpg/1920px-Chaoran_Tower%2C_Daming_Lake%2C_Jinan_in_October_2019.jpg"
+  },
+  "kaifeng-wansui.jpg": {
+    "location": "开封万岁山",
+    "source": "携程旅行景点图",
+    "url": "https://you.ctrip.com/sight/kaifeng165/77323.html"
+  },
+  "kaifeng-drum-night-market.jpg": {
+    "location": "开封鼓楼夜市",
+    "source": "Wikimedia Commons",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Drum_Tower-_Kaifeng_Night_Market_1.jpg/1920px-Drum_Tower-_Kaifeng_Night_Market_1.jpg"
+  }
+}

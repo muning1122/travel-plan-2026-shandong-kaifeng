@@ -3,12 +3,20 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="我的旅行路线管家，选择路线后进入可执行的旅行手册。">
   <link rel="icon" href="favicon.ico">
   <title>我的旅行路线管家</title>
   <link rel="stylesheet" href="assets/css/style.css">
+  <style>
+    .home-hero{min-height:250px;background:linear-gradient(112deg,rgba(7,56,70,.93),rgba(9,112,111,.67)),url("assets/images/weihai-huanhai-road.jpg") center/cover}
+    .home-note{margin-top:20px}
+    .route-card .body{min-height:307px;display:flex;flex-direction:column}
+    .route-card .route-btn{margin-top:auto;align-self:flex-start}
+    @media(max-width:760px){.home-hero{min-height:225px}.route-card .body{min-height:0}}
+  </style>
 </head>
 <body>
-  <header class="hero" style="--hero:url('/assets/images/shandong-cover.jpg')">
+  <header class="hero home-hero">
     <div class="wrap">
       <div class="tags"><span class="tag">路线选择</span><span class="tag">手机执行手册</span><span class="tag">持续更新</span></div>
       <h1>我的旅行路线管家</h1>
@@ -16,61 +24,61 @@
     </div>
   </header>
   <main class="wrap">
-    <div class="section-title"><h2>选择路线</h2><span class="lead">首页只负责选择路线，详情进入独立页面查看</span></div>
+    <div class="section-title"><h2>选择路线</h2><span class="lead">首页只负责选择路线，详情进入独立页面查看。</span></div>
     <div class="grid">
-    <article class="route-card">
-      <img loading="lazy" src="assets/images/shandong-cover.jpg" alt="山东—开封文化美食线">
-      <div class="body">
-        <div class="tags"><span class="tag ">已更新</span><span class="tag">青岛看海</span><span class="tag">轻租车</span><span class="tag">万岁山</span><span class="tag">少转场</span><span class="tag">不爬山</span></div>
-        <h2>青岛海岸慢游—开封万岁山线</h2>
-        <p class="lead">路线：广州/佛山、青岛八大关、海边兜风、开封、万岁山</p>
-        <p><b>天数：</b>5天4晚｜7月20日—24日</p>
-        <p><b>预算提示：</b>不含机票约3800-6250元；机票临近出发需实时核价</p>
-        <p><b>强度：</b>轻松为主，正午午休，避免爬山和长转场</p>
-        <a class="route-btn primary" href="routes/shandong-kaifeng.html">查看路线</a>
-      </div>
-    </article>
-    
-    <article class="route-card">
-      <img loading="lazy" src="assets/images/jiuzhaigou-cover.jpg" alt="九寨沟七天水景草原奇观线">
-      <div class="body">
-        <div class="tags"><span class="tag ">推荐</span><span class="tag">水色奇观</span><span class="tag">黄龙彩池</span><span class="tag">高原草原</span><span class="tag">瀑布</span><span class="tag">不能吃辣友好</span></div>
-        <h2>九寨沟七天水景草原奇观线</h2>
-        <p class="lead">路线：成都、黄龙、九寨沟、若尔盖花湖、黄河九曲第一湾、松潘</p>
-        <p><b>天数：</b>7天6晚</p>
-        <p><b>预算提示：</b>当地两人约4200-14000元，机票酒店另看</p>
-        <p><b>强度：</b>中等偏累，有高原和长车程</p>
-        <a class="route-btn primary" href="routes/jiuzhaigou-7days.html">查看路线</a>
-      </div>
-    </article>
-    
-    <article class="route-card">
-      <img loading="lazy" src="assets/images/guangxi-cover.jpg" alt="广西靖西德天瀑布线">
-      <div class="body">
-        <div class="tags"><span class="tag warn">预览版</span><span class="tag">瀑布</span><span class="tag">峡谷</span><span class="tag">边境风光</span><span class="tag">田园</span></div>
-        <h2>广西靖西德天瀑布线</h2>
-        <p class="lead">路线：南宁、靖西、鹅泉、通灵大峡谷、德天瀑布、明仕田园</p>
-        <p><b>天数：</b>约5-6天待细化</p>
-        <p><b>预算提示：</b>两人当地约3500-7000元起，机票酒店另核</p>
-        <p><b>强度：</b>中等，县域转场和景区步行为主</p>
-        <a class="route-btn primary" href="routes/guangxi-jingxi.html">查看路线预览</a>
-      </div>
-    </article>
-    
-    <article class="route-card">
-      <img loading="lazy" src="assets/images/dunhuang-cover.jpg" alt="张掖敦煌西北奇观线">
-      <div class="body">
-        <div class="tags"><span class="tag ">已规划</span><span class="tag">丹霞</span><span class="tag">石窟</span><span class="tag">沙漠</span><span class="tag">关城</span><span class="tag">西北</span></div>
-        <h2>张掖敦煌西北奇观线</h2>
-        <p class="lead">路线：兰州/西宁、张掖丹霞、嘉峪关、敦煌、鸣沙山月牙泉</p>
-        <p><b>天数：</b>7天6晚</p>
-        <p><b>预算提示：</b>两人约6500-15000元，按机票、火车和包车浮动</p>
-        <p><b>强度：</b>中等偏累，干热、防晒、长转场</p>
-        <a class="route-btn primary" href="routes/dunhuang.html">查看路线</a>
-      </div>
-    </article>
+      <article class="route-card">
+        <img loading="lazy" src="assets/images/weihai-huanhai-road.jpg" alt="威海环海路海岸实景">
+        <div class="body">
+          <div class="tags"><span class="tag">已规划</span><span class="tag">青岛看海</span><span class="tag">威海兜风</span><span class="tag">济南泉水</span><span class="tag">万岁山</span><span class="tag">不爬山</span></div>
+          <h2>青岛—威海—济南—开封慢游线</h2>
+          <p class="lead">路线：广州/佛山 → 青岛 → 威海 → 济南 → 开封 → 郑州机场 → 广州/佛山</p>
+          <p><b>天数：</b>7天6晚｜7月20—26日</p>
+          <p><b>预算提示：</b>两人固定执行账本 7300元，含机票2000元与六晚住宿1100元</p>
+          <p><b>强度：</b>中等，不爬山；海边租车、济南泉水、万岁山夜场</p>
+          <a class="route-btn primary" href="routes/shandong-kaifeng.html">查看路线</a>
+        </div>
+      </article>
+
+      <article class="route-card">
+        <img loading="lazy" src="assets/images/jiuzhaigou-cover.jpg" alt="九寨沟水色实景">
+        <div class="body">
+          <div class="tags"><span class="tag">已规划</span><span class="tag">水色奇观</span><span class="tag">黄龙彩池</span><span class="tag">高原草原</span><span class="tag">不吃辣友好</span></div>
+          <h2>九寨沟七天水景草原奇观线</h2>
+          <p class="lead">路线：成都、黄龙、九寨沟、若尔盖花湖、黄河九曲第一湾、松潘</p>
+          <p><b>天数：</b>7天6晚</p>
+          <p><b>预算提示：</b>按大交通、住宿、包车和景区门票分层核算</p>
+          <p><b>强度：</b>中等偏累，有高原和长车程</p>
+          <a class="route-btn primary" href="routes/jiuzhaigou-7days.html">查看路线</a>
+        </div>
+      </article>
+
+      <article class="route-card">
+        <img loading="lazy" src="assets/images/guangxi-cover.jpg" alt="广西山水实景">
+        <div class="body">
+          <div class="tags"><span class="tag warn">待细化</span><span class="tag">瀑布</span><span class="tag">峡谷</span><span class="tag">边境风光</span><span class="tag">田园</span></div>
+          <h2>广西靖西德天瀑布线</h2>
+          <p class="lead">路线：南宁、靖西、鹅泉、通灵大峡谷、德天瀑布、明仕田园</p>
+          <p><b>天数：</b>5—6天待细化</p>
+          <p><b>预算提示：</b>交通、住宿和景区门票需出发前核算</p>
+          <p><b>强度：</b>中等，县域转场和景区步行为主</p>
+          <a class="route-btn primary" href="routes/guangxi-jingxi.html">查看预览</a>
+        </div>
+      </article>
+
+      <article class="route-card">
+        <img loading="lazy" src="assets/images/dunhuang-cover.jpg" alt="敦煌鸣沙山实景">
+        <div class="body">
+          <div class="tags"><span class="tag">已规划</span><span class="tag">丹霞</span><span class="tag">石窟</span><span class="tag">沙漠</span><span class="tag">关城</span><span class="tag">西北</span></div>
+          <h2>张掖敦煌西北奇观线</h2>
+          <p class="lead">路线：兰州/西宁、张掖丹霞、嘉峪关、敦煌、鸣沙山月牙泉</p>
+          <p><b>天数：</b>7天6晚</p>
+          <p><b>预算提示：</b>按机票、火车、包车和景区门票分层核算</p>
+          <p><b>强度：</b>中等偏累，干燥、防晒、长转场</p>
+          <a class="route-btn primary" href="routes/dunhuang.html">查看路线</a>
+        </div>
+      </article>
     </div>
-    <section class="notice">路线会持续更新。机票、火车、酒店、景区开放、门票和餐厅营业时间都会变化，出发前以官方/12306/航司/景区公众号/高德/美团实际页面为准。</section>
+    <section class="notice home-note">路线会持续更新。机票、火车、酒店、景区开放、门票和餐厅营业时间都会变化，出发前以官方、12306、航司、景区公众号、高德和美团实际页面为准。</section>
   </main>
 </body>
 </html>
