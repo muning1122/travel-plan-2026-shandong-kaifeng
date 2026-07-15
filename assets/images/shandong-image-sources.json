@@ -3,6 +3,16 @@
     "location": "青岛八大关",
     "source": "项目原有实景图片"
   },
+  "qingdao-second-beach-dike.jpg": {
+    "location": "青岛第二海水浴场防波堤",
+    "source": "Wikimedia Commons",
+    "url": "https://commons.wikimedia.org/wiki/File:%E9%9D%92%E5%B2%9B%E7%AC%AC%E4%BA%8C%E6%B5%B7%E6%B0%B4%E6%B5%B4%E5%9C%BA%E9%98%B2%E6%B3%A2%E5%A0%A4_2011-02-20.jpg"
+  },
+  "qingdao-xiaomaidao.jpg": {
+    "location": "青岛小麦岛公园",
+    "source": "青岛日报社/观海新闻",
+    "url": "https://www.dailyqd.com/guanhai/390557_1.html"
+  },
   "qingdao-shilaoren.jpg": {
     "location": "青岛石老人海水浴场",
     "source": "Wikimedia Commons",
@@ -17,6 +27,36 @@
     "location": "威海幸福门海滨",
     "source": "Wikimedia Commons",
     "url": "https://commons.wikimedia.org/wiki/File:Gate_of_happiness_%E5%B1%B1%E4%B8%9C_%E5%A8%81%E6%B5%B7_-_panoramio.jpg"
+  },
+  "weihai-liugong-island.jpg": {
+    "location": "乘船前往威海刘公岛",
+    "source": "Wikimedia Commons",
+    "url": "https://commons.wikimedia.org/wiki/File:Seagulls_following_us_to_Liugong_Island_(53992238517).jpg"
+  },
+  "weihai-half-moon-bay.jpg": {
+    "location": "威海半月湾",
+    "source": "威海市人民政府",
+    "url": "https://www.weihai.gov.cn/art/2026/5/3/art_58817_6330665.html"
+  },
+  "weihai-maotoushan.jpg": {
+    "location": "威海猫头山观景平台",
+    "source": "威海市人民政府",
+    "url": "https://www.weihai.gov.cn/art/2026/5/3/art_58817_6330665.html"
+  },
+  "weihai-torch-eighth-street.jpg": {
+    "location": "威海火炬八街",
+    "source": "威海市人民政府",
+    "url": "https://www.weihai.gov.cn/art/2026/5/3/art_58817_6330665.html"
+  },
+  "weihai-yuehai-park.jpg": {
+    "location": "威海悦海公园灯塔",
+    "source": "威海市人民政府",
+    "url": "https://www.weihai.gov.cn/art/2026/5/3/art_58817_6330665.html"
+  },
+  "weihai-international-beach-2026.jpg": {
+    "location": "威海国际海水浴场",
+    "source": "威海市人民政府",
+    "url": "https://www.weihai.gov.cn/art/2026/5/3/art_58817_6330665.html"
   },
   "weihai-international-beach.jpg": {
     "location": "威海国际海水浴场海岸",
