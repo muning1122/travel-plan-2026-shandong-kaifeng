@@ -2,3 +2,5 @@
 *.err.log
 node_modules/
 .vercel/
+.playwright-cli/
+output/

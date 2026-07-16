@@ -1,0 +1,42 @@
+{
+  "route": "稻城亚丁雪山海子中低徒步线",
+  "checked_at": "2026-07-16",
+  "images": [
+    {
+      "file": "daocheng-yading-cover.jpg",
+      "place": "亚丁冲古草甸与夏诺多吉",
+      "source": "https://commons.wikimedia.org/wiki/File:Yading_Chanadorje-Xianuoduoji_Chonggu_Grassland.jpg"
+    },
+    {
+      "file": "daocheng-chonggu.jpg",
+      "place": "冲古寺",
+      "source": "https://commons.wikimedia.org/wiki/File:亚丁冲古寺_-_Chonggu_Temple_-_2012.10_-_panoramio.jpg"
+    },
+    {
+      "file": "daocheng-luorong.jpg",
+      "place": "洛绒牛场",
+      "source": "https://commons.wikimedia.org/wiki/File:洛绒牛场Q30023595.jpg"
+    },
+    {
+      "file": "daocheng-milk-lake.jpg",
+      "place": "牛奶海",
+      "source": "https://commons.wikimedia.org/wiki/File:牛奶海_2016_刘祖赛_稻城亚丁_-_panoramio.jpg"
+    },
+    {
+      "file": "daocheng-xiannairi.jpg",
+      "place": "仙乃日峰",
+      "source": "https://commons.wikimedia.org/wiki/File:仙乃日峰_2016_稻城亚丁_刘祖赛_-_panoramio.jpg"
+    },
+    {
+      "file": "daocheng-white-pagoda.jpg",
+      "place": "稻城白塔",
+      "source": "https://commons.wikimedia.org/wiki/File:稻城白塔_-_White_Pagoda_in_Daocheng_County_-_2012.10_-_panoramio.jpg"
+    },
+    {
+      "file": "daocheng-amap-road.png",
+      "place": "成都至稻城亚丁公路关系",
+      "source": "https://ditu.amap.com/",
+      "note": "高德地图网页截图，仅用于空间关系；本路线不把新手自驾列为默认方案。"
+    }
+  ]
+}

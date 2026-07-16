@@ -1,0 +1,91 @@
+{
+  "route": "阿勒泰喀纳斯禾木自然奇观线",
+  "verified_on": "2026-07-16",
+  "usage_note": "所有图片均已本地化；页面仅裁切显示，不进行生成式改造。署名和许可按原始文件页记录。",
+  "images": [
+    {
+      "file": "altay-cover.jpg",
+      "subject": "喀纳斯湖全景",
+      "usage": "路线页 Hero 主封面",
+      "source_title": "喀納斯湖11.jpg",
+      "source_page": "https://commons.wikimedia.org/wiki/File:%E5%96%80%E7%B4%8D%E6%96%AF%E6%B9%9611.jpg",
+      "original_url": "https://upload.wikimedia.org/wikipedia/commons/f/fb/%E5%96%80%E7%B4%8D%E6%96%AF%E6%B9%9611.jpg",
+      "author": "Newbamboo",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "local_transform": "Wikimedia 1920px 缩略图，本地保存；网页使用 object-fit 裁切"
+    },
+    {
+      "file": "altay-kanas-meadow.jpg",
+      "subject": "喀纳斯沿线湖畔草地",
+      "usage": "每日执行卡次要配图；不作封面",
+      "source_title": "Kanas Lake, Altay, China (Unsplash).jpg",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Kanas_Lake,_Altay,_China_(Unsplash).jpg",
+      "original_url": "https://upload.wikimedia.org/wikipedia/commons/9/95/Kanas_Lake%2C_Altay%2C_China_%28Unsplash%29.jpg",
+      "author": "Muye Ma",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "local_transform": "原图本地保存；网页使用 object-fit 裁切"
+    },
+    {
+      "file": "altay-kanas-lake.jpg",
+      "subject": "喀纳斯湖与森林山体",
+      "usage": "喀纳斯每日卡与景点内部走法",
+      "source_title": "LakeKanas2.jpg",
+      "source_page": "https://commons.wikimedia.org/wiki/File:LakeKanas2.jpg",
+      "original_url": "https://upload.wikimedia.org/wikipedia/commons/0/01/LakeKanas2.jpg",
+      "author": "Fanghong",
+      "license": "CC BY-SA 3.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "local_transform": "Wikimedia 1600px 缩略图，本地保存；网页使用 object-fit 裁切"
+    },
+    {
+      "file": "altay-three-bays.jpg",
+      "subject": "喀纳斯卧龙湾与河谷",
+      "usage": "神仙湾、月亮湾、卧龙湾执行攻略",
+      "source_title": "View from the road into Xinjiang Kanas National Geopark.jpg",
+      "source_page": "https://commons.wikimedia.org/wiki/File:View_from_the_road_into_Xinjiang_Kanas_National_Geopark.jpg",
+      "original_url": "https://upload.wikimedia.org/wikipedia/commons/3/30/View_from_the_road_into_Xinjiang_Kanas_National_Geopark.jpg",
+      "author": "Gpwitteveen",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "local_transform": "原图本地保存；网页使用 object-fit 裁切"
+    },
+    {
+      "file": "altay-hemu.jpg",
+      "subject": "禾木新村木屋与河谷",
+      "usage": "禾木每日卡与景点执行攻略",
+      "source_title": "禾木新村.jpg",
+      "source_page": "https://commons.wikimedia.org/wiki/File:%E7%A6%BE%E6%9C%A8%E6%96%B0%E6%9D%91.jpg",
+      "original_url": "https://upload.wikimedia.org/wikipedia/commons/6/61/%E7%A6%BE%E6%9C%A8%E6%96%B0%E6%9D%91.jpg",
+      "author": "Yanxutong1215",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "local_transform": "Wikimedia 1920px 缩略图，本地保存；网页使用 object-fit 裁切"
+    },
+    {
+      "file": "altay-hemu-valley.jpg",
+      "subject": "阿勒泰禾木河谷",
+      "usage": "白哈巴可选支线的阿勒泰河谷氛围配图，页面文字明确其为支线而非主体验",
+      "source_title": "DSC - Altay - Hemu Valley 1.jpg",
+      "source_page": "https://commons.wikimedia.org/wiki/File:DSC_-_Altay_-_Hemu_Valley_1.jpg",
+      "original_url": "https://upload.wikimedia.org/wikipedia/commons/4/4f/DSC_-_Altay_-_Hemu_Valley_1.jpg",
+      "author": "CatOnMars",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "local_transform": "原图本地保存；网页使用 object-fit 裁切"
+    },
+    {
+      "file": "altay-burqin.jpg",
+      "subject": "布尔津额尔齐斯河",
+      "usage": "布尔津恢复夜执行攻略",
+      "source_title": "Irtysh River landscape in the Burqin.jpg",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Irtysh_River_landscape_in_the_Burqin.jpg",
+      "original_url": "https://upload.wikimedia.org/wikipedia/commons/7/78/Irtysh_River_landscape_in_the_Burqin.jpg",
+      "author": "余华峰",
+      "license": "CC BY-SA 3.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "local_transform": "原图本地保存；网页使用 object-fit 裁切"
+    }
+  ]
+}

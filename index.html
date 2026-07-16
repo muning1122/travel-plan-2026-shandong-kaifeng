@@ -8,129 +8,215 @@
   <title>我的旅行路线管家</title>
   <link rel="stylesheet" href="assets/css/style.css">
   <style>
-    .home-hero{min-height:250px;background:linear-gradient(112deg,rgba(7,56,70,.93),rgba(9,112,111,.67)),url("assets/images/weihai-huanhai-road.jpg") center/cover}
-    .home-note{margin-top:20px}
-    .route-card .body{min-height:307px;display:flex;flex-direction:column}
-    .route-card .route-btn{margin-top:auto;align-self:flex-start}
-    @media(max-width:760px){.home-hero{min-height:225px}.route-card .body{min-height:0}}
+    .home-page{min-height:100vh;background:linear-gradient(180deg,#eff7f5 0%,#f7faf9 56%,#f1f6f5 100%)}
+    .home-hero{min-height:148px;align-items:center;background:linear-gradient(105deg,rgba(5,48,61,.96),rgba(5,104,101,.72)),url("assets/images/weihai-huanhai-road.jpg") center 48%/cover}
+    .home-hero .hero-inner{width:min(1480px,calc(100% - 36px));margin:0 auto;padding:22px 0 18px}
+    .home-hero .hero-kicker{display:flex;gap:7px;margin:0 0 8px}
+    .home-hero .hero-kicker span{padding:4px 8px;border:1px solid rgba(255,255,255,.35);border-radius:999px;background:rgba(255,255,255,.14);font-size:12px;font-weight:900}
+    .home-hero h1{margin:0 0 5px;font-size:32px;letter-spacing:0}
+    .home-hero p{max-width:920px;font-size:15px;line-height:1.55}
+    .home-shell{width:min(1480px,calc(100% - 36px));margin:0 auto;padding:12px 0 10px}
+    .catalog-bar{display:flex;align-items:center;justify-content:space-between;gap:14px;min-height:42px;margin-bottom:10px}
+    .catalog-title{display:flex;align-items:baseline;gap:10px;min-width:0}
+    .catalog-title h2{margin:0;font-size:23px;line-height:1.2}
+    .catalog-title span,.catalog-note{color:var(--muted);font-size:13px;font-weight:700}
+    .route-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px}
+    .route-tile{display:grid;grid-template-rows:112px minmax(0,1fr);min-width:0;min-height:232px;overflow:hidden;border:1px solid #d5e3e5;border-radius:14px;background:#fff;color:var(--ink);font-weight:400;box-shadow:0 8px 22px rgba(24,56,68,.08);transition:transform .18s ease,box-shadow .18s ease,border-color .18s ease}
+    .route-tile:hover{transform:translateY(-2px);border-color:#9ccbc4;box-shadow:0 13px 28px rgba(24,56,68,.13)}
+    .route-tile:focus-visible{outline:3px solid rgba(15,118,110,.35);outline-offset:3px}
+    .route-cover{position:relative;min-width:0;margin:0;overflow:hidden;background:#dbe7e6}
+    .route-cover::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(6,28,36,.03),rgba(6,28,36,.48))}
+    .route-cover img{height:100%;transition:transform .35s ease;filter:saturate(1.05) contrast(1.02)}
+    .route-tile:hover .route-cover img{transform:scale(1.035)}
+    .route-status,.route-duration{position:absolute;z-index:1;top:9px;padding:4px 8px;border-radius:999px;font-size:11px;font-weight:900;line-height:1.2}
+    .route-status{left:9px;background:#ecfaf4;color:#0b6457}
+    .route-status.candidate{background:#fff3d9;color:#835517}
+    .route-status.new{background:#eaf3ff;color:#195f94}
+    .route-duration{right:9px;background:rgba(9,32,42,.76);color:#fff;backdrop-filter:blur(5px)}
+    .route-summary{display:flex;flex-direction:column;min-width:0;padding:10px 11px 9px}
+    .route-heading{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:start;gap:7px}
+    .route-heading h2{display:-webkit-box;min-height:43px;margin:0;overflow:hidden;-webkit-box-orient:vertical;-webkit-line-clamp:2;font-size:17px;line-height:1.28;letter-spacing:0}
+    .route-arrow{display:grid;place-items:center;min-width:58px;height:26px;padding:0 8px;border-radius:999px;background:#e8f3f1;color:#0f6a63;font-size:11px;font-weight:900;line-height:1}
+    .route-path{margin:4px 0 7px;overflow:hidden;color:#637385;font-size:12.5px;line-height:1.35;text-overflow:ellipsis;white-space:nowrap}
+    .route-budget{display:flex;align-items:center;justify-content:space-between;gap:6px;margin:0 0 7px;padding:5px 7px;border:1px solid #cce4de;border-radius:9px;background:#edf8f5;color:#075e55;font-size:12.5px;font-weight:900;line-height:1.25;white-space:nowrap}
+    .route-budget b{color:#123a43;font-size:10.5px}
+    .route-budget small{color:#5e746f;font-size:9.5px;font-weight:800}
+    .route-highlights{display:flex;gap:5px;min-width:0;margin-top:auto;overflow:hidden;white-space:nowrap}
+    .route-highlights span{flex:0 0 auto;padding:3px 7px;border-radius:999px;background:#eef6f4;color:#285e5a;font-size:11px;font-weight:900}
+    .home-foot{display:flex;justify-content:space-between;gap:12px;margin-top:9px;padding:7px 10px;border-radius:10px;background:rgba(255,255,255,.74);color:#687789;font-size:11.5px;line-height:1.35}
+    @media(max-width:1250px){
+      .home-hero .hero-inner,.home-shell{width:min(100% - 24px,1480px)}
+      .route-grid{grid-template-columns:repeat(4,minmax(0,1fr))}
+      .route-grid{gap:10px}
+      .route-heading h2{font-size:16px}
+    }
+    @media(max-width:900px){
+      .route-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+      .route-tile{grid-template-rows:120px minmax(0,1fr)}
+    }
+    @media(max-width:640px){
+      .home-hero{min-height:138px}
+      .home-hero .hero-inner{padding:17px 0 14px}
+      .home-hero h1{font-size:27px}
+      .home-hero p{font-size:13px;line-height:1.45}
+      .home-hero .hero-kicker span:nth-child(3){display:none}
+      .home-shell{width:100%;padding:10px 12px 8px}
+      .catalog-bar{min-height:38px;margin-bottom:8px}
+      .catalog-title h2{font-size:20px}
+      .catalog-note{display:none}
+      .route-grid{grid-template-columns:none;grid-template-rows:repeat(2,208px);grid-auto-flow:column;grid-auto-columns:min(82vw,306px);gap:9px;overflow-x:auto;padding:1px 2px 9px;scroll-snap-type:x proximity;overscroll-behavior-inline:contain}
+      .route-grid::-webkit-scrollbar{height:5px}
+      .route-grid::-webkit-scrollbar-thumb{border-radius:999px;background:#b6cfcc}
+      .route-tile{grid-template-rows:88px minmax(0,1fr);min-height:0;scroll-snap-align:start}
+      .route-heading h2{min-height:38px;font-size:15px}
+      .route-summary{padding:8px 9px}
+      .route-path{margin:2px 0 5px;font-size:11.5px}
+      .route-budget{margin-bottom:5px;padding:4px 6px;font-size:11.5px}
+      .route-budget b{font-size:9.5px}.route-budget small{font-size:8.8px}
+      .route-highlights span{font-size:10.5px}
+      .home-foot{margin-top:4px;font-size:10.5px}
+      .home-foot span:last-child{display:none}
+    }
+    @media(prefers-reduced-motion:reduce){.route-tile,.route-cover img{transition:none}}
   </style>
 </head>
-<body>
+<body class="home-page">
   <header class="hero home-hero">
-    <div class="wrap">
-      <div class="tags"><span class="tag">路线选择</span><span class="tag">手机执行手册</span><span class="tag">持续更新</span></div>
+    <div class="hero-inner">
+      <div class="hero-kicker"><span>9条路线</span><span>手机执行手册</span><span>持续更新</span></div>
       <h1>我的旅行路线管家</h1>
-      <p>选择一条路线，进入当天可执行的旅行手册：几点出发、怎么走、吃什么、住哪里、门票预约、预算和应急方案都在里面。</p>
+      <p>先选目的地，再进入完整执行手册。每天去哪、交通接驳、住宿区域、预约门票和应急方案都已拆好。</p>
     </div>
   </header>
-  <main class="wrap">
-    <div class="section-title"><h2>选择路线</h2><span class="lead">首页只负责选择路线，详情进入独立页面查看。</span></div>
-    <div class="grid">
-      <article class="route-card">
-        <img loading="lazy" src="assets/images/weihai-huanhai-road.jpg" alt="威海环海路海岸实景">
-        <div class="body">
-          <div class="tags"><span class="tag">已规划</span><span class="tag">青岛看海</span><span class="tag">威海海岸</span><span class="tag">5/8天可选</span><span class="tag">万岁山</span><span class="tag">不爬山</span></div>
-          <h2>威海 / 青岛—威海—开封慢游线</h2>
-          <p class="lead">路线：五天版软卧直达威海；八天版先飞青岛，再到威海、开封和郑州机场</p>
-          <p><b>天数：</b>5天4晚 / 8天7晚｜7月20日起</p>
-<p><b>行程提示：</b>已按飞机、高铁、分段打车与住宿完成执行拆分，费用明细在路线页末尾按需查看。</p>
-          <p><b>强度：</b>中等，不爬山；威海海岸慢游、万岁山夜场</p>
-          <a class="route-btn primary" href="routes/shandong-kaifeng.html">查看路线</a>
-        </div>
-      </article>
 
-      <article class="route-card">
-        <img loading="lazy" src="assets/images/jiuzhaigou-cover.jpg" alt="九寨沟水色实景">
-        <div class="body">
-          <div class="tags"><span class="tag">已规划</span><span class="tag">水色奇观</span><span class="tag">黄龙彩池</span><span class="tag">高原草原</span><span class="tag">不吃辣友好</span></div>
-          <h2>九寨沟七天水景草原奇观线</h2>
-          <p class="lead">路线：成都、黄龙、九寨沟、若尔盖花湖、黄河九曲第一湾、松潘</p>
-          <p><b>天数：</b>7天6晚</p>
-<p><b>行程提示：</b>大交通、住宿、包车和景区门票均在详情页按需核对</p>
-          <p><b>强度：</b>中等偏累，有高原和长车程</p>
-          <a class="route-btn primary" href="routes/jiuzhaigou-7days.html">查看路线</a>
-        </div>
-      </article>
+  <main class="home-shell">
+    <section aria-labelledby="route-heading">
+      <div class="catalog-bar">
+        <div class="catalog-title"><h2 id="route-heading">路线总览</h2><span>9条路线 · 一屏快速比较</span></div>
+        <span class="catalog-note">预算均为两名成年人全程边界，已含往返大交通</span>
+      </div>
 
-      <article class="route-card">
-        <img loading="lazy" src="assets/images/daocheng-yading-cover.jpg" alt="稻城亚丁冲古草甸与夏诺多吉实景">
-        <div class="body">
-          <div class="tags"><span class="tag warn">独立候选</span><span class="tag">雪山海子</span><span class="tag">高原</span><span class="tag">不硬爬版</span><span class="tag">单独成线</span></div>
-          <h2>稻城亚丁雪山海子轻徒步线</h2>
-          <p class="lead">路线：广州/佛山 → 成都 → 稻城/香格里拉镇 → 亚丁景区 → 稻城 → 成都 → 广州/佛山</p>
-          <p><b>天数：</b>7天6晚候选版</p>
-          <p><b>行程提示：</b>不并入九寨沟；以观光车、草甸、神山观景为主，牛奶海/五色海不设为必须完成。</p>
-          <p><b>强度：</b>中高，高原与步行不可完全避免；更适合预留充足时间单独去。</p>
-          <a class="route-btn primary" href="routes/daocheng-yading.html">查看候选路线</a>
-        </div>
-      </article>
+      <div class="route-grid">
+        <a class="route-tile" href="routes/shandong-kaifeng.html" aria-label="查看威海青岛威海开封慢游线">
+          <figure class="route-cover">
+            <img src="assets/images/weihai-huanhai-road.jpg" alt="威海环海路日落实景">
+            <span class="route-status">重点路线</span><span class="route-duration">5 / 8天</span>
+          </figure>
+          <div class="route-summary">
+            <div class="route-heading"><h2>威海 / 青岛—威海—开封慢游线</h2><span class="route-arrow" aria-hidden="true">查看路线</span></div>
+            <p class="route-path">青岛 · 威海 · 开封 · 郑州</p>
+            <p class="route-budget"><span><b>双人总预算</b> ¥7,488–9,790</span><small>三方案总边界</small></p>
+            <div class="route-highlights"><span>看海</span><span>沿海自驾</span><span>万岁山</span><span>不爬山</span></div>
+          </div>
+        </a>
 
-      <article class="route-card">
-        <img loading="lazy" src="assets/images/guangxi-cover.jpg" alt="广西山水实景">
-        <div class="body">
-          <div class="tags"><span class="tag warn">待细化</span><span class="tag">瀑布</span><span class="tag">峡谷</span><span class="tag">边境风光</span><span class="tag">田园</span></div>
-          <h2>广西靖西德天瀑布线</h2>
-          <p class="lead">路线：南宁、靖西、鹅泉、通灵大峡谷、德天瀑布、明仕田园</p>
-          <p><b>天数：</b>5—6天待细化</p>
-<p><b>行程提示：</b>交通、住宿和景区门票以出发前实际页面为准</p>
-          <p><b>强度：</b>中等，县域转场和景区步行为主</p>
-          <a class="route-btn primary" href="routes/guangxi-jingxi.html">查看预览</a>
-        </div>
-      </article>
+        <a class="route-tile" href="routes/jiuzhaigou-7days.html" aria-label="查看九寨沟七天水景草原奇观线">
+          <figure class="route-cover">
+            <img src="assets/images/jiuzhaigou-cover.jpg" alt="九寨沟蓝绿色海子实景">
+            <span class="route-status">深度手册</span><span class="route-duration">7天6晚</span>
+          </figure>
+          <div class="route-summary">
+            <div class="route-heading"><h2>九寨沟七天水景草原奇观线</h2><span class="route-arrow" aria-hidden="true">查看路线</span></div>
+            <p class="route-path">成都 · 黄龙 · 九寨沟 · 若尔盖 · 松潘</p>
+            <p class="route-budget"><span><b>双人总预算</b> ¥7,800–12,900</span><small>7天标准版</small></p>
+            <div class="route-highlights"><span>水色奇观</span><span>黄龙彩池</span><span>高原</span><span>不辣友好</span></div>
+          </div>
+        </a>
 
-      <article class="route-card">
-        <img loading="lazy" src="assets/images/dunhuang-cover.jpg" alt="敦煌鸣沙山实景">
-        <div class="body">
-          <div class="tags"><span class="tag">已规划</span><span class="tag">丹霞</span><span class="tag">石窟</span><span class="tag">沙漠</span><span class="tag">关城</span><span class="tag">西北</span></div>
-          <h2>张掖敦煌西北奇观线</h2>
-          <p class="lead">路线：兰州/西宁、张掖丹霞、嘉峪关、敦煌、鸣沙山月牙泉</p>
-          <p><b>天数：</b>7天6晚</p>
-<p><b>行程提示：</b>机票、火车、包车和景区门票以详情页核对为准</p>
-          <p><b>强度：</b>中等偏累，干燥、防晒、长转场</p>
-          <a class="route-btn primary" href="routes/dunhuang.html">查看路线</a>
-        </div>
-      </article>
+        <a class="route-tile" href="routes/daocheng-yading.html" aria-label="查看稻城亚丁雪山海子中低徒步线">
+          <figure class="route-cover">
+            <img src="assets/images/daocheng-yading-cover.jpg" alt="稻城亚丁雪山草甸实景">
+            <span class="route-status">已规划</span><span class="route-duration">7 / 8天</span>
+          </figure>
+          <div class="route-summary">
+            <div class="route-heading"><h2>稻城亚丁雪山海子中低徒步线</h2><span class="route-arrow" aria-hidden="true">查看路线</span></div>
+            <p class="route-path">成都 · 稻城 · 香格里拉镇 · 亚丁</p>
+            <p class="route-budget"><span><b>双人总预算</b> ¥9,100–19,862</span><small>两方案总边界</small></p>
+            <div class="route-highlights"><span>雪山海子</span><span>高原</span><span>中低徒步</span></div>
+          </div>
+        </a>
 
-      <article class="route-card">
-        <img loading="lazy" src="assets/images/qinggan-qinghai-lake.jpg" alt="青海湖实景">
-        <div class="body">
-          <div class="tags"><span class="tag">新建</span><span class="tag">8天7晚</span><span class="tag">青海湖</span><span class="tag">盐湖雅丹</span><span class="tag">敦煌</span><span class="tag warn">高强度</span></div>
-          <h2>青甘大环线 8天7晚西北奇观线</h2>
-          <p class="lead">路线：西宁 → 青海湖 → 茶卡 → 大柴旦 → 水上雅丹 → 黑独山 → 敦煌 → 嘉峪关 → 张掖 → 西宁</p>
-          <p><b>天数：</b>8天7晚环线；广州/佛山至西宁建议另留D0，返程建议D9。</p>
-          <p><b>行程提示：</b>把抖音路线拆为每日可执行卡，保留全清单，同时标明转场、天气和夜路止损点。</p>
-          <p><b>强度：</b>高，约3000公里；正规拼车/包车或小团优先，不建议单人新手自驾。</p>
-          <a class="route-btn primary" href="routes/qinggan-loop.html">查看执行手册</a>
-        </div>
-      </article>
+        <a class="route-tile" href="routes/dunhuang.html" aria-label="查看张掖敦煌西北奇观线">
+          <figure class="route-cover">
+            <img src="assets/images/dunhuang-cover.jpg" alt="敦煌鸣沙山月牙泉实景">
+            <span class="route-status">已规划</span><span class="route-duration">7天6晚</span>
+          </figure>
+          <div class="route-summary">
+            <div class="route-heading"><h2>张掖敦煌西北奇观线</h2><span class="route-arrow" aria-hidden="true">查看路线</span></div>
+            <p class="route-path">张掖 · 嘉峪关 · 敦煌 · 鸣沙山</p>
+            <p class="route-budget"><span><b>双人总预算</b> ¥6,500–15,000</span><small>三档总边界</small></p>
+            <div class="route-highlights"><span>丹霞</span><span>莫高窟</span><span>沙漠</span><span>关城</span></div>
+          </div>
+        </a>
 
-      <article class="route-card">
-        <img loading="lazy" src="assets/images/yulong-cover.jpg" alt="玉龙雪山与丽江水景实景">
-        <div class="body">
-          <div class="tags"><span class="tag">已规划</span><span class="tag">7天6晚</span><span class="tag">日照金山</span><span class="tag">蓝月谷</span><span class="tag">索道可选</span></div>
-          <h2>丽江玉龙雪山自然奇观线</h2>
-          <p class="lead">路线：佛山/广州 → 昆明 → 丽江 → 黑龙潭 → 白沙 → 玉龙雪山 → 昆明 → 返程</p>
-          <p><b>玩法：</b>甘海子、蓝月谷为稳妥底盘；天气、票务和身体允许时加入冰川公园索道。</p>
-          <p><b>预算边界：</b>两人不含住宿约4450—5100元；全包会更高，页面内如实拆账。</p>
-          <p><b>强度：</b>中等；索道加强版有高海拔风险，但不是专业登山。</p>
-          <a class="route-btn primary" href="routes/yulong-snow-mountain.html">查看执行手册</a>
-        </div>
-      </article>
+        <a class="route-tile" href="routes/qinggan-loop.html" aria-label="查看青甘大环线八天七晚西北奇观线">
+          <figure class="route-cover">
+            <img src="assets/images/qinggan-qinghai-lake.jpg" alt="青海湖高原湖泊实景">
+            <span class="route-status">已规划</span><span class="route-duration">8天7晚</span>
+          </figure>
+          <div class="route-summary">
+            <div class="route-heading"><h2>青甘大环线八天七晚西北奇观线</h2><span class="route-arrow" aria-hidden="true">查看路线</span></div>
+            <p class="route-path">西宁 · 青海湖 · 大柴旦 · 敦煌 · 张掖</p>
+            <p class="route-budget"><span><b>双人总预算</b> ¥18,000–29,000</span><small>8天舒适版</small></p>
+            <div class="route-highlights"><span>盐湖雅丹</span><span>戈壁</span><span>3000公里</span></div>
+          </div>
+        </a>
 
-      <article class="route-card">
-        <img loading="lazy" src="assets/images/zhangjiajie-cover.jpg" alt="张家界武陵源石英砂岩峰林实景">
-        <div class="body">
-          <div class="tags"><span class="tag">已规划</span><span class="tag">6天5晚</span><span class="tag">峰林奇观</span><span class="tag">索道电梯</span><span class="tag warn">中高强度</span></div>
-          <h2>张家界武陵源＋天门山山岳奇观线</h2>
-          <p class="lead">路线：佛山/广州 → 张家界西 → 武陵源 → 袁家界/天子山 → 天门山 → 返程</p>
-          <p><b>玩法：</b>这是单独的山岳线；用环保车、百龙天梯和索道减腿，不把完整峡谷徒步设为必做。</p>
-          <p><b>预算边界：</b>两人不含住宿约4450—5310元；票价、车次按实际支付页核对。</p>
-          <p><b>强度：</b>中高；台阶、排队和雨雾不可完全避免。</p>
-          <a class="route-btn primary" href="routes/zhangjiajie-mountains.html">查看执行手册</a>
-        </div>
-      </article>
-    </div>
-    <section class="notice home-note">路线会持续更新。机票、火车、酒店、景区开放、门票和餐厅营业时间都会变化，出发前以官方、12306、航司、景区公众号、高德和美团实际页面为准。</section>
+        <a class="route-tile" href="routes/yulong-snow-mountain.html" aria-label="查看丽江玉龙雪山自然奇观线">
+          <figure class="route-cover">
+            <img src="assets/images/yulong-cover.jpg" alt="玉龙雪山与丽江水景实景">
+            <span class="route-status new">自然精简</span><span class="route-duration">5天4晚</span>
+          </figure>
+          <div class="route-summary">
+            <div class="route-heading"><h2>丽江玉龙雪山自然奇观线</h2><span class="route-arrow" aria-hidden="true">查看路线</span></div>
+            <p class="route-path">丽江 · 虎跳峡 · 玉龙雪山 · 黑龙潭</p>
+            <p class="route-budget"><span><b>双人总预算</b> ¥6,880–10,140</span><small>含机票及4晚住宿</small></p>
+            <div class="route-highlights"><span>雪山峡谷</span><span>蓝月谷</span><span>纯自然景观</span></div>
+          </div>
+        </a>
+
+        <a class="route-tile" href="routes/zhangjiajie-mountains.html" aria-label="查看张家界武陵源和天门山山岳奇观线">
+          <figure class="route-cover">
+            <img src="assets/images/zhangjiajie-cover.jpg" alt="张家界武陵源石英砂岩峰林实景">
+            <span class="route-status new">新路线</span><span class="route-duration">6天5晚</span>
+          </figure>
+          <div class="route-summary">
+            <div class="route-heading"><h2>张家界武陵源＋天门山山岳奇观线</h2><span class="route-arrow" aria-hidden="true">查看路线</span></div>
+            <p class="route-path">武陵源 · 袁家界 · 天子山 · 天门山</p>
+            <p class="route-budget"><span><b>双人总预算</b> ¥6,100–7,490</span><small>6天标准版</small></p>
+            <div class="route-highlights"><span>峰林奇观</span><span>索道电梯</span><span>中等强度</span></div>
+          </div>
+        </a>
+
+        <a class="route-tile" href="routes/altay.html" aria-label="查看阿勒泰喀纳斯禾木自然奇观线">
+          <figure class="route-cover">
+            <img src="assets/images/altay-cover.jpg" alt="阿勒泰喀纳斯湖与山林实景">
+            <span class="route-status new">新路线</span><span class="route-duration">9天8晚</span>
+          </figure>
+          <div class="route-summary">
+            <div class="route-heading"><h2>阿勒泰喀纳斯禾木自然奇观线</h2><span class="route-arrow" aria-hidden="true">查看路线</span></div>
+            <p class="route-path">乌鲁木齐 · 阿勒泰/布尔津 · 禾木 · 喀纳斯 · 白哈巴可选</p>
+            <p class="route-budget"><span><b>双人总预算</b> ¥17,000–30,700</span><small>9天舒适版</small></p>
+            <div class="route-highlights"><span>湖泊森林</span><span>图瓦村落</span><span>连住慢游</span><span>中低步行</span></div>
+          </div>
+        </a>
+
+        <a class="route-tile" href="routes/mohe.html" aria-label="查看漠河北极村北红村边境奇观线">
+          <figure class="route-cover">
+            <img src="assets/images/mohe-emur-river.jpg" alt="漠河额木尔河与大兴安岭森林夏季实景">
+            <span class="route-status new">新路线</span><span class="route-duration">8天7晚</span>
+          </figure>
+          <div class="route-summary">
+            <div class="route-heading"><h2>漠河北极村北红村边境奇观线</h2><span class="route-arrow" aria-hidden="true">查看路线</span></div>
+            <p class="route-path">哈尔滨 · 漠河 · 北极村 · 北红村 · 第一湾</p>
+            <p class="route-budget"><span><b>双人总预算</b> ¥14,500–24,820</span><small>8天舒适版</small></p>
+            <div class="route-highlights"><span>极北边境</span><span>黑龙江湾</span><span>夏季长昼</span><span>短步行</span></div>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <div class="home-foot"><span>路线会持续增加；新卡片会自动沿网格排列，不挤压现有入口。</span><span>票价、车次、开放时间以出发前官方页面为准。</span></div>
   </main>
 </body>
 </html>

@@ -11,6 +11,8 @@ img{display:block;width:100%;object-fit:cover;background:#dbe7e6}
 .hero p{max-width:850px;color:#edf8f7;margin:0}
 .topnav,.route-return{position:sticky;top:0;z-index:30;display:flex;gap:8px;overflow:auto;white-space:nowrap;padding:10px 14px;background:rgba(255,255,255,.96);border-bottom:1px solid var(--line)}
 .topnav a,.btn,.route-btn,.copy-btn,.back-btn{border:0;border-radius:999px;padding:8px 12px;background:#eaf3f2;color:#17394a;font-weight:900;cursor:pointer;font-size:14px;display:inline-block}
+.topnav a,.btn,.route-btn,.copy-btn,.back-btn{min-height:44px;align-items:center}
+.topnav a,.route-btn,.copy-btn,.back-btn{display:inline-flex}
 .primary,.route-btn.primary,.back-btn.primary{background:var(--teal);color:#fff}
 .grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
 .grid.three{grid-template-columns:repeat(3,minmax(0,1fr))}

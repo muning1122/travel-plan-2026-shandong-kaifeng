@@ -12,6 +12,8 @@ document.querySelectorAll('[data-copy]').forEach(btn => {
       toast = document.createElement('div');
       toast.id = 'toast';
       toast.className = 'toast';
+      toast.setAttribute('role', 'status');
+      toast.setAttribute('aria-live', 'polite');
       document.body.appendChild(toast);
     }
     toast.textContent = '已复制：' + text;

@@ -1,0 +1,92 @@
+{
+  "route": "漠河北极村北红村边境奇观线",
+  "checked_at": "2026-07-16",
+  "notes": [
+    "所有页面实际使用的照片均为本地文件，不依赖远程热链。",
+    "新华社图片仅保留为资料图；首页、Hero和北极村核心执行卡改用无水印开放许可实景。",
+    "mohe-route-map.jpg 使用 OpenStreetMap 真实底图；彩色箭头只表示地点顺序，不作为逐弯导航。",
+    "mohe-forest-cabin.jpg 仅作为漠河林区木构建筑氛围参考，页面没有把它冒充为北红村具体民宿或地标。"
+  ],
+  "images": [
+    {
+      "file": "mohe-cover.jpg",
+      "used_for": "未在当前页面显示，仅保留为来源资料图",
+      "subject": "北极村“中国漠河”极北地标与黑龙江河面夏季实景",
+      "source_page": "https://www.news.cn/photo/20250809/9b13fc677230489aba3b52d4b8dff909/c.html",
+      "credit": "新华社记者 王建威 摄",
+      "license_note": "新华社版权图片，页面保留原始水印和来源链接，仅作路线资料展示。"
+    },
+    {
+      "file": "mohe-arctic-marker.jpg",
+      "used_for": "备用极北地标实景",
+      "subject": "北极村“北”字地标",
+      "source_page": "https://www.news.cn/photo/20250809/9b13fc677230489aba3b52d4b8dff909/c.html",
+      "credit": "新华社记者 王建威 摄",
+      "license_note": "新华社版权图片，保留原始水印。"
+    },
+    {
+      "file": "mohe-arctic-boardwalk.jpg",
+      "used_for": "北极村慢游日",
+      "subject": "北极村夏季河岸步道",
+      "source_page": "https://www.news.cn/photo/20250809/9b13fc677230489aba3b52d4b8dff909/c.html",
+      "credit": "新华社记者 王建威 摄",
+      "license_note": "新华社版权图片，保留原始水印。"
+    },
+    {
+      "file": "mohe-forest-boardwalk.jpg",
+      "used_for": "内部攻略备用图",
+      "subject": "漠河林区木栈道",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Plank_road_near_Amur_River,_Aug_2019.jpg",
+      "credit": "Wikimedia Commons 原作者见源页",
+      "license_note": "CC BY-SA 4.0，具体署名与许可条款见源页。"
+    },
+    {
+      "file": "mohe-first-bay.jpg",
+      "used_for": "龙江第一湾执行卡与景点攻略",
+      "subject": "龙江第一湾夏季河湾",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Heilongjiang_First_Bay.jpg",
+      "credit": "Wikimedia Commons 原作者见源页",
+      "license_note": "开放许可图片，具体署名与许可版本见源页。"
+    },
+    {
+      "file": "mohe-forest-cabin.jpg",
+      "used_for": "北红村林区木构氛围参考",
+      "subject": "漠河林区木构建筑",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Cabin_of_forest_ranger_in_Mohe,_Aug_2019.jpg",
+      "credit": "Wikimedia Commons 原作者见源页",
+      "license_note": "CC BY-SA 4.0，具体署名与许可条款见源页。"
+    },
+    {
+      "file": "mohe-border-marker.jpg",
+      "used_for": "北极村执行卡、景点攻略和边境规则攻略",
+      "subject": "中俄边境138(1)号界碑",
+      "source_page": "https://commons.wikimedia.org/wiki/File:No._138-1_Boundary_Marker_at_China%E2%80%93Russia_Border.jpg",
+      "credit": "Wikimedia Commons 原作者见源页",
+      "license_note": "开放许可图片，具体署名与许可版本见源页。"
+    },
+    {
+      "file": "mohe-fire-museum.jpg",
+      "used_for": "漠河市区与雨天替代攻略",
+      "subject": "大兴安岭五六火灾纪念馆外观",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Daxing%27anling_May_6_Fire_Memorial_Museum.jpg",
+      "credit": "Wikimedia Commons 原作者见源页",
+      "license_note": "开放许可图片，具体署名与许可版本见源页。"
+    },
+    {
+      "file": "mohe-emur-river.jpg",
+      "used_for": "首页路线卡和页面Hero封面",
+      "subject": "额木尔河桥与林区河面",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Bridge_on_Emur_River,_Aug_2019.jpg",
+      "credit": "Wikimedia Commons 原作者见源页",
+      "license_note": "CC BY-SA 4.0，具体署名与许可条款见源页。"
+    },
+    {
+      "file": "mohe-route-map.jpg",
+      "used_for": "路线关系图",
+      "subject": "漠河市区、北极村、北红村、龙江第一湾真实位置关系",
+      "source_page": "https://www.openstreetmap.org/copyright",
+      "credit": "© OpenStreetMap contributors",
+      "license_note": "OpenStreetMap 数据依 ODbL 使用；截图于2026-07-16生成。地点坐标来自公开地图检索，箭头仅示意分日顺序。"
+    }
+  ]
+}

@@ -26,12 +26,14 @@
     .d-nav a{flex:0 0 auto;border-radius:999px;background:#fff;color:#5c3d18;border:1px solid #eadfcd;padding:8px 12px;font-weight:900}
     .route-overview-map{max-width:760px;margin:0 auto 12px}
     .route-overview-map img{max-height:360px;object-fit:contain;background:#fbfaf4}
-    .day-flow,.stay-flow,.budget-table{display:grid;gap:1px;overflow:auto;border:1px solid var(--line);border-radius:18px;background:var(--line);box-shadow:var(--shadow)}
+    .day-flow,.stay-flow,.budget-table,.budget-breakdown{display:grid;gap:1px;overflow:auto;border:1px solid var(--line);border-radius:18px;background:var(--line);box-shadow:var(--shadow)}
     .day-flow{grid-template-columns:.65fr 1.05fr 1.2fr 1.1fr 1.05fr}
     .stay-flow{grid-template-columns:.7fr .95fr 1fr 1.25fr 1.15fr 1.1fr 1.15fr 1.05fr 1.1fr}
     .budget-table{grid-template-columns:1fr 1.15fr 1.1fr 1.1fr 1.1fr 1.25fr}
-    .day-flow>div,.stay-flow>div,.budget-table>div{min-width:142px;padding:11px;background:#fff}
-    .day-flow .head,.stay-flow .head,.budget-table .head{background:#fff2d8;color:#17394a;font-weight:900}
+    .budget-breakdown{grid-template-columns:.85fr repeat(6,1fr) 1fr;margin-top:12px}
+    .day-flow>div,.stay-flow>div,.budget-table>div,.budget-breakdown>div{min-width:142px;padding:11px;background:#fff}
+    .day-flow .head,.stay-flow .head,.budget-table .head,.budget-breakdown .head{background:#fff2d8;color:#17394a;font-weight:900}
+    .budget-breakdown .total{background:#edf8f5;color:#075e55;font-weight:900}
     .desert-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
     .desert-card{background:#fff;border:1px solid var(--line);border-radius:18px;box-shadow:var(--shadow);padding:15px;overflow:hidden}
     .desert-card h3{margin:0 0 8px;font-size:19px}
@@ -57,7 +59,7 @@
     .check-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
     .source-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px 16px}
     @media(max-width:900px){.dunhuang-shell{grid-template-columns:1fr}.desert-grid,.map-grid,.check-grid{grid-template-columns:1fr 1fr}}
-    @media(max-width:760px){body{font-size:15.5px;overflow-x:hidden}.dunhuang-hero,.d-nav,.wrap{max-width:100vw;overflow-x:hidden}.dunhuang-shell{width:100%;max-width:calc(100vw - 28px);min-height:auto;padding:16px;border-radius:22px}.hero-copy,.overview-card{max-width:100%;overflow:hidden}.hero-copy h1{font-size:26px;line-height:1.2}.hero-copy .tags{display:grid;grid-template-columns:1fr}.overview-list div{grid-template-columns:1fr}.desert-grid,.map-grid,.check-grid,.stay-action-grid{grid-template-columns:1fr}.day-flow,.stay-flow,.budget-table{display:block;overflow:auto}.day-flow>div,.stay-flow>div,.budget-table>div{min-width:260px;border-bottom:1px solid var(--line)}.route-overview-map img{max-height:300px}.source-grid{grid-template-columns:1fr}}
+    @media(max-width:760px){body{font-size:15.5px;overflow-x:hidden}.dunhuang-hero,.d-nav,.wrap{max-width:100vw;overflow-x:hidden}.dunhuang-shell{width:100%;max-width:calc(100vw - 28px);min-height:auto;padding:16px;border-radius:22px}.hero-copy,.overview-card{max-width:100%;overflow:hidden}.hero-copy h1{font-size:26px;line-height:1.2}.hero-copy .tags{display:grid;grid-template-columns:1fr}.overview-list div{grid-template-columns:1fr}.desert-grid,.map-grid,.check-grid,.stay-action-grid{grid-template-columns:1fr}.day-flow,.stay-flow,.budget-table,.budget-breakdown{display:block;overflow:auto}.day-flow>div,.stay-flow>div,.budget-table>div,.budget-breakdown>div{min-width:260px;border-bottom:1px solid var(--line)}.route-overview-map img{max-height:300px}.source-grid{grid-template-columns:1fr}}
   </style>
 </head>
 <body>
@@ -78,7 +80,7 @@
           <div><span>不适合</span><b>怕晒怕干、讨厌连续坐车、不能接受预约抢票压力的人。</b></div>
           <div><span>交通方式</span><b>飞机/火车到兰州或西宁，河西走廊用高铁/动车/火车，敦煌段打车/包车/小团。</b></div>
           <div><span>住宿顺序</span><b>D1兰州/西宁，D2张掖，D3嘉峪关，D4-D6敦煌，D7返程。</b></div>
-          <div><span>预算提醒</span><b>两人约6500-15000元浮动；大交通、敦煌住宿、莫高窟票、敦煌西线包车最容易变。</b></div>
+          <div><span>预算提醒</span><b>双人规划边界6500—15000元，已含往返大交通；超过上限时先重新选交通与玩法，不用漏项硬凑。</b></div>
           <div><span>核对规则</span><b>航班、火车、酒店、门票、开放和天气都以实际页面为准。</b></div>
         </div>
       </aside>
@@ -308,8 +310,15 @@
         <div class="head">版本</div><div class="head">适合谁</div><div class="head">两人大交通</div><div class="head">当地交通</div><div class="head">门票/项目</div><div class="head">总预算提醒</div>
         <div>省钱火车版</div><div>时间宽裕、能接受卧铺和回头路</div><div>广州往返兰州/西宁火车或低价机票，按12306/航司</div><div>河西走廊火车 + 敦煌公交/打车/少量小团</div><div>保莫高窟、鸣沙山、丹霞、关城；西线可轻量</div><div>两人约6500-9500元起，牺牲舒适度和时间</div>
         <div>标准顺路版</div><div>想少走回头路、体验完整</div><div>兰州/西宁进，敦煌出或中转返</div><div>城市间火车 + 敦煌西线小团/拼车</div><div>核心景点都保留，额外项目少点</div><div>两人约9000-13000元，暑期酒店机票会拉高</div>
-        <div>舒服省心版</div><div>不想折腾交通，愿意多花一点</div><div>飞机优先，敦煌返程中转时间留足</div><div>敦煌段包车/正规小团，酒店位置更好</div><div>莫高窟优先好场次，鸣沙山按体力加项目</div><div>两人约12000-15000元或更高，以实际为准</div>
+        <div>舒服省心版</div><div>不想折腾交通，愿意多花一点</div><div>飞机优先，敦煌返程中转时间留足</div><div>敦煌段包车/正规小团，酒店位置更好</div><div>莫高窟优先好场次，鸣沙山按体力加项目</div><div>双人规划边界12000—15000元；付款页超出时重新决策</div>
       </div>
+      <div class="budget-breakdown" aria-label="张掖敦煌三档双人预算分项">
+        <div class="head">版本</div><div class="head">往返大交通</div><div class="head">城际/市内</div><div class="head">6晚住宿</div><div class="head">门票/项目</div><div class="head">7天餐饮</div><div class="head">机动备用</div><div class="head">双人合计</div>
+        <div>省钱火车版</div><div>1800—2600</div><div>700—1300</div><div>1200—1800</div><div>1100—1600</div><div>900—1200</div><div>800—1000</div><div class="total">6500—9500</div>
+        <div>标准顺路版</div><div>2800—4200</div><div>1300—2000</div><div>1800—2600</div><div>1200—1800</div><div>1000—1400</div><div>900—1000</div><div class="total">9000—13000</div>
+        <div>舒服省心版</div><div>3800—4800</div><div>2200—2800</div><div>2600—3200</div><div>1300—1700</div><div>1200—1500</div><div>900—1000</div><div class="total">12000—15000</div>
+      </div>
+      <div class="notice"><b>复算口径：</b>每一行低位与高位分别相加，正好得到该版本总边界；金额均为两名成年人。机票、房价或西线用车一旦超过对应栏上限，就表示当前订单已离开该版本预算，不把超支藏进“以实际为准”。</div>
       <div class="notice"><b>最容易超预算：</b>敦煌返程机票、暑期敦煌住宿、莫高窟票种、敦煌西线包车/小团、鸣沙山额外项目。省钱先压酒店和额外项目，不要压缩莫高窟预约和返程缓冲。</div>
     </section>
 

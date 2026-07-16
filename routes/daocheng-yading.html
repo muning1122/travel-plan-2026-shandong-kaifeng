@@ -1,80 +1,361 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="稻城亚丁雪山海子轻徒步线候选旅行手册">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="稻城亚丁雪山海子中低强度徒步执行手册，含7天飞机版、8天陆路渐进版、交通、住宿、票务、预算和高原应急。">
   <link rel="icon" href="../favicon.ico">
-  <title>稻城亚丁雪山海子轻徒步线｜旅行管家</title>
+  <title>稻城亚丁雪山海子中低徒步线｜旅行管家</title>
   <link rel="stylesheet" href="../assets/css/style.css">
-  <style>
-    :root{--hero:url('../assets/images/daocheng-yading-cover.jpg')}
-    .yading-hero{min-height:54vh;background:linear-gradient(100deg,rgba(10,42,47,.80),rgba(10,42,47,.24)),var(--hero) center/cover}
-    .decision-card{padding:15px;border:1px solid var(--line);border-radius:16px;background:#fff;box-shadow:var(--shadow)}
-    .decision-card strong{display:block;margin-bottom:6px;font-size:18px}
-  </style>
+  <link rel="stylesheet" href="../assets/css/daocheng-route.css">
 </head>
-<body>
-  <nav class="route-return"><a class="back-btn primary" href="../index.html">← 返回路线选择</a><span class="lead">独立候选线：先判断是否值得深挖</span></nav>
-  <header class="hero yading-hero">
-    <div class="wrap">
-      <div class="tags"><span class="tag">7天6晚候选</span><span class="tag">雪山海子</span><span class="tag">高原草甸</span><span class="tag warn">不硬爬牛奶海</span></div>
-      <h1>稻城亚丁雪山海子<br>轻徒步线</h1>
-      <p>广州/佛山 → 成都 → 稻城/香格里拉镇 → 亚丁景区 → 稻城 → 成都 → 广州/佛山。它应该单独成行，不和九寨沟、敦煌或山东路线混搭。</p>
+<body class="nature-page daocheng-page" id="top">
+  <div class="nature-return">
+    <a class="route-btn" href="../index.html">← 返回路线选择</a>
+    <span class="lead">默认中低强度徒步，不把登顶或牛奶海当作硬任务</span>
+  </div>
+
+  <header class="nature-hero">
+    <div class="nature-hero-shell hero-daocheng">
+      <div class="nature-hero-copy">
+        <div class="badge-row"><span class="tag">7 / 8天可选</span><span class="tag">雪山海子</span><span class="tag">中低徒步</span><span class="tag">高原</span><span class="tag">不辣友好</span></div>
+        <h1>稻城亚丁雪山海子中低徒步线</h1>
+        <p data-hero-route>广州/佛山 → 成都 → 稻城亚丁机场 → 香格里拉镇 → 亚丁景区 → 稻城 → 成都 → 广州/佛山</p>
+        <p><b>核心：</b>冲古寺、冲古草甸、珍珠海、洛绒牛场。牛奶海和五色海只作高强度可选支线。</p>
+      </div>
+      <aside class="nature-overview" aria-label="路线总览">
+        <h2>路线总控台</h2>
+        <div class="overview-row"><span>当前方案</span><b data-current-plan>方案A｜7天飞机快进版</b></div>
+        <div class="overview-row"><span>天数</span><b data-hero-days>7天6晚</b></div>
+        <div class="overview-row"><span>交通</span><b data-hero-traffic>飞机 + 正规接驳 + 景区观光车</b></div>
+        <div class="overview-row"><span>徒步强度</span><b>默认中低；必要栈道和缓坡，不连续高强度爬升</b></div>
+        <div class="overview-row"><span>适合</span><b>想看雪山、草甸和海子，能接受高原与必要步行的人</b></div>
+        <div class="overview-row"><span>不适合</span><b>近期心肺不适、严重贫血、完全不能步行或拒绝高原风险的人</b></div>
+        <div class="overview-row"><span>核对规则</span><b>航班、票价、道路和开放范围以出发前官方页面为准</b></div>
+      </aside>
     </div>
   </header>
-  <nav class="topnav"><a href="#decision">先看取舍</a><a href="#outline">七天骨架</a><a href="#spots">景点怎么取舍</a><a href="#stay">住宿</a><a href="#check">出发前核对</a></nav>
-  <main class="wrap">
-    <section id="decision">
-      <div class="section-title"><h2>先给结论</h2><span class="lead">它很震撼，但不是“轻松顺路加一个”的地方</span></div>
-      <div class="preview-grid">
-        <article class="decision-card"><strong>值得单独做</strong><p>雪山、草甸、河谷和海子与九寨沟是完全不同的画面，适合想看强烈自然奇观的人。</p></article>
-        <article class="decision-card"><strong>不并入九寨沟</strong><p>两个方向不顺。7天把两地混在一起会只剩转场，反而看不到亚丁真正的节奏。</p></article>
-        <article class="decision-card"><strong>与你的偏好要讲清</strong><p>不爱爬山可以做“观光车 + 冲古草甸 + 神山观景”版；牛奶海、五色海不作为任务。高原与一定步行仍不可避免。</p></article>
+
+  <nav class="nature-nav" aria-label="页内导航">
+    <a href="#answer">先看结论</a><a href="#plans">方案选择</a><a href="#route-map">路线图</a><a href="#dashboard">30秒总控</a><a href="#check48">48小时核对</a><a href="#tickets">票务</a><a href="#days">每日执行</a><a href="#traffic">交通</a><a href="#stay">住宿</a><a href="#spots">景区走法</a><a href="#food">不辣吃饭</a><a href="#budget">预算</a><a href="#emergency">应急</a><a href="#sources">来源</a>
+  </nav>
+
+  <main>
+    <section class="nature-section" id="answer">
+      <div class="section-title"><h2>先给结论</h2><span class="lead">它值得单独成线，但不适合硬塞进九寨沟</span></div>
+      <div class="decision-grid">
+        <article class="decision-card recommended"><div class="badge-row"><span class="mini-badge">主玩法</span><span class="mini-badge">中低徒步</span></div><h3>把雪山草甸看完整，不追高海拔打卡</h3><p>短线看冲古寺、冲古草甸和珍珠海；第二天按景区当天开放交通到洛绒牛场，步行以草甸近端栈道为主。画面已经足够代表亚丁。</p></article>
+        <article class="decision-card hard-rule"><div class="badge-row"><span class="mini-badge alert">硬规则</span></div><h3>牛奶海、五色海不是默认行程</h3><p>挑战线海拔高、爬升长、天气变化快。只有身体无不适、天气好、景区开放且本人主动想走时才临时考虑；任何一项不合适就不去。</p></article>
       </div>
-      <div class="notice"><b>为什么之前没有放进九寨沟页：</b>不是漏掉，而是避免把“很有名”误写成“适合顺路加”。亚丁核心高处的牛奶海、五色海海拔约4600—4700米且需要徒步，官方攻略也明确提示要量力而行。</div>
+      <div class="notice"><b>不辣要求：</b>全程默认清淡、不放辣椒、不放红油、不放花椒、不放麻油。高原日不要空腹，也不要饮酒。</div>
     </section>
 
-    <section id="outline">
-      <div class="section-title"><h2>七天路线骨架</h2><span class="lead">先按不硬赶、不过度徒步的版本留档</span></div>
-      <div class="preview-timeline">
-        <article class="preview-day"><b>D1｜广州/佛山 → 成都</b><span>落地直接住，优先适应与补给；不夜逛。</span></article>
-        <article class="preview-day"><b>D2｜成都 → 稻城/香格里拉镇</b><span>飞机或正规小团接驳；到达后只休息。</span></article>
-        <article class="preview-day"><b>D3｜亚丁短线</b><span>冲古草甸、神山观景；以适应海拔为第一目标。</span></article>
-        <article class="preview-day"><b>D4｜亚丁轻量观景</b><span>观光车到可达区域，按体力决定是否加步行。</span></article>
-        <article class="preview-day"><b>D5｜稻城周边</b><span>白塔、河谷、桑堆等低强度补景；不赶远路。</span></article>
-        <article class="preview-day"><b>D6｜稻城 → 成都</b><span>留足转场与天气缓冲，晚上睡成都。</span></article>
-        <article class="preview-day"><b>D7｜成都 → 广州/佛山</b><span>只保返程；不再临时塞重景点。</span></article>
+    <section class="nature-section" id="plans">
+      <div class="section-title"><h2>选择旅行节奏</h2><span class="lead">点击后，总控、每日行程、交通、住宿和预算同步切换</span></div>
+      <div class="plan-grid" role="group" aria-label="选择稻城亚丁路线方案">
+        <button class="plan-button" type="button" data-plan-target="a" aria-pressed="true">
+          <span class="badge-row"><span class="mini-badge">7天</span><span class="mini-badge warn">省时间</span></span>
+          <span class="plan-title">方案A｜飞机快进 + 严格休息版</span>
+          <span class="plan-copy"><b>路线：</b>成都飞稻城，落地立即下撤香格里拉镇；两天景区后住稻城县城，再飞回成都。</span>
+          <span class="plan-copy"><b>住宿：</b>成都机场圈2晚分住 + 香格里拉镇3晚 + 稻城县城1晚。</span>
+          <span class="plan-copy"><b>适合：</b>时间只有7天、愿意接受机场海拔跳升并严格休息的人。</span>
+          <span class="plan-copy"><b>优点：</b>少两天盘山公路，时间和总预算相对可控。</span>
+          <span class="plan-copy"><b>缺点：</b>稻城机场海拔约4411米，海拔跳升明显；D2必须只转场休息。</span>
+        </button>
+        <button class="plan-button" type="button" data-plan-target="b" aria-pressed="false">
+          <span class="badge-row"><span class="mini-badge">8天</span><span class="mini-badge">渐进适应</span></span>
+          <span class="plan-title">方案B｜陆路渐进 + 回程飞版</span>
+          <span class="plan-copy"><b>路线：</b>成都经康定到新都桥住1晚，次日经理塘到香格里拉镇，返程由稻城机场飞成都。</span>
+          <span class="plan-copy"><b>住宿：</b>成都集合点1晚 + 新都桥1晚 + 香格里拉镇3晚 + 稻城/成都各1晚。</span>
+          <span class="plan-copy"><b>适合：</b>有8天、想逐步适应海拔且能接受两天较长车程的人。</span>
+          <span class="plan-copy"><b>优点：</b>海拔逐步上升，沿途景观丰富，初到高原更有适应过程。</span>
+          <span class="plan-copy"><b>缺点：</b>连续两天长车程，必须选正规小团/接驳，不建议新手自己开。</span>
+        </button>
+      </div>
+      <div class="plan-status" aria-live="polite"><span>当前显示：<b data-current-plan>方案A｜7天飞机快进版</b></span><span>刷新和分享链接会保留选择</span></div>
+    </section>
+
+    <section class="nature-section" id="route-map">
+      <div class="section-title"><h2>真实高德路线关系图</h2><span class="lead">地图只说明空间关系，正式出发按当天导航和正规接驳执行</span></div>
+      <article class="map-card" data-plan-group="a">
+        <div class="flight-map-note"><b>方案A不使用下方驾车长线图。</b><span>实际执行：成都实际机场 → 飞抵稻城亚丁机场 → 正规接驳下撤香格里拉镇 → 景区观光车进沟。飞机段必须以航司订单为准，避免把757公里驾车线误看成飞行路线。</span></div>
+      </article>
+      <article class="map-card" data-plan-group="b" hidden>
+        <figure><a href="../assets/images/daocheng-amap-road.png" target="_blank"><img loading="lazy" src="../assets/images/daocheng-amap-road.png" alt="成都到稻城亚丁景区高德地图路线截图"></a><figcaption>真实高德地图网页截图，点击可放大。底图只表达空间关系，不能代替出发当天导航；本页不建议新手自行驾驶长距离高原山路。<div class="map-legend" data-plan-group="a"><span>A1：成都机场 ⇄ 稻城亚丁机场，飞机</span><span>A2：稻城机场 → 香格里拉镇，正规接驳</span><span>A3：香格里拉镇 ⇄ 亚丁游客中心</span></div><div class="map-legend" data-plan-group="b" hidden><span>B1：成都 → 康定 → 新都桥，陆路第1天</span><span>B2：新都桥 → 理塘 → 香格里拉镇，陆路第2天</span><span>B3：香格里拉镇 ⇄ 亚丁游客中心；稻城机场飞回成都</span></div></figcaption></figure>
+      </article>
+    </section>
+
+    <section class="nature-section" id="dashboard">
+      <div class="section-title"><h2>30秒看懂：今天去哪、今晚住哪</h2><span class="lead">手机左右滑动；这里只放总控，不塞详细攻略</span></div>
+      <div data-plan-group="a">
+        <div class="day-dashboard">
+          <article class="day-glance"><strong>D1｜飞成都</strong><p><b>路线：</b>广州白云 → 成都</p><p><b>今晚：</b>实际起飞机场圈</p><p><b>关键：</b>不夜逛，确认D2航站楼</p></article>
+          <article class="day-glance"><strong>D2｜飞稻城</strong><p><b>路线：</b>成都 → 稻城机场 → 香格里拉镇</p><p><b>今晚：</b>香格里拉镇第1晚/共3晚</p><p><b>关键：</b>机场不久留，只下撤休息</p></article>
+          <article class="day-glance"><strong>D3｜景区短线</strong><p><b>路线：</b>冲古 → 珍珠海</p><p><b>今晚：</b>香格里拉镇第2晚/共3晚</p><p><b>关键：</b>仙乃日和草甸优先</p></article>
+          <article class="day-glance"><strong>D4｜洛绒牛场</strong><p><b>路线：</b>景区交通 + 草甸近端栈道</p><p><b>今晚：</b>香格里拉镇第3晚/共3晚</p><p><b>关键：</b>不默认走牛奶海</p></article>
+          <article class="day-glance"><strong>D5｜恢复转场</strong><p><b>路线：</b>香格里拉镇 → 稻城县城</p><p><b>今晚：</b>稻城县城第1晚/共1晚</p><p><b>关键：</b>白塔可删，先恢复</p></article>
+          <article class="day-glance"><strong>D6｜飞成都</strong><p><b>路线：</b>稻城机场 → 成都</p><p><b>今晚：</b>成都机场圈第1晚/共1晚</p><p><b>关键：</b>不接同日紧张返程</p></article>
+          <article class="day-glance"><strong>D7｜返广州</strong><p><b>路线：</b>成都 → 广州/佛山</p><p><b>今晚：</b>正常不住</p><p><b>关键：</b>只保返程</p></article>
+        </div>
+      </div>
+      <div data-plan-group="b" hidden>
+        <div class="day-dashboard">
+          <article class="day-glance"><strong>D1｜到成都</strong><p><b>路线：</b>广州/佛山 → 成都</p><p><b>今晚：</b>正规接驳集合点附近</p><p><b>关键：</b>确认司机和车牌</p></article>
+          <article class="day-glance"><strong>D2｜到新都桥</strong><p><b>路线：</b>成都 → 康定 → 新都桥</p><p><b>今晚：</b>新都桥主路第1晚/共1晚</p><p><b>关键：</b>长车程，不临时加点</p></article>
+          <article class="day-glance"><strong>D3｜到香格里拉镇</strong><p><b>路线：</b>新都桥 → 理塘 → 香格里拉镇</p><p><b>今晚：</b>香格里拉镇第1晚/共3晚</p><p><b>关键：</b>天黑前入住</p></article>
+          <article class="day-glance"><strong>D4｜景区短线</strong><p><b>路线：</b>冲古 → 珍珠海</p><p><b>今晚：</b>香格里拉镇第2晚/共3晚</p><p><b>关键：</b>短线适应</p></article>
+          <article class="day-glance"><strong>D5｜洛绒牛场</strong><p><b>路线：</b>景区交通 + 草甸近端栈道</p><p><b>今晚：</b>香格里拉镇第3晚/共3晚</p><p><b>关键：</b>中低强度止步</p></article>
+          <article class="day-glance"><strong>D6｜稻城恢复</strong><p><b>路线：</b>香格里拉镇 → 稻城县城</p><p><b>今晚：</b>稻城县城</p><p><b>关键：</b>白塔可删</p></article>
+          <article class="day-glance"><strong>D7｜飞成都</strong><p><b>路线：</b>稻城机场 → 成都</p><p><b>今晚：</b>成都机场圈</p><p><b>关键：</b>保留航班缓冲</p></article>
+          <article class="day-glance"><strong>D8｜返广州</strong><p><b>路线：</b>成都 → 广州/佛山</p><p><b>今晚：</b>正常不住</p><p><b>关键：</b>只保返程</p></article>
+        </div>
       </div>
     </section>
 
-    <section id="spots">
-      <div class="section-title"><h2>景点怎么取舍</h2><span class="lead">不做“必须徒步到最高点”的假承诺</span></div>
-      <details class="spot-card" open><summary><img loading="lazy" src="../assets/images/daocheng-yading-cover.jpg" alt="冲古草甸与夏诺多吉实景"><div><b>冲古草甸 / 神山观景</b><p class="lead">优先保留：观景价值高，适合作为高原适应日。</p></div></summary><div class="spot-body"><p><b>走法：</b>按景区当天观光车与步道指引，到冲古寺、草甸和安全观景平台为主；不舒服立刻回到观光车线，不硬走。</p><p><b>要带：</b>身份证、景区预约、雨衣、防晒、薄羽绒/冲锋衣、水、轻食、充电宝；小瓶氧气可在当地按需要购买。</p></div></details>
-      <details class="spot-card"><summary><img loading="lazy" src="../assets/images/daocheng-yading-cover.jpg" alt="亚丁雪山实景"><div><b>洛绒牛场 / 长线分叉</b><p class="lead">可选：只在天气、身体和景区开放条件都合适时考虑。</p></div></summary><div class="spot-body"><p><b>本路线规则：</b>不把牛奶海、五色海列为必达点。高原反应、下雨、云雾或体力不佳时，原路返回就是正确选择，不是“少玩了”。</p><p><b>官方核对：</b>门票、观光车、观景车及当日开放范围，以亚丁景区官网/公众号和现场公告为准。</p></div></details>
-      <details class="spot-card"><summary><img loading="lazy" src="../assets/images/daocheng-yading-cover.jpg" alt="稻城亚丁雪山实景"><div><b>稻城周边轻量日</b><p class="lead">把它作为恢复体力与拍照缓冲，不再增加长徒步。</p></div></summary><div class="spot-body"><p><b>适合安排：</b>白塔、河谷、桑堆方向按当天车况与天气选择；司机/小团路线必须前一晚确认，避免在高原临时跑远路。</p></div></details>
-    </section>
-
-    <section id="stay">
-      <div class="section-title"><h2>住宿只选这四类圈</h2><span class="lead">先把高原休息质量放在景观房前面</span></div>
-      <div class="preview-grid">
-        <article class="preview-card"><h3>成都东站圈</h3><p>适合首晚和返程；订房关键词：<b>成都东站 酒店 可取消</b>。第二天转场更稳。</p></article>
-        <article class="preview-card"><h3>香格里拉镇主路</h3><p>去亚丁入口最顺。优先确认热水、供氧/供暖说明、是否靠主路、能否打车。</p></article>
-        <article class="preview-card"><h3>稻城县城主路</h3><p>适合D5恢复体力。关键词：<b>稻城县城 酒店 可取消</b>；不要只为景观订到偏远村落。</p></article>
+    <section class="nature-section" id="quick">
+      <div class="section-title"><h2>旅行现场快捷执行卡</h2><span class="lead">到了当地，先看这一排</span></div>
+      <div class="quick-exec-grid" data-plan-group="a">
+        <article class="quick-exec"><h3>D1-D2｜进高原</h3><p><b>睡前：</b>核对成都起飞机场、航站楼、稻城接车人。</p><p><b>落地：</b>机场约4411米，不逗留拍照，直接下撤。</p></article>
+        <article class="quick-exec"><h3>D3｜短线</h3><p><b>必带：</b>身份证、票码、雨具、薄外套、水、充电宝。</p><p><b>止损：</b>头痛胸闷就回冲古寺/车站。</p></article>
+        <article class="quick-exec"><h3>D4｜洛绒</h3><p><b>默认：</b>按景区当日交通往返，洛绒牛场栈道慢走。</p><p><b>不做：</b>不把牛奶海/五色海当成必须。</p></article>
+        <article class="quick-exec"><h3>D5-D7｜退高原</h3><p><b>今晚：</b>稻城县城恢复，再飞成都。</p><p><b>原则：</b>航班日不再接紧张跨城票。</p></article>
+      </div>
+      <div class="quick-exec-grid" data-plan-group="b" hidden>
+        <article class="quick-exec"><h3>D1｜集合</h3><p><b>睡前：</b>确认正规订单、司机、车牌、接送点。</p><p><b>不要：</b>不接陌生人私下揽客。</p></article>
+        <article class="quick-exec"><h3>D2-D3｜陆路</h3><p><b>必带：</b>晕车药、水、轻食、薄外套、充电宝。</p><p><b>原则：</b>长车程不临时加景点，不赶夜路。</p></article>
+        <article class="quick-exec"><h3>D4-D5｜亚丁</h3><p><b>顺序：</b>先短线，再洛绒中低强度线。</p><p><b>止损：</b>任何高反立即缩短。</p></article>
+        <article class="quick-exec"><h3>D6-D8｜返程</h3><p><b>今晚：</b>稻城恢复，飞成都后再住一晚。</p><p><b>原则：</b>不压缩航班缓冲。</p></article>
       </div>
     </section>
 
-    <section id="check">
-      <div class="section-title"><h2>这条线确认前必须过四关</h2><span class="lead">四项都能接受，才值得深挖成执行手册</span></div>
-      <div class="list-grid">
-        <article class="preview-card"><h3>高原</h3><p>接受高海拔、温差、雨雾与“看到不清雪山”的可能；有基础病先咨询医生。</p></article>
-        <article class="preview-card"><h3>步行</h3><p>接受景区内必要步行；不把牛奶海/五色海作为强制任务。</p></article>
-        <article class="preview-card"><h3>交通</h3><p>提前锁定成都—稻城大交通和当地正规接驳；不要临时拼陌生私车。</p></article>
-        <article class="preview-card"><h3>时间</h3><p>至少7天6晚，首尾另留航班缓冲；它不适合压缩成五天周末式行程。</p></article>
+    <section class="nature-section" id="photos">
+      <div class="section-title"><h2>这条线真正值得看的画面</h2><span class="lead">全部为不同地点的真实实景图</span></div>
+      <div class="photo-showcase">
+        <article class="photo-tile"><img loading="lazy" src="../assets/images/daocheng-chonggu.jpg" alt="冲古寺实景"><div><b>冲古寺</b><span>短线入口的寺院、森林与神山框景</span></div></article>
+        <article class="photo-tile"><img loading="lazy" src="../assets/images/daocheng-xiannairi.jpg" alt="仙乃日峰实景"><div><b>仙乃日</b><span>珍珠海短线的雪山主体</span></div></article>
+        <article class="photo-tile"><img loading="lazy" src="../assets/images/daocheng-luorong.jpg" alt="洛绒牛场实景"><div><b>洛绒牛场</b><span>电瓶车可达的草甸与三神山视角</span></div></article>
+        <article class="photo-tile"><img loading="lazy" src="../assets/images/daocheng-yading-cover.jpg" alt="冲古草甸和夏诺多吉实景"><div><b>冲古草甸</b><span>中低强度也能获得的代表性画面</span></div></article>
+        <article class="photo-tile"><img loading="lazy" src="../assets/images/daocheng-milk-lake.jpg" alt="牛奶海实景"><div><b>牛奶海</b><span>高强度可选支线，不设为默认目标</span></div></article>
+        <article class="photo-tile"><img loading="lazy" src="../assets/images/daocheng-white-pagoda.jpg" alt="稻城白塔实景"><div><b>稻城白塔</b><span>返程恢复日的低强度可选停留</span></div></article>
       </div>
-      <div class="notice">本页为独立候选版。景区开放、门票、观光车、航班、天气和高原道路情况均会变化，出发前请以亚丁景区官方、航司、酒店平台和高德实际页面为准。</div>
-      <p class="lead">图片来源：<a href="https://commons.wikimedia.org/wiki/File:Yading_Chanadorje-Xianuoduoji_Chonggu_Grassland.jpg" target="_blank" rel="noopener">Wikimedia Commons｜Yading Chanadorje-Xianuoduoji Chonggu Grassland</a>（CC BY-SA）。</p>
+    </section>
+
+    <section class="nature-section" id="check48">
+      <div class="section-title"><h2>出发前48小时最终核对</h2><span class="lead">漏一项就先补，不靠现场碰运气</span></div>
+      <div class="checklist-board">
+        <article class="checklist-card"><h3>大交通</h3><label><input type="checkbox">成都进出航班/车票已付款</label><label><input type="checkbox">成都起飞机场和航站楼已核对</label><label data-plan-group="a"><input type="checkbox">稻城机场正规接车已确认</label><label data-plan-group="b" hidden><input type="checkbox">成都至新都桥正规陆路订单已确认</label><label><input type="checkbox">返程保留一晚缓冲</label></article>
+        <article class="checklist-card"><h3>住宿</h3><label><input type="checkbox">香格里拉镇连续3晚已订</label><label><input type="checkbox">确认热水、供暖/空调、电梯或楼层</label><label><input type="checkbox">可取消、可寄存、靠主路</label><label><input type="checkbox">高反时可否协助供氧/就医</label></article>
+        <article class="checklist-card"><h3>景区票务</h3><label><input type="checkbox">实名预约与当前门票政策已核对</label><label><input type="checkbox">第二个景区日的二次入园规则已问清</label><label><input type="checkbox">观光车、电瓶车当前收费与运营已核对</label><label><input type="checkbox">挑战线是否开放不影响主线</label></article>
+        <article class="checklist-card"><h3>高原物品</h3><label><input type="checkbox">薄羽绒/冲锋衣、雨衣、防晒</label><label><input type="checkbox">水、轻食、晕车药、常用药</label><label><input type="checkbox">手机和充电宝全部充满</label><label><input type="checkbox">不辣点餐话术已截图</label></article>
+        <article class="checklist-card"><h3>身体状态</h3><label><input type="checkbox">无发热、感冒、胸闷或明显疲劳</label><label><input type="checkbox">知道头痛胸闷时立即停止</label><label><input type="checkbox">有基础疾病已咨询医生</label><label><input type="checkbox">不饮酒、不跑跳、不硬撑</label></article>
+        <article class="checklist-card"><h3>天气与止损</h3><label><input type="checkbox">亚丁官方天气和公告已查</label><label><input type="checkbox">首个景区日大雨时只走短线或镇上休息</label><label><input type="checkbox">第二个景区日天气差就取消洛绒长停</label><label><input type="checkbox">明确牛奶海可随时删除</label></article>
+      </div>
+    </section>
+
+    <section class="nature-section" id="tickets">
+      <div class="section-title"><h2>票务预约总表</h2><span class="lead">2026-07-16核对；支付前再次看官方公告</span></div>
+      <div class="table-scroll"><table class="route-table"><thead><tr><th>项目</th><th>当前参考</th><th>在哪里查</th><th>建议提前</th><th>没票/停运怎么办</th></tr></thead><tbody>
+        <tr><td>亚丁景区实名预约/门票</td><td><b>2026-08-01至10-31门票免票</b>；7月31日前支付价仍须在官方付款页复核</td><td>亚丁景区官网、官方微信公众号、官方购票页</td><td>日期确定后即查；免票期也须实名预约</td><td>不找不明代购；预约失败就改日期，不现场赌名额</td></tr>
+        <tr><td>游客中心至扎灌崩交通</td><td>景区自2026-05-29起暂停交通服务收费；新价格公布前不写死</td><td>官方购票页、公众号、入园当日公告</td><td>与预约一起确认</td><td>停运则不进沟，不步行替代约37公里公路</td></tr>
+        <tr><td>冲古寺至洛绒牛场交通</td><td>同属本轮交通服务整改范围，当前是否收费及运营以官方付款页为准</td><td>景区官方、现场公告</td><td>第二个景区日前一晚复核</td><td>停运就只做短线，不徒步补约6.7公里</td></tr>
+        <tr><td>二次入园</td><td>旧规则为首日实名登记；整改期政策可能联动变化</td><td>首日检票口、官方购票页、公众号</td><td>首个景区日入园前问清</td><td>无法二进就把洛绒与短线二选一，不违规重复入园</td></tr>
+        <tr><td>挑战线开放</td><td>受天气、步道和现场管控影响，不作为本路线默认内容</td><td>景区官网/公众号当天公告</td><td>只在洛绒当日判断</td><td>关闭或身体不适就停在洛绒牛场</td></tr>
+        <tr><td>成都与稻城大交通</td><td>A为往返航班；B为去程正规陆路、返程航班，班次和价格均会变</td><td>航司官网、正规平台小团/接驳订单、OTA支付页</td><td>确定日期后即查可取消方案</td><td>航班取消就续住；陆路异常按平台和交管安全落脚，不赶夜路</td></tr>
+      </tbody></table></div>
+      <p class="ticket-note"><b>政策时间线：</b>旧官方页面仍展示146元门票、120元观光车和80元电瓶车等历史标准，但2026-05-29起交通服务已暂停收费，2026-08-01至10-31门票免票。运营时段、二次入园和整改后的新交通价格必须以出发日期的官方付款页与当天公告为准。</p>
+    </section>
+
+    <section class="nature-section" id="days">
+      <div class="section-title"><h2>每日详细执行卡</h2><span class="lead">默认折叠，旅行时只展开当天</span></div>
+      <div class="day-details" data-plan-group="a">
+        <details class="nature-day"><summary><span class="day-code">D1</span><span class="day-summary-main"><b>广州/佛山 → 成都</b><span>落地即休息，不逛夜景</span></span><span class="stay-summary">住：实际起飞机场圈</span><span class="effort">轻松 ⭐</span></summary><div class="nature-day-inner"><div class="day-visual text-only"><div class="brief"><p><b>今日一句话：</b>把体力留给高原，成都只承担中转。</p><p><b>今日预算：</b>以航班支付页、机场接驳和酒店订单为准。</p><p><b>今日可删：</b>全部城市夜游。</p><p><b>导航关键词：</b>成都实际落地机场 + D2起飞机场酒店。</p><p><b>睡前：</b>确认D2起飞机场、航站楼、托运行李和稻城接车。</p></div></div><div class="timeline"><div class="timeline-row"><time>下午/晚上</time><p>佛山到广州白云机场，国内航班至少提前2小时到。</p></div><div class="timeline-row"><time>落地后</time><p>按D2实际起飞机场住同机场圈；若D2从另一机场起飞，今晚直接转到对应机场附近。</p></div></div><div class="fallback-grid"><div class="fallback"><b>晚点</b><p>取消所有活动，优先睡够。</p></div><div class="fallback"><b>太累</b><p>酒店外卖清淡面/粥。</p></div><div class="fallback"><b>明早</b><p>按航班建议提前2小时到航站楼。</p></div></div></div></details>
+        <details class="nature-day"><summary><span class="day-code">D2</span><span class="day-summary-main"><b>成都 → 稻城机场 → 香格里拉镇</b><span>高海拔落地转场日</span></span><span class="stay-summary">住：香格里拉镇第1/3晚</span><span class="effort">正常 ⭐⭐</span></summary><div class="nature-day-inner"><div class="day-visual"><img src="../assets/images/daocheng-yading-cover.jpg" alt="亚丁冲古草甸"><div class="brief"><p><b>今日目标：</b>安全下撤到约2900米的香格里拉镇。</p><p><b>关键风险：</b>稻城机场海拔约4411米，不在机场久留，不跑跳。</p><p><b>要带：</b>身份证、薄外套、水、晕车药、充电宝。</p></div></div><div class="timeline"><div class="timeline-row"><time>上午</time><p>成都飞稻城；具体航班以实际出票为准。</p></div><div class="timeline-row"><time>落地+30分钟</time><p>取行李、联系已确认的正规平台司机，核对姓名、车牌和目的地。</p></div><div class="timeline-row"><time>之后约2小时</time><p>稻城机场 → 香格里拉镇主路酒店；途中只做必要休息。</p></div><div class="timeline-row"><time>晚餐</time><p>清汤面、菌汤或清淡家常菜；不饮酒、不洗很热的长时间澡。</p></div></div><div class="fallback-grid"><div class="fallback"><b>明显不适</b><p>立即告诉司机，去低海拔镇区/卫生机构评估。</p></div><div class="fallback"><b>航班取消</b><p>成都续住，整体顺延；不当夜拼山路车。</p></div><div class="fallback"><b>明早</b><p>07:00前后出发，短线适应。</p></div></div></div></details>
+        <details class="nature-day"><summary><span class="day-code">D3</span><span class="day-summary-main"><b>亚丁短线：冲古寺 → 珍珠海</b><span>先适应，再看仙乃日</span></span><span class="stay-summary">住：香格里拉镇第2/3晚</span><span class="effort">正常 ⭐⭐</span></summary><div class="nature-day-inner"><div class="day-visual"><img src="../assets/images/daocheng-chonggu.jpg" alt="冲古寺"><div class="brief"><p><b>必看：</b>冲古寺、冲古草甸、珍珠海、仙乃日。</p><p><b>步行：</b>短线仍有台阶和缓坡，按约3-4小时慢走，不追速度。</p><p><b>可删：</b>任何绕行拍照点。</p></div></div><div class="timeline"><div class="timeline-row"><time>06:40</time><p>早餐、检查预约信息和天气。</p></div><div class="timeline-row"><time>07:00-07:30</time><p>酒店 → 亚丁游客中心，预留核验。</p></div><div class="timeline-row"><time>入园后</time><p>按当天交通安排到扎灌崩 → 步行冲古寺/草甸 → 珍珠海观景 → 原路返回乘车点。</p></div><div class="timeline-row"><time>15:30前后</time><p>开始返程，避免把第一天体力耗尽。</p></div></div><div class="fallback-grid"><div class="fallback"><b>下雨</b><p>只走冲古寺和草甸，珍珠海视路况删。</p></div><div class="fallback"><b>高反</b><p>停止上行，回扎灌崩乘车出沟。</p></div><div class="fallback"><b>今晚</b><p>充满手机/充电宝，核对D4交通和二次入园规则。</p></div></div></div></details>
+        <details class="nature-day"><summary><span class="day-code">D4</span><span class="day-summary-main"><b>洛绒牛场中低强度线</b><span>景区交通减腿，草甸慢走</span></span><span class="stay-summary">住：香格里拉镇第3/3晚</span><span class="effort">正常 ⭐⭐</span></summary><div class="nature-day-inner"><div class="day-visual"><img src="../assets/images/daocheng-luorong.jpg" alt="洛绒牛场"><div class="brief"><p><b>默认终点：</b>洛绒牛场栈道和开阔草甸。</p><p><b>中低强度：</b>按当天景区交通往返，只在牛场按状态慢走。</p><p><b>高强度分支：</b>牛奶海/五色海不是本方案任务。</p></div></div><div class="timeline"><div class="timeline-row"><time>07:00前后</time><p>按首日核对结果二次入园，乘当天开放交通到扎灌崩。</p></div><div class="timeline-row"><time>上午</time><p>步行到冲古寺交通站 → 按当天运营安排到洛绒牛场。</p></div><div class="timeline-row"><time>10:00-14:00</time><p>近端栈道、草甸、三神山视角；每30-40分钟坐下补水。</p></div><div class="timeline-row"><time>14:30后</time><p>开始返程，两段交通都留出排队时间。</p></div></div><div class="fallback-grid"><div class="fallback"><b>天气差</b><p>牛场短停后原路回，不硬等云开。</p></div><div class="fallback"><b>太累</b><p>到站只看近处草甸，随下一班返回。</p></div><div class="fallback"><b>明早</b><p>08:30左右退房去稻城县城。</p></div></div></div></details>
+        <details class="nature-day"><summary><span class="day-code">D5</span><span class="day-summary-main"><b>香格里拉镇 → 稻城县城</b><span>恢复体力和返机场准备</span></span><span class="stay-summary">住：稻城县城1晚</span><span class="effort">轻松 ⭐</span></summary><div class="nature-day-inner"><div class="day-visual"><img src="../assets/images/daocheng-white-pagoda.jpg" alt="稻城白塔"><div class="brief"><p><b>今日一句话：</b>只下撤、休息和确认送机，不再加高强度景点。</p><p><b>预算口径：</b>镇到县城接驳计入500-900元总接驳区间；白塔只做短打车可选。</p><p><b>必做/可删：</b>必做入住、补水和确认D6送机；白塔及全部额外景点都可删。</p><p><b>不辣吃饭：</b>搜“稻城县城 清淡家常菜 不辣”或“清汤面”。</p><p><b>今日要带：</b>身份证、接驳订单、水、晕车药、充电宝、薄外套。</p></div></div><div class="timeline"><div class="timeline-row"><time>08:30</time><p>香格里拉镇主路酒店退房；正规平台接驳约2-3小时，提前一晚确认上门点和两人总价。</p></div><div class="timeline-row"><time>11:30前后</time><p>稻城县城主路酒店寄存/入住，午餐后午睡2小时。</p></div><div class="timeline-row"><time>16:30前后</time><p>身体舒服才打车短看白塔30-45分钟；不舒服就留在酒店。</p></div><div class="timeline-row"><time>20:30</time><p>核对D6送机司机、车牌、出发时间和稻城机场航站楼。</p></div></div><div class="keyword-row"><button class="copy-btn" data-copy="稻城县城 主路 酒店" type="button">复制住宿导航</button><button class="copy-btn" data-copy="稻城白塔" type="button">复制白塔导航</button></div><div class="fallback-grid"><div class="fallback"><b>晚到</b><p>白塔直接删除，入住后只吃饭休息。</p></div><div class="fallback"><b>下雨/太累</b><p>不外出，酒店补水并把行李收好。</p></div><div class="fallback"><b>明早</b><p>按航班时间倒推3小时从县城酒店出发。</p></div></div></div></details>
+        <details class="nature-day"><summary><span class="day-code">D6</span><span class="day-summary-main"><b>稻城机场 → 成都</b><span>返程缓冲日</span></span><span class="stay-summary">住：成都机场圈1晚</span><span class="effort">轻松 ⭐</span></summary><div class="nature-day-inner"><div class="day-visual text-only"><div class="brief"><p><b>今日一句话：</b>平稳离开高原，不接同日跨城紧张票。</p><p><b>预算口径：</b>送机计入接驳区间，稻城飞成都计入2400-4200元两人往返航班项。</p><p><b>必做/可删：</b>只保送机、航班和入住；全部成都活动可删。</p><p><b>不辣吃饭：</b>机场或酒店选粥、清汤面、蒸蛋。</p><p><b>今日要带：</b>身份证、航班订单、充电宝、水、常用药。</p></div></div><div class="timeline"><div class="timeline-row"><time>航班前3小时</time><p>稻城县城主路酒店上车去稻城亚丁机场，山路、值机和安检一并留足缓冲。</p></div><div class="timeline-row"><time>起飞前2小时</time><p>到出发层办理值机；不在高海拔机场闲逛拍照。</p></div><div class="timeline-row"><time>落地成都后</time><p>机场到D7同机场圈酒店约30-60分钟，直接入住、清点行李和休息。</p></div></div><div class="keyword-row"><button class="copy-btn" data-copy="稻城亚丁机场 出发层" type="button">复制稻城机场</button><button class="copy-btn" data-copy="成都 实际起飞机场 酒店" type="button">复制成都机场酒店</button></div><div class="fallback-grid"><div class="fallback"><b>航班晚点</b><p>成都酒店保留可取消，不把D7改成早班紧接。</p></div><div class="fallback"><b>身体不适</b><p>停止活动，向机场工作人员求助并按需就医。</p></div><div class="fallback"><b>明早</b><p>按D7航班提前2小时到对应航站楼。</p></div></div></div></details>
+        <details class="nature-day"><summary><span class="day-code">D7</span><span class="day-summary-main"><b>成都 → 广州/佛山</b><span>返程</span></span><span class="stay-summary">正常不住宿</span><span class="effort">轻松 ⭐</span></summary><div class="nature-day-inner"><div class="day-visual text-only"><div class="brief"><p><b>今日一句话：</b>只保返程，不补成都景点。</p><p><b>预算口径：</b>成都到广州机票计入2600-4200元两人往返项；广州回佛山按实际城际/地铁/打车付款。</p><p><b>必做/可删：</b>必做值机和回家；全部补景点可删。</p><p><b>不辣吃饭：</b>机场简餐选粥粉面或清淡套餐。</p><p><b>今日要带：</b>身份证、航班订单、充电宝、水、全部行李。</p></div></div><div class="timeline"><div class="timeline-row"><time>航班前2.5小时</time><p>成都机场圈酒店退房，乘酒店接送或打车到实际航站楼。</p></div><div class="timeline-row"><time>航班前2小时</time><p>完成值机和安检，不临时离开机场。</p></div><div class="timeline-row"><time>落地广州后</time><p>按当日运营选择地铁、城际或打车回佛山。</p></div></div><div class="keyword-row"><button class="copy-btn" data-copy="成都 实际起飞机场 航站楼" type="button">复制返程机场</button></div><div class="fallback-grid"><div class="fallback"><b>晚点</b><p>优先改签同日后续航班；必要时续住机场圈。</p></div><div class="fallback"><b>身体不适</b><p>先就医，不补行程。</p></div><div class="fallback"><b>结束</b><p>落地后向家人报平安并检查行李。</p></div></div></div></details>
+      </div>
+
+      <div class="day-details" data-plan-group="b" hidden>
+        <details class="nature-day"><summary><span class="day-code">D1</span><span class="day-summary-main"><b>广州/佛山 → 成都</b><span>接驳集合准备</span></span><span class="stay-summary">住：集合点1晚</span><span class="effort">轻松 ⭐</span></summary><div class="nature-day-inner"><div class="day-visual text-only"><div class="brief"><p><b>今日一句话：</b>落地后住到集合点1公里内，只为明早准时上车。</p><p><b>预算口径：</b>广州成都大交通按支付页；成都接驳与集合点住宿按订单。</p><p><b>必做/可删：</b>必做核对司机、车牌、保险、路线、两人总价；夜游全部删除。</p><p><b>不辣吃饭：</b>集合点附近清汤面、粥或蒸菜。</p><p><b>今日要带：</b>身份证、订单、充电宝、晕车药、薄外套。</p></div></div><div class="timeline"><div class="timeline-row"><time>下午/晚上</time><p>广州/佛山到成都，按票面提前到机场或车站。</p></div><div class="timeline-row"><time>落地后60分钟内</time><p>到订单指定集合点1公里内酒店入住。</p></div><div class="timeline-row"><time>21:00前</time><p>书面确认D2上车点、07:30前后发车、司机电话、车牌和退款规则。</p></div></div><div class="keyword-row"><button class="copy-btn" data-copy="订单中的成都集合点全名" type="button">复制集合点提示</button></div><div class="fallback-grid"><div class="fallback"><b>晚到</b><p>先联系平台改次日集合，不私下追车。</p></div><div class="fallback"><b>太累</b><p>外卖清淡餐，立即休息。</p></div><div class="fallback"><b>明早</b><p>比约定集合时间提前20分钟到上车点。</p></div></div></div></details>
+        <details class="nature-day"><summary><span class="day-code">D2</span><span class="day-summary-main"><b>成都 → 康定 → 新都桥</b><span>陆路适应第1天</span></span><span class="stay-summary">住：新都桥主路1晚</span><span class="effort">较累 ⭐⭐⭐</span></summary><div class="nature-day-inner"><div class="day-visual text-only"><div class="brief"><p><b>今日目标：</b>只完成转场并住进新都桥，不把康定当住宿变量。</p><p><b>今日交通：</b>正规小团/平台接驳；约8-10小时，以路况为准。</p><p><b>今日必做：</b>核对司机、车牌、保险、两人总价和新都桥酒店送达点。</p><p><b>今日可删：</b>全部沿途临时景点。</p><p><b>不辣吃饭：</b>清汤面、蒸蛋、米饭和清淡家常菜。</p><p><b>导航关键词：</b>新都桥镇主路酒店。</p></div></div><div class="timeline"><div class="timeline-row"><time>07:30前后</time><p>成都集合点上车，行李和证件随身。</p></div><div class="timeline-row"><time>中午</time><p>正规服务区简餐补水，不吃重辣。</p></div><div class="timeline-row"><time>天黑前</time><p>到新都桥主路酒店入住，确认D3接车。</p></div></div><div class="fallback-grid"><div class="fallback"><b>堵车</b><p>取消所有停留，仍无法到达就按平台安排安全落脚。</p></div><div class="fallback"><b>不适</b><p>立刻告知司机，在正规服务点休息。</p></div><div class="fallback"><b>明早</b><p>07:30后出发，先吃早餐。</p></div></div></div></details>
+        <details class="nature-day"><summary><span class="day-code">D3</span><span class="day-summary-main"><b>新都桥 → 理塘 → 香格里拉镇</b><span>陆路适应第2天</span></span><span class="stay-summary">住：香格里拉镇第1/3晚</span><span class="effort">较累 ⭐⭐⭐</span></summary><div class="nature-day-inner"><div class="day-visual text-only"><div class="brief"><p><b>今日一句话：</b>只做长转场，目标是天黑前住进香格里拉镇。</p><p><b>预算口径：</b>与D2共用方案B陆路3800-6800元两人书面订单。</p><p><b>必做/可删：</b>理塘只补给、用厕所；沿途打卡全部可删。</p><p><b>不辣吃饭：</b>服务区清汤面或自备面包、牛奶。</p><p><b>今日要带：</b>身份证、水、轻食、晕车药、充电宝、薄外套。</p></div></div><div class="timeline"><div class="timeline-row"><time>07:30</time><p>新都桥主路酒店上车，核对当天终点和司机。</p></div><div class="timeline-row"><time>中午</time><p>理塘正规服务点短停30-45分钟，只补给、用厕所和简单午餐。</p></div><div class="timeline-row"><time>天黑前</time><p>送达香格里拉镇主路酒店，入住后不再外出。</p></div></div><div class="keyword-row"><button class="copy-btn" data-copy="稻城亚丁香格里拉镇 主路 酒店" type="button">复制今晚住宿</button></div><div class="fallback-grid"><div class="fallback"><b>晚点</b><p>按平台/交管在安全城镇住宿，触发下方异常重排，不走夜路。</p></div><div class="fallback"><b>太累</b><p>车上休息，沿途点全部删除。</p></div><div class="fallback"><b>明早</b><p>正常到镇才07:00前后去短线；异常到达则按重排执行。</p></div></div></div></details>
+        <details class="nature-day"><summary><span class="day-code">D4</span><span class="day-summary-main"><b>亚丁短线：冲古 → 珍珠海</b><span>中低强度适应</span></span><span class="stay-summary">住：香格里拉镇第2/3晚</span><span class="effort">正常 ⭐⭐</span></summary><div class="nature-day-inner"><div class="day-visual"><img src="../assets/images/daocheng-chonggu.jpg" alt="冲古寺与草甸"><div class="brief"><p><b>今日一句话：</b>先用短线看仙乃日并测试身体，不追速度。</p><p><b>预算口径：</b>以官方预约页和当日交通付款页为准。</p><p><b>必做/可删：</b>必做冲古草甸、仙乃日；珍珠海上行段可删。</p><p><b>不辣吃饭：</b>自带轻食，回镇搜“清汤面 不辣”。</p><p><b>今日要带：</b>身份证、票码、雨衣、水、轻食、充电宝、薄外套。</p></div></div><div class="timeline"><div class="timeline-row"><time>07:00-07:30</time><p>酒店到亚丁游客中心，至少提前30分钟核验。</p></div><div class="timeline-row"><time>入园后</time><p>游客中心 → 当日交通 → 扎灌崩 → 冲古寺/草甸 → 珍珠海 → 原路返回。</p></div><div class="timeline-row"><time>15:30前后</time><p>开始离场，回镇休息并确认D5二次入园规则。</p></div></div><div class="keyword-row"><button class="copy-btn" data-copy="稻城亚丁游客中心" type="button">复制景区入口</button></div><div class="fallback-grid"><div class="fallback"><b>下雨</b><p>只留冲古草甸，雷电或大雨直接出沟。</p></div><div class="fallback"><b>高反/太累</b><p>立即停止上行，回扎灌崩乘车。</p></div><div class="fallback"><b>明早</b><p>07:00前后出发；若今天不适，D5取消。</p></div></div></div></details>
+        <details class="nature-day"><summary><span class="day-code">D5</span><span class="day-summary-main"><b>洛绒牛场中低强度线</b><span>景区交通减腿</span></span><span class="stay-summary">住：香格里拉镇第3/3晚</span><span class="effort">正常 ⭐⭐</span></summary><div class="nature-day-inner"><div class="day-visual"><img src="../assets/images/daocheng-luorong.jpg" alt="洛绒牛场草甸"><div class="brief"><p><b>今日一句话：</b>坐车到草甸核心，只走近端栈道。</p><p><b>预算口径：</b>二次入园和洛绒交通以官方当日付款页为准。</p><p><b>必做/可删：</b>洛绒近端栈道必做；远端、骑马、牛奶海和五色海全可删。</p><p><b>不辣吃饭：</b>水与轻食自备，回镇吃菌汤或清汤面。</p><p><b>今日要带：</b>身份证、预约、雨衣、防风外套、水、轻食、充电宝。</p></div></div><div class="timeline"><div class="timeline-row"><time>07:00前后</time><p>酒店到游客中心，核对二次入园和交通运营。</p></div><div class="timeline-row"><time>上午</time><p>到扎灌崩 → 冲古寺交通站 → 按当日运营到洛绒牛场。</p></div><div class="timeline-row"><time>10:00-14:00</time><p>近端栈道慢走0.5-1.5公里，随时原路返回。</p></div><div class="timeline-row"><time>14:30后</time><p>乘车离场，回镇收拾D6行李。</p></div></div><div class="keyword-row"><button class="copy-btn" data-copy="稻城亚丁游客中心" type="button">复制景区入口</button></div><div class="fallback-grid"><div class="fallback"><b>天气差</b><p>到站短看15-30分钟就返程。</p></div><div class="fallback"><b>交通停运</b><p>取消洛绒，不徒步补6.7公里。</p></div><div class="fallback"><b>明早</b><p>08:30左右退房去稻城县城。</p></div></div></div></details>
+        <details class="nature-day"><summary><span class="day-code">D6</span><span class="day-summary-main"><b>香格里拉镇 → 稻城县城</b><span>恢复日</span></span><span class="stay-summary">住：稻城县城1晚</span><span class="effort">轻松 ⭐</span></summary><div class="nature-day-inner"><div class="day-visual text-only"><div class="brief"><p><b>今日一句话：</b>下撤、午睡、确认送机。</p><p><b>预算口径：</b>正规接驳约2-3小时，计入方案B另列300-700元接驳项。</p><p><b>必做/可删：</b>入住和确认D7送机必做；白塔可删。</p><p><b>不辣吃饭：</b>县城清淡家常菜或清汤面。</p><p><b>今日要带：</b>身份证、订单、水、晕车药、充电宝。</p></div></div><div class="timeline"><div class="timeline-row"><time>08:30</time><p>镇主路酒店退房上车。</p></div><div class="timeline-row"><time>11:30前后</time><p>到稻城县城主路酒店，午餐、午睡、补水。</p></div><div class="timeline-row"><time>20:30</time><p>确认D7司机、车牌、出发时间和航班。</p></div></div><div class="keyword-row"><button class="copy-btn" data-copy="稻城县城 主路 酒店" type="button">复制今晚住宿</button></div><div class="fallback-grid"><div class="fallback"><b>晚到</b><p>取消白塔，只入住。</p></div><div class="fallback"><b>太累</b><p>酒店休息，不外出。</p></div><div class="fallback"><b>明早</b><p>航班前3小时从县城出发。</p></div></div></div></details>
+        <details class="nature-day"><summary><span class="day-code">D7</span><span class="day-summary-main"><b>稻城机场 → 成都</b><span>飞离高原</span></span><span class="stay-summary">住：成都机场圈1晚</span><span class="effort">轻松 ⭐</span></summary><div class="nature-day-inner"><div class="day-visual text-only"><div class="brief"><p><b>今日一句话：</b>只飞离高原，不接当天广州紧张票。</p><p><b>预算口径：</b>稻城飞成都计入方案B大交通；送机计入接驳项。</p><p><b>必做/可删：</b>送机、航班和入住必做；全部成都活动可删。</p><p><b>不辣吃饭：</b>机场或酒店吃粥、清汤面。</p><p><b>今日要带：</b>身份证、航班订单、充电宝、水、常用药。</p></div></div><div class="timeline"><div class="timeline-row"><time>航班前3小时</time><p>县城主路酒店出发去稻城亚丁机场。</p></div><div class="timeline-row"><time>航班前2小时</time><p>到出发层值机安检，不久留拍照。</p></div><div class="timeline-row"><time>成都落地后</time><p>到D8同机场圈酒店入住。</p></div></div><div class="keyword-row"><button class="copy-btn" data-copy="稻城亚丁机场 出发层" type="button">复制稻城机场</button></div><div class="fallback-grid"><div class="fallback"><b>晚点</b><p>保留成都可取消酒店，不改同日联程。</p></div><div class="fallback"><b>不适</b><p>立即求助机场工作人员。</p></div><div class="fallback"><b>明早</b><p>按D8航班提前2小时到航站楼。</p></div></div></div></details>
+        <details class="nature-day"><summary><span class="day-code">D8</span><span class="day-summary-main"><b>成都 → 广州/佛山</b><span>返程</span></span><span class="stay-summary">正常不住宿</span><span class="effort">轻松 ⭐</span></summary><div class="nature-day-inner"><div class="day-visual text-only"><div class="brief"><p><b>今日一句话：</b>利用缓冲日从容返程，不补景点。</p><p><b>预算口径：</b>成都广州大交通按真实支付页。</p><p><b>必做/可删：</b>值机和回家必做；全部补景点可删。</p><p><b>不辣吃饭：</b>机场清淡套餐。</p><p><b>今日要带：</b>身份证、订单、充电宝、水、全部行李。</p></div></div><div class="timeline"><div class="timeline-row"><time>航班前2.5小时</time><p>成都机场圈酒店退房并前往实际航站楼。</p></div><div class="timeline-row"><time>落地广州后</time><p>按当日运营回佛山。</p></div></div><div class="keyword-row"><button class="copy-btn" data-copy="成都 实际起飞机场 航站楼" type="button">复制返程机场</button></div><div class="fallback-grid"><div class="fallback"><b>晚点</b><p>改签同日后续班或续住机场圈。</p></div><div class="fallback"><b>太累</b><p>取消一切停留，直接回家。</p></div><div class="fallback"><b>结束</b><p>向家人报平安并检查行李。</p></div></div></div></details>
+      </div>
+      <aside class="notice" data-plan-group="b" aria-label="方案B长途晚点闭环"><b>方案B长途晚点闭环：</b>D2若无法到新都桥，就在平台安排的康定等安全城镇住下，取消原D3香格里拉镇首晚并新增中途住宿；D3只到新都桥，D4再到香格里拉镇，D5只走冲古短线，洛绒牛场整天删除，D6-D8住宿与返程日期保持不变。D3若已离开新都桥但无法到香格里拉镇，也在安全城镇住下，取消香格里拉镇首晚；D4只完成到镇和休息，D5走短线，洛绒整天删除。两种情况都不改签固定返程前的D6稻城县城、D7成都、D8广州；若D5仍到不了景区，整条亚丁入园取消并向平台、酒店和航司办理退改。</aside>
+    </section>
+
+    <section class="nature-section" id="traffic">
+      <div class="section-title"><h2>交通接驳卡</h2><span class="lead">机场、高铁站、景区入口不混写</span></div>
+      <div class="transport-grid" data-plan-group="a">
+        <article class="transport-card"><h3>D1｜广州白云机场 → 成都机场</h3><ul><li><b>上/下车：</b>广州白云实际航站楼 → 成都天府或双流实际航站楼。</li><li><b>方式/购票：</b>航司官网或OTA支付页；优先与D2同机场衔接。</li><li><b>两人参考：</b>计入广州⇄成都机票2600-4200元区间。</li><li><b>预留：</b>国内航班提前2小时到；机场到酒店再留30-60分钟。</li><li><b>晚点：</b>只入住，不夜逛。</li><li><b>导航：</b>广州白云机场 + 航班号。</li></ul></article>
+        <article class="transport-card"><h3>D2｜成都机场 → 稻城亚丁机场 → 香格里拉镇</h3><ul><li><b>上/下车：</b>成都实际航站楼 → 稻城亚丁机场到达层 → 香格里拉镇主路酒店。</li><li><b>方式/购票：</b>航司/OTA出票；落地接驳只用平台订单或酒店确认车辆。</li><li><b>耗时：</b>飞行与候机按航班；机场下撤约2小时，以路况为准。</li><li><b>两人参考：</b>成都⇄稻城航班计2400-4200元；落地接驳另计入市内交通。</li><li><b>预留：</b>落地取行李约30分钟；司机姓名、电话、车牌提前一晚确认。</li><li><b>晚点：</b>成都续住，不连夜拼山路车。</li><li><b>导航：</b>稻城亚丁机场到达层；香格里拉镇主路酒店。</li></ul></article>
+        <article class="transport-card"><h3>两个景区日｜香格里拉镇 → 亚丁游客中心</h3><ul><li><b>上/下车：</b>主路酒店/平台确认点 → 亚丁游客中心。</li><li><b>方式：</b>酒店接送、正规出租或平台网约车。</li><li><b>耗时：</b>约15-30分钟，按酒店位置和排队。</li><li><b>两人参考：</b>往返计入500-900元总接驳区间，不写死单次价。</li><li><b>预留：</b>建议07:00前后离店，至少比预约时段早30分钟到。</li><li><b>晚点：</b>错过预约先联系景区，不接受陌生人加价带入。</li><li><b>导航：</b>稻城亚丁游客中心。</li></ul></article>
+        <article class="transport-card"><h3>恢复与返程｜香格里拉镇 → 稻城县城 → 机场</h3><ul><li><b>上/下车：</b>镇主路酒店 → 稻城县城主路酒店 → 稻城亚丁机场出发层。</li><li><b>方式：</b>正规平台接驳，优先同一订单写清两段。</li><li><b>耗时：</b>镇到县城约2-3小时；送机按订单和路况。</li><li><b>预留：</b>飞行日提前3小时离开县城。</li><li><b>晚点：</b>白塔直接删除；车辆爽约先平台改派。</li><li><b>导航：</b>稻城县城主路酒店；稻城亚丁机场出发层。</li></ul></article>
+      </div>
+      <div class="transport-grid" data-plan-group="b" hidden>
+        <article class="transport-card"><h3>D1｜广州/佛山 → 成都集合点</h3><ul><li><b>上/下车：</b>实际机场/高铁站 → 接驳订单指定集合点。</li><li><b>方式：</b>飞机或高铁按真实支付价比较。</li><li><b>住宿：</b>集合点1公里内，步行或短打车可达。</li><li><b>预留：</b>睡前核对司机、电话、车牌、保险、两人总价和退款规则。</li><li><b>导航：</b>订单中的成都集合点全名。</li></ul></article>
+        <article class="transport-card"><h3>D2｜成都 → 康定 → 新都桥</h3><ul><li><b>上/下车：</b>成都集合点 → 新都桥镇主路酒店。</li><li><b>方式/渠道：</b>正规小团、平台包车或固定接驳，只认平台订单。</li><li><b>耗时：</b>约8-10小时，以路况为准。</li><li><b>费用：</b>与D3共同计入方案B陆路3800-6800元两人区间。</li><li><b>预留：</b>07:30前后出发，必须明确天黑前送达。</li><li><b>晚点：</b>取消全部沿途停留，不临时改陌生私车。</li><li><b>导航：</b>新都桥镇主路酒店。</li></ul></article>
+        <article class="transport-card"><h3>D3｜新都桥 → 理塘 → 香格里拉镇</h3><ul><li><b>上/下车：</b>新都桥主路酒店 → 香格里拉镇主路酒店。</li><li><b>耗时：</b>约8-10小时，以路况为准。</li><li><b>费用：</b>与D2共用同一书面订单，确认两人总价和司机食宿是否包含。</li><li><b>预留：</b>只在理塘正规服务点短停补给。</li><li><b>晚点：</b>必要时按平台/交管安排安全中途住宿并顺延，不走长夜路。</li><li><b>导航：</b>稻城亚丁香格里拉镇主路酒店。</li></ul></article>
+        <article class="transport-card"><h3>D6-D7｜香格里拉镇 → 稻城 → 机场</h3><ul><li><b>D6：</b>下撤稻城县城恢复。</li><li><b>D7：</b>航班前3小时去机场，飞成都。</li><li><b>到成都：</b>住D8起飞机场圈。</li></ul></article>
+      </div>
+    </section>
+
+    <section class="nature-section" id="stay">
+      <div class="section-title"><h2>住宿流转与订房圈</h2><span class="lead">高原优先睡眠、热水、主路和应急，不追偏远景观房</span></div>
+      <div class="stay-flow" data-plan-group="a">
+        <article><h3>成都机场圈｜2晚分住</h3><p><b>范围：</b>次日实际起飞机场1-3公里；不跨天府/双流机场。</p><p><b>搜索：</b>“成都天府/双流机场 酒店 接送 24小时前台”。</p><p><b>价位风险：</b>暑期和深夜到达涨价，必须看含税支付价。</p><p><b>吃饭：</b>酒店简餐、粥粉面；避开需长途打车的网红圈。</p><p><b>检查：</b>可取消、接送时段、可寄存；次日直达航站楼。</p></article>
+        <article><h3>香格里拉镇｜连住3晚</h3><p><b>范围：</b>镇主路，距游客中心车程约15-30分钟；不住偏远山坳。</p><p><b>搜索：</b>“亚丁景区 香格里拉镇主路 热水 供氧 可取消”。</p><p><b>价位风险：</b>旺季连住和供氧房溢价明显，以真实OTA截图为准。</p><p><b>吃饭：</b>搜“清汤牦牛肉/菌汤/番茄鸡蛋面 不辣”。</p><p><b>检查：</b>热水、供暖/空调、低楼层/电梯、接送和医疗协助。</p></article>
+        <article><h3>稻城县城｜1晚</h3><p><b>范围：</b>县城主路、正规接驳易上车处；不为白塔景观住偏远。</p><p><b>搜索：</b>“稻城县城 主路 酒店 送机 可取消”。</p><p><b>吃饭：</b>清淡家常菜、面食；避开夜间绕城。</p><p><b>检查：</b>代约送机、早餐打包、可取消；D6航班前3小时离店。</p></article>
+      </div>
+      <div class="stay-flow" data-plan-group="b" hidden>
+        <article><h3>成都集合点｜1晚</h3><p><b>范围：</b>订单指定集合点1公里内，避免清晨跨城打车。</p><p><b>检查：</b>可取消、24小时前台、早餐打包；D2步行或短打车到集合点。</p></article>
+        <article><h3>新都桥主路｜1晚</h3><p><b>范围：</b>接驳主线路边1公里内，不住山坳民宿。</p><p><b>搜索：</b>“新都桥镇 主路 酒店 热水 供暖 可取消”。</p><p><b>检查：</b>热水、供暖、电梯/低楼层、D3门口接车；只住新都桥，避免D3起点断链。</p></article>
+        <article><h3>香格里拉镇｜连住3晚</h3><p>镇主路、可协助景区接送；优先热水、低楼层和医疗便利。</p></article>
+        <article><h3>稻城 + 成都｜各1晚</h3><p>稻城方便送机，成都按返程机场选圈，形成完整缓冲。</p></article>
+      </div>
+      <div class="keyword-row"><button class="copy-btn" data-copy="稻城亚丁景区 香格里拉镇主路 酒店 热水 供氧 可取消" type="button">复制香格里拉镇订房词</button><button class="copy-btn" data-copy="稻城县城 主路 酒店 送机 可取消" type="button">复制稻城县城订房词</button><button class="copy-btn" data-copy="成都 实际起飞机场 酒店 接送 24小时前台" type="button">复制成都机场订房词</button></div>
+
+      <article class="hotel-evidence">
+        <figure><div class="evidence-pending"><div><b>真实 OTA 日期价格截图待浏览器连接恢复后补入</b><br>不使用伪造价格或装饰截图替代。</div></div></figure>
+        <div><h3>香格里拉镇连锁酒店核验</h3><dl><dt>平台</dt><dd>携程公开酒店页</dd><dt>酒店</dt><dd>稻城亚丁智选假日套房酒店</dd><dt>位置</dt><dd>香格里拉镇赤土河路34号，近景区交通区域</dd><dt>示例日期</dt><dd>2026-07-19入住，2026-07-20退房，1间1晚，2成人</dd><dt>已核实</dt><dd>4.5分、850条评论；免费行李寄存、餐厅、免费停车；评论提到可接送景区及高反协助。</dd><dt>价格</dt><dd><b>未写死。</b>当前浏览器插件连接失败，支付页房价和截图尚未取得，不能把搜索摘要冒充实时价格。</dd></dl><p class="quiet-note">直接核对：<a href="https://hotels.ctrip.com/hotels/8429973.html" target="_blank" rel="noopener">携程酒店页</a>。出发前以支付页、退改规则和房型为准。</p></div>
+      </article>
+    </section>
+
+    <section class="nature-section" id="spots">
+      <div class="section-title"><h2>景区内部执行攻略</h2><span class="lead">进门后怎么走、累了在哪里停</span></div>
+      <div class="spot-guide">
+        <details class="spot-exec"><summary><img src="../assets/images/daocheng-chonggu.jpg" alt="冲古寺实景"><span class="spot-summary"><span class="spot-title">短线｜冲古寺、冲古草甸、珍珠海</span><span class="spot-copy">代表性强，默认必做；先用它判断身体是否适应。</span></span><span class="level">中低强度</span></summary><div class="spot-content"><div class="spot-facts"><div><span>日期</span><b>A-D3 / B-D4</b></div><div><span>入口</span><b>亚丁游客中心</b></div><div><span>时长</span><b>约5-6小时含交通</b></div><div><span>海拔</span><b>珍珠海约4100米</b></div></div><p><b>入园前：</b>身份证、票码、雨衣、薄外套、防晒、水、轻食、充电宝、舒服鞋。</p><ol class="steps"><li>游客中心检票，按当天交通安排到扎灌崩。</li><li>按指引慢走到冲古寺和冲古草甸，先适应呼吸，不急拍照。</li><li>状态正常再往珍珠海方向；从冲古寺至珍珠海约1.5公里单程，以缓坡和台阶为主，按官方栈道与现场指引走。</li><li>在珍珠海停留后原路返回冲古寺，回扎灌崩乘车出沟。</li></ol><p><b>必看：</b>冲古草甸、仙乃日、珍珠海。<b>可删/退出点：</b>珍珠海上行段；不舒服就在冲古草甸结束并回扎灌崩。</p><p><b>厕所/补给：</b>游客中心、扎灌崩和主要服务点；进步道前先用厕所，轻食自备。<b>出园：</b>回香格里拉镇酒店休息。</p></div></details>
+
+        <details class="spot-exec"><summary><img src="../assets/images/daocheng-luorong.jpg" alt="洛绒牛场实景"><span class="spot-summary"><span class="spot-title">中低线｜冲古寺交通站 → 洛绒牛场</span><span class="spot-copy">坐车抵达草甸核心，步行只做栈道和近距离观景。</span></span><span class="level">中低强度</span></summary><div class="spot-content"><div class="spot-facts"><div><span>日期</span><b>A-D4 / B-D5</b></div><div><span>交通</span><b>景区交通，以当日公告为准</b></div><div><span>时长</span><b>约6-7小时含往返</b></div><div><span>海拔</span><b>洛绒约4180米</b></div></div><p><b>入园前：</b>完成二次入园规则核对，带身份证、预约信息、充电宝、雨衣、防风外套、水、轻食。</p><ol class="steps"><li>按当天景区交通安排到扎灌崩，慢走到冲古寺交通站。</li><li>核验当日交通运营和收费，乘车约6.7公里到洛绒牛场；停运不徒步补全程。</li><li>在牛场只走近端栈道，按状态选择约0.5-1.5公里慢走，看央迈勇、夏诺多吉和草甸。</li><li>午后云量增加或体力下降时，立刻乘车原路返回。</li></ol><p><b>必看：</b>洛绒牛场开阔草甸、雪山同框。<b>可删/退出点：</b>远端栈道和全部挑战支线；到站不舒服就看15分钟返程。</p><p><b>天气：</b>小雨穿雨衣短走，大雨/雷电直接返程。<b>太累：</b>交通站附近看15-30分钟就回。</p></div></details>
+
+        <details class="spot-exec"><summary><img src="../assets/images/daocheng-milk-lake.jpg" alt="牛奶海实景"><span class="spot-summary"><span class="spot-title">挑战支线｜牛奶海、五色海</span><span class="spot-copy">不是本路线默认内容，也不用于衡量“有没有玩到亚丁”。</span></span><span class="level high">高强度可选</span></summary><div class="spot-content"><div class="spot-facts"><div><span>起点</span><b>洛绒牛场</b></div><div><span>海拔</span><b>约4500-4700米</b></div><div><span>强度</span><b>长爬升、高风险</b></div><div><span>默认</span><b>不安排</b></div></div><p><b>只有以下条件全部满足才考虑：</b>景区当天开放、天气稳定、无头痛胸闷、首个景区日适应良好、时间充足、同行人同意、本人主动想走。任何一项不满足都停在洛绒牛场。</p><p><b>官方提示：</b>洛绒牛场到舍身崖约3.5公里，可按现场规则选择马帮；之后仍有约1.8公里高海拔徒步。它明显超出本用户默认中低强度范围。</p><p><b>氧气：</b>可备用小瓶氧气，但氧气不能替代下撤和就医。明显不适立即停止、返程并寻求景区工作人员协助。</p></div></details>
+
+        <details class="spot-exec"><summary><img src="../assets/images/daocheng-white-pagoda.jpg" alt="稻城白塔实景"><span class="spot-summary"><span class="spot-title">恢复点｜稻城白塔</span><span class="spot-copy">返机场前的低强度短停，前几天累就直接删除。</span></span><span class="level">轻松可删</span></summary><div class="spot-content"><p><b>走法：</b>住稻城县城主路，傍晚打车/接驳到白塔附近，只做平缓区域短停和拍照，30-45分钟后返回。<b>不做：</b>不为白塔绕远，不压缩送机休息。</p></div></details>
+      </div>
+    </section>
+
+    <section class="nature-section" id="food">
+      <div class="section-title"><h2>不能吃辣怎么吃</h2><span class="lead">高原更要吃清淡、热食和易消化食物</span></div>
+      <div class="food-callout">我们完全不能吃辣，辣椒、红油、花椒、麻油都不要，蘸料也不要辣，麻烦做清淡一点。</div>
+      <div class="guide-grid section-gap"><article class="guide-card"><div class="guide-body"><h3>优先选择</h3><p>清汤牦牛肉、菌汤锅、番茄鸡蛋面、清汤面、蒸蛋、炒青菜、白米饭、青稞饼、酸奶、粥。</p><div class="keyword-row"><button class="copy-btn" data-copy="香格里拉镇 清汤牦牛肉 不辣" type="button">复制清汤关键词</button><button class="copy-btn" data-copy="稻城县城 清淡家常菜 不辣" type="button">复制家常菜关键词</button></div></div></article><article class="guide-card"><div class="guide-body"><h3>明确避开</h3><p>红油凉菜、麻辣牦牛肉干、辣蘸碟、重辣火锅、酒精和过量咖啡。清汤锅也要确认蘸料和底料没有花椒辣椒。</p></div></article></div>
+    </section>
+
+    <section class="nature-section" id="gear">
+      <div class="section-title"><h2>氧气、充电宝与高原准备</h2><span class="lead">准备是为了及时止损，不是让人硬撑</span></div>
+      <div class="safety-grid">
+        <article class="safety-card"><h3>氧气要不要带</h3><p>可以在当地正规渠道购买小瓶氧气备用。稻城机场约4411米、洛绒牛场约4180米、挑战线更高；但氧气不是继续上行的通行证。头痛加重、胸闷、步态不稳或明显不适时立即停止、下撤，必要时联系景区医疗。</p></article>
+        <article class="safety-card"><h3>充电宝必须带</h3><p>必须。票码、导航、联系司机和拍照都耗电。每天晚上手机和充电宝充满；容量、标识和随身携带规则以航司/铁路安检要求为准，不托运。</p></article>
+        <article class="safety-card"><h3>衣物</h3><p>薄羽绒或抓绒、防风外套、雨衣、帽子、墨镜、防晒霜、润唇膏、舒服且防滑的鞋。不要只按成都温度准备。</p></article>
+        <article class="safety-card"><h3>轻食与药品</h3><p>水、面包/饭团、巧克力、纸巾、晕车药、肠胃药、创可贴和个人常用药。有心肺基础疾病或严重贫血，出发前先咨询医生。</p></article>
+      </div>
+    </section>
+
+    <section class="nature-section" id="budget">
+      <div class="section-title"><h2>预算拆账</h2><span class="lead">两位成人；放在末尾，不把预算做成首页宣传</span></div>
+      <div class="budget-summary" data-plan-group="a"><article><span>方案A含全部大交通</span><strong>9100-16512元</strong><p>按当前免票与交通暂停收费下限、旧政策可复算上限分别计算。</p></article><article><span>不含广州⇄成都机票</span><strong>6500-12312元</strong><p>仍包含成都⇄稻城、住宿、票务预留、接驳、餐饮和备用金。</p></article><article><span>4000元判断</span><strong>不可行</strong><p>即使遇到免票，也不能覆盖正规交通与安全住宿。</p></article></div>
+      <div class="budget-summary" data-plan-group="b" hidden><article><span>方案B含全部大交通</span><strong>10950-19862元</strong><p>低端按当前免票与暂停收费，顶端按旧政策可复算上限和陆路价格风险。</p></article><article><span>不含广州⇄成都机票</span><strong>8350-15662元</strong><p>仍包含川西陆路、稻城返成都、住宿、票务预留、餐饮和备用金。</p></article><article><span>4000元判断</span><strong>不可行</strong><p>不应通过私车和漏算住宿硬压。</p></article></div>
+      <div class="table-scroll"><table class="route-table"><thead><tr><th>项目</th><th>方案A两人</th><th>方案B两人</th><th>说明</th></tr></thead><tbody>
+        <tr><td>广州/佛山 ⇄ 成都机票</td><td>2600-4200</td><td>2600-4200</td><td>此行按飞机口径列账；用户的4000元口径只扣实际机票。若改坐高铁，高铁票必须重新计入。</td></tr>
+        <tr><td>成都与稻城大交通</td><td>2400-4200</td><td>3800-6800</td><td>A为往返航班；B含去程正规陆路和返程航班。</td></tr>
+        <tr><td>景区票务和交通</td><td>0-812</td><td>0-812</td><td>0对应免票期且交通暂缓收费；812按旧政策两成人“门票146 + 首日观光车120 + 二次入园观光车60 + 洛绒交通80”复算，仅作历史上限，不代表当前固定价格。支付前按官方页面重算。</td></tr>
+        <tr><td>6/7晚住宿</td><td>2200-4200</td><td>2600-4800</td><td>按成都、香格里拉镇、稻城及中途主路正规住宿。</td></tr>
+        <tr><td>接驳/市内交通</td><td>500-900</td><td>已大部分计入陆路项，另300-700</td><td>正规平台，不用无订单私车。</td></tr>
+        <tr><td>餐饮</td><td>900-1200</td><td>1050-1350</td><td>两人清淡简餐与景区轻食。</td></tr>
+        <tr><td>备用金</td><td>500-1000</td><td>600-1200</td><td>天气、航班、医疗和临时住宿。</td></tr>
+      </tbody></table></div>
+      <p class="quiet-note">以上是决策区间，不是固定报价。没有将供氧房、挑战线骑马、无人机、旅拍或高价景观房计入。</p>
+      <div class="table-scroll"><table class="route-table"><thead><tr><th>单人独行分项</th><th>方案A</th><th>方案B</th><th>计算口径</th></tr></thead><tbody>
+        <tr><td>广州⇄成都</td><td>1300-2100</td><td>1300-2100</td><td>双人机票区间减半，出票时按单人支付页。</td></tr>
+        <tr><td>成都与稻城大交通</td><td>1200-2100</td><td>1900-3400</td><td>A为往返航班单人份；B为陆路小团单人份加返程航班。</td></tr>
+        <tr><td>票务</td><td>0-406</td><td>0-406</td><td>当前优惠下限至旧政策单人可复算上限。</td></tr>
+        <tr><td>整间住宿</td><td>2200-4200</td><td>2600-4800</td><td>单人仍支付整间房，不减半。</td></tr>
+        <tr><td>接驳</td><td>350-700</td><td>200-500</td><td>按可拼车与部分固定送机折中估算。</td></tr>
+        <tr><td>餐饮</td><td>450-600</td><td>525-675</td><td>双人餐饮减半。</td></tr>
+        <tr><td>备用金</td><td>500-1000</td><td>600-1200</td><td>天气、医疗和临时住宿不因单人而减半。</td></tr>
+        <tr><td><b>单人合计</b></td><td><b>含广州成都6000-11106；不含4700-9006</b></td><td><b>含广州成都7125-13081；不含5825-10981</b></td><td>逐项相加，可直接复算。</td></tr>
+      </tbody></table></div>
+      <p class="quiet-note">单人表是结构性估算，不是单人现价承诺；出票和订房时必须按单人重新拉支付页。</p>
+    </section>
+
+    <section class="nature-section" id="emergency">
+      <div class="section-title"><h2>应急方案</h2><span class="lead">不写“灵活调整”，直接给动作</span></div>
+      <div class="emergency-list">
+        <details data-plan-group="a"><summary>稻城机场落地高反怎么办</summary><p>不要在机场停留拍照，立刻联系已确认司机下撤香格里拉镇；坐直、少说话、慢呼吸。症状明显或加重，直接去医疗机构，不进景区。</p></details>
+        <details data-plan-group="b" hidden><summary>陆路进高原出现不适怎么办</summary><p>立刻停止沿途加点，在最近安全城镇或正规服务点休息；联系平台司机与酒店，必要时中止上行并就医，不走夜路补进度。</p></details>
+        <details><summary>在县城需要就医怎么办</summary><p>先拨打120并说明“高海拔不适、当前位置、症状和人数”；也可让酒店/司机导航“稻城县人民医院（稻城县金珠镇亚丁路二段9号）”。不要自己驾车，不把普通氧气瓶当作治疗。</p></details>
+        <details><summary>进沟后头痛胸闷怎么办</summary><p>停止上行，回扎灌崩乘车出沟并联系景区工作人员；明显胸闷、步态不稳、意识异常或症状加重，立即拨打120或请工作人员启动医疗救援。第二个景区日直接取消，不用氧气硬顶原计划。</p></details>
+        <details><summary>下雨、雷电或景区临时关闭怎么办</summary><p>首个景区日小雨只做冲古寺/草甸，大雨、雷电或官方关闭就在镇上休息；第二个景区日天气差就取消洛绒长停。住宿和返程日期不前后互换，不走野路、不硬等放晴。</p></details>
+        <details><summary>景区交通停运怎么办</summary><p>取消洛绒牛场，不徒步补约6.7公里；短线也只在官方允许的交通和步道范围内执行。改镇上休息，保护膝盖和返程体力。</p></details>
+        <details><summary>正规接驳临时爽约怎么办</summary><p>先在原平台申请改派/退款，再请酒店前台协助联系有资质车辆；不在机场、客运中心接受陌生人私下揽客。</p></details>
+        <details><summary>航班取消怎么办</summary><p>去程取消就在成都续住，整体顺延；返程取消就在稻城县城续住，不连夜走山路。使用可取消酒店和备用金。</p></details>
+        <details><summary>预算超支怎么办</summary><p>先删牛奶海等所有额外项目、景观房和白塔包车；再比较A/B大交通。若两人不含广州机票预算只有4000元，直接换路线，不牺牲安全住宿和正规交通。</p></details>
+        <details><summary>完全吃不了辣怎么办</summary><p>把点餐话术直接给店员看；做错就换清汤面、白饭、蒸蛋或重新制作，不勉强吃红油菜。</p></details>
+      </div>
+    </section>
+
+    <section class="nature-section" id="sources">
+      <div class="section-title"><h2>来源与更新时间</h2><span class="lead">官方规则优先，OTA用于住宿体验与价格核验</span></div>
+      <div class="source-list">
+        <a href="https://www.yadingtour.com/home/showArticle.action?article.amid=82" target="_blank" rel="noopener">亚丁景区官方游览指南：票务、二次入园、交通和景点海拔</a>
+        <a href="https://www.yadingtour.com/book/providerIndex.action?iscenicid=1" target="_blank" rel="noopener">亚丁景区官方购票入口</a>
+        <a href="https://www.xinhuanet.com/20260710/e06988dfee8349b2980b6bc7d6a45466/c.html" target="_blank" rel="noopener">新华社：2026年亚丁整改、交通服务暂缓收费与限时免门票</a>
+        <a href="https://cbgc.scol.com.cn/news/7749151" target="_blank" rel="noopener">川观新闻：2026-08-01至10-31门票免票公告</a>
+        <a href="https://www.ganzitv.com/cms/a/177730842/content" target="_blank" rel="noopener">2026亚丁景区运营时间公告</a>
+        <a href="https://www.daocheng.gov.cn/bmdt/article/709007" target="_blank" rel="noopener">稻城县政府：整治非法营运与私揽客</a>
+        <a href="https://ggzyjy.sc.gov.cn/jyxx/002002/002002001/20241104/8a69c5d892b02efb0192e69cda677ce6.html" target="_blank" rel="noopener">四川省公共资源交易信息网：稻城县人民医院公开地址</a>
+        <a href="https://zwfw.sc.gov.cn/art/2019/9/17/art_15329_84521.html" target="_blank" rel="noopener">四川政务：稻城亚丁机场海拔约4411米</a>
+        <a href="https://hotels.ctrip.com/hotels/8429973.html" target="_blank" rel="noopener">携程：稻城亚丁智选假日套房酒店公开页</a>
+        <a href="https://commons.wikimedia.org/wiki/File:Yading_Chanadorje-Xianuoduoji_Chonggu_Grassland.jpg" target="_blank" rel="noopener">Wikimedia Commons：封面图来源</a>
+        <a href="../assets/images/daocheng-image-sources.json" target="_blank">全部图片来源记录</a>
+      </div>
+      <p class="source-meta">攻略核对日期：2026-07-16。景区咨询 0836-6966022；投诉 0836-6966021；公开应急信息参考救援 13684498848、医疗 13990486468，出发前仍应以景区最新公告复核。</p>
+      <div class="notice">本攻略用于旅行执行参考。航班、酒店、道路、门票、观光车、电瓶车、挑战线开放、天气和医疗联系方式会变化。出发前请以航司、酒店平台、亚丁景区官网/公众号、高德实际页面为准。</div>
     </section>
   </main>
+
+  <script src="../assets/js/main.js"></script>
+  <script>
+    (() => {
+      const key = 'travel-plan-daocheng-plan';
+      const labels = {a:'方案A｜7天飞机快进版', b:'方案B｜8天陆路渐进版'};
+      const hero = {
+        a:{days:'7天6晚',traffic:'飞机 + 正规接驳 + 景区当天开放交通',route:'广州/佛山 → 成都 → 稻城亚丁机场 → 香格里拉镇 → 亚丁景区 → 稻城 → 成都 → 广州/佛山'},
+        b:{days:'8天7晚',traffic:'飞机/高铁到成都 + 正规陆路接驳 + 回程飞机',route:'广州/佛山 → 成都 → 康定 → 新都桥 → 理塘 → 香格里拉镇 → 亚丁景区 → 稻城 → 成都 → 广州/佛山'}
+      };
+      const valid = value => value === 'a' || value === 'b';
+      const initial = new URLSearchParams(location.search).get('plan');
+      const stored = localStorage.getItem(key);
+      let active = valid(initial) ? initial : (valid(stored) ? stored : 'a');
+
+      function render(plan, updateUrl = true){
+        active = plan;
+        document.querySelectorAll('[data-plan-target]').forEach(button => button.setAttribute('aria-pressed', String(button.dataset.planTarget === plan)));
+        document.querySelectorAll('[data-plan-group]').forEach(group => group.hidden = group.dataset.planGroup !== plan);
+        document.querySelectorAll('[data-current-plan]').forEach(node => node.textContent = labels[plan]);
+        document.querySelector('[data-hero-days]').textContent = hero[plan].days;
+        document.querySelector('[data-hero-traffic]').textContent = hero[plan].traffic;
+        document.querySelector('[data-hero-route]').textContent = hero[plan].route;
+        localStorage.setItem(key, plan);
+        if(updateUrl){
+          const url = new URL(location.href); url.searchParams.set('plan', plan);
+          history.pushState({plan},'',url);
+        }
+      }
+
+      document.querySelectorAll('[data-plan-target]').forEach(button => button.addEventListener('click', () => render(button.dataset.planTarget)));
+      addEventListener('popstate', () => { const plan = new URLSearchParams(location.search).get('plan'); render(valid(plan) ? plan : 'a', false); });
+      render(active, false);
+      if(!valid(initial)){
+        const url = new URL(location.href); url.searchParams.set('plan', active);
+        history.replaceState({plan: active},'',url);
+      }
+    })();
+  </script>
 </body>
 </html>

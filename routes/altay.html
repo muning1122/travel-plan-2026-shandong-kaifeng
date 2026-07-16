@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="阿勒泰喀纳斯禾木自然奇观线旅行现场执行手册，默认9天8晚舒适版，含8天精简版、真实地图、交通、住宿、票务、预算和天气应急。">
+  <link rel="icon" href="../favicon.ico">
+  <title>阿勒泰喀纳斯禾木自然奇观线｜旅行管家</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/altay-route.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+</head>
+<body class="nature-page altay-page" id="top">
+  <div class="nature-return">
+    <a class="route-btn" href="../index.html">← 返回路线选择</a>
+    <span class="lead">默认9天舒适线：禾木与喀纳斯各连住2晚，不把长台阶和长徒步当必做</span>
+  </div>
+
+  <header class="nature-hero">
+    <div class="nature-hero-shell hero-altay">
+      <div class="nature-hero-copy">
+        <div class="badge-row"><span class="tag">9天8晚默认</span><span class="tag">禾木2晚</span><span class="tag">喀纳斯2晚</span><span class="tag">中低步行</span><span class="tag">不默认自驾</span></div>
+        <h1>阿勒泰喀纳斯禾木自然奇观线</h1>
+        <p data-hero-route>广州/佛山 → 乌鲁木齐 → 阿勒泰 → 禾木 → 喀纳斯/贾登峪 → 布尔津 → 乌鲁木齐 → 广州/佛山</p>
+        <p><b>核心：</b>禾木木屋与河谷、喀纳斯湖、神仙湾/月亮湾/卧龙湾；白哈巴只在票务、边境管理和身体都合适时替换半天。</p>
+      </div>
+      <aside class="nature-overview" aria-label="阿勒泰路线总览">
+        <h2>路线总控台</h2>
+        <div class="overview-row"><span>当前方案</span><b data-current-plan>方案A｜9天8晚舒适完整版</b></div>
+        <div class="overview-row"><span>天数</span><b data-hero-days>9天8晚</b></div>
+        <div class="overview-row"><span>交通</span><b data-hero-traffic>飞机/火车 + 正规接驳/小团 + 景区区间车</b></div>
+        <div class="overview-row"><span>徒步强度</span><b>默认中低：村内慢走、短栈道和观景台；观鱼台长台阶不设为必做</b></div>
+        <div class="overview-row"><span>适合</span><b>想把森林、湖泊、木屋与晨雾慢慢看完，愿意接受长距离转场的人</b></div>
+        <div class="overview-row"><span>不适合</span><b>完全不能坐长车、只想一天打卡三景区、拒绝旺季预约的人</b></div>
+        <div class="overview-row"><span>核对规则</span><b>航班、火车、区间车、开放和价格以出发前官方支付页为准</b></div>
+      </aside>
+    </div>
+  </header>
+
+  <nav class="nature-nav" aria-label="页内导航">
+    <a href="#answer">先看结论</a><a href="#plans">方案选择</a><a href="#route-map">真实地图</a><a href="#dashboard">30秒总控</a><a href="#check48">48小时核对</a><a href="#tickets">票务</a><a href="#days">每日执行</a><a href="#traffic">交通</a><a href="#stay">住宿</a><a href="#spots">景区走法</a><a href="#food">吃饭</a><a href="#packing">准备</a><a href="#budget">预算</a><a href="#emergency">应急</a><a href="#sources">来源</a>
+  </nav>
+
+  <main>
+    <section class="nature-section" id="answer">
+      <div class="section-title"><h2>先给结论</h2><span class="lead">这条线最贵的是距离和旺季住宿，不是门票</span></div>
+      <div class="decision-grid">
+        <article class="decision-card recommended"><div class="badge-row"><span class="mini-badge">主推荐</span><span class="mini-badge">景色不打折</span></div><h3>9天8晚，先缓冲再进山</h3><p>乌鲁木齐前后都保留缓冲；阿勒泰/布尔津先住一晚；禾木、喀纳斯各连住2晚。这样不会把到达、退房、区间车和核心景色全挤在同一天。</p></article>
+        <article class="decision-card hard-rule"><div class="badge-row"><span class="mini-badge alert">体力边界</span></div><h3>观鱼台不是“来都来了”任务</h3><p>默认用区间车串喀纳斯湖与三湾，短栈道随时折返。观鱼台末段长台阶、三湾全程长走和禾木高处爬坡只作天气好、本人主动想走时的可选项。</p></article>
+      </div>
+      <div class="notice"><b>最稳做法：</b>广州飞乌鲁木齐；疆内用航班/火车抵阿勒泰或北屯，再使用有平台订单的接驳/小团。阿禾公路虽已通车且风景好，但本页不默认让不熟悉北疆山路的人自驾。</div>
+    </section>
+
+    <section class="nature-section" id="plans">
+      <div class="section-title"><h2>选择旅行节奏</h2><span class="lead">点击后，总控、住宿、每日行程、交通和预算同步切换</span></div>
+      <div class="plan-grid" role="group" aria-label="选择阿勒泰路线方案">
+        <button class="plan-button" type="button" data-plan-target="a" aria-pressed="true">
+          <span class="badge-row"><span class="mini-badge">默认推荐</span><span class="mini-badge">9天8晚</span></span>
+          <span class="plan-title">方案A｜舒适完整线</span>
+          <span class="plan-copy"><b>住宿：</b>乌鲁木齐2晚分住 + 阿勒泰/布尔津1晚 + 禾木2晚 + 喀纳斯/贾登峪2晚 + 布尔津1晚。</span>
+          <span class="plan-copy"><b>优点：</b>每个核心景区都有完整白天，前后转场有缓冲，白哈巴具备替换空间。</span>
+          <span class="plan-copy"><b>代价：</b>多1晚住宿和餐饮，旺季总预算更高。</span>
+        </button>
+        <button class="plan-button" type="button" data-plan-target="b" aria-pressed="false">
+          <span class="badge-row"><span class="mini-badge warn">8天7晚</span><span class="mini-badge warn">明确压缩</span></span>
+          <span class="plan-title">方案B｜精简但不硬赶核心</span>
+          <span class="plan-copy"><b>住宿：</b>乌鲁木齐2晚分住 + 禾木2晚 + 喀纳斯/贾登峪2晚 + 布尔津1晚。</span>
+          <span class="plan-copy"><b>删减：</b>取消阿勒泰/布尔津进山前缓冲夜，D2成为较累转场；白哈巴默认删除。</span>
+          <span class="plan-copy"><b>保留：</b>禾木和喀纳斯仍各2晚，不牺牲两处核心景色。</span>
+        </button>
+      </div>
+      <div class="plan-status" aria-live="polite"><span>当前显示：<b data-current-plan>方案A｜9天8晚舒适完整版</b></span><span>URL与本地记录会保留选择</span></div>
+    </section>
+
+    <section class="nature-section" id="route-map">
+      <div class="section-title"><h2>可核验真实地图：北疆地面路线关系</h2><span class="lead">OpenStreetMap真实底图；线段表达行程顺序，不冒充道路导航</span></div>
+      <div class="route-map-shell">
+        <figure class="map-card"><div id="altay-map" role="img" aria-label="乌鲁木齐、阿勒泰、禾木、喀纳斯、白哈巴和布尔津真实地图"></div><figcaption>地图点位来自 OpenStreetMap/Nominatim，可缩放核验。彩色线只表示分段顺序，不是可驾驶轨迹；出发当天必须在高德按每段导航，并服从景区交通和交管。<div class="map-legend"><span>蓝：乌鲁木齐⇄阿勒泰/北屯大交通</span><span>绿：阿勒泰→禾木→喀纳斯→布尔津</span><span>橙虚线：白哈巴可选支线</span></div></figcaption></figure>
+        <div class="map-side">
+          <article><h3>1｜快进阿勒泰</h3><p>乌鲁木齐 → 阿勒泰雪都机场/阿勒泰站/北屯站。按实际票价和到达时间选择。</p><a href="https://www.openstreetmap.org/?mlat=47.7176&amp;mlon=88.0871#map=9/47.7176/88.0871" target="_blank" rel="noopener">核验阿勒泰站点位</a></article>
+          <article><h3>2｜核心山地段</h3><p>阿勒泰/布尔津 → 禾木 → 贾登峪/喀纳斯。只用正规接驳、小团或景区车辆。</p><a href="https://uri.amap.com/search?keyword=%E7%A6%BE%E6%9C%A8%E6%9D%91&amp;city=%E9%98%BF%E5%8B%92%E6%B3%B0&amp;src=travelplanner" target="_blank" rel="noopener">高德搜索“禾木村”</a></article>
+          <article><h3>3｜白哈巴是替换项</h3><p>它不与喀纳斯核心硬叠加；仅在预约、边境管理、交通与天气都合适时替换半天。</p><a href="https://www.openstreetmap.org/?mlat=48.6932&amp;mlon=86.7816#map=11/48.6932/86.7816" target="_blank" rel="noopener">核验白哈巴点位</a></article>
+          <div class="map-fallback"><b>地图未加载时：</b>仍按“乌鲁木齐 → 阿勒泰 → 禾木 → 喀纳斯/贾登峪 → 布尔津 → 乌鲁木齐”执行；点击上方核验链接查看真实底图。</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="nature-section" id="dashboard">
+      <div class="section-title"><h2>30秒看懂：今天去哪、今晚住哪</h2><span class="lead">手机左右滑动，只放最重要信息</span></div>
+      <div data-plan-group="a">
+        <div class="day-dashboard">
+          <article class="day-glance"><strong>D1｜飞乌鲁木齐</strong><p><b>今晚：</b>次日出发点附近</p><p><b>关键：</b>只落地休息</p></article>
+          <article class="day-glance"><strong>D2｜到阿勒泰</strong><p><b>今晚：</b>阿勒泰/布尔津1晚</p><p><b>关键：</b>不连夜进禾木</p></article>
+          <article class="day-glance"><strong>D3｜进禾木</strong><p><b>今晚：</b>禾木第1/2晚</p><p><b>关键：</b>到村后只慢走</p></article>
+          <article class="day-glance"><strong>D4｜禾木完整日</strong><p><b>今晚：</b>禾木第2/2晚</p><p><b>关键：</b>木桥河岸优先</p></article>
+          <article class="day-glance"><strong>D5｜去喀纳斯</strong><p><b>今晚：</b>喀纳斯/贾登峪第1/2晚</p><p><b>关键：</b>湖区轻游</p></article>
+          <article class="day-glance"><strong>D6｜喀纳斯核心</strong><p><b>今晚：</b>喀纳斯/贾登峪第2/2晚</p><p><b>关键：</b>湖+三湾，不爬观鱼台</p></article>
+          <article class="day-glance"><strong>D7｜出山</strong><p><b>今晚：</b>布尔津1晚</p><p><b>关键：</b>白哈巴只作替换</p></article>
+          <article class="day-glance"><strong>D8｜回乌鲁木齐</strong><p><b>今晚：</b>机场/车站圈1晚</p><p><b>关键：</b>保留返程缓冲</p></article>
+          <article class="day-glance"><strong>D9｜返程</strong><p><b>今晚：</b>正常不住</p><p><b>关键：</b>只保交通</p></article>
+        </div>
+      </div>
+      <div data-plan-group="b" hidden>
+        <div class="day-dashboard">
+          <article class="day-glance"><strong>D1｜飞乌鲁木齐</strong><p><b>今晚：</b>次日出发点附近</p><p><b>关键：</b>确认D2双段交通</p></article>
+          <article class="day-glance"><strong>D2｜直进禾木</strong><p><b>今晚：</b>禾木第1/2晚</p><p><b>关键：</b>本线最累，不夜进山</p></article>
+          <article class="day-glance"><strong>D3｜禾木完整日</strong><p><b>今晚：</b>禾木第2/2晚</p><p><b>关键：</b>木桥河岸优先</p></article>
+          <article class="day-glance"><strong>D4｜去喀纳斯</strong><p><b>今晚：</b>喀纳斯/贾登峪第1/2晚</p><p><b>关键：</b>湖区轻游</p></article>
+          <article class="day-glance"><strong>D5｜喀纳斯核心</strong><p><b>今晚：</b>喀纳斯/贾登峪第2/2晚</p><p><b>关键：</b>区间车串三湾</p></article>
+          <article class="day-glance"><strong>D6｜出山</strong><p><b>今晚：</b>布尔津1晚</p><p><b>关键：</b>白哈巴删除</p></article>
+          <article class="day-glance"><strong>D7｜回乌鲁木齐</strong><p><b>今晚：</b>机场/车站圈1晚</p><p><b>关键：</b>不接同日广州票</p></article>
+          <article class="day-glance"><strong>D8｜返程</strong><p><b>今晚：</b>正常不住</p><p><b>关键：</b>只保交通</p></article>
+        </div>
+      </div>
+
+      <div class="section-title section-gap"><h2>旅行现场快捷卡：每天先看这里</h2><span class="lead">详细内容在后面的折叠卡</span></div>
+      <div class="quick-exec-grid" data-plan-group="a">
+        <article class="quick-exec"><h3>D1｜乌鲁木齐</h3><p><b>住：</b>次日机场/车站圈</p><p><b>睡前：</b>核对D2航站楼/车站与接驳。</p></article>
+        <article class="quick-exec"><h3>D2｜阿勒泰缓冲</h3><p><b>住：</b>阿勒泰市或布尔津主路</p><p><b>睡前：</b>司机、车牌、阿禾公路与禾木预约。</p></article>
+        <article class="quick-exec"><h3>D3-D4｜禾木2晚</h3><p><b>首日：</b>木桥、河岸、老村。</p><p><b>次日：</b>晨景+村内慢走，不搬行李。</p></article>
+        <article class="quick-exec"><h3>D5-D6｜喀纳斯2晚</h3><p><b>首日：</b>换乘、入住、湖区。</p><p><b>次日：</b>喀纳斯湖+三湾，区间车减腿。</p></article>
+        <article class="quick-exec"><h3>D7｜布尔津</h3><p><b>默认：</b>出山休息。</p><p><b>白哈巴：</b>只能替换上午，不能额外叠加。</p></article>
+        <article class="quick-exec"><h3>D8-D9｜返程缓冲</h3><p><b>D8：</b>回乌鲁木齐住1晚。</p><p><b>D9：</b>飞广州后回佛山。</p></article>
+      </div>
+      <div class="quick-exec-grid" data-plan-group="b" hidden>
+        <article class="quick-exec"><h3>D1｜乌鲁木齐</h3><p><b>住：</b>次日机场/车站圈</p><p><b>睡前：</b>确认D2能在天黑前到禾木。</p></article>
+        <article class="quick-exec"><h3>D2｜直进禾木</h3><p><b>住：</b>禾木第1晚</p><p><b>止损：</b>晚点就在阿勒泰/布尔津住，不夜进山。</p></article>
+        <article class="quick-exec"><h3>D3｜禾木完整日</h3><p><b>住：</b>禾木第2晚</p><p><b>重点：</b>木桥与河岸，观景台可删。</p></article>
+        <article class="quick-exec"><h3>D4-D5｜喀纳斯2晚</h3><p><b>重点：</b>湖区+三湾。</p><p><b>删除：</b>白哈巴与观鱼台长台阶。</p></article>
+        <article class="quick-exec"><h3>D6｜布尔津</h3><p><b>住：</b>县城主路1晚</p><p><b>重点：</b>早出山、午睡、补给。</p></article>
+        <article class="quick-exec"><h3>D7-D8｜返程</h3><p><b>D7：</b>回乌鲁木齐住1晚。</p><p><b>D8：</b>只保飞行，不补景点。</p></article>
+      </div>
+    </section>
+
+    <section class="nature-section" id="check48">
+      <div class="section-title"><h2>出发前48小时最终核对</h2><span class="lead">勾完再出发</span></div>
+      <div class="checklist-board">
+        <article class="checklist-card"><h3>大交通</h3><label><input type="checkbox">广州白云⇄乌鲁木齐已出票</label><label><input type="checkbox">乌鲁木齐→阿勒泰/北屯票已出票</label><label><input type="checkbox">布尔津→北屯/阿勒泰接驳及返乌票已确认</label><label><input type="checkbox">返广州航站楼和行李额已核对</label></article>
+        <article class="checklist-card"><h3>景区票务</h3><label><input type="checkbox">禾木分时预约和区间车已核对</label><label><input type="checkbox">喀纳斯2日票型与区间车已核对</label><label><input type="checkbox">白哈巴若选择，资格/预约/交通已确认</label><label><input type="checkbox">身份证姓名与票务一致</label></article>
+        <article class="checklist-card"><h3>车辆与酒店</h3><label><input type="checkbox">小团/接驳有平台订单</label><label><input type="checkbox">司机姓名、电话、车牌、接送点已确认</label><label><input type="checkbox">禾木2晚、喀纳斯2晚没有订错日期</label><label><input type="checkbox">酒店可寄存、热水、取行李方式已确认</label></article>
+        <article class="checklist-card"><h3>天气与体力</h3><label><input type="checkbox">查了阿勒泰、禾木、喀纳斯逐小时天气</label><label><input type="checkbox">大雨/道路管控时知道停在哪个城镇</label><label><input type="checkbox">已接受观鱼台和长栈道可直接删除</label><label><input type="checkbox">睡眠不足时不追加白哈巴</label></article>
+        <article class="checklist-card"><h3>物品</h3><label><input type="checkbox">身份证、充电宝、数据线</label><label><input type="checkbox">防晒、墨镜、帽子、雨衣</label><label><input type="checkbox">防风薄外套、舒服防滑鞋</label><label><input type="checkbox">晕车药、肠胃药、水与轻食</label></article>
+        <article class="checklist-card"><h3>安全止损</h3><label><input type="checkbox">拒绝无订单私车和临时加价</label><label><input type="checkbox">不在夜间赶阿禾/山路</label><label><input type="checkbox">道路封闭就原地续住，不绕野路</label><label><input type="checkbox">景区咨询与平台客服已收藏</label></article>
+      </div>
+    </section>
+
+    <section class="nature-section" id="tickets">
+      <div class="section-title"><h2>票务与预约总表</h2><span class="lead">官方门票基准与当期区间车分开核对</span></div>
+      <div class="table-scroll"><table class="route-table"><thead><tr><th>项目</th><th>何时查</th><th>官方/一手渠道</th><th>价格与包含项</th><th>没票怎么办</th></tr></thead><tbody>
+        <tr><td>广州⇄乌鲁木齐</td><td>建议提前21-45天比较</td><td>航司官网/官方App；支付页最终确认</td><td>机票、行李额、退改规则分开看，不写死航班</td><td>前后移动1天或比较深圳/广州出发，不压缩禾木和喀纳斯2晚</td></tr>
+        <tr><td>乌鲁木齐→阿勒泰/北屯</td><td>机票随时查；火车按12306预售期</td><td>航司、12306</td><td>阿勒泰雪都机场是机场；阿勒泰站/北屯站是火车站，不能混写</td><td>A改同日另一交通仍可住缓冲夜；B买不到早班就启用阿勒泰/布尔津临时住宿</td></tr>
+        <tr><td>禾木</td><td>旺季建议提前3-7天，节假日更早</td><td>微信“喀纳斯景区”“原行网”；以实名支付页为准</td><td>发改委旺季门票基准50元/人；区间车和运营时段以当期页为准</td><td>无预约不进山，续住阿勒泰/布尔津并顺延，不买黄牛票</td></tr>
+        <tr><td>喀纳斯</td><td>旺季建议提前3-7天</td><td>微信“喀纳斯景区”“原行网”</td><td>发改委旺季门票基准160元/人·2天；区间车按当期票型另核</td><td>顺延入园或将D6改村内休整，不用私车绕入口</td></tr>
+        <tr><td>白哈巴可选</td><td>至少提前3-7天核对当期管理</td><td>官方公众号/原行网、喀纳斯换乘中心公告</td><td>发改委旺季门票基准30元/人；交通、证件和边境管理以当期公告为准</td><td>直接删除，保留喀纳斯湖与三湾，体验不算失败</td></tr>
+        <tr><td>正规接驳/小团</td><td>旺季提前7-15天</td><td>有订单的平台、正规旅行社、酒店可核验车队</td><td>写清两人总价、油路停、司机食宿、取消规则与是否走夜路</td><td>先平台改派；无法当天进山就住安全城镇</td></tr>
+        <tr><td>酒店</td><td>禾木/喀纳斯旺季提前30-60天</td><td>携程/美团/去哪儿等支付页</td><td>只认含税可取消价；本页真实OTA核价待出发前补充</td><td>优先保连住，再降房型；不把两晚拆到偏远不同民宿</td></tr>
+      </tbody></table></div>
+      <p class="quiet-note">价格核对日期：2026-07-16。发改委门票基准可核验；2026具体区间车、分时段、开放和组合票必须以出发前官方支付页为准。</p>
+    </section>
+
+    <section class="nature-section" id="days">
+      <div class="section-title"><h2>每日详细执行卡</h2><span class="lead">默认折叠；只打开当天</span></div>
+      <div class="day-details" data-plan-group="a">
+        <details class="nature-day"><summary><span class="day-code">D1</span><span><b>广州/佛山 → 乌鲁木齐</b><span>落地缓冲</span></span><span class="stay-summary">住：次日机场/车站圈1晚</span><span class="effort">正常 ⭐⭐</span></summary><div class="nature-day-inner"><div class="day-visual"><img src="../assets/images/altay-kanas-meadow.jpg" alt="阿勒泰喀纳斯沿线湖畔实景"><div class="brief"><p><b>今日一句话：</b>只完成进疆和入住，不安排夜游。</p><p><b>预算：</b>两人当日落地交通+餐饮+住宿约500-1000元，不含机票。</p><p><b>必做/可删：</b>入住、核对D2必做；全部乌鲁木齐景点可删。</p><p><b>吃饭：</b>酒店附近清汤面、抓饭不放辣、粥粉面。</p><p><b>带：</b>身份证、机票、充电宝、薄外套。</p></div></div><div class="timeline"><div class="timeline-row"><time>航班前2小时</time><p>到广州白云实际航站楼值机，核对托运行李和中转规则。</p></div><div class="timeline-row"><time>落地后60-90分钟</time><p>取行李，按D2实际起点去酒店；不跨机场/车站住错圈。</p></div><div class="timeline-row"><time>21:00前</time><p>确认D2票、司机、车牌、接点和缓冲住宿。</p></div></div><div class="keyword-row"><button class="copy-btn" data-copy="乌鲁木齐 次日出发机场或火车站 酒店 可取消" type="button">复制住宿词</button></div><div class="fallback-grid"><div class="fallback"><b>晚点</b><p>平台通知D2接驳；必要时改晚班，保留缓冲夜。</p></div><div class="fallback"><b>太累</b><p>外卖清淡餐，洗澡睡觉。</p></div><div class="fallback"><b>明早</b><p>按机票提前2小时、火车提前60分钟离店。</p></div></div></div></details>
+
+        <details class="nature-day"><summary><span class="day-code">D2</span><span><b>乌鲁木齐 → 阿勒泰/布尔津</b><span>北疆缓冲日</span></span><span class="stay-summary">住：阿勒泰或布尔津1晚</span><span class="effort">正常 ⭐⭐</span></summary><div class="nature-day-inner"><div class="day-visual text-only"><div class="brief"><p><b>今日一句话：</b>到北疆后先睡一晚，不连夜进禾木。</p><p><b>预算：</b>两人疆内交通+住宿+餐饮约1000-2600元。</p><p><b>必做/可删：</b>与D3司机碰面必做；城市闲逛可删。</p><p><b>吃饭：</b>清炖牛羊肉、抓饭、拌面备注不辣。</p><p><b>带：</b>身份证、车票、晕车药、水、充电宝。</p></div></div><div class="timeline"><div class="timeline-row"><time>上午/中午</time><p>航班到阿勒泰机场，或火车到阿勒泰站/北屯站；按订单接驳。</p></div><div class="timeline-row"><time>到达后</time><p>住司机次日方便接的主路酒店，午睡和补给。</p></div><div class="timeline-row"><time>20:30</time><p>确认阿禾公路路况、D3接人时间、禾木预约和行李规则。</p></div></div><div class="keyword-row"><button class="copy-btn" data-copy="阿勒泰市 主路 酒店 可取消 接送" type="button">复制阿勒泰住宿</button></div><div class="fallback-grid"><div class="fallback"><b>晚到</b><p>原地住，不夜进禾木。</p></div><div class="fallback"><b>道路管控</b><p>续住并顺延D3，联系景区和酒店退改。</p></div><div class="fallback"><b>明早</b><p>08:00前后上车，争取下午到禾木。</p></div></div></div></details>
+
+        <details class="nature-day"><summary><span class="day-code">D3</span><span><b>阿勒泰/布尔津 → 禾木</b><span>阿禾公路进山</span></span><span class="stay-summary">住：禾木第1晚/共2晚</span><span class="effort">较累 ⭐⭐⭐</span></summary><div class="nature-day-inner"><div class="day-visual"><img src="../assets/images/altay-hemu.jpg" alt="阿勒泰禾木河谷实景"><div class="brief"><p><b>今日一句话：</b>一路看森林草原，到村后只走木桥与河岸。</p><p><b>预算：</b>车辆、票务、住宿和餐饮两人约1500-3000元。</p><p><b>必做/可删：</b>禾木桥与河岸必做；高处观景台今天删除。</p><p><b>吃饭：</b>牛肉汤、土豆烧牛肉、清炒蔬菜；先问辣椒。</p><p><b>带：</b>身份证、预约、薄外套、水、雨衣、晕车药。</p></div></div><div class="timeline"><div class="timeline-row"><time>08:00前后</time><p>主路酒店上车，沿正规路线去禾木入口；途中只在正规服务点短停。</p></div><div class="timeline-row"><time>14:00-16:00</time><p>入口换景区交通，确认大件行李到住宿的方式。</p></div><div class="timeline-row"><time>17:00后</time><p>入住 → 禾木桥 → 河岸 → 老村短走 → 回房休息。</p></div></div><div class="keyword-row"><button class="copy-btn" data-copy="禾木景区入口" type="button">复制禾木入口</button></div><div class="fallback-grid"><div class="fallback"><b>晚到</b><p>只入住，河岸移到D4。</p></div><div class="fallback"><b>下雨</b><p>村内公交+木桥近端短看。</p></div><div class="fallback"><b>明早</b><p>睡到自然醒或按天气看晨景，不强制早起。</p></div></div></div></details>
+
+        <details class="nature-day"><summary><span class="day-code">D4</span><span><b>禾木完整慢游</b><span>木屋、河谷与晨景</span></span><span class="stay-summary">住：禾木第2晚/共2晚</span><span class="effort">轻松 ⭐</span></summary><div class="nature-day-inner"><div class="day-visual"><img src="../assets/images/altay-hemu.jpg" alt="禾木村与河谷"><div class="brief"><p><b>今日一句话：</b>不搬行李，把最好看的光线留给禾木。</p><p><b>预算：</b>两人餐饮+村内交通约350-700元，住宿另计。</p><p><b>必做/可删：</b>木桥、河岸、木屋巷道必做；高处观景台可删。</p><p><b>吃饭：</b>奶茶另放盐、烤馕、清炖肉、番茄鸡蛋面。</p><p><b>带：</b>防风外套、防晒、充电宝、雨衣、舒服鞋。</p></div></div><div class="timeline"><div class="timeline-row"><time>07:00-09:00</time><p>天气好且精神足，河岸看晨雾；不追凌晨机位。</p></div><div class="timeline-row"><time>10:30-15:30</time><p>木桥 → 老村 → 河岸草地 → 午餐/午睡。</p></div><div class="timeline-row"><time>16:30-19:30</time><p>选择河岸夕光；观景台只走舒适范围，随时原路返。</p></div></div><div class="keyword-row"><button class="copy-btn" data-copy="禾木桥" type="button">复制禾木桥</button></div><div class="fallback-grid"><div class="fallback"><b>人多</b><p>避开桥头正中，沿河岸向两侧分流。</p></div><div class="fallback"><b>太累</b><p>只做木桥+河岸1公里内。</p></div><div class="fallback"><b>明早</b><p>08:00后退房去喀纳斯，不抢极早班。</p></div></div></div></details>
+
+        <details class="nature-day"><summary><span class="day-code">D5</span><span><b>禾木 → 喀纳斯/贾登峪</b><span>换景区轻游</span></span><span class="stay-summary">住：喀纳斯/贾登峪第1晚/共2晚</span><span class="effort">正常 ⭐⭐</span></summary><div class="nature-day-inner"><div class="day-visual"><img src="../assets/images/altay-kanas-lake.jpg" alt="喀纳斯湖实景"><div class="brief"><p><b>今日一句话：</b>换乘、入住后只看喀纳斯湖，不叠三湾长走。</p><p><b>预算：</b>两人车辆/区间车/餐饮约700-1400元，门票住宿另计。</p><p><b>必做/可删：</b>湖区必做；游船、观鱼台和白哈巴可删。</p><p><b>吃饭：</b>湖区简餐、清汤面；自备轻食避免排队。</p><p><b>带：</b>身份证、票码、水、轻食、雨衣、充电宝。</p></div></div><div class="timeline"><div class="timeline-row"><time>08:00-09:00</time><p>退房，按官方/平台交通从禾木到贾登峪或喀纳斯入口。</p></div><div class="timeline-row"><time>中午前后</time><p>换乘中心核验票和行李，入住老/新村主路或贾登峪。</p></div><div class="timeline-row"><time>15:00-18:00</time><p>区间车到喀纳斯湖，湖边短栈道慢走后返回。</p></div></div><div class="keyword-row"><button class="copy-btn" data-copy="喀纳斯景区贾登峪游客中心" type="button">复制贾登峪入口</button></div><div class="fallback-grid"><div class="fallback"><b>晚到</b><p>只入住，湖区移到D6。</p></div><div class="fallback"><b>下雨</b><p>换乘中心→湖区短看，减少栈道。</p></div><div class="fallback"><b>明早</b><p>08:00前后开始湖区+三湾。</p></div></div></div></details>
+
+        <details class="nature-day"><summary><span class="day-code">D6</span><span><b>喀纳斯湖 + 三湾</b><span>区间车减腿核心日</span></span><span class="stay-summary">住：喀纳斯/贾登峪第2晚/共2晚</span><span class="effort">正常 ⭐⭐</span></summary><div class="nature-day-inner"><div class="day-visual"><img src="../assets/images/altay-three-bays.jpg" alt="喀纳斯三湾实景"><div class="brief"><p><b>今日一句话：</b>湖区和三湾完整看，站与站之间优先坐车。</p><p><b>预算：</b>两人餐饮+当日额外项目约300-900元；游船不计入默认。</p><p><b>必做/可删：</b>月亮湾、卧龙湾、神仙湾必做；观鱼台长台阶删除。</p><p><b>吃饭：</b>换乘中心简餐，自备水和不辣轻食。</p><p><b>带：</b>票码、防晒、薄外套、雨衣、水、充电宝。</p></div></div><div class="timeline"><div class="timeline-row"><time>08:00-11:30</time><p>按客流先喀纳斯湖或三湾；遵从当天调度。</p></div><div class="timeline-row"><time>12:00-13:30</time><p>换乘中心午餐、休息、充电。</p></div><div class="timeline-row"><time>14:00-17:30</time><p>神仙湾 → 月亮湾 → 卧龙湾；默认每站短栈道，站间坐区间车。</p></div></div><div class="keyword-row"><button class="copy-btn" data-copy="喀纳斯换乘中心" type="button">复制换乘中心</button></div><div class="fallback-grid"><div class="fallback"><b>大雨/雾</b><p>湖区短看，三湾选1-2个，不等能见度。</p></div><div class="fallback"><b>腿累</b><p>每湾观景台拍照即返，不走湾间全程。</p></div><div class="fallback"><b>明早</b><p>确认D7是否选白哈巴；不选就早出山。</p></div></div></div></details>
+
+        <details class="nature-day"><summary><span class="day-code">D7</span><span><b>喀纳斯 → 布尔津</b><span>白哈巴可替换半天</span></span><span class="stay-summary">住：布尔津主路1晚</span><span class="effort">正常 ⭐⭐</span></summary><div class="nature-day-inner"><div class="day-visual"><img src="../assets/images/altay-burqin.jpg" alt="布尔津额尔齐斯河实景"><div class="brief"><p><b>今日一句话：</b>默认早出山去布尔津；白哈巴只在全条件合适时替换上午。</p><p><b>预算：</b>两人接驳+餐饮+住宿约1000-1800元；白哈巴票车另计。</p><p><b>必做/可删：</b>安全到布尔津必做；白哈巴、五彩滩均可删。</p><p><b>吃饭：</b>冷水鱼先问做法和时价，点清蒸/清炖；不点游客大套餐。</p><p><b>带：</b>身份证、车票、晕车药、水、充电宝。</p></div></div><div class="timeline"><div class="timeline-row"><time>默认08:30</time><p>退房出山，按订单到布尔津县城。</p></div><div class="timeline-row"><time>白哈巴支线</time><p>只有预约、交通、天气和送达时间都确认时才去；它替换上午，不与所有三湾叠加。</p></div><div class="timeline-row"><time>17:00前</time><p>布尔津入住、午睡/晚餐；不再长距离赶景。</p></div></div><div class="keyword-row"><button class="copy-btn" data-copy="布尔津县城 主路 酒店" type="button">复制布尔津住宿</button></div><div class="fallback-grid"><div class="fallback"><b>晚出山</b><p>取消五彩滩，只入住。</p></div><div class="fallback"><b>天气差</b><p>白哈巴直接删除。</p></div><div class="fallback"><b>明早</b><p>按北屯/阿勒泰出发票提前上车。</p></div></div></div></details>
+
+        <details class="nature-day"><summary><span class="day-code">D8</span><span><b>布尔津 → 乌鲁木齐</b><span>返程缓冲</span></span><span class="stay-summary">住：乌鲁木齐机场/车站圈1晚</span><span class="effort">较累 ⭐⭐⭐</span></summary><div class="nature-day-inner"><div class="day-visual text-only"><div class="brief"><p><b>今日一句话：</b>只完成离开北疆和回乌鲁木齐。</p><p><b>预算：</b>两人接驳+火车/航班+住宿餐饮约1200-3000元。</p><p><b>必做/可删：</b>到站、入住、返程确认必做；全部乌市景点可删。</p><p><b>吃饭：</b>车站/酒店附近清淡简餐。</p><p><b>带：</b>身份证、订单、水、轻食、充电宝。</p></div></div><div class="timeline"><div class="timeline-row"><time>按票出发</time><p>布尔津酒店→北屯/阿勒泰站或机场，预留山路与安检。</p></div><div class="timeline-row"><time>到乌鲁木齐</time><p>只去D9实际起飞机场圈酒店。</p></div><div class="timeline-row"><time>睡前</time><p>核对航站楼、行李额和回佛山交通。</p></div></div><div class="keyword-row"><button class="copy-btn" data-copy="乌鲁木齐 实际起飞机场 酒店 接送" type="button">复制返程住宿</button></div><div class="fallback-grid"><div class="fallback"><b>晚点</b><p>有D8缓冲夜，不改D9前的景点。</p></div><div class="fallback"><b>错过车</b><p>平台改签并在布尔津续住，不拼夜车。</p></div><div class="fallback"><b>明早</b><p>航班前2小时到航站楼。</p></div></div></div></details>
+
+        <details class="nature-day"><summary><span class="day-code">D9</span><span><b>乌鲁木齐 → 广州/佛山</b><span>返程</span></span><span class="stay-summary">正常不住宿</span><span class="effort">轻松 ⭐</span></summary><div class="nature-day-inner"><div class="day-visual text-only"><div class="brief"><p><b>今日一句话：</b>只保返程，不补大巴扎等重景点。</p><p><b>预算：</b>市内接驳+餐饮两人约200-500元，不含机票。</p><p><b>必做/可删：</b>值机和回佛山必做；所有停留可删。</p><p><b>吃饭：</b>机场清淡套餐。</p><p><b>带：</b>身份证、订单、充电宝、全部行李。</p></div></div><div class="timeline"><div class="timeline-row"><time>航班前2.5小时</time><p>酒店退房去实际航站楼。</p></div><div class="timeline-row"><time>广州落地</time><p>按当日运营回佛山，向家人报平安。</p></div></div><div class="keyword-row"><button class="copy-btn" data-copy="乌鲁木齐天山国际机场 实际航站楼" type="button">复制机场</button></div><div class="fallback-grid"><div class="fallback"><b>取消</b><p>使用可取消酒店续住，航司改签。</p></div><div class="fallback"><b>太累</b><p>直接回家，不经停市区。</p></div><div class="fallback"><b>结束</b><p>检查身份证、相机与充电宝。</p></div></div></div></details>
+      </div>
+
+      <div class="day-details" data-plan-group="b" hidden>
+        <details class="nature-day"><summary><span class="day-code">D1</span><span><b>广州/佛山 → 乌鲁木齐</b><span>为直进禾木准备</span></span><span class="stay-summary">住：次日出发点1晚</span><span class="effort">正常 ⭐⭐</span></summary><div class="nature-day-inner"><div class="day-visual text-only"><div class="brief"><p><b>今日一句话：</b>落地只休息，确认D2早班大交通与接驳闭环。</p><p><b>预算：</b>两人住宿餐饮接驳约500-1000元，不含机票。</p><p><b>必做：</b>确认D2能在天黑前到禾木；做不到就启用临时缓冲夜。</p><p><b>吃饭/物品：</b>清淡简餐；身份证、充电宝、晕车药。</p></div></div><div class="timeline"><div class="timeline-row"><time>落地后</time><p>住次日出发点附近，不夜逛。</p></div><div class="timeline-row"><time>20:30</time><p>确认早班、司机、车牌、禾木预约和最晚入村时间。</p></div></div><div class="keyword-row"><button class="copy-btn" data-copy="乌鲁木齐 次日出发点 酒店" type="button">复制住宿词</button></div><div class="fallback-grid"><div class="fallback"><b>晚点</b><p>D2改住阿勒泰/布尔津，后续删白哈巴。</p></div><div class="fallback"><b>太累</b><p>选择A方案，不强行压缩。</p></div><div class="fallback"><b>明早</b><p>按早班时间离店。</p></div></div></div></details>
+        <details class="nature-day"><summary><span class="day-code">D2</span><span><b>乌鲁木齐 → 阿勒泰/北屯 → 禾木</b><span>本线最累转场</span></span><span class="stay-summary">住：禾木第1晚/共2晚</span><span class="effort">较累 ⭐⭐⭐</span></summary><div class="nature-day-inner"><div class="day-visual"><img src="../assets/images/altay-hemu.jpg" alt="禾木河谷"><div class="brief"><p><b>今日一句话：</b>只有早班+书面接驳能天黑前到村才执行。</p><p><b>预算：</b>两人疆内交通/车辆/住宿餐饮约1800-3800元。</p><p><b>必做/可删：</b>安全到村必做；所有沿途打卡和夜游删除。</p><p><b>吃饭/物品：</b>自备轻食；身份证、水、晕车药、薄外套。</p></div></div><div class="timeline"><div class="timeline-row"><time>清晨</time><p>乌鲁木齐→阿勒泰机场/站或北屯站。</p></div><div class="timeline-row"><time>到站即接</time><p>平台车辆直达禾木入口，换景区交通。</p></div><div class="timeline-row"><time>到村后</time><p>只入住、吃饭、睡觉。</p></div></div><div class="keyword-row"><button class="copy-btn" data-copy="禾木景区入口" type="button">复制禾木入口</button></div><div class="fallback-grid"><div class="fallback"><b>晚点触发</b><p>17:00前无法确认进村，就住阿勒泰/布尔津。</p></div><div class="fallback"><b>次日处理</b><p>D3进禾木，D4去喀纳斯，删除禾木完整慢游的一半。</p></div><div class="fallback"><b>硬规则</b><p>不走长夜路。</p></div></div></div></details>
+        <details class="nature-day"><summary><span class="day-code">D3</span><span><b>禾木完整日</b><span>不搬行李</span></span><span class="stay-summary">住：禾木第2晚/共2晚</span><span class="effort">轻松 ⭐</span></summary><div class="nature-day-inner"><div class="day-visual"><img src="../assets/images/altay-hemu.jpg" alt="禾木村"><div class="brief"><p><b>今日一句话：</b>木桥、河岸与老村慢走，观景台可删。</p><p><b>预算：</b>两人餐饮村内交通约350-700元，住宿另计。</p><p><b>吃饭/物品：</b>清炖肉、面食不辣；防晒、外套、充电宝。</p></div></div><div class="timeline"><div class="timeline-row"><time>上午</time><p>晨景→木桥→河岸。</p></div><div class="timeline-row"><time>中午</time><p>午餐、午睡。</p></div><div class="timeline-row"><time>下午</time><p>木屋巷道和河岸夕光。</p></div></div><div class="keyword-row"><button class="copy-btn" data-copy="禾木桥" type="button">复制禾木桥</button></div><div class="fallback-grid"><div class="fallback"><b>下雨</b><p>村内公交+桥头近看。</p></div><div class="fallback"><b>太累</b><p>只走1公里内。</p></div><div class="fallback"><b>明早</b><p>08:00后退房。</p></div></div></div></details>
+        <details class="nature-day"><summary><span class="day-code">D4</span><span><b>禾木 → 喀纳斯</b><span>换景区轻游</span></span><span class="stay-summary">住：喀纳斯/贾登峪第1晚/共2晚</span><span class="effort">正常 ⭐⭐</span></summary><div class="nature-day-inner"><div class="day-visual"><img src="../assets/images/altay-kanas-lake.jpg" alt="喀纳斯湖实景"><div class="brief"><p><b>今日一句话：</b>换乘、入住、湖区短走，不叠加白哈巴。</p><p><b>预算：</b>两人接驳餐饮约700-1400元，票房另计。</p><p><b>吃饭/物品：</b>简餐；票码、水、雨衣、充电宝。</p></div></div><div class="timeline"><div class="timeline-row"><time>上午</time><p>退房，经官方/平台交通到贾登峪。</p></div><div class="timeline-row"><time>下午</time><p>入住后看喀纳斯湖。</p></div><div class="timeline-row"><time>17:30前</time><p>开始返回住宿。</p></div></div><div class="keyword-row"><button class="copy-btn" data-copy="喀纳斯景区贾登峪游客中心" type="button">复制入口</button></div><div class="fallback-grid"><div class="fallback"><b>晚到</b><p>湖区移到D5上午。</p></div><div class="fallback"><b>下雨</b><p>只换乘入住。</p></div><div class="fallback"><b>明早</b><p>08:00开始核心日。</p></div></div></div></details>
+        <details class="nature-day"><summary><span class="day-code">D5</span><span><b>喀纳斯湖 + 三湾</b><span>核心完整日</span></span><span class="stay-summary">住：喀纳斯/贾登峪第2晚/共2晚</span><span class="effort">正常 ⭐⭐</span></summary><div class="nature-day-inner"><div class="day-visual"><img src="../assets/images/altay-three-bays.jpg" alt="喀纳斯三湾"><div class="brief"><p><b>今日一句话：</b>区间车串湖与三湾，观鱼台和白哈巴删除。</p><p><b>预算：</b>两人餐饮及可选项目约300-900元。</p><p><b>吃饭/物品：</b>自备轻食；防晒、外套、水、充电宝。</p></div></div><div class="timeline"><div class="timeline-row"><time>上午</time><p>湖区或三湾按客流先后执行。</p></div><div class="timeline-row"><time>中午</time><p>换乘中心休息。</p></div><div class="timeline-row"><time>下午</time><p>神仙湾→月亮湾→卧龙湾，站间坐车。</p></div></div><div class="keyword-row"><button class="copy-btn" data-copy="喀纳斯换乘中心" type="button">复制换乘中心</button></div><div class="fallback-grid"><div class="fallback"><b>人多</b><p>湖区与三湾顺序对调。</p></div><div class="fallback"><b>腿累</b><p>每湾只走观景台。</p></div><div class="fallback"><b>明早</b><p>早出山去布尔津。</p></div></div></div></details>
+        <details class="nature-day"><summary><span class="day-code">D6</span><span><b>喀纳斯 → 布尔津</b><span>恢复日</span></span><span class="stay-summary">住：布尔津1晚</span><span class="effort">轻松 ⭐</span></summary><div class="nature-day-inner"><div class="day-visual"><img src="../assets/images/altay-burqin.jpg" alt="布尔津额尔齐斯河"><div class="brief"><p><b>今日一句话：</b>白哈巴删除，出山后午睡和吃饭。</p><p><b>预算：</b>两人接驳住宿餐饮约1000-1800元。</p><p><b>吃饭/物品：</b>清蒸冷水鱼先问时价；身份证、晕车药、水。</p></div></div><div class="timeline"><div class="timeline-row"><time>08:30</time><p>退房出山。</p></div><div class="timeline-row"><time>下午</time><p>布尔津入住、休息。</p></div><div class="timeline-row"><time>晚上</time><p>确认D7票和接驳。</p></div></div><div class="keyword-row"><button class="copy-btn" data-copy="布尔津县城 主路 酒店" type="button">复制住宿</button></div><div class="fallback-grid"><div class="fallback"><b>晚到</b><p>不逛河堤。</p></div><div class="fallback"><b>太累</b><p>外卖回房。</p></div><div class="fallback"><b>明早</b><p>按票提前离店。</p></div></div></div></details>
+        <details class="nature-day"><summary><span class="day-code">D7</span><span><b>布尔津 → 乌鲁木齐</b><span>返程缓冲</span></span><span class="stay-summary">住：乌鲁木齐1晚</span><span class="effort">较累 ⭐⭐⭐</span></summary><div class="nature-day-inner"><div class="day-visual text-only"><div class="brief"><p><b>今日一句话：</b>只完成北疆回乌鲁木齐，不接同日广州航班。</p><p><b>预算：</b>两人交通住宿餐饮约1200-3000元。</p><p><b>吃饭/物品：</b>清淡简餐；身份证、订单、水、充电宝。</p></div></div><div class="timeline"><div class="timeline-row"><time>按票</time><p>去北屯/阿勒泰站或机场。</p></div><div class="timeline-row"><time>抵乌</time><p>住D8机场圈。</p></div></div><div class="keyword-row"><button class="copy-btn" data-copy="乌鲁木齐 实际起飞机场 酒店" type="button">复制返程住宿</button></div><div class="fallback-grid"><div class="fallback"><b>晚点</b><p>保留缓冲夜。</p></div><div class="fallback"><b>错过</b><p>平台改签并续住。</p></div><div class="fallback"><b>明早</b><p>航班前2小时到。</p></div></div></div></details>
+        <details class="nature-day"><summary><span class="day-code">D8</span><span><b>乌鲁木齐 → 广州/佛山</b><span>返程</span></span><span class="stay-summary">正常不住宿</span><span class="effort">轻松 ⭐</span></summary><div class="nature-day-inner"><div class="day-visual text-only"><div class="brief"><p><b>今日一句话：</b>只保飞行和回家。</p><p><b>预算：</b>市内接驳餐饮约200-500元，不含机票。</p><p><b>物品：</b>身份证、订单、全部行李。</p></div></div><div class="timeline"><div class="timeline-row"><time>航班前2.5小时</time><p>酒店退房去实际航站楼。</p></div><div class="timeline-row"><time>落地</time><p>按当日运营回佛山。</p></div></div><div class="keyword-row"><button class="copy-btn" data-copy="乌鲁木齐天山国际机场 实际航站楼" type="button">复制机场</button></div><div class="fallback-grid"><div class="fallback"><b>取消</b><p>续住机场圈，航司改签。</p></div><div class="fallback"><b>太累</b><p>落地直接回家。</p></div><div class="fallback"><b>结束</b><p>检查行李。</p></div></div></div></details>
+      </div>
+    </section>
+
+    <section class="nature-section" id="traffic">
+      <div class="section-title"><h2>交通闭环卡</h2><span class="lead">每段都写清站点类型、到达后接驳和晚点止损</span></div>
+      <div class="transport-grid" data-plan-group="a">
+        <article class="transport-card"><h3>D1｜广州白云机场 → 乌鲁木齐机场</h3><ul><li><b>类型：</b>机场→机场；航司官网/官方App出票。</li><li><b>建议：</b>优先白天或傍晚到，不买落地后还要跨城的紧张票。</li><li><b>预留：</b>国内航班提前2小时到；落地取行李留60分钟。</li><li><b>晚点：</b>只影响乌市缓冲，不压D3-D6核心。</li></ul></article>
+        <article class="transport-card"><h3>D2｜乌鲁木齐 → 阿勒泰/北屯</h3><ul><li><b>选择：</b>乌鲁木齐机场→阿勒泰雪都机场；或乌鲁木齐站→阿勒泰站/北屯站。</li><li><b>落地：</b>平台车辆接到阿勒泰/布尔津主路酒店。</li><li><b>原则：</b>今天不进禾木，给晚点和身体留余地。</li><li><b>没票：</b>前后移动大交通，不删禾木/喀纳斯连住。</li></ul></article>
+        <article class="transport-card"><h3>D3-D7｜阿勒泰核心山地段</h3><ul><li><b>起终点：</b>主路酒店→禾木入口→禾木村→贾登峪/喀纳斯→布尔津。</li><li><b>方式：</b>有订单接驳/小团+景区区间车；不默认自驾。</li><li><b>订单必须写：</b>车型、接送点、两人总价、司机食宿、油路停、取消和夜路。</li><li><b>道路异常：</b>住最近安全城镇，不走野路或长夜路。</li></ul></article>
+        <article class="transport-card"><h3>D8-D9｜布尔津 → 乌鲁木齐 → 广州</h3><ul><li><b>第一段：</b>布尔津→北屯/阿勒泰站或机场。</li><li><b>第二段：</b>火车/航班到乌鲁木齐，住1晚。</li><li><b>第三段：</b>D9乌鲁木齐机场→广州白云。</li><li><b>闭环：</b>不买D8同日广州票，避免山路晚点毁掉返程。</li></ul></article>
+      </div>
+      <div class="transport-grid" data-plan-group="b" hidden>
+        <article class="transport-card"><h3>D1-D2｜乌鲁木齐直进禾木</h3><ul><li><b>必须满足：</b>D2早班抵阿勒泰/北屯；平台车辆书面承诺天黑前送禾木入口。</li><li><b>禁止：</b>晚点后仍夜进阿禾/山路。</li><li><b>止损：</b>17:00前无法确认进村，就住阿勒泰/布尔津并顺延。</li></ul></article>
+        <article class="transport-card"><h3>D4-D6｜禾木 → 喀纳斯 → 布尔津</h3><ul><li><b>方式：</b>正规接驳/小团+景区区间车。</li><li><b>取舍：</b>白哈巴删除；D6直接出山。</li><li><b>行李：</b>提前确认换乘点和民宿接送，避免拖箱走坡路。</li></ul></article>
+        <article class="transport-card"><h3>D7-D8｜布尔津 → 乌鲁木齐 → 广州</h3><ul><li><b>D7：</b>经北屯/阿勒泰回乌鲁木齐并住1晚。</li><li><b>D8：</b>飞广州。</li><li><b>晚点：</b>使用乌市缓冲夜，不硬接同日联程。</li></ul></article>
+      </div>
+    </section>
+
+    <section class="nature-section" id="stay">
+      <div class="section-title"><h2>住宿流转与订房圈</h2><span class="lead">舒适优先：连住、主路、景区交通和取行李</span></div>
+      <div class="stay-flow" data-plan-group="a">
+        <article><h3>乌鲁木齐｜2晚分住</h3><p><b>中心：</b>按下一段实际机场/车站选1-2公里圈。</p><p><b>关键词：</b>“乌鲁木齐机场/乌鲁木齐站 酒店 接送 可取消”。</p><p><b>检查：</b>不跨机场与车站；D8住D9起飞机场圈。</p></article>
+        <article><h3>阿勒泰/布尔津｜1晚</h3><p><b>中心：</b>司机方便接的主路1-1.5公里圈。</p><p><b>关键词：</b>“阿勒泰市 主路 酒店 接送”或“布尔津县城 主路 酒店”。</p><p><b>作用：</b>吸收D2晚点，避免夜进山。</p></article>
+        <article><h3>禾木｜连住2晚</h3><p><b>中心：</b>禾木村公交站/主路约800米内，避免拖箱爬坡。</p><p><b>关键词：</b>“禾木村 公交站 木屋民宿 热水 可取消”。</p><p><b>检查：</b>大件行李接送、热水、独卫、早餐和退改。</p></article>
+        <article><h3>喀纳斯/贾登峪｜连住2晚</h3><p><b>优先：</b>喀纳斯新/老村主路和村内公交站；价格过高则贾登峪游客中心圈。</p><p><b>关键词：</b>“喀纳斯新村 公交站 酒店”或“贾登峪游客中心 酒店”。</p><p><b>检查：</b>二日票/进出园、行李、村内公交和早餐。</p></article>
+        <article><h3>布尔津｜1晚</h3><p><b>中心：</b>县城主路/河堤餐饮圈1-1.5公里。</p><p><b>关键词：</b>“布尔津县城 主路 酒店 可取消”。</p><p><b>检查：</b>D8去北屯/阿勒泰接驳、早餐打包、寄存。</p></article>
+      </div>
+      <div class="stay-flow" data-plan-group="b" hidden>
+        <article><h3>乌鲁木齐｜2晚分住</h3><p>D1住D2早班出发点；D7住D8起飞机场圈。</p></article>
+        <article><h3>禾木｜连住2晚</h3><p>主路/公交站800米内；确认晚到是否接行李。</p></article>
+        <article><h3>喀纳斯/贾登峪｜连住2晚</h3><p>新/老村公交站优先，贾登峪为价格和行李备选。</p></article>
+        <article><h3>布尔津｜1晚</h3><p>主路、餐饮和次日接驳方便；白哈巴删除。</p></article>
+      </div>
+      <div class="keyword-row"><button class="copy-btn" data-copy="禾木村 公交站 木屋民宿 热水 独卫 可取消" type="button">复制禾木订房词</button><button class="copy-btn" data-copy="喀纳斯新村 公交站 酒店 可取消" type="button">复制喀纳斯订房词</button><button class="copy-btn" data-copy="贾登峪游客中心 酒店 可取消" type="button">复制贾登峪订房词</button></div>
+      <article class="hotel-evidence"><div><h3>真实OTA核价状态</h3><p><b>状态：</b>真实OTA核价待出发前补充。</p><p><b>原因：</b>路线尚未给出具体日期，禾木和喀纳斯旺季价格随日期、房型和退改变化很大。本页不展示虚构截图、不引用模糊“起”价。</p><p><b>核价动作：</b>确定日期后，在携程/美团/去哪儿分别查1间1晚、2位成人、可免费取消、含税支付价；截图必须同时看见酒店名、入住/退房日期和价格。</p><p><b>候选类型：</b>乌鲁木齐/阿勒泰/布尔津优先全季、汉庭、如家、智选假日等可核验连锁；禾木和喀纳斯以位置、热水、独卫、行李接送和真实差评为先。</p></div><div class="evidence-pending"><div><b>未伪造OTA截图</b><p>确定真实日期后再补充平台、酒店全名、日期、人数和支付价。</p></div></div></article>
+    </section>
+
+    <section class="nature-section" id="spots">
+      <div class="section-title"><h2>景区内部执行攻略</h2><span class="lead">进门后第一步、必看、可删和离场都写清</span></div>
+      <div class="spot-guide">
+        <details class="spot-exec"><summary><img src="../assets/images/altay-hemu.jpg" alt="禾木河谷"><span><span class="spot-title">禾木怎么走？</span><span class="spot-copy">区间车入村，木桥与河岸优先；连住2晚不追机位</span></span><span class="level">中低步行</span></summary><div class="spot-content"><div class="spot-facts"><div><span>入口</span><b>禾木景区入口/换乘点</b></div><div><span>建议时长</span><b>1个到达傍晚+1个完整日</b></div><div><span>门票</span><b>旺季基准50元/人；区间车待核</b></div><div><span>开放</span><b>以官方当日公告为准</b></div></div><ol class="steps"><li>入口核验身份证和预约，问清大件行李如何到民宿。</li><li>乘景区交通到禾木服务区/村内站，先入住，不拖箱走坡路。</li><li>到达日只走禾木桥→河岸→老村近端，约1-2小时。</li><li>完整日早晚看河谷光线，中午回房午睡。</li><li>观景台仅在路况、天气、膝盖都合适时短走；不以登高为任务。</li></ol><p><b>必看：</b>木桥、禾木河、木屋村落。<b>可删：</b>高处观景台、骑马、吉克普林远线。</p><p><b>厕所/补给：</b>游客服务区、村内主路；水和轻食从住处带出。</p><p><b>下雨/太累：</b>村内公交+木桥近端30-60分钟；回房休息。</p><p><b>离场：</b>前晚向民宿确认行李和去喀纳斯的上车点。</p></div></details>
+
+        <details class="spot-exec"><summary><img src="../assets/images/altay-kanas-lake.jpg" alt="喀纳斯湖实景"><span><span class="spot-title">喀纳斯湖怎么走？</span><span class="spot-copy">换乘中心先分流，湖边短栈道，不强上观鱼台</span></span><span class="level">中低步行</span></summary><div class="spot-content"><div class="spot-facts"><div><span>入口</span><b>贾登峪游客中心</b></div><div><span>建议时长</span><b>半天，和三湾分时段</b></div><div><span>门票</span><b>旺季基准160元/人·2天</b></div><div><span>交通</span><b>景区区间车，当期票型待核</b></div></div><ol class="steps"><li>贾登峪核验票证，坐区间车到喀纳斯换乘中心。</li><li>把住宿、行李和返程班次先问清，再去湖区。</li><li>坐车/短走到喀纳斯湖，沿湖近端栈道慢走30-90分钟。</li><li>游船是额外消费，不是看湖必需；预算或天气不合适就不买。</li><li>观鱼台末段长台阶多，不设为必做；若本人主动选择，先核预约和停运风险。</li></ol><p><b>必看：</b>湖色、森林和河口。<b>可删：</b>游船、观鱼台、长距离湖边步行。</p><p><b>天气替代：</b>雾大就看近处湖岸，不等整天；雷雨立即回换乘中心。</p><p><b>离场：</b>17:00前后开始回住宿，避免错过末班村内交通。</p></div></details>
+
+        <details class="spot-exec"><summary><img src="../assets/images/altay-three-bays.jpg" alt="喀纳斯三湾"><span><span class="spot-title">神仙湾、月亮湾、卧龙湾怎么走？</span><span class="spot-copy">站间坐车，每湾短看；不走三湾全程</span></span><span class="level">低步行可缩短</span></summary><div class="spot-content"><div class="spot-facts"><div><span>起点</span><b>换乘中心/区间车站</b></div><div><span>默认时长</span><b>3-4小时</b></div><div><span>步行</span><b>每湾观景台与短栈道</b></div><div><span>最佳策略</span><b>按客流逆序或顺序调整</b></div></div><ol class="steps"><li>先看当天区间车调度和舒适度提示。</li><li>神仙湾看水面与林线，停15-25分钟。</li><li>月亮湾看弯月形河道，走近端栈道30-45分钟。</li><li>卧龙湾看河心沙洲，观景台停20-30分钟。</li><li>湾与湾之间默认坐车；不要为了“全走完”消耗返程体力。</li></ol><p><b>必看：</b>月亮湾、卧龙湾；神仙湾遇大雾可删。<b>拍照：</b>栏杆内观景台，不跨护栏。</p><p><b>下雨：</b>三选二；大雨只保月亮湾。<b>太累：</b>每站下车拍照即返。</p></div></details>
+
+        <details class="spot-exec"><summary><img src="../assets/images/altay-hemu-valley.jpg" alt="阿勒泰禾木河谷实景"><span><span class="spot-title">白哈巴怎么选？</span><span class="spot-copy">只作半天替换项；先核证件、预约和景区交通</span></span><span class="level">可选支线</span></summary><div class="spot-content"><div class="spot-facts"><div><span>位置</span><b>哈巴河县铁热克提乡方向</b></div><div><span>门票</span><b>旺季基准30元/人</b></div><div><span>额外核对</span><b>边境管理、预约、区间车</b></div><div><span>默认结论</span><b>不与三湾核心叠加</b></div></div><ol class="steps"><li>前一晚在官方渠道确认当期是否开放、证件要求和班次。</li><li>按指定换乘点乘景区车辆，不接受私车带入承诺。</li><li>到村后只走主街、木屋和近端观景点，约1.5-2.5小时。</li><li>按约定班次返回，再出山去布尔津。</li></ol><p><b>必看：</b>只有本人特别想看边境木屋村落时才去。<b>可删：</b>整条支线，删除不影响喀纳斯主体验。</p><p><b>止损：</b>天气差、睡眠不足、班次不顺或到布尔津会太晚，立即取消。</p></div></details>
+
+        <details class="spot-exec"><summary><img src="../assets/images/altay-burqin.jpg" alt="布尔津额尔齐斯河"><span><span class="spot-title">布尔津恢复夜怎么安排？</span><span class="spot-copy">出山后的休息、吃饭和返程衔接，不再塞重景点</span></span><span class="level">轻松</span></summary><div class="spot-content"><div class="spot-facts"><div><span>住宿</span><b>县城主路/餐饮圈</b></div><div><span>时长</span><b>1晚</b></div><div><span>任务</span><b>洗澡、吃饭、确认返程</b></div><div><span>可选</span><b>河堤短走/五彩滩看天气</b></div></div><ol class="steps"><li>到县城先入住和午睡，不拖行李逛街。</li><li>晚餐只选明码标价餐馆，冷水鱼先问重量、单价和做法。</li><li>体力足可沿河堤短走30-60分钟；不专程绕远。</li><li>睡前确认去北屯/阿勒泰的接驳、车牌和出发时间。</li></ol><p><b>天气差/太累：</b>全部夜游删除。<b>离场：</b>按火车/航班时间提前60-120分钟离店。</p></div></details>
+      </div>
+    </section>
+
+    <section class="nature-section" id="food">
+      <div class="section-title"><h2>当地吃饭：特色要尝，肠胃和不辣底线不丢</h2><span class="lead">不硬追网红店，优先顺路、明码标价和当天营业</span></div>
+      <div class="food-callout">点餐话术：我们不能吃辣，辣椒、辣油、辣皮子和辣蘸料都不要；孜然可以少放，菜做清淡一点，鱼和羊肉请先报重量与总价。</div>
+      <div class="guide-grid section-gap">
+        <article class="guide-card"><div class="guide-body"><h3>乌鲁木齐/阿勒泰</h3><p><b>吃：</b>抓饭、清炖羊肉、拌面不放辣、烤馕、酸奶。</p><p><b>搜：</b>“阿勒泰 清炖羊肉 明码标价”“乌鲁木齐 机场 清淡餐”。</p><p><b>避坑：</b>转场日不吃超量烧烤，不喝酒。</p></div></article>
+        <article class="guide-card"><div class="guide-body"><h3>禾木/喀纳斯</h3><p><b>吃：</b>牛肉汤、土豆烧肉、番茄鸡蛋面、奶茶另放盐。</p><p><b>搜：</b>“禾木村 清汤面”“喀纳斯新村 家常菜 不辣”。</p><p><b>避坑：</b>景区餐高峰先看菜单和总价，自备面包/牛奶做兜底。</p></div></article>
+        <article class="guide-card"><div class="guide-body"><h3>布尔津</h3><p><b>吃：</b>冷水鱼可选清蒸/清炖、家常蔬菜、面食。</p><p><b>搜：</b>“布尔津 冷水鱼 明码标价 近期评价”。</p><p><b>避坑：</b>鱼先问品种、重量、每斤价和加工费，不点含糊套餐。</p></div></article>
+        <article class="guide-card"><div class="guide-body"><h3>随身安全餐</h3><p>水、面包、饭团、牛奶、巧克力、常用肠胃药。区间车排队或餐厅做错时先吃安全餐，不空腹硬撑。</p></div></article>
+      </div>
+    </section>
+
+    <section class="nature-section" id="packing">
+      <div class="section-title"><h2>准备清单</h2><span class="lead">北疆夏季也有早晚温差、雨和长车程</span></div>
+      <div class="check-grid">
+        <article class="check-card"><h3>证件票务</h3><ul><li>身份证、航司App、12306</li><li>喀纳斯景区/原行网票码</li><li>酒店与接驳订单离线截图</li><li>白哈巴若去，提前核对当期证件要求</li></ul></article>
+        <article class="check-card"><h3>衣物天气</h3><ul><li>薄羽绒/防风外套、夏季换洗</li><li>雨衣优先，折叠伞备用</li><li>帽子、墨镜、防晒霜</li><li>防滑舒服鞋，不穿新鞋进山</li></ul></article>
+        <article class="check-card"><h3>长车程</h3><ul><li>晕车药、颈枕、纸巾</li><li>水、面包、牛奶、巧克力</li><li>充电宝与备用数据线</li><li>小垃圾袋，不在山路乱丢</li></ul></article>
+        <article class="check-card"><h3>手机用电</h3><ul><li>手机与充电宝每晚充满</li><li>地图、订单、司机电话离线截图</li><li>充电宝按航空/铁路规则随身携带，不托运</li><li>冷天减少手机长期暴露</li></ul></article>
+      </div>
+    </section>
+
+    <section class="nature-section" id="budget">
+      <div class="section-title"><h2>预算总账</h2><span class="lead">舒适区间，不压价；两人是主口径</span></div>
+      <div class="budget-summary" data-plan-group="a"><article><span>方案A两人全程</span><strong>17000-30700元</strong><p>含广州⇄乌鲁木齐、8晚住宿、正规接驳/小团、基础票务、餐饮和备用金。</p></article><article><span>不含广州⇄乌鲁木齐</span><strong>13000-23700元</strong><p>便于单独比较当地实际花费。</p></article><article><span>单人独行参考</span><strong>11000-21500元</strong><p>住宿不减半；若无法拼车会更高。</p></article></div>
+      <div class="budget-summary" data-plan-group="b" hidden><article><span>方案B两人全程</span><strong>16200-29300元</strong><p>省1晚缓冲住宿与部分餐饮，但D2更累。</p></article><article><span>不含广州⇄乌鲁木齐</span><strong>12200-22300元</strong><p>白哈巴默认删除。</p></article><article><span>单人独行参考</span><strong>10500-20500元</strong><p>住宿仍按整间，拼车失败会增加。</p></article></div>
+      <div class="table-scroll"><table class="route-table"><thead><tr><th>两人项目</th><th>方案A 9天</th><th>方案B 8天</th><th>计算口径</th></tr></thead><tbody>
+        <tr><td>广州⇄乌鲁木齐</td><td>4000-7000</td><td>4000-7000</td><td>2人往返含税支付价区间；行李额与退改另核。</td></tr>
+        <tr><td>乌鲁木齐⇄阿勒泰/北屯</td><td>800-2200</td><td>800-2200</td><td>飞机/火车按实际组合；不写死班次。</td></tr>
+        <tr><td>当地正规接驳/小团</td><td>3500-6000</td><td>3500-6000</td><td>阿勒泰/北屯、禾木、喀纳斯、布尔津闭环；平台订单。</td></tr>
+        <tr><td>住宿</td><td>4200-8200</td><td>3900-7600</td><td>A 8晚；B 7晚。禾木和喀纳斯旺季波动最大。</td></tr>
+        <tr><td>门票与基础景交</td><td>700-1100</td><td>650-1000</td><td>2名成人；官方门票基准+当期区间车估算，白哈巴仅A上限含。</td></tr>
+        <tr><td>餐饮</td><td>2200-3400</td><td>2000-3200</td><td>两人每日约250-380元，景区轻食与县城正餐混合。</td></tr>
+        <tr><td>市内短交通</td><td>600-1000</td><td>550-900</td><td>机场/车站/酒店短接驳，不与小团重复。</td></tr>
+        <tr><td>备用金</td><td>1000-1800</td><td>800-1400</td><td>天气、道路、临时续住和医疗。</td></tr>
+        <tr><td><b>两人合计</b></td><td><b>17000-30700</b></td><td><b>16200-29300</b></td><td>逐项相加，可复算；不是固定报价。</td></tr>
+      </tbody></table></div>
+      <p class="quiet-note">未计：观鱼台额外交通、游船、骑马、旅拍、无人机、景观房升级和白哈巴临时政策性费用。预算核对日期：2026-07-16；出票订房时按支付页重算。</p>
+    </section>
+
+    <section class="nature-section" id="emergency">
+      <div class="section-title"><h2>应急方案</h2><span class="lead">触发条件明确，直接执行</span></div>
+      <div class="emergency-list">
+        <details><summary>D2晚点，天黑前到不了禾木怎么办</summary><p>A方案本来就住阿勒泰/布尔津；B方案立即启用同样的临时缓冲夜，D3再进禾木。绝不夜赶阿禾/山路；后续删白哈巴，不删禾木和喀纳斯核心。</p></details>
+        <details><summary>禾木或喀纳斯预约没票怎么办</summary><p>先在官方渠道看相邻时段/日期；使用可取消酒店整体顺延。仍无票就住阿勒泰/布尔津休息，不买黄牛票、不接受私车“带进去”。</p></details>
+        <details><summary>暴雨、落石或道路管控怎么办</summary><p>停在交管允许的最近安全城镇，联系平台、景区和酒店退改；不绕野路，不让司机冒险夜行。若影响返程，优先启用备用金和乌鲁木齐缓冲夜。</p></details>
+        <details><summary>喀纳斯人太多怎么办</summary><p>查看“原行网”舒适度和现场调度；湖区与三湾顺序对调，中午在换乘中心休息。只保月亮湾、卧龙湾和湖区，观鱼台与游船全部删除。</p></details>
+        <details><summary>白哈巴临时不能去怎么办</summary><p>这是预设可删项，直接改为喀纳斯湖边慢走、村内休息或早出山；不临时找私车，不影响主线。</p></details>
+        <details><summary>膝盖累或完全不想爬坡怎么办</summary><p>禾木只走木桥和河岸；三湾站间全坐区间车，每站只看观景台；观鱼台删除。核心画面仍能保留。</p></details>
+        <details><summary>司机爽约或临时加价怎么办</summary><p>只在原平台发起改派/退款，保留聊天和订单证据；请酒店协助联系有资质车队。当天无法安全到下一站就续住，不私下转账。</p></details>
+        <details><summary>酒店位置订偏、拖箱困难怎么办</summary><p>先联系民宿行李接送和村内公交；无法解决就更换主路/公交站附近可取消房。不要拖大箱走长坡，必要时把大件寄存在布尔津/阿勒泰。</p></details>
+        <details><summary>手机没电或没信号怎么办</summary><p>每晚离线保存票码、酒店、司机电话和地图；充电宝随身。失联时回游客中心/换乘中心/酒店前台，不独自走小路。</p></details>
+        <details><summary>预算超支怎么办</summary><p>先删观鱼台、游船、白哈巴、景观房和旅拍；再比较航班/火车。不要砍正规接驳、主路住宿、禾木2晚和喀纳斯2晚。</p></details>
+      </div>
+    </section>
+
+    <section class="nature-section" id="sources">
+      <div class="section-title"><h2>来源与更新时间</h2><span class="lead">官方门票和道路优先；当期运营以官方支付页复核</span></div>
+      <div class="source-list">
+        <a href="https://xjdrc.xinjiang.gov.cn/xjfgw/c108396/201808/2b4475f475ea48ccbe8e8dc5406b2914.shtml" target="_blank" rel="noopener">新疆发改委：喀纳斯、禾木、白哈巴门票与全域票基准</a>
+        <a href="https://www.xinjiang.gov.cn/xinjiang/xwfb/202510/597e97a665054fccb3bff77fc8b94232.shtml" target="_blank" rel="noopener">新疆政府发布会：阿勒泰机场、火车站和交通体系</a>
+        <a href="https://jtyst.xinjiang.gov.cn/xjjtysj/mtkjt/202507/88c73e72d36f4aeeb3bf113169d75ab4.shtml" target="_blank" rel="noopener">新疆交通运输厅：阿禾公路正式通车与旅游环线</a>
+        <a href="https://alt-szb.xjmty.com/html/2026-05/06/content_416_338265.htm" target="_blank" rel="noopener">阿勒泰日报：喀纳斯景区2026夏季旅游启幕</a>
+        <a href="https://alt-szb.xjmty.com/html/2025-08/08/content_417_248982.htm" target="_blank" rel="noopener">阿勒泰日报：原行网舒适度与景区客流服务</a>
+        <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap：地图底图与数据归属</a>
+        <a href="../assets/images/altay-image-sources.json" target="_blank">阿勒泰本地图片与地图来源记录</a>
+      </div>
+      <p class="source-meta">攻略核对日期：2026-07-16。官方门票基准为可核验政策；2026分时预约、区间车、村内公交、白哈巴管理、道路和天气随时变化，出发前必须在“喀纳斯景区”“原行网”、12306、航司和交管页面复核。</p>
+      <div class="notice">本攻略用于旅行执行参考。航班、火车、酒店、门票、区间车、开放时间、道路、边境管理和天气会变化；任何实时信息以官方支付页和现场公告为准。真实OTA住宿截图尚未完成，不能把本页区间当作锁价。</div>
+    </section>
+  </main>
+
+  <script src="../assets/js/main.js"></script>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script>
+    (() => {
+      const key = 'travel-plan-altay-plan';
+      const labels = {a:'方案A｜9天8晚舒适完整版', b:'方案B｜8天7晚精简版'};
+      const hero = {
+        a:{days:'9天8晚',traffic:'飞机/火车 + 正规接驳/小团 + 景区区间车',route:'广州/佛山 → 乌鲁木齐 → 阿勒泰/布尔津 → 禾木2晚 → 喀纳斯/贾登峪2晚 → 布尔津 → 乌鲁木齐 → 广州/佛山'},
+        b:{days:'8天7晚',traffic:'早班飞机/火车 + 正规接驳/小团 + 景区区间车',route:'广州/佛山 → 乌鲁木齐 → 阿勒泰/北屯直进禾木2晚 → 喀纳斯/贾登峪2晚 → 布尔津 → 乌鲁木齐 → 广州/佛山'}
+      };
+      const valid = value => value === 'a' || value === 'b';
+      const initial = new URLSearchParams(location.search).get('plan');
+      const stored = localStorage.getItem(key);
+      let active = valid(initial) ? initial : (valid(stored) ? stored : 'a');
+
+      function render(plan, updateUrl = true){
+        active = plan;
+        document.querySelectorAll('[data-plan-target]').forEach(button => button.setAttribute('aria-pressed', String(button.dataset.planTarget === plan)));
+        document.querySelectorAll('[data-plan-group]').forEach(group => group.hidden = group.dataset.planGroup !== plan);
+        document.querySelectorAll('[data-current-plan]').forEach(node => node.textContent = labels[plan]);
+        document.querySelector('[data-hero-days]').textContent = hero[plan].days;
+        document.querySelector('[data-hero-traffic]').textContent = hero[plan].traffic;
+        document.querySelector('[data-hero-route]').textContent = hero[plan].route;
+        localStorage.setItem(key, plan);
+        if(updateUrl){const url = new URL(location.href);url.searchParams.set('plan',plan);history.pushState({plan},'',url);}
+      }
+      document.querySelectorAll('[data-plan-target]').forEach(button => button.addEventListener('click', () => render(button.dataset.planTarget)));
+      addEventListener('popstate', () => {const plan = new URLSearchParams(location.search).get('plan');render(valid(plan) ? plan : 'a', false);});
+      render(active, false);
+      if(!valid(initial)){const url = new URL(location.href);url.searchParams.set('plan',active);history.replaceState({plan:active},'',url);}
+
+      if(window.L){
+        const map = L.map('altay-map',{scrollWheelZoom:false}).setView([46.65,87.5],6);
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:18,attribution:'&copy; OpenStreetMap contributors'}).addTo(map);
+        const points = [
+          ['乌鲁木齐',43.8244,87.6139],['阿勒泰站',47.7176,88.0871],['禾木村',48.5692,87.4304],['贾登峪',48.4917,87.1460],['白哈巴',48.6932,86.7816],['布尔津',47.7006,86.8722]
+        ];
+        points.forEach(([name,lat,lon]) => L.marker([lat,lon]).addTo(map).bindPopup(name));
+        L.polyline([[43.8244,87.6139],[47.7176,88.0871]],{color:'#256b92',weight:5}).addTo(map);
+        L.polyline([[47.7176,88.0871],[48.5692,87.4304],[48.4917,87.1460],[47.7006,86.8722]],{color:'#176b5b',weight:5}).addTo(map);
+        L.polyline([[48.4917,87.1460],[48.6932,86.7816]],{color:'#c98c2d',weight:4,dashArray:'9 8'}).addTo(map);
+        L.polyline([[47.7006,86.8722],[43.8244,87.6139]],{color:'#7562a8',weight:5}).addTo(map);
+        L.control.scale({imperial:false}).addTo(map);
+      }
+    })();
+  </script>
+</body>
+</html>
