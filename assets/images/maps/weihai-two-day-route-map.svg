@@ -1,0 +1,109 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1180" role="img" aria-labelledby="title desc">
+  <title id="title">威海两日核心路线示意图</title>
+  <desc id="desc">第一天游览刘公岛，第二天上午海源公园、半月湾和猫头山，午休后游览火炬八街、国际海水浴场、金海湾栈桥并在欧乐坊吃晚饭。</desc>
+  <defs>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#19445b" flood-opacity=".14"/>
+    </filter>
+    <marker id="arrow-teal" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M0,0 L12,6 L0,12 Z" fill="#087d78"/>
+    </marker>
+    <marker id="arrow-red" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M0,0 L12,6 L0,12 Z" fill="#df5147"/>
+    </marker>
+    <marker id="arrow-gold" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M0,0 L12,6 L0,12 Z" fill="#e49a24"/>
+    </marker>
+  </defs>
+
+  <rect width="1080" height="1180" fill="#f3f9fb"/>
+  <path d="M0 0H1080V690C930 645 850 700 740 665C625 630 595 545 465 535C330 525 220 615 0 555Z" fill="#d7eff8"/>
+  <path d="M0 65C180 115 260 105 380 175C505 248 550 330 670 350C790 372 890 305 1080 348V740H0Z" fill="#eaf6ed" opacity=".93"/>
+
+  <text x="58" y="70" fill="#13324a" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="42" font-weight="800">威海两日核心路线图</text>
+  <text x="58" y="108" fill="#5e7585" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="22">位置关系示意｜道路、管制与公里数以高德当天导航为准</text>
+
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M565 590 C620 640 675 670 736 664 S850 630 920 610" stroke="#087d78" stroke-width="12" marker-end="url(#arrow-teal)"/>
+    <path d="M565 565 C630 520 685 466 727 405 S776 314 815 252 S900 202 960 190" stroke="#df5147" stroke-width="12" marker-end="url(#arrow-red)"/>
+    <path d="M960 210 C850 322 750 450 565 590" stroke="#df5147" stroke-width="7" stroke-dasharray="18 16" marker-end="url(#arrow-red)" opacity=".72"/>
+    <path d="M550 610 C480 555 410 495 325 430 S232 325 165 266" stroke="#e49a24" stroke-width="12" marker-end="url(#arrow-gold)"/>
+    <path d="M165 285 C175 380 224 485 318 584 S460 650 550 610" stroke="#e49a24" stroke-width="8" stroke-dasharray="18 16" marker-end="url(#arrow-gold)" opacity=".82"/>
+  </g>
+
+  <g font-family="Microsoft YaHei, PingFang SC, sans-serif" text-anchor="middle">
+    <g transform="translate(565 590)">
+      <circle r="30" fill="#13324a" stroke="#fff" stroke-width="7"/>
+      <text y="-48" fill="#13324a" font-size="25" font-weight="800">威高/幸福门酒店</text>
+      <text y="50" fill="#5e7585" font-size="19">两晚不换酒店</text>
+    </g>
+    <g transform="translate(736 664)">
+      <circle r="22" fill="#087d78" stroke="#fff" stroke-width="6"/>
+      <text y="50" fill="#13324a" font-size="23" font-weight="800">刘公岛客运中心</text>
+    </g>
+    <g transform="translate(920 610)">
+      <circle r="26" fill="#087d78" stroke="#fff" stroke-width="7"/>
+      <text y="-42" fill="#13324a" font-size="25" font-weight="800">刘公岛</text>
+      <text y="44" fill="#087d78" font-size="18" font-weight="700">D1 核心</text>
+    </g>
+    <g transform="translate(727 405)">
+      <circle r="25" fill="#df5147" stroke="#fff" stroke-width="7"/>
+      <text x="-8" y="-44" fill="#13324a" font-size="25" font-weight="800">海源公园</text>
+      <text x="-8" y="47" fill="#b23b34" font-size="18" font-weight="700">顺路40分钟</text>
+    </g>
+    <g transform="translate(815 252)">
+      <circle r="22" fill="#df5147" stroke="#fff" stroke-width="6"/>
+      <text x="-6" y="-38" fill="#13324a" font-size="23" font-weight="800">半月湾</text>
+    </g>
+    <g transform="translate(960 190)">
+      <circle r="24" fill="#df5147" stroke="#fff" stroke-width="7"/>
+      <text x="-40" y="-39" fill="#13324a" font-size="24" font-weight="800">猫头山观光车</text>
+    </g>
+    <g transform="translate(325 430)">
+      <circle r="22" fill="#e49a24" stroke="#fff" stroke-width="6"/>
+      <text y="-37" fill="#13324a" font-size="23" font-weight="800">火炬八街</text>
+    </g>
+    <g transform="translate(245 350)">
+      <circle r="20" fill="#e49a24" stroke="#fff" stroke-width="6"/>
+      <text x="-8" y="-36" fill="#13324a" font-size="22" font-weight="800">国际海水浴场</text>
+    </g>
+    <g transform="translate(165 266)">
+      <circle r="24" fill="#e49a24" stroke="#fff" stroke-width="7"/>
+      <text x="33" y="-39" fill="#13324a" font-size="24" font-weight="800">金海湾栈桥</text>
+      <text x="30" y="43" fill="#a7650d" font-size="18" font-weight="700">18:20前到｜看晚霞</text>
+    </g>
+    <g transform="translate(318 584)">
+      <circle r="22" fill="#e49a24" stroke="#fff" stroke-width="6"/>
+      <text y="50" fill="#13324a" font-size="23" font-weight="800">欧乐坊晚饭</text>
+    </g>
+  </g>
+
+  <g filter="url(#shadow)" font-family="Microsoft YaHei, PingFang SC, sans-serif">
+    <rect x="50" y="765" width="980" height="350" rx="28" fill="#fff"/>
+    <rect x="82" y="805" width="272" height="260" rx="22" fill="#e8f7f4"/>
+    <text x="108" y="850" fill="#087d78" font-size="26" font-weight="800">D1｜刘公岛</text>
+    <text x="108" y="896" fill="#13324a" font-size="21">酒店寄存</text>
+    <text x="108" y="932" fill="#13324a" font-size="21">→ 刘公岛码头</text>
+    <text x="108" y="968" fill="#13324a" font-size="21">→ 刘公岛</text>
+    <text x="108" y="1004" fill="#13324a" font-size="21">→ 返航入住</text>
+    <text x="108" y="1042" fill="#5e7585" font-size="18">晚上不追加景点</text>
+
+    <rect x="384" y="805" width="296" height="260" rx="22" fill="#fff0ee"/>
+    <text x="410" y="850" fill="#c74138" font-size="26" font-weight="800">D2上午｜东海岸</text>
+    <text x="410" y="896" fill="#13324a" font-size="21">海源公园 40分钟</text>
+    <text x="410" y="932" fill="#13324a" font-size="21">→ 半月湾短停</text>
+    <text x="410" y="968" fill="#13324a" font-size="21">→ 猫头山观光车</text>
+    <text x="410" y="1004" fill="#13324a" font-size="21">→ 酒店午休</text>
+    <text x="410" y="1042" fill="#a33d36" font-size="18">太热/晚起先删海源</text>
+
+    <rect x="710" y="805" width="288" height="260" rx="22" fill="#fff7e7"/>
+    <text x="736" y="850" fill="#b57512" font-size="26" font-weight="800">D2傍晚｜西海岸</text>
+    <text x="736" y="896" fill="#13324a" font-size="21">火炬八街</text>
+    <text x="736" y="932" fill="#13324a" font-size="21">→ 海水浴场</text>
+    <text x="736" y="968" fill="#13324a" font-size="21">→ 金海湾晚霞</text>
+    <text x="736" y="1004" fill="#13324a" font-size="21">→ 欧乐坊晚饭</text>
+    <text x="736" y="1042" fill="#8a5a13" font-size="18">晚霞优先，不压缩</text>
+  </g>
+
+  <text x="540" y="1153" text-anchor="middle" fill="#5e7585" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="19">红线为D2上午｜金线为D2傍晚｜虚线为回酒店休息</text>
+</svg>
