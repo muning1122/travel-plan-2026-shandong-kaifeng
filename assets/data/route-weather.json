@@ -43,9 +43,9 @@
     "shandong-kaifeng": {
       "name": "青岛—威海—开封5天执行版",
       "duration": 5,
-      "fixedStart": "2026-07-24",
-      "departureDate": "2026-07-22",
-      "dateLabel": "7月22日上车，7月24—28日游玩",
+      "fixedStart": "2026-07-25",
+      "departureDate": "2026-07-23",
+      "dateLabel": "7月23日上车，7月25—29日游玩",
       "coastal": true,
       "highAltitude": false,
       "days": [
