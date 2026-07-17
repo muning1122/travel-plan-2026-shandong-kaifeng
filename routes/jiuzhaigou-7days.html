@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" href="../favicon.ico">
   <title>九寨沟七天水景草原奇观线｜旅行管家</title>
+  <link rel="stylesheet" href="../assets/css/route-weather.css">
   <style>
     :root {
       --ink:#102033;
@@ -1146,7 +1147,7 @@
     }
   </style>
 </head>
-<body>
+<body data-route-id="jiuzhaigou-7days">
   <div class="return-bar">
     <a class="return-home primary" href="../index.html">← 返回路线选择</a>
     <span class="status-note">九寨沟详情页已升级为手机端旅行执行手册，票价车次以实际为准</span>
@@ -2231,5 +2232,8 @@
       document.getElementById('scheme-' + tab.dataset.scheme).classList.add('active');
     }));
   </script>
+  <script src="../assets/js/route-weather-config.js"></script>
+  <script src="../assets/js/weather-snapshot.js"></script>
+  <script src="../assets/js/route-weather.js"></script>
 </body>
 </html>

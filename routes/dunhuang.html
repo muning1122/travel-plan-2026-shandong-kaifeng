@@ -6,6 +6,7 @@
   <link rel="icon" href="../favicon.ico">
   <title>张掖敦煌西北奇观线｜旅行管家</title>
   <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/route-weather.css">
   <style>
     body{background:linear-gradient(180deg,#fff8ed 0%,#f4f8f7 46%,#eef6f3 100%)}
     .dunhuang-hero{max-width:1120px;margin:18px auto 0;padding:0 14px}
@@ -62,7 +63,7 @@
     @media(max-width:760px){body{font-size:15.5px;overflow-x:hidden}.dunhuang-hero,.d-nav,.wrap{max-width:100vw;overflow-x:hidden}.dunhuang-shell{width:100%;max-width:calc(100vw - 28px);min-height:auto;padding:16px;border-radius:22px}.hero-copy,.overview-card{max-width:100%;overflow:hidden}.hero-copy h1{font-size:26px;line-height:1.2}.hero-copy .tags{display:grid;grid-template-columns:1fr}.overview-list div{grid-template-columns:1fr}.desert-grid,.map-grid,.check-grid,.stay-action-grid{grid-template-columns:1fr}.day-flow,.stay-flow,.budget-table,.budget-breakdown{display:block;overflow:auto}.day-flow>div,.stay-flow>div,.budget-table>div,.budget-breakdown>div{min-width:260px;border-bottom:1px solid var(--line)}.route-overview-map img{max-height:300px}.source-grid{grid-template-columns:1fr}}
   </style>
 </head>
-<body>
+<body data-route-id="dunhuang">
   <nav class="route-return"><a class="back-btn primary" href="../index.html">← 返回路线选择</a><span class="lead">正式执行手册：7天6晚，张掖丹霞—嘉峪关—敦煌</span></nav>
 
   <header class="dunhuang-hero">
@@ -362,5 +363,8 @@
   </main>
 
   <script src="../assets/js/main.js"></script>
+  <script src="../assets/js/route-weather-config.js"></script>
+  <script src="../assets/js/weather-snapshot.js"></script>
+  <script src="../assets/js/route-weather.js"></script>
 </body>
 </html>

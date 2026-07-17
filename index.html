@@ -7,6 +7,7 @@
   <link rel="icon" href="favicon.ico">
   <title>我的旅行路线管家</title>
   <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/route-weather.css">
   <style>
     .home-page{min-height:100vh;background:linear-gradient(180deg,#eff7f5 0%,#f7faf9 56%,#f1f6f5 100%)}
     .home-hero{min-height:148px;align-items:center;background:linear-gradient(105deg,rgba(5,48,61,.96),rgba(5,104,101,.72)),url("assets/images/weihai-huanhai-road.jpg") center 48%/cover}
@@ -80,7 +81,7 @@
     @media(prefers-reduced-motion:reduce){.route-tile,.route-cover img{transition:none}}
   </style>
 </head>
-<body class="home-page">
+<body class="home-page" data-weather-index>
   <header class="hero home-hero">
     <div class="hero-inner">
       <div class="hero-kicker"><span>9条路线</span><span>手机执行手册</span><span>持续更新</span></div>
@@ -105,7 +106,7 @@
           <div class="route-summary">
             <div class="route-heading"><h2>威海 / 青岛—威海—开封慢游线</h2><span class="route-arrow" aria-hidden="true">查看路线</span></div>
             <p class="route-path">青岛 · 威海 · 开封 · 郑州</p>
-            <p class="route-budget"><span><b>双人总预算</b> ¥7,488–9,790</span><small>三方案总边界</small></p>
+            <p class="route-budget"><span><b>双人总预算</b> ¥6,398–8,472</span><small>成人+学生｜三方案边界</small></p>
             <div class="route-highlights"><span>看海</span><span>沿海自驾</span><span>万岁山</span><span>不爬山</span></div>
           </div>
         </a>
@@ -218,5 +219,8 @@
 
     <div class="home-foot"><span>路线会持续增加；新卡片会自动沿网格排列，不挤压现有入口。</span><span>票价、车次、开放时间以出发前官方页面为准。</span></div>
   </main>
+  <script src="assets/js/route-weather-config.js"></script>
+  <script src="assets/js/weather-snapshot.js"></script>
+  <script src="assets/js/route-weather.js"></script>
 </body>
 </html>

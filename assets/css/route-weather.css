@@ -1,0 +1,43 @@
+.route-weather-panel{width:min(1180px,calc(100% - 28px));margin:18px auto 24px;padding:18px;border:1px solid #cfe0e2;border-radius:14px;background:#fff;box-shadow:0 10px 28px rgba(20,52,64,.09);color:#173746}
+.route-weather-panel *{box-sizing:border-box}
+.weather-head{display:flex;align-items:flex-start;justify-content:space-between;gap:16px;margin-bottom:14px}
+.weather-head h2{margin:0 0 5px;font-size:24px;letter-spacing:0}
+.weather-head p{margin:0;color:#627584;font-size:14px;line-height:1.55}
+.weather-live-badge{display:inline-flex;align-items:center;gap:6px;flex:0 0 auto;padding:7px 10px;border-radius:999px;background:#edf7f5;color:#0b6c61;font-size:12px;font-weight:900}
+.weather-live-badge::before{content:"";width:8px;height:8px;border-radius:50%;background:#18a87f;box-shadow:0 0 0 4px rgba(24,168,127,.12)}
+.weather-controls{display:flex;align-items:end;gap:10px;flex-wrap:wrap;margin:0 0 13px;padding:12px;border-radius:10px;background:#f4f8f8}
+.weather-controls label{display:grid;gap:5px;color:#526a78;font-size:12px;font-weight:800}
+.weather-controls input{min-height:42px;padding:8px 10px;border:1px solid #bfcfd3;border-radius:8px;background:#fff;color:#173746;font:inherit;font-size:15px}
+.weather-controls button,.weather-official-link{display:inline-flex;align-items:center;justify-content:center;min-height:42px;padding:8px 13px;border:0;border-radius:8px;background:#0d776d;color:#fff;font:inherit;font-size:13px;font-weight:900;cursor:pointer;text-decoration:none}
+.weather-overall{display:grid;grid-template-columns:auto minmax(0,1fr);gap:12px;align-items:center;margin-bottom:13px;padding:13px;border-radius:10px;background:#edf7f5}
+.weather-overall[data-status="green"]{background:#eaf8f1;color:#115e4d}
+.weather-overall[data-status="amber"]{background:#fff5df;color:#7d5310}
+.weather-overall[data-status="red"]{background:#fff0ed;color:#8d3329}
+.weather-overall[data-status="unknown"]{background:#eef3f5;color:#4d6672}
+.weather-verdict{min-width:90px;font-size:18px;font-weight:950}
+.weather-reason{font-size:14px;line-height:1.55}
+.weather-days{display:grid;grid-template-columns:repeat(auto-fit,minmax(154px,1fr));gap:9px;margin-bottom:13px}
+.weather-day{min-width:0;padding:11px;border:1px solid #d7e3e5;border-left:4px solid #8aa9ae;border-radius:9px;background:#fff}
+.weather-day[data-status="green"]{border-left-color:#1a9a72}
+.weather-day[data-status="amber"]{border-left-color:#e3a425}
+.weather-day[data-status="red"]{border-left-color:#dc5546}
+.weather-day strong{display:block;margin-bottom:4px;font-size:14px}
+.weather-day .weather-place{overflow:hidden;margin-bottom:7px;color:#607481;font-size:12px;text-overflow:ellipsis;white-space:nowrap}
+.weather-day .weather-main{margin-bottom:4px;font-size:15px;font-weight:900}
+.weather-day small{display:block;color:#667a86;font-size:11.5px;line-height:1.5}
+.typhoon-card{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:14px;align-items:center;padding:13px;border:1px solid #ead6a8;border-radius:10px;background:#fff9ea}
+.typhoon-card h3{margin:0 0 5px;font-size:16px}
+.typhoon-card p{margin:0;color:#685a3d;font-size:13px;line-height:1.55}
+.weather-foot{margin:10px 0 0;color:#71828c;font-size:11.5px;line-height:1.55}
+.route-live-status{display:inline-flex;align-items:center;max-width:100%;margin-top:5px;padding:3px 7px;border-radius:999px;background:#eef3f4;color:#536d78;font-size:10.5px;font-weight:900;white-space:nowrap}
+.route-live-status[data-status="green"]{background:#e8f7ef;color:#11664e}
+.route-live-status[data-status="amber"]{background:#fff2d8;color:#7f5310}
+.route-live-status[data-status="red"]{background:#ffebe7;color:#94352c}
+@media(max-width:640px){
+  .route-weather-panel{width:calc(100% - 20px);margin:12px auto 18px;padding:14px;border-radius:11px}
+  .weather-head{gap:8px}.weather-head h2{font-size:20px}.weather-head p{font-size:13px}.weather-live-badge{padding:6px 8px;font-size:11px}
+  .weather-controls{display:grid;grid-template-columns:minmax(0,1fr) auto;padding:10px}.weather-controls label{grid-column:1/-1}.weather-controls button,.weather-official-link{min-height:44px;padding:8px 11px}
+  .weather-overall{grid-template-columns:1fr;gap:4px}.weather-verdict{font-size:17px}
+  .weather-days{display:flex;gap:8px;overflow-x:auto;padding-bottom:6px;scroll-snap-type:x proximity}.weather-day{flex:0 0 72%;scroll-snap-align:start}
+  .typhoon-card{grid-template-columns:1fr}.typhoon-card .weather-official-link{width:100%}
+}
