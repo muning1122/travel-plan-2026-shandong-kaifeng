@@ -3,6 +3,16 @@
     "location": "青岛八大关",
     "source": "项目原有实景图片"
   },
+  "qingdao-beer-museum.jpg": {
+    "location": "青岛啤酒博物馆",
+    "source": "青岛啤酒博物馆官网",
+    "url": "https://www.tsingtaomuseum.com/"
+  },
+  "maps/qingdao-amap-official-base.png": {
+    "location": "青岛北站、啤酒博物馆、八大关、第二海水浴场与小麦岛",
+    "source": "高德地图真实道路截图",
+    "url": "https://www.amap.com/"
+  },
   "qingdao-second-beach-dike.jpg": {
     "location": "青岛第二海水浴场防波堤",
     "source": "Wikimedia Commons",
@@ -27,11 +37,6 @@
     "location": "威海幸福门海滨",
     "source": "Wikimedia Commons",
     "url": "https://commons.wikimedia.org/wiki/File:Gate_of_happiness_%E5%B1%B1%E4%B8%9C_%E5%A8%81%E6%B5%B7_-_panoramio.jpg"
-  },
-  "weihai-liugong-island.jpg": {
-    "location": "乘船前往威海刘公岛",
-    "source": "Wikimedia Commons",
-    "url": "https://commons.wikimedia.org/wiki/File:Seagulls_following_us_to_Liugong_Island_(53992238517).jpg"
   },
   "weihai-half-moon-bay.jpg": {
     "location": "威海半月湾",

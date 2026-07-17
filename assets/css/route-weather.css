@@ -25,6 +25,8 @@
 .weather-day .weather-place{overflow:hidden;margin-bottom:7px;color:#607481;font-size:12px;text-overflow:ellipsis;white-space:nowrap}
 .weather-day .weather-main{margin-bottom:4px;font-size:15px;font-weight:900}
 .weather-day small{display:block;color:#667a86;font-size:11.5px;line-height:1.5}
+.weather-source-mini{display:inline-flex;margin-top:7px;color:#0b6c61;font-size:11.5px;font-weight:900;text-decoration:none}
+.weather-station-note{margin-top:4px;color:#8a6b31!important}
 .typhoon-card{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:14px;align-items:center;padding:13px;border:1px solid #ead6a8;border-radius:10px;background:#fff9ea}
 .typhoon-card h3{margin:0 0 5px;font-size:16px}
 .typhoon-card p{margin:0;color:#685a3d;font-size:13px;line-height:1.55}
@@ -36,7 +38,7 @@
 @media(max-width:640px){
   .route-weather-panel{width:calc(100% - 20px);margin:12px auto 18px;padding:14px;border-radius:11px}
   .weather-head{gap:8px}.weather-head h2{font-size:20px}.weather-head p{font-size:13px}.weather-live-badge{padding:6px 8px;font-size:11px}
-  .weather-controls{display:grid;grid-template-columns:minmax(0,1fr) auto;padding:10px}.weather-controls label{grid-column:1/-1}.weather-controls button,.weather-official-link{min-height:44px;padding:8px 11px}
+  .weather-controls{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));padding:10px}.weather-controls label{grid-column:1/-1}.weather-controls button,.weather-official-link{min-height:44px;padding:8px 11px;text-align:center}
   .weather-overall{grid-template-columns:1fr;gap:4px}.weather-verdict{font-size:17px}
   .weather-days{display:flex;gap:8px;overflow-x:auto;padding-bottom:6px;scroll-snap-type:x proximity}.weather-day{flex:0 0 72%;scroll-snap-align:start}
   .typhoon-card{grid-template-columns:1fr}.typhoon-card .weather-official-link{width:100%}

@@ -1,8 +1,9 @@
 {
-  "generatedPolicy": "每次手动部署前刷新全部路线；页面打开时再尝试获取最新预报。",
+  "generatedPolicy": "每次手动部署前从中国天气网刷新全部路线；页面只展示官方快照，台风单独核对中央气象台。",
   "forecastDays": 16,
   "locations": {
     "guangzhou": { "name": "广州/佛山出发区", "lat": 23.13, "lon": 113.26 },
+    "qingdao": { "name": "青岛", "lat": 36.07, "lon": 120.38 },
     "weihai": { "name": "威海", "lat": 37.51, "lon": 122.12 },
     "kaifeng": { "name": "开封", "lat": 34.80, "lon": 114.31 },
     "zhengzhou": { "name": "郑州", "lat": 34.75, "lon": 113.62 },
@@ -40,7 +41,7 @@
   },
   "routes": {
     "shandong-kaifeng": {
-      "name": "威海—开封5天执行版",
+      "name": "青岛—威海—开封5天执行版",
       "duration": 5,
       "fixedStart": "2026-07-24",
       "departureDate": "2026-07-22",
@@ -48,11 +49,11 @@
       "coastal": true,
       "highAltitude": false,
       "days": [
-        { "day": 1, "offset": 0, "label": "刘公岛", "location": "weihai" },
-        { "day": 2, "offset": 1, "label": "威海东西海岸", "location": "weihai" },
-        { "day": 3, "offset": 2, "label": "威海南岸与夜车", "location": "weihai" },
-        { "day": 4, "offset": 3, "label": "万岁山夜场", "location": "kaifeng" },
-        { "day": 5, "offset": 4, "label": "万岁山与返程", "location": "zhengzhou" }
+        { "day": 1, "offset": 0, "label": "青岛四处精华、晚转威海", "location": "qingdao" },
+        { "day": 2, "offset": 1, "label": "威海核心海岸、夜车转场", "location": "weihai" },
+        { "day": 3, "offset": 2, "label": "抵开封、午休与御河夜游", "location": "kaifeng" },
+        { "day": 4, "offset": 3, "label": "万岁山完整日", "location": "kaifeng" },
+        { "day": 5, "offset": 4, "label": "万岁山补漏与郑州返程", "location": "zhengzhou" }
       ]
     },
     "jiuzhaigou-7days": {
