@@ -41,19 +41,20 @@
   },
   "routes": {
     "shandong-kaifeng": {
-      "name": "青岛—威海—开封5天执行版",
-      "duration": 5,
+      "name": "青岛—威海—开封6天执行版",
+      "duration": 6,
       "fixedStart": "2026-07-25",
       "departureDate": "2026-07-23",
-      "dateLabel": "7月23日上车，7月25—29日游玩",
+      "dateLabel": "7月23日上车，7月25—30日游玩",
       "coastal": true,
       "highAltitude": false,
       "days": [
-        { "day": 1, "offset": 0, "label": "青岛四处精华、晚转威海", "location": "qingdao" },
-        { "day": 2, "offset": 1, "label": "威海核心海岸、夜车转场", "location": "weihai" },
-        { "day": 3, "offset": 2, "label": "抵开封、午休与御河夜游", "location": "kaifeng" },
-        { "day": 4, "offset": 3, "label": "万岁山完整日", "location": "kaifeng" },
-        { "day": 5, "offset": 4, "label": "万岁山补漏与郑州返程", "location": "zhengzhou" }
+        { "day": 1, "offset": 0, "label": "青岛四处精华、C6511转威海", "location": "qingdao" },
+        { "day": 2, "offset": 1, "label": "威海东海岸与猫头山", "location": "weihai" },
+        { "day": 3, "offset": 2, "label": "威海西海岸、K8262夜车", "location": "weihai" },
+        { "day": 4, "offset": 3, "label": "济南换K15、开封御河夜游", "location": "kaifeng" },
+        { "day": 5, "offset": 4, "label": "万岁山完整日", "location": "kaifeng" },
+        { "day": 6, "offset": 5, "label": "万岁山补漏与郑州返程", "location": "zhengzhou" }
       ]
     },
     "jiuzhaigou-7days": {

@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>青岛—威海—开封六日一图流</title>
+  <style>
+    *{box-sizing:border-box}html,body{margin:0;background:#dfeeed;color:#0a2d43;font-family:"Microsoft YaHei","PingFang SC",sans-serif}body{width:1240px}.poster{width:1240px;padding:52px;background:linear-gradient(180deg,#d9eeef 0,#f4f7f4 16%,#eef4f1 100%)}
+    .hero{position:relative;min-height:470px;overflow:hidden;border-radius:36px;background:#073b4a;box-shadow:0 24px 70px rgba(6,48,61,.23)}.hero-grid{position:absolute;inset:0;display:grid;grid-template-columns:1.1fr .95fr .95fr}.hero-grid img{width:100%;height:100%;object-fit:cover}.hero-grid:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(1,35,47,.94) 0,rgba(1,35,47,.74) 37%,rgba(1,35,47,.24) 70%,rgba(1,35,47,.4) 100%)}
+    .hero-copy{position:relative;z-index:2;width:710px;padding:54px;color:#fff}.kicker{display:inline-flex;padding:9px 15px;border:1px solid rgba(255,255,255,.5);border-radius:999px;background:rgba(255,255,255,.16);font-size:20px;font-weight:800}.hero h1{margin:20px 0 10px;font-size:58px;line-height:1.1;letter-spacing:0}.hero .sub{font-size:27px;line-height:1.55}.hero .route{margin-top:28px;padding:18px 22px;border-left:7px solid #ffbe48;border-radius:0 18px 18px 0;background:rgba(1,31,43,.63);font-size:22px;font-weight:800;line-height:1.6}.pill-row{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}.pill{padding:8px 13px;border-radius:999px;background:#e8f7f2;color:#075649;font-size:18px;font-weight:900}
+    .section{margin-top:32px}.section-head{display:flex;justify-content:space-between;align-items:end;gap:20px;margin:0 8px 15px}.section-head h2{margin:0;font-size:34px}.section-head p{margin:0;color:#58717f;font-size:17px}.ticket-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}.ticket{display:grid;grid-template-columns:116px 1fr;gap:16px;padding:20px;border:1px solid #cfe0df;border-radius:24px;background:#fff;box-shadow:0 10px 28px rgba(8,53,63,.08)}.ticket-no{display:grid;place-items:center;border-radius:18px;background:#0b8175;color:#fff;font-size:25px;font-weight:900}.ticket:nth-child(2n) .ticket-no{background:#246e9b}.ticket h3{margin:0 0 8px;font-size:23px}.ticket p{margin:4px 0;color:#526c7b;font-size:17px;line-height:1.45}.ticket .seat{color:#865306;font-weight:900}
+    .days{display:grid;gap:18px}.day{display:grid;grid-template-columns:300px 1fr;min-height:270px;overflow:hidden;border:1px solid #d1e1df;border-radius:28px;background:#fff;box-shadow:0 12px 32px rgba(10,49,58,.09)}.day-photo{position:relative;overflow:hidden}.day-photo img{width:100%;height:100%;object-fit:cover}.day-photo:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(2,37,48,.68),rgba(2,37,48,0) 58%)}.day-label{position:absolute;z-index:2;left:20px;bottom:18px;color:#fff}.day-label b{display:block;font-size:34px}.day-label span{font-size:18px}.day-body{padding:24px 28px}.day-body h3{margin:0 0 11px;font-size:28px}.timeline{display:flex;align-items:center;flex-wrap:wrap;gap:8px;margin-bottom:14px}.timeline span{padding:7px 11px;border-radius:10px;background:#e9f4f1;color:#0a6358;font-size:17px;font-weight:900}.timeline i{font-style:normal;color:#e79b21;font-weight:900}.day-body p{margin:7px 0;color:#4d6674;font-size:18px;line-height:1.55}.day-body .stay{margin-top:13px;padding:12px 15px;border-radius:14px;background:#fff5df;color:#71470a;font-weight:900}.day.d3{border-left:9px solid #f6ad2f}.day.d4{border-left:9px solid #3c7da5}.day.d5{border-left:9px solid #d1493f}.day.d6{border-left:9px solid #0b8175}
+    .day.d6 .day-photo{background:linear-gradient(150deg,#083f54,#0b8175);display:grid;place-items:center}.day.d6 .flight-mark{position:relative;z-index:2;color:white;text-align:center;padding:28px}.flight-mark strong{display:block;font-size:62px}.flight-mark span{font-size:21px}.hotel-box{display:grid;grid-template-columns:1fr 1fr;gap:16px}.hotel{padding:22px;border-radius:24px;background:#073b4a;color:#fff}.hotel:nth-child(2){background:#155f67}.hotel h3{margin:0 0 8px;font-size:24px}.hotel p{margin:5px 0;color:#d8eeef;font-size:18px;line-height:1.5}.hotel .price{color:#ffd26b;font-size:25px;font-weight:900}.totals{display:grid;grid-template-columns:1.15fr .85fr;gap:16px;margin-top:16px}.total-card{padding:24px;border-radius:24px;background:#fff;border:1px solid #cfe0df}.total-card h3{margin:0 0 12px;font-size:24px}.total-line{display:flex;justify-content:space-between;gap:18px;padding:7px 0;border-bottom:1px dashed #d5e2e1;font-size:18px}.total-line:last-child{border:0}.grand{display:grid;align-content:center;padding:24px;border-radius:24px;background:#fff1d6;color:#744605}.grand span{font-size:18px;font-weight:800}.grand strong{display:block;margin:4px 0;font-size:47px}.grand small{font-size:16px;color:#8e681f;line-height:1.45}.footer{margin-top:24px;padding:16px 20px;border-radius:18px;background:#dcebe8;color:#47636e;font-size:16px;line-height:1.55}.footer b{color:#0a5b51}
+  </style>
+</head>
+<body>
+<main class="poster">
+  <header class="hero">
+    <div class="hero-grid"><img src="../../assets/images/shandong-trip-poster/qingdao-beer.jpg" alt=""><img src="../../assets/images/shandong-trip-poster/weihai-golden-bay.jpg" alt=""><img src="../../assets/images/shandong-trip-poster/kaifeng-wansui.jpg" alt=""></div>
+    <div class="hero-copy">
+      <span class="kicker">2026.07.23 上车 · 07.25—07.30 游玩</span>
+      <h1>青岛 → 威海 → 开封<br>六日旅行一图流</h1>
+      <div class="sub">两人同行｜已购车票、酒店与返程机票全部落位</div>
+      <div class="route">广州白云站 → 南昌 → 青岛北 → 威海 → 济南 → 开封 → 郑州新郑机场 → 广州白云机场</div>
+      <div class="pill-row"><span class="pill">青岛工业与建筑海岸</span><span class="pill">威海两个完整看海日</span><span class="pill">御河夜游</span><span class="pill">万岁山1.5天</span></div>
+    </div>
+  </header>
+
+  <section class="section">
+    <div class="section-head"><h2>已购交通 · 时间与座位</h2><p>只保留当前有效订单，不列重复候补单</p></div>
+    <div class="ticket-grid">
+      <article class="ticket"><div class="ticket-no">T172</div><div><h3>广州白云 → 南昌</h3><p>7/23 21:15 → 7/24 09:18</p><p class="seat">加6车：01号上铺、02号上铺</p></div></article>
+      <article class="ticket"><div class="ticket-no">K1138</div><div><h3>南昌 → 青岛北</h3><p>7/24 11:27 → 7/25 05:31｜同站换乘2小时09分</p><p class="seat">14车：30号上铺、31号下铺</p></div></article>
+      <article class="ticket"><div class="ticket-no">C6511</div><div><h3>青岛北 → 威海</h3><p>7/25 19:17 → 21:11</p><p class="seat">08车07D号等｜同行席位看订单</p></div></article>
+      <article class="ticket"><div class="ticket-no">K8262</div><div><h3>威海 → 济南</h3><p>7/27 22:06 → 7/28 06:17</p><p class="seat">09车11号下铺等｜同行铺位看订单</p></div></article>
+      <article class="ticket"><div class="ticket-no">K15</div><div><h3>济南 → 开封</h3><p>7/28 07:55 → 15:17｜改签后仍有效</p><p class="seat">02车19号中铺等｜同行铺位看订单</p></div></article>
+      <article class="ticket"><div class="ticket-no">ZH8365</div><div><h3>郑州新郑 → 广州白云</h3><p>7/30 19:05 → 21:25｜深圳航空</p><p class="seat">尚未值机选座</p></div></article>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-head"><h2>六天怎么走</h2><p>每一天只保最重要的执行信息</p></div>
+    <div class="days">
+      <article class="day"><div class="day-photo"><img src="../../assets/images/shandong-trip-poster/qingdao-beer.jpg" alt="青岛啤酒博物馆"><div class="day-label"><b>D1 · 7/25</b><span>青岛 → 威海</span></div></div><div class="day-body"><h3>青岛四处精华，晚上城际到威海</h3><div class="timeline"><span>05:31 青岛北</span><i>→</i><span>啤酒博物馆</span><i>→</i><span>八大关</span><i>→</i><span>第二海水浴场</span><i>→</i><span>可选小麦岛</span></div><p><b>关键：</b>到站先洗漱、早餐、寄存；17:15前结束景点，回青岛北取行李。</p><p><b>交通：</b>C6511 19:17—21:11，08车07D号等。</p><p class="stay">今晚：威海天和美术馆酒店（葡萄滩海水浴场店）｜第1晚/共2晚</p></div></article>
+      <article class="day"><div class="day-photo"><img src="../../assets/images/shandong-trip-poster/weihai-official-03.png" alt="威海东海岸海岬"><div class="day-label"><b>D2 · 7/26</b><span>威海东海岸</span></div></div><div class="day-body"><h3>海源、半月湾与猫头山，正午固定休息</h3><div class="timeline"><span>海源公园40分钟</span><i>→</i><span>半月湾</span><i>→</i><span>猫头山官方观光车</span><i>→</i><span>酒店午休</span></div><p><b>看什么：</b>渔港礁石、弧形海湾、层叠海岬；不走徒步山路。</p><p><b>天气差：</b>先删海源，再缩短猫头山；午休不删。</p><p class="stay">今晚：原酒店｜第2晚/共2晚</p></div></article>
+      <article class="day d3"><div class="day-photo"><img src="../../assets/images/shandong-trip-poster/weihai-golden-bay.jpg" alt="威海金海湾栈桥"><div class="day-label"><b>D3 · 7/27</b><span>威海西海岸整日</span></div></div><div class="day-body"><h3>完整玩到傍晚，再上K8262夜车</h3><div class="timeline"><span>葡萄滩</span><i>→</i><span>火炬八街</span><i>→</i><span>国际海水浴场</span><i>→</i><span>金海湾</span></div><p><b>关键：</b>退房后寄存行李；18:20前到金海湾，19:10收手，回酒店取行李。</p><p><b>进站：</b>20:00左右到威海站；K8262 22:06发车。</p><p class="stay">今晚：K8262卧铺｜不计酒店</p></div></article>
+      <article class="day d4"><div class="day-photo"><img src="../../assets/images/shandong-trip-poster/kaifeng-yuhe.jpg" alt="开封大宋御河夜游"><div class="day-label"><b>D4 · 7/28</b><span>济南换乘 → 开封</span></div></div><div class="day-body"><h3>K15直达开封，晚上只坐御河游船</h3><div class="timeline"><span>06:17 到济南</span><i>→</i><span>07:55 K15</span><i>→</i><span>15:17 开封</span><i>→</i><span>御河夜游</span></div><p><b>换乘：</b>济南同站1小时38分；K15改签后的296元订单仍有效。</p><p><b>到达：</b>先去全季汴西湖店放行李、休息；累了可删夜游。</p><p class="stay">今晚：全季酒店（开封汴西湖店）｜第1晚/共2晚</p></div></article>
+      <article class="day d5"><div class="day-photo"><img src="../../assets/images/shandong-trip-poster/kaifeng-wansui.jpg" alt="开封万岁山武侠城夜场"><div class="day-label"><b>D5 · 7/29</b><span>万岁山完整日</span></div></div><div class="day-body"><h3>上午到夜场，按当天节目单追核心演出</h3><div class="timeline"><span>09:30前后入园</span><i>→</i><span>上午核心场</span><i>→</i><span>12:00—15:00遮阴</span><i>→</i><span>下午 + 夜场</span></div><p><b>关键：</b>进园先拿节目单、锁大型实景演出；不从入口商业街漫无目的逛。</p><p><b>太热：</b>正午只吃饭、补水、休息；排队太长直接换下一场。</p><p class="stay">今晚：原全季酒店｜第2晚/共2晚</p></div></article>
+      <article class="day d6"><div class="day-photo"><div class="flight-mark"><strong>✈</strong><span>万岁山补漏<br>→ 郑州新郑机场<br>→ 广州白云</span></div><div class="day-label"><b>D6 · 7/30</b><span>返程日</span></div></div><div class="day-body"><h3>上午只补冲突节目，下午只保送机</h3><div class="timeline"><span>08:00起床退房</span><i>→</i><span>万岁山补2—3项</span><i>→</i><span>14:15前离开酒店</span><i>→</i><span>19:05起飞</span></div><p><b>关键：</b>12:00前离园，午饭、取行李后直去机场；不加任何重景点。</p><p><b>航班：</b>ZH8365 19:05—21:25，尚未值机选座。</p><p class="stay">今晚：正常不住｜航班晚点再备机场酒店</p></div></article>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-head"><h2>酒店与已核总支出</h2><p>酒店按实付，不再套用每晚预算</p></div>
+    <div class="hotel-box">
+      <article class="hotel"><h3>威海｜7/25入住，7/27退房</h3><p>威海天和美术馆酒店（葡萄滩海水浴场店）</p><p>连续2晚｜退房后寄存至傍晚</p><div class="price">实付 ¥556.7</div></article>
+      <article class="hotel"><h3>开封｜7/28入住，7/30退房</h3><p>全季酒店（开封汴西湖店）</p><p>连续2晚｜D6退房后寄存</p><div class="price">实付 ¥471</div></article>
+    </div>
+    <div class="totals">
+      <article class="total-card"><h3>两人基础账</h3><div class="total-line"><span>已购大交通</span><b>¥3075</b></div><div class="total-line"><span>酒店实付</span><b>¥1027.7</b></div><div class="total-line"><span>市内打车 + 送机</span><b>¥540</b></div><div class="total-line"><span>核心票务</span><b>¥408</b></div><div class="total-line"><span>六天餐饮</span><b>¥900</b></div></article>
+      <article class="grand"><span>两人基础合计</span><strong>¥5950.7</strong><span>含100元机动金</span><strong>¥6050.7</strong><small>门票优惠资格、临时叫车时段费与景区现场规则仍以实际页面为准。</small></article>
+    </div>
+  </section>
+  <footer class="footer"><b>执行原则：</b>08:00前不强行起床；D2与D3把威海东西海岸拆开；7月27日20:00左右进站；K15只认改签后仍有效的296元订单；所有车站站台、检票口、景区节目与天气以当天官方页面为准。</footer>
+</main>
+</body>
+</html>

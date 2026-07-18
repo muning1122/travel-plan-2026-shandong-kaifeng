@@ -1,0 +1,32 @@
+{
+  "qingdao-beer.jpg": {
+    "location": "青岛啤酒博物馆",
+    "source": "青岛啤酒博物馆官网",
+    "url": "https://www.tsingtaomuseum.com/"
+  },
+  "qingdao-xiaomai-05.jpg": {
+    "location": "青岛小麦岛公园",
+    "source": "青岛日报社/观海新闻",
+    "url": "https://www.dailyqd.com/guanhai/390557_1.html"
+  },
+  "weihai-official-03.png": {
+    "location": "威海东海岸海岬",
+    "source": "威海市人民政府",
+    "url": "https://www.weihai.gov.cn/art/2026/5/3/art_58817_6330665.html"
+  },
+  "weihai-golden-bay.jpg": {
+    "location": "威海国际海水浴场/金海湾栈桥",
+    "source": "威海市人民政府",
+    "url": "https://www.weihai.gov.cn/art/2024/3/28/art_70043_4762786.html"
+  },
+  "kaifeng-yuhe.jpg": {
+    "location": "开封大宋御河夜游",
+    "source": "中央广播电视总台国际在线/开封网",
+    "url": "https://hn.cri.cn/2022-02-25/973d9a79-a5ca-f4b6-8ffd-6ae7edc02746.html"
+  },
+  "kaifeng-wansui.jpg": {
+    "location": "开封万岁山武侠城",
+    "source": "携程旅行景点图",
+    "url": "https://you.ctrip.com/sight/kaifeng165/77323.html"
+  }
+}
