@@ -64,6 +64,7 @@
   }
 
   function safeNumber(value, fallback) {
+    if (value == null || value === "") return fallback;
     var number = Number(value);
     return Number.isFinite(number) ? number : fallback;
   }
@@ -90,6 +91,7 @@
     var max = safeNumber(day.temperature_2m_max, 0);
     var min = safeNumber(day.temperature_2m_min, 99);
     var wind = windLevel(day.wind_scale);
+    var isTrend = String(day.forecast_type).indexOf("8—15") >= 0;
     var red = [];
     var amber = [];
 
@@ -101,9 +103,12 @@
     if (max >= 35 && max < 38) amber.push("高温");
     if (route.highAltitude && min <= 4) amber.push("高海拔低温");
 
+    if (isTrend && (red.length || amber.length)) {
+      return { status: "amber", label: "趋势有风险，临近复核", reason: Array.from(new Set(red.concat(amber))).join("、") + "；当前仍是8—15天趋势" };
+    }
     if (red.length) return { status: "red", label: "不建议按原计划", reason: Array.from(new Set(red)).join("、") };
     if (amber.length) return { status: "amber", label: "能去但要调整", reason: Array.from(new Set(amber)).join("、") };
-    if (String(day.forecast_type).indexOf("8—15") >= 0) {
+    if (isTrend) {
       return { status: "green", label: "趋势暂可，临近复核", reason: "当前仅为官方8—15天客观趋势，不等同短期精细预报" };
     }
     return { status: "green", label: "目前可去", reason: "官方7天预报未见强降雨、雷暴、强风或极端高温信号" };
@@ -247,20 +252,29 @@
 
   function makePanel(routeId, route, start) {
     var panel = document.createElement("section");
+    var slot = document.getElementById("route-weather-slot");
+    var compact = Boolean(slot && slot.hasAttribute("data-weather-compact"));
     panel.className = "route-weather-panel";
+    if (compact) panel.classList.add("is-compact");
     panel.id = "route-weather";
-    panel.innerHTML =
+    var heading =
       '<div class="weather-head"><div><h2>天气与台风官方判断</h2><p>' +
       escapeHtml(route.name) +
       (route.dateLabel ? "｜" + escapeHtml(route.dateLabel) : "") +
-      '｜先看能不能去，再决定是否锁票和酒店。</p></div><span class="weather-live-badge">官方快照</span></div>' +
+      '｜先看能不能去，再决定是否调整。</p></div><span class="weather-live-badge">官方快照</span></div>';
+    var controls =
       '<div class="weather-controls"><label>推算出发日期<input class="weather-date" type="date" value="' +
       start +
       '"></label><button class="weather-refresh" type="button">按此日期查看</button><a class="weather-official-link" href="https://www.weather.com.cn/" target="_blank" rel="noopener">中国天气网</a><a class="weather-official-link" href="https://www.nmc.cn/publish/typhoon/warning_index.html" target="_blank" rel="noopener">中央气象台台风</a></div>' +
-      '<div class="weather-overall" data-status="unknown"><div class="weather-verdict">正在判断</div><div class="weather-reason">读取官方快照中。</div></div><div class="weather-days"></div>' +
+      '<div class="weather-days"></div>' +
       '<div class="typhoon-card"><div class="typhoon-copy"><h3>台风预报</h3><p>读取中央气象台发布快照。</p></div><a class="weather-official-link" href="https://www.nmc.cn/publish/typhoon/warning_index.html" target="_blank" rel="noopener">打开官方预警</a></div><p class="weather-foot"></p>';
+    var verdict = '<div class="weather-overall" data-status="unknown"><div class="weather-verdict">正在判断</div><div class="weather-reason">读取官方快照中。</div></div>';
+    panel.innerHTML = compact
+      ? heading + verdict + '<details class="weather-detail"><summary>展开逐日预报、台风和官方链接</summary><div class="weather-detail-body">' + controls + "</div></details>"
+      : heading + controls.replace('<div class="weather-days"></div>', verdict + '<div class="weather-days"></div>');
     var main = document.querySelector("main");
-    if (main) document.body.insertBefore(panel, main);
+    if (slot) slot.appendChild(panel);
+    else if (main) document.body.insertBefore(panel, main);
     else document.body.appendChild(panel);
     panel.querySelector(".weather-refresh").addEventListener("click", function () {
       var value = panel.querySelector(".weather-date").value;

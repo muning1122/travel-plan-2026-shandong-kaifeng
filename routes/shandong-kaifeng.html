@@ -1,10 +1,10 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="广州佛山出发的6天青岛威海开封执行版、8天青岛威海开封版与5天青岛威海海滨版旅行执行手册。">
-  <title>6/8天海岸慢游｜青岛—威海—开封 / 青岛—威海</title>
+  <title>5/6/8天海岸慢游｜青岛—威海—开封 / 青岛—威海</title>
   <link rel="icon" href="../favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="../assets/css/style.css">
   <link rel="stylesheet" href="../assets/css/route-weather.css">
@@ -33,18 +33,22 @@
     @media(max-width:620px){.ticket-leg-grid{grid-template-columns:1fr}.ticket-transfer{min-height:92px}.ticket-time{font-size:18px}}
     .all-ticket-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-top:14px}.all-ticket{padding:13px;border:1px solid var(--line);border-radius:14px;background:#f8fbfb}.all-ticket strong{display:block;font-size:17px}.all-ticket p{margin:5px 0;color:var(--muted)}.all-ticket .seat{color:#7b4b0d;font-weight:900}.ticket-status.pending{background:#fff2d9;color:#80500d}.poster-link-card{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:14px;align-items:center;padding:16px;border:1px solid var(--line);border-radius:18px;background:linear-gradient(105deg,#e9f8f5,#eef5fb);box-shadow:var(--shadow)}.poster-link-card h3{margin:0 0 4px}.poster-link-card p{margin:0;color:var(--muted)}.poster-link-card a{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:9px 15px;border-radius:999px;background:var(--teal);color:#fff;white-space:nowrap}
     body [hidden]{display:none!important}
+    .trip-actions{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin:14px 0}.trip-action{display:grid;grid-template-columns:auto minmax(0,1fr);gap:10px;align-items:center;min-height:76px;padding:12px 14px;border:1px solid var(--line);border-radius:15px;background:#fff;box-shadow:0 7px 18px rgba(17,48,72,.07);color:var(--ink)}.trip-action:hover{border-color:#9fc9c5;transform:translateY(-1px)}.trip-action-icon{display:grid;place-items:center;width:38px;height:38px;border-radius:12px;background:#e7f5f2;color:var(--teal);font-size:13px;font-weight:950}.trip-action strong{display:block;font-size:15px}.trip-action small{display:block;color:var(--muted);font-size:12px;font-weight:700}.route-weather-slot{margin-top:2px}
+    body:not(.plans-ready) [data-plan-only]{display:none!important}body[data-plan="a"]:not(.plans-ready) [data-plan-only*="a"],body[data-plan="b"]:not(.plans-ready) [data-plan-only*="b"],body[data-plan="c"]:not(.plans-ready) [data-plan-only*="c"]{display:revert!important}.topnav a:first-child:not(.active){background:#eaf5f3;color:#155b5b}.topnav a.active{background:var(--teal);color:#fff}.map-zoom-button{display:inline-flex;align-items:center;justify-content:center;min-height:42px;margin:0 0 9px auto;padding:8px 13px;border:1px solid #9bc9c4;border-radius:999px;background:#eaf7f5;color:#0b6c61;font:800 13px inherit;cursor:pointer}
     @media(max-width:620px){.all-ticket-grid{grid-template-columns:1fr}.poster-link-card{grid-template-columns:1fr}.poster-link-card a{width:100%}}
+    @media(max-width:620px){.trip-actions{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.trip-action{min-height:72px;padding:10px}.trip-action-icon{width:34px;height:34px}.trip-action small{line-height:1.4}.topnav{top:0!important;bottom:auto!important;border-top:0!important;border-bottom:1px solid var(--line)!important}section{scroll-margin-top:62px!important}}
   </style>
 </head>
 <body data-plan="a" data-route-id="shandong-kaifeng">
-  <nav class="topnav"><a href="#one-screen">30秒总控</a><a href="#plans">版本选择</a><a href="#outbound-ticket">已购车票</a><a href="#trip-poster">一图流</a><a href="#weihai-map">三城路线图</a><a href="#quick">今日快捷</a><a href="#booking">大交通</a><a href="#tickets">景点预约</a><a href="#stay-flow">住宿流转</a><a href="#days">详细版</a><a href="#traffic">交通</a><a href="#hotel">住宿</a><a href="#spots">景点</a><a href="#food">吃饭</a><a href="#pack">准备</a><a href="#emergency">应急</a><a href="#check">核对</a></nav>
+  <script>(function(){try{var p=new URL(location.href).searchParams.get('plan')||localStorage.getItem('shandong-kaifeng-plan-v4');if(p==='a'||p==='b'||p==='c')document.body.dataset.plan=p;}catch(e){}})();</script>
+  <nav class="topnav" aria-label="路线快捷导航"><a href="#one-screen">30秒总控</a><a href="#plans">版本选择</a><a href="#outbound-ticket">已购交通</a><a href="#quick">今日执行</a><a href="#weihai-map">路线图</a><a href="#days">详细行程</a><a href="#route-weather">天气</a><a href="#emergency">应急</a><a href="#budget">费用</a></nav>
   <main class="wrap">
     <a class="back" href="../index.html">← 返回路线选择</a>
     <header class="hero">
       <div class="hero-inner">
         <div>
           <p class="eyebrow">方案A：7月23日上车｜7月25—30日游玩｜方案B/C日期待定</p>
-          <h1>6/8天海岸慢游<br>青岛、威海与开封可组合</h1>
+          <h1>5/6/8天海岸慢游<br>青岛、威海与开封可组合</h1>
           <p data-plan-only="a" hidden>已锁定：7月23日T172、24日南昌换K1138、25日05:31抵青岛北；当天走啤酒博物馆—八大关—第二海水浴场—可选小麦岛，19:17乘C6511到威海。26日东海岸、27日西海岸完整游玩，22:06乘K8262；28日换K15于15:17直达开封，晚上御河夜游；30日19:05乘ZH8365返广州。</p>
           <p data-plan-only="b">八天版保留青岛2晚、威海3晚、开封2晚，是内容最完整的三城版本；全程不爬山。</p>
           <p data-plan-only="c" hidden>五天海滨版保留青岛2晚与威海2晚，删除河南段；威海拆成东海岸海岬、西海岸晚霞和轻松返程。</p>
@@ -53,6 +57,14 @@
         <aside class="hero-card"><h2>路线总控台</h2><div data-plan-only="a" hidden><p><b>主线：</b>7月23日T172 → 24日南昌换K1138 → 25日青岛四处 → C6511到威海 → 26日东海岸 → 27日西海岸整日 → K8262 → 28日济南换K15直达开封 → 御河夜游 → 万岁山1.5天 → 30日ZH8365返广州</p><p><b>住宿：</b>威海天和美术馆酒店7月25日入住、27日退房，共2晚；27日晚睡K8262；全季开封汴西湖店7月28日入住、30日退房，共2晚。</p><p><b>关键接驳：</b>南昌同站换乘2小时09分；C6511已出票；K8262于28日06:17到济南，预留1小时38分同站换K15，15:17直达开封。</p><p><b>定位：</b>青岛首日看工业文化与建筑海岸，威海用两个完整白天拆开东西海岸，开封只保御河夜游和万岁山。</p></div><div data-plan-only="b"><p><b>主线：</b>广州/佛山 → 青岛 → 威海 → 开封 → 郑州新郑 → 广州/佛山</p><p><b>住宿：</b>青岛2晚 + 威海3晚 + 开封2晚。</p><p><b>定位：</b>三城内容最完整，威海以海岸慢游和休整为主。</p></div><div data-plan-only="c" hidden><p><b>主线：</b>广州白云 → 青岛胶东 → 青岛2晚 → 威海2晚 → 威海大水泊 → 广州。</p><p><b>住宿：</b>青岛2晚 + 威海2晚，不换偏远海景房。</p><p><b>定位：</b>只保留两座海滨城市；返程机票是最大预算变量。</p></div><p data-plan-only="a,b"><b>硬原则：</b>青岛四处精华、威海两个完整海岸日和万岁山1.5天不被普通打卡点挤压。</p><p data-plan-only="c" hidden><b>硬原则：</b>青岛建筑海岸和威海东西海岸都保留；返程日不等晚霞。</p><p><b>核对：</b>航班、12306、景点预约、观光车和节目单以出发前实际页面为准。</p></aside>
       </div>
     </header>
+
+    <div class="trip-actions" role="group" aria-label="旅行现场快捷入口">
+      <a class="trip-action" href="#quick"><span class="trip-action-icon">今天</span><span><strong>打开今日执行卡</strong><small>几点走、住哪里、下一步做什么</small></span></a>
+      <a class="trip-action" href="#outbound-ticket"><span class="trip-action-icon">票</span><span><strong>查看已购交通</strong><small>车次、换乘、座位与航班</small></span></a>
+      <a class="trip-action" href="#weihai-map"><span class="trip-action-icon">图</span><span><strong>打开三城路线图</strong><small>按酒店、车站与景点顺序执行</small></span></a>
+      <a class="trip-action" href="#route-weather" data-plan-only="a"><span class="trip-action-icon">天气</span><span><strong>查看官方判断</strong><small>中国天气网与中央气象台</small></span></a>
+    </div>
+    <div id="route-weather-slot" class="route-weather-slot" data-weather-compact data-plan-only="a"></div>
 
     <section id="decision">
       <div class="section-title"><h2>先给结论</h2><p class="lead">少而精，不赶路，把最喜欢的地方玩透。</p></div>
@@ -245,7 +257,7 @@
       <div class="day-overview" data-plan-only="a" hidden>
         <article class="day-tile"><div class="overview-day-no">D1</div><div class="overview-copy"><strong>05:31到青岛 + 晚转威海</strong><p>啤酒博物馆 → 八大关/二浴 → 小麦岛 → C6511</p><div class="overview-meta"><span class="overview-stay">今晚：天和美术馆酒店｜第1晚/共2晚</span><span class="fatigue">较累 ⭐⭐⭐</span><span class="overview-key">关键：19:17青岛北发车</span></div></div></article>
         <article class="day-tile"><div class="overview-day-no">D2</div><div class="overview-copy"><strong>威海东海岸</strong><p>海源 → 半月湾 → 大项链 → 猫头山 → “喂，海！”公园沿线</p><div class="overview-meta"><span class="overview-stay">今晚：天和美术馆酒店｜第2晚/共2晚</span><span class="fatigue">正常 ⭐⭐</span><span class="overview-key">关键：同一趟观光巴士，不额外折返</span></div></div></article>
-        <article class="day-tile"><div class="overview-day-no">D3</div><div class="overview-copy"><strong>威海西海岸整日 + 夜车</strong><p>葡萄滩 → 火炬八街 → 国际海水浴场 → 金海湾 → K8262</p><div class="overview-meta"><span class="overview-stay">今晚：K8262软卧｜列车夜宿</span><span class="fatigue">正常 ⭐⭐</span><span class="overview-key">关键：18:40离海边，22:06发车</span></div></div></article>
+        <article class="day-tile"><div class="overview-day-no">D3</div><div class="overview-copy"><strong>威海西海岸整日 + 夜车</strong><p>葡萄滩 → 火炬八街 → 国际海水浴场 → 金海湾 → K8262</p><div class="overview-meta"><span class="overview-stay">今晚：K8262软卧｜列车夜宿</span><span class="fatigue">较累 ⭐⭐⭐</span><span class="overview-key">关键：18:40离海边，22:06发车</span></div></div></article>
         <article class="day-tile"><div class="overview-day-no">D4</div><div class="overview-copy"><strong>济南换K15直达开封</strong><p>K8262 → K15 → 全季汴西湖 → 御河夜游</p><div class="overview-meta"><span class="overview-stay">今晚：全季汴西湖｜第1晚/共2晚</span><span class="fatigue">较累 ⭐⭐⭐</span><span class="overview-key">关键：同站换乘1小时38分</span></div></div></article>
         <article class="day-tile"><div class="overview-day-no">D5</div><div class="overview-copy"><strong>万岁山完整日</strong><p>核心实景演出 → 午间遮阴休息 → 夜场</p><div class="overview-meta"><span class="overview-stay">今晚：全季汴西湖｜第2晚/共2晚</span><span class="fatigue">正常 ⭐⭐</span><span class="overview-key">关键：按节目单走，不横穿赶场</span></div></div></article>
         <article class="day-tile"><div class="overview-day-no">D6</div><div class="overview-copy"><strong>补节目 + 飞回广州</strong><p>万岁山 → 取行李 → 新郑机场 → ZH8365</p><div class="overview-meta"><span class="overview-stay">今晚：正常不住，晚点备酒店</span><span class="fatigue">轻松 ⭐</span><span class="overview-key">关键：14:15前离开开封</span></div></div></article>
@@ -380,7 +392,7 @@
         </details>
 
         <details class="day-card" id="sd-a-d3">
-          <summary><img class="day-summary-img" src="../assets/images/weihai-international-beach-2026.jpg" alt="威海国际海水浴场与金海湾栈桥晚霞实景"><div class="day-summary-copy"><strong>7月27日 D3｜威海西海岸整日 → K8262</strong><p>这一整天明确留给威海：葡萄滩、火炬八街、国际海水浴场和金海湾，晚上再上夜车。</p><div class="summary-meta"><span>K8262软卧｜列车夜宿</span><span>正常 ⭐⭐</span><span>打车81元</span></div></div><span class="day-toggle">展开</span></summary>
+          <summary><img class="day-summary-img" src="../assets/images/weihai-international-beach-2026.jpg" alt="威海国际海水浴场与金海湾栈桥晚霞实景"><div class="day-summary-copy"><strong>7月27日 D3｜威海西海岸整日 → K8262</strong><p>这一整天明确留给威海：葡萄滩、火炬八街、国际海水浴场和金海湾，晚上再上夜车。</p><div class="summary-meta"><span>K8262软卧｜列车夜宿</span><span>较累 ⭐⭐⭐</span><span>打车81元</span></div></div><span class="day-toggle">展开</span></summary>
           <div class="day-inner">
             <div class="mini"><div><span>今日一句话</span><b>白天完整玩威海西海岸，晚上才转场，不把D3写成空白日。</b></div><div><span>今晚住</span><b>K8262软卧｜威海22:06 → 济南06:17</b></div><div><span>今日重点</span><b>火炬八街主视角 + 金海湾栈桥</b></div><div><span>可删</span><b>晚点先删火炬八街，列车最优先</b></div></div>
             <div class="timeline">
@@ -398,7 +410,7 @@
         </details>
 
         <details class="day-card" id="sd-a-d4">
-          <summary><img class="day-summary-img" src="../assets/images/kaifeng-yuhe-night.jpg" alt="开封御河夜游真实游船与灯光夜景"><div class="day-summary-copy"><strong>7月28日 D4｜济南换K15 → 15:17到开封 → 御河</strong><p>K15改签后仍有效；下午入住全季汴西湖，晚上只坐游船，不逛历史街区。</p><div class="summary-meta"><span>全季汴西湖｜第1晚/共2晚</span><span>较累 ⭐⭐⭐</span><span>打车42元</span></div></div><span class="day-toggle">展开</span></summary>
+          <summary><img class="day-summary-img" src="../assets/images/kaifeng-yuhe-night.jpg" alt="开封御河夜游真实游船与灯光夜景"><div class="day-summary-copy"><strong>7月28日 D4｜济南换K15 → 15:17到开封 → 御河</strong><p>K15改签后仍有效；下午入住全季汴西湖，晚上只坐游船，不逛历史街区。</p><div class="summary-meta"><span>全季汴西湖｜第1晚/共2晚</span><span>较累 ⭐⭐⭐</span><span>打车66元</span></div></div><span class="day-toggle">展开</span></summary>
           <div class="day-inner">
             <div class="mini"><div><span>今日一句话</span><b>济南同站换乘，K15直达开封；到店先休息，夜游可删。</b></div><div><span>今晚住</span><b>全季酒店（开封汴西湖店）｜第1晚/共2晚</b></div><div><span>今日重点</span><b>换乘稳妥 + 御河轻量夜景</b></div><div><span>可删</span><b>晚点或太累只删御河</b></div></div>
             <div class="timeline">
@@ -407,14 +419,14 @@
               <div class="time-row"><time class="time">15:17—18:30</time><div><h4>开封站 → 全季汴西湖 → 洗澡休息</h4><p>到店只办理入住、吃饭和恢复体力，不加古街或历史城区。</p><p class="keyword"><span>导航：全季酒店 开封汴西湖店</span><button class="copy-btn" data-copy="全季酒店 开封汴西湖店">复制</button></p></div></div>
               <div class="time-row"><time class="time">19:00—21:00</time><div><h4>大宋御河夜游 → 回酒店</h4><p>优先核对清明上河园御河码头、往返航线和末班；只坐船看水面灯光、桥梁与沿岸景观，不安排街区步行。</p></div></div>
             </div>
-            <div class="notice good"><b>D4用车账｜约14公里、42元：</b>开封站→酒店、酒店↔御河码头，均按3元/公里列账。</div>
+            <div class="notice good"><b>D4用车账｜约22公里、66元：</b>开封站→全季汴西湖约8公里，酒店↔清明上河园御河码头约14公里，按3元/公里保守列账；实际以高德当天路线为准。</div>
             <div class="notice warn"><b>K15执行：</b>这张296元订单改签后仍有效，按当前票面执行；不要把任何重复候补订单加入清单或预算。</div>
             <div class="stay-grid"><div><b>今晚住哪里</b>全季酒店（开封汴西湖店），第1晚/共2晚；28日入住、30日退房。</div><div><b>明天怎么走</b>08:00起床，早餐后按万岁山当天节目单完整玩一天。</div></div>
           </div>
         </details>
 
         <details class="day-card" id="sd-a-d5">
-          <summary><img class="day-summary-img" src="../assets/images/kaifeng-wansui-sand-battle.png" alt="开封万岁山三打祝家庄实景马战"><div class="day-summary-copy"><strong>7月29日 D5｜万岁山完整日</strong><p>从上午玩到夜场；按节目单追核心演出，正午固定遮阴休息。</p><div class="summary-meta"><span>全季汴西湖｜第2晚/共2晚</span><span>正常 ⭐⭐</span><span>打车12元</span></div></div><span class="day-toggle">展开</span></summary>
+          <summary><img class="day-summary-img" src="../assets/images/kaifeng-wansui-sand-battle.png" alt="开封万岁山三打祝家庄实景马战"><div class="day-summary-copy"><strong>7月29日 D5｜万岁山完整日</strong><p>从上午玩到夜场；按节目单追核心演出，正午固定遮阴休息。</p><div class="summary-meta"><span>全季汴西湖｜第2晚/共2晚</span><span>正常 ⭐⭐</span><span>打车42元</span></div></div><span class="day-toggle">展开</span></summary>
           <div class="day-inner">
             <div class="timeline">
               <div class="time-row"><time class="time">08:00—09:30</time><div><h4>起床早餐 → 核对节目单 → 进园</h4><p>先预约需要预约的核心实景演出，再按场次倒推移动。</p></div></div>
@@ -422,13 +434,13 @@
               <div class="time-row"><time class="time">12:00—15:00</time><div><h4>午饭 + 遮阴休息</h4><p>高温时固定坐下补水，不横穿园区赶小节目。</p></div></div>
               <div class="time-row"><time class="time">15:00—22:00</time><div><h4>下午演出 + 夜场</h4><p>节目名和场次只认当天官方公告；夜场结束后打车回同一家酒店。</p></div></div>
             </div>
-            <div class="notice good"><b>D5用车账｜4公里、12元：</b>酒店↔万岁山按3元/公里列账。</div>
+            <div class="notice good"><b>D5用车账｜约14公里、42元：</b>全季汴西湖↔万岁山往返按约7公里/程、3元/公里保守列账；实际以高德当天路线为准。</div>
             <div class="stay-grid"><div><b>今晚住哪里</b>继续住全季汴西湖，第2晚/共2晚。</div><div><b>明天怎么走</b>08:00起床，退房寄存后补2—3项；12:30前离园，14:15前离开开封。</div></div>
           </div>
         </details>
 
         <details class="day-card" id="sd-a-d6">
-          <summary><img class="day-summary-img" src="../assets/images/kaifeng-wansui.jpg" alt="开封万岁山武侠城水上实景演出"><div class="day-summary-copy"><strong>7月30日 D6｜万岁山补漏 → ZH8365返广州</strong><p>上午只补冲突节目；下午只保送机，19:05起飞、21:25到广州。</p><div class="summary-meta"><span>正常不住</span><span>轻松 ⭐</span><span>市内12元 + 送机120元</span></div></div><span class="day-toggle">展开</span></summary>
+          <summary><img class="day-summary-img" src="../assets/images/kaifeng-wansui.jpg" alt="开封万岁山武侠城水上实景演出"><div class="day-summary-copy"><strong>7月30日 D6｜万岁山补漏 → ZH8365返广州</strong><p>上午只补冲突节目；下午只保送机，19:05起飞、21:25到广州。</p><div class="summary-meta"><span>正常不住</span><span>正常 ⭐⭐</span><span>市内42元 + 送机120元</span></div></div><span class="day-toggle">展开</span></summary>
           <div class="day-inner">
             <div class="mini"><div><span>今日一句话</span><b>中午准时收手，返程优先于任何加项。</b></div><div><span>今晚住</span><b>正常不住；取消时备机场酒店</b></div><div><span>今日重点</span><b>14:15前离开开封</b></div><div><span>可删</span><b>昨天已经满足就不再进园</b></div></div>
             <div class="timeline">
@@ -437,7 +449,7 @@
               <div class="time-row"><time class="time">14:15—17:00</time><div><h4>全季汴西湖 → 郑州新郑机场</h4><p>送机固定120元列账；到机场后办理值机选座和安检。</p></div></div>
               <div class="time-row"><time class="time">19:05—21:25</time><div><h4>ZH8365 郑州 → 广州</h4><p>深圳航空，已出票；当前尚未值机选座，以航司临行通知为准。</p></div></div>
             </div>
-            <div class="notice good"><b>D6交通账｜132元：</b>酒店↔万岁山补漏约4公里12元；开封酒店→新郑机场固定120元。</div>
+            <div class="notice good"><b>D6交通账｜162元：</b>酒店↔万岁山补漏约14公里42元；开封酒店→新郑机场固定120元。</div>
           </div>
         </details>
       </div>
@@ -792,14 +804,14 @@
             <tr><td>ZH8365返程机票</td><td class="expense">682元</td><td>7月30日19:05郑州新郑→21:25广州白云，两人订单实付。</td></tr>
             <tr><td><b>大交通小计</b></td><td class="expense">3075元</td><td>1407 + 186 + 504 + 296 + 682，全部按当前有效订单。</td></tr>
             <tr><td>四晚酒店实付</td><td class="expense">1027.7元</td><td>威海天和美术馆酒店556.7元 + 全季开封汴西湖店471元；两地各住2晚。</td></tr>
-            <tr><td>市内打车</td><td class="expense">420元</td><td>D1 210元 + D2 63元 + D3 81元 + D4 42元 + D5 12元 + D6 12元；均按3元/公里口径。</td></tr>
+            <tr><td>市内打车</td><td class="expense">504元</td><td>D1 210元 + D2 63元 + D3 81元 + D4 66元 + D5 42元 + D6 42元；开封段按已订汴西湖酒店真实方位重算，均按3元/公里口径。</td></tr>
             <tr><td>返程机场接驳</td><td class="expense">120元</td><td>仅保留开封→郑州新郑机场一次120元；去程已改火车，不再计算威海机场接驳。</td></tr>
             <tr><td>核心票务</td><td class="expense">408元</td><td>青岛啤酒博物馆成人60元+学生50元=110元；猫头山观光车40元；大宋御河成人68元+学生参考40元=108元；万岁山成人+学生150元。</td></tr>
             <tr><td>六天餐饮</td><td class="expense">900元</td><td>两人合计150元/天×6天。</td></tr>
-            <tr><td><b>基础合计</b></td><td class="expense">5950.7元</td><td>大交通3075 + 酒店1027.7 + 市内打车420 + 送机120 + 票务408 + 餐饮900。</td></tr>
+            <tr><td><b>基础合计</b></td><td class="expense">6034.7元</td><td>大交通3075 + 酒店1027.7 + 市内打车504 + 送机120 + 票务408 + 餐饮900。</td></tr>
             <tr><td>机动备用</td><td class="expense">100元</td><td>用于叫车时段费、列车晚点后的临时补给或小额改签差额。</td></tr>
-            <tr><td><b>带机动金合计</b></td><td class="expense">6050.7元</td><td><b>这是当前六天方案的两人总支出：酒店已按556.7 + 471实付，K15只计有效的296元订单。</b></td></tr>
-            <tr><td><b>单人独自出行参考</b></td><td class="expense">3631.7元</td><td>去程硬卧432元 + C6511 93元 + K8262 252元 + K15 148元 + 返程机票341元 + 酒店1027.7元 + 打车420元 + 送机120元 + 成人票务248元 + 餐饮450元 + 机动100元。</td></tr>
+            <tr><td><b>带机动金合计</b></td><td class="expense">6134.7元</td><td><b>这是当前六天方案的两人总支出：酒店已按556.7 + 471实付，K15只计有效的296元订单。</b></td></tr>
+            <tr><td><b>单人独自出行参考</b></td><td class="expense">3715.7元</td><td>去程硬卧432元 + C6511 93元 + K8262 252元 + K15 148元 + 返程机票341元 + 酒店1027.7元 + 打车504元 + 送机120元 + 成人票务248元 + 餐饮450元 + 机动100元。</td></tr>
           </tbody></table></div>
         </div>
         <div data-plan-only="b" hidden>
@@ -936,7 +948,7 @@
           playbookCards[4].innerHTML='<summary><b>万岁山分两段怎么安排？</b></summary><h3>'+firstVisit+'，'+returnDay+'上午补冲突节目</h3><p><b>入园前：</b>身份证、充电宝、水、小风扇、纸巾、轻便雨具；先看官方节目单、预约场次和入园规则。</p><p><b>第一段：</b>'+firstVisitCopy+'</p><p><b>返程日上午：</b>09:00后补2—3项，12:00前离园取行李；不再加鼓楼夜市或开封老城。</p><p><b>可删：</b>边缘区、排队过长项目和与主节目冲突的小演出；高温时宁可坐着等下一场。</p>';
         }
       }
-      function setPlan(plan){
+      function setPlan(plan,historyMode){
         if(plan!=='a'&&plan!=='b'&&plan!=='c')plan='a';
         document.body.setAttribute('data-plan',plan);
         planBlocks.forEach(function(block){var plans=block.getAttribute('data-plan-only').split(',').map(function(value){return value.trim();});block.hidden=plans.indexOf(plan)===-1;});
@@ -944,10 +956,23 @@
         applyAdaptiveCopy(plan);
         if(planStatus){var labels={a:'当前显示：方案A｜6天三城执行版',b:'当前显示：方案B｜8天舒适深度版',c:'当前显示：方案C｜5天海滨精简版'};planStatus.textContent=labels[plan];}
         try{localStorage.setItem('shandong-kaifeng-plan-v4',plan);}catch(e){}
+        document.body.classList.add('plans-ready');
+        if(historyMode&&window.history&&window.URL){var url=new URL(window.location.href);url.searchParams.set('plan',plan);window.history[historyMode+'State']({plan:plan},'',url);}
       }
-      planButtons.forEach(function(button){button.addEventListener('click',function(){setPlan(button.getAttribute('data-plan-select'));});});
+      planButtons.forEach(function(button){button.addEventListener('click',function(){setPlan(button.getAttribute('data-plan-select'),'push');});});
       var savedPlan='a';try{savedPlan=localStorage.getItem('shandong-kaifeng-plan-v4')||'a';}catch(e){}
-      setPlan(savedPlan);
+      var queryPlan='';try{queryPlan=new URL(window.location.href).searchParams.get('plan')||'';}catch(e){}
+      setPlan(queryPlan==='a'||queryPlan==='b'||queryPlan==='c'?queryPlan:savedPlan,'replace');
+      window.addEventListener('popstate',function(event){var plan=event.state&&event.state.plan;try{plan=plan||new URL(window.location.href).searchParams.get('plan')||'a';}catch(e){}setPlan(plan);});
+      var plansSection=document.getElementById('plans'),oneScreenSection=document.getElementById('one-screen'),quickSection=document.getElementById('quick'),weatherSlot=document.getElementById('route-weather-slot');
+      if(plansSection&&oneScreenSection)plansSection.insertAdjacentElement('afterend',oneScreenSection);
+      if(oneScreenSection&&quickSection)oneScreenSection.insertAdjacentElement('afterend',quickSection);
+      if(quickSection&&weatherSlot)quickSection.insertAdjacentElement('afterend',weatherSlot);
+      document.querySelectorAll('button:not([type])').forEach(function(button){button.type='button';});
+      document.querySelectorAll('.route-map-card .route-map-viewport').forEach(function(viewport){var button=document.createElement('button');button.type='button';button.className='map-zoom-button';button.textContent='全屏放大地图';viewport.insertAdjacentElement('beforebegin',button);button.addEventListener('click',function(){if(document.fullscreenElement){document.exitFullscreen();}else if(viewport.requestFullscreen){viewport.requestFullscreen();}});});
+      var navLinks=Array.prototype.slice.call(document.querySelectorAll('.topnav a[href^="#"]'));
+      function updateNav(){var current='';navLinks.forEach(function(link){var target=document.querySelector(link.getAttribute('href'));if(target&&target.getBoundingClientRect().top<=110)current=link.getAttribute('href');});navLinks.forEach(function(link){var active=link.getAttribute('href')===current;link.classList.toggle('active',active);if(active)link.setAttribute('aria-current','location');else link.removeAttribute('aria-current');});}
+      updateNav();window.addEventListener('scroll',updateNav,{passive:true});window.addEventListener('hashchange',function(){setTimeout(updateNav,80);});
       document.querySelectorAll('.day-card').forEach(function(card){card.addEventListener('toggle',function(){var e=card.querySelector('.day-toggle');if(e)e.textContent=card.open?'收起':'展开';});});
     })();
   </script>

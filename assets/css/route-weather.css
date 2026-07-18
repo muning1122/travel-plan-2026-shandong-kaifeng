@@ -31,6 +31,8 @@
 .typhoon-card h3{margin:0 0 5px;font-size:16px}
 .typhoon-card p{margin:0;color:#685a3d;font-size:13px;line-height:1.55}
 .weather-foot{margin:10px 0 0;color:#71828c;font-size:11.5px;line-height:1.55}
+.route-weather-panel.is-compact{width:100%;margin:0;padding:15px;border-radius:16px;box-shadow:0 7px 18px rgba(20,52,64,.07)}
+.route-weather-panel.is-compact .weather-head{margin-bottom:10px}.route-weather-panel.is-compact .weather-head h2{font-size:20px}.route-weather-panel.is-compact .weather-overall{margin-bottom:0}.weather-detail{margin-top:10px;border-top:1px solid #dce7e8}.weather-detail>summary{padding:11px 2px 2px;color:#0b6c61;font-size:14px;font-weight:900;cursor:pointer}.weather-detail-body{padding-top:10px}
 .route-live-status{display:inline-flex;align-items:center;max-width:100%;margin-top:5px;padding:3px 7px;border-radius:999px;background:#eef3f4;color:#536d78;font-size:10.5px;font-weight:900;white-space:nowrap}
 .route-live-status[data-status="green"]{background:#e8f7ef;color:#11664e}
 .route-live-status[data-status="amber"]{background:#fff2d8;color:#7f5310}
@@ -42,4 +44,5 @@
   .weather-overall{grid-template-columns:1fr;gap:4px}.weather-verdict{font-size:17px}
   .weather-days{display:flex;gap:8px;overflow-x:auto;padding-bottom:6px;scroll-snap-type:x proximity}.weather-day{flex:0 0 72%;scroll-snap-align:start}
   .typhoon-card{grid-template-columns:1fr}.typhoon-card .weather-official-link{width:100%}
+  .route-weather-panel.is-compact{width:100%;margin:0;padding:12px}.route-weather-panel.is-compact .weather-live-badge{display:none}.route-weather-panel.is-compact .weather-head h2{font-size:18px}
 }
