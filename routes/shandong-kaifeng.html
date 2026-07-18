@@ -37,7 +37,7 @@
   </style>
 </head>
 <body data-plan="a" data-route-id="shandong-kaifeng">
-  <nav class="topnav"><a href="#one-screen">30秒总控</a><a href="#plans">版本选择</a><a href="#outbound-ticket">已购车票</a><a href="#trip-poster">一图流</a><a href="#weihai-map">青威路线图</a><a href="#quick">今日快捷</a><a href="#booking">大交通</a><a href="#tickets">景点预约</a><a href="#stay-flow">住宿流转</a><a href="#days">详细版</a><a href="#traffic">交通</a><a href="#hotel">住宿</a><a href="#spots">景点</a><a href="#food">吃饭</a><a href="#pack">准备</a><a href="#emergency">应急</a><a href="#check">核对</a></nav>
+  <nav class="topnav"><a href="#one-screen">30秒总控</a><a href="#plans">版本选择</a><a href="#outbound-ticket">已购车票</a><a href="#trip-poster">一图流</a><a href="#weihai-map">三城路线图</a><a href="#quick">今日快捷</a><a href="#booking">大交通</a><a href="#tickets">景点预约</a><a href="#stay-flow">住宿流转</a><a href="#days">详细版</a><a href="#traffic">交通</a><a href="#hotel">住宿</a><a href="#spots">景点</a><a href="#food">吃饭</a><a href="#pack">准备</a><a href="#emergency">应急</a><a href="#check">核对</a></nav>
   <main class="wrap">
     <a class="back" href="../index.html">← 返回路线选择</a>
     <header class="hero">
@@ -104,7 +104,7 @@
     </section>
 
     <section id="weihai-map">
-      <div class="section-title"><h2>青岛 D1 + 威海 D2—D3 路线图</h2><p class="lead">两张都是真实高德地图底图；威海拆成东西海岸两天，编号和颜色分别对应日期。</p></div>
+      <div class="section-title"><h2>青岛 + 威海 + 开封路线图</h2><p class="lead">均使用真实高德地图底图；方案A按已订酒店、实际车站与当天执行顺序重新标注。</p></div>
       <div class="weihai-map-layout">
         <figure class="card route-map-card">
           <h3>D1｜青岛四处精华后，晚上转威海</h3>
@@ -141,47 +141,101 @@
         </figure>
 
         <figure class="card route-map-card">
-          <h3>D2—D3｜威海东海岸 + 西海岸完整两日</h3>
-          <div class="route-map-viewport" data-mobile-center=".52" tabindex="0" aria-label="威海高德地图路线图，可左右滑动">
+          <h3>D2—D3｜从已订天和美术馆酒店出发的威海两日</h3>
+          <div class="route-map-viewport" data-mobile-center=".47" tabindex="0" aria-label="威海高德地图海岸路线图，可左右滑动">
             <div class="amap-route-stage">
-              <img src="../assets/images/maps/weihai-amap-official-base.png" alt="高德地图威海城区、东海岸、西海岸和威海站真实道路底图">
-              <svg class="amap-route-overlay" viewBox="0 0 1920 1080" role="img" aria-label="红线为上午东海岸，橙线为傍晚西海岸与进站路线">
+              <img src="../assets/images/maps/weihai-amap-official-base.png" alt="高德地图威海天和美术馆酒店、东海岸与西海岸真实道路底图">
+              <svg class="amap-route-overlay" viewBox="0 0 1920 1080" role="img" aria-label="红线为D2环海巴士与东海岸，橙线为D3西海岸">
                 <defs>
                   <marker id="arrowWeihaiRed" markerWidth="34" markerHeight="34" refX="31" refY="17" orient="auto" markerUnits="userSpaceOnUse" viewBox="0 0 34 34"><path d="M0,2 L34,17 L0,32 Z" fill="#e64e43"/></marker>
                   <marker id="arrowWeihaiOrange" markerWidth="34" markerHeight="34" refX="31" refY="17" orient="auto" markerUnits="userSpaceOnUse" viewBox="0 0 34 34"><path d="M0,2 L34,17 L0,32 Z" fill="#ee9712"/></marker>
                 </defs>
-                <path class="route-halo" d="M1000 630 Q1165 560 1315 455 Q1395 360 1418 265 Q1452 205 1470 150"/>
-                <path class="route-line red" marker-end="url(#arrowWeihaiRed)" d="M1000 630 Q1165 560 1315 455 Q1395 360 1418 265 Q1452 205 1470 150"/>
-                <path class="route-halo dashed" d="M1470 150 Q1240 410 1000 630"/>
-                <path class="route-line red dashed" marker-end="url(#arrowWeihaiRed)" d="M1470 150 Q1240 410 1000 630"/>
-                <path class="route-halo" d="M1000 630 Q700 500 275 365 Q170 355 72 330 Q105 265 166 218"/>
-                <path class="route-line orange" marker-end="url(#arrowWeihaiOrange)" d="M1000 630 Q700 500 275 365 Q170 355 72 330 Q105 265 166 218"/>
-                <path class="route-halo dashed" d="M166 218 Q350 570 112 790"/>
-                <path class="route-line orange dashed" marker-end="url(#arrowWeihaiOrange)" d="M166 218 Q350 570 112 790"/>
-                <g class="map-pin hotel" transform="translate(1000 630)"><circle r="31"/><text y="8">01</text></g>
+                <path class="route-halo" d="M670 195 Q980 330 1315 455 Q1390 350 1418 265 Q1405 215 1360 175 Q1430 130 1470 150 Q1140 105 805 155"/>
+                <path class="route-line red" marker-end="url(#arrowWeihaiRed)" d="M670 195 Q980 330 1315 455 Q1390 350 1418 265 Q1405 215 1360 175 Q1430 130 1470 150 Q1140 105 805 155"/>
+                <path class="route-halo dashed" d="M805 155 Q1110 105 1418 265 Q1080 245 670 195"/>
+                <path class="route-line red dashed" marker-end="url(#arrowWeihaiRed)" d="M805 155 Q1110 105 1418 265 Q1080 245 670 195"/>
+                <path class="route-halo" d="M670 195 Q500 275 275 365 Q170 355 72 330 Q105 265 166 218 Q410 185 670 195"/>
+                <path class="route-line orange" marker-end="url(#arrowWeihaiOrange)" d="M670 195 Q500 275 275 365 Q170 355 72 330 Q105 265 166 218 Q410 185 670 195"/>
+                <g class="map-pin hotel" transform="translate(670 195)"><circle r="31"/><text y="8">01</text></g>
                 <g class="map-pin red" transform="translate(1315 455)"><circle r="26"/><text y="8">02</text></g>
                 <g class="map-pin red" transform="translate(1418 265)"><circle r="26"/><text y="8">03</text></g>
-                <g class="map-pin red" transform="translate(1470 150)"><circle r="26"/><text y="8">04</text></g>
-                <g class="map-pin orange" transform="translate(275 365)"><circle r="26"/><text y="8">05</text></g>
-                <g class="map-pin orange" transform="translate(72 330)"><circle r="26"/><text y="8">06</text></g>
-                <g class="map-pin orange" transform="translate(166 218)"><circle r="26"/><text y="8">07</text></g>
-                <g class="map-pin orange" transform="translate(112 790)"><circle r="26"/><text y="8">08</text></g>
-                <g class="map-label-box hotel-label" transform="translate(820 650)"><rect width="164" height="43" rx="12"/><text x="14" y="28">威高/幸福门酒店</text></g>
-                <g class="map-label-box" transform="translate(1150 420)"><rect width="142" height="43" rx="12"/><text x="14" y="28">海源公园</text></g>
-                <g class="map-label-box" transform="translate(1248 238)"><rect width="142" height="43" rx="12"/><text x="14" y="28">半月湾</text></g>
-                <g class="map-label-box" transform="translate(1498 118)"><rect width="174" height="43" rx="12"/><text x="14" y="28">猫头山观光车</text></g>
+                <g class="map-pin red" transform="translate(1360 175)"><circle r="26"/><text y="8">04</text></g>
+                <g class="map-pin red" transform="translate(1470 150)"><circle r="26"/><text y="8">05</text></g>
+                <g class="map-pin red" transform="translate(805 155)"><circle r="26"/><text y="8">06</text></g>
+                <g class="map-pin orange" transform="translate(275 365)"><circle r="26"/><text y="8">07</text></g>
+                <g class="map-pin orange" transform="translate(72 330)"><circle r="26"/><text y="8">08</text></g>
+                <g class="map-pin orange" transform="translate(166 218)"><circle r="26"/><text y="8">09</text></g>
+                <g class="map-label-box hotel-label" transform="translate(690 205)"><rect width="208" height="43" rx="12"/><text x="14" y="28">天和美术馆酒店</text></g>
+                <g class="map-label-box" transform="translate(1145 440)"><rect width="142" height="43" rx="12"/><text x="14" y="28">海源公园</text></g>
+                <g class="map-label-box" transform="translate(1245 280)"><rect width="142" height="43" rx="12"/><text x="14" y="28">半月湾北岸</text></g>
+                <g class="map-label-box" transform="translate(1158 128)"><rect width="200" height="43" rx="12"/><text x="14" y="28">3号“大项链”</text></g>
+                <g class="map-label-box" transform="translate(1498 118)"><rect width="184" height="43" rx="12"/><text x="14" y="28">10号猫头山</text></g>
+                <g class="map-label-box" transform="translate(820 105)"><rect width="156" height="43" rx="12"/><text x="14" y="28">“喂，海！”公园</text></g>
                 <g class="map-label-box" transform="translate(298 382)"><rect width="142" height="43" rx="12"/><text x="14" y="28">火炬八街</text></g>
                 <g class="map-label-box" transform="translate(40 375)"><rect width="184" height="43" rx="12"/><text x="14" y="28">国际海水浴场</text></g>
                 <g class="map-label-box" transform="translate(195 185)"><rect width="156" height="43" rx="12"/><text x="14" y="28">金海湾栈桥</text></g>
-                <g class="map-label-box" transform="translate(134 820)"><rect width="130" height="43" rx="12"/><text x="14" y="28">威海站</text></g>
               </svg>
             </div>
           </div>
-          <p class="map-swipe-hint">手机提示：红色看东海岸，橙色看西海岸；虚线表示回酒店休息或取行李。</p>
-          <div class="map-schedule" data-plan-only="a" hidden><div class="map-schedule-row red"><b>D2东海岸｜红色</b><span>01天和美术馆酒店 → 02海源 → 03半月湾 → 04猫头山观光车 → 回酒店午休</span></div><div class="map-schedule-row orange"><b>D3西海岸｜橙色</b><span>01酒店/葡萄滩 → 05火炬八街 → 06国际海水浴场 → 07金海湾 → 回酒店取行李 → 08威海站</span></div></div>
-          <div class="map-schedule" data-plan-only="b"><div class="map-schedule-row red"><b>D4｜红色</b><span>01酒店 → 02海源 → 03半月湾 → 午后回酒店休整</span></div><div class="map-schedule-row orange"><b>D5｜橙色</b><span>01酒店 → 04猫头山观光车 → 05火炬八街 → 06海水浴场 → 07金海湾 → 欧乐坊</span></div></div>
-          <div class="map-schedule" data-plan-only="c" hidden><div class="map-schedule-row red"><b>D3｜红色</b><span>01酒店 → 02海源 → 03半月湾 → 04猫头山 → 酒店</span></div><div class="map-schedule-row orange"><b>D4/D5｜橙色</b><span>05火炬八街 → 06海水浴场 → 07金海湾；返程日只按航班留短线</span></div></div>
-          <figcaption>威海底图为真实高德地图截图。D2只走东海岸并回同一酒店；D3白天完整游西海岸，18:40左右离开海边、取行李后去威海站。海源仍是可删项，猫头山和金海湾优先级更高。</figcaption>
+          <p class="map-swipe-hint">手机提示：红色是D2环海巴士与东海岸，橙色是D3西海岸；编号即执行顺序。</p>
+          <div class="map-schedule" data-plan-only="a" hidden><div class="map-schedule-row red"><b>D2东海岸｜红色</b><span>01天和酒店 → 02海源 → 03半月湾北岸 → 巴士04大项链 → 05猫头山 → 06喂海公园沿线 → 按票种返回03 → 打车回01</span></div><div class="map-schedule-row orange"><b>D3西海岸｜橙色</b><span>01酒店/葡萄滩 → 07火炬八街 → 08国际海水浴场 → 09金海湾 → 回01取行李；威海站另见下图</span></div></div>
+          <div class="map-schedule" data-plan-only="b"><div class="map-schedule-row red"><b>D4｜红色</b><span>海源 → 半月湾 → 观光巴士大项链/猫头山/喂海沿线 → 午后休整</span></div><div class="map-schedule-row orange"><b>D5｜橙色</b><span>火炬八街 → 海水浴场 → 金海湾 → 欧乐坊</span></div></div>
+          <div class="map-schedule" data-plan-only="c" hidden><div class="map-schedule-row red"><b>D3｜红色</b><span>海源 → 半月湾 → 大项链/猫头山观光车 → 喂海沿线</span></div><div class="map-schedule-row orange"><b>D4/D5｜橙色</b><span>火炬八街 → 海水浴场 → 金海湾；返程日只按航班留短线</span></div></div>
+          <figcaption>底图中的紫色酒店标注位于统一北路80号一带，已按实际已订酒店重画。17站基础线公开规则为随上随下；全景巴士则为“原客原回”。当天先看购票页属于哪一种，再决定是否在喂海公园短停。</figcaption>
+        </figure>
+
+        <figure class="card route-map-card" data-plan-only="a" hidden>
+          <h3>D3最后一段｜天和美术馆酒店 → 实际威海站</h3>
+          <div class="route-map-viewport" data-mobile-center=".5" tabindex="0" aria-label="威海酒店到威海站高德地图路线图，可左右滑动">
+            <div class="amap-route-stage">
+              <img src="../assets/images/maps/weihai-station-amap-base.png" alt="高德地图威海市区与威海站真实道路底图">
+              <svg class="amap-route-overlay" viewBox="0 0 1920 1080" role="img" aria-label="蓝线为天和美术馆酒店到威海站进站方向">
+                <defs><marker id="arrowWeihaiStation" markerWidth="34" markerHeight="34" refX="31" refY="17" orient="auto" markerUnits="userSpaceOnUse" viewBox="0 0 34 34"><path d="M0,2 L34,17 L0,32 Z" fill="#196da6"/></marker></defs>
+                <path class="route-halo" d="M925 520 Q970 605 995 700"/>
+                <path class="route-line" style="stroke:#196da6" marker-end="url(#arrowWeihaiStation)" d="M925 520 Q970 605 995 700"/>
+                <g class="map-pin hotel" transform="translate(925 520)"><circle r="30"/><text y="8">01</text></g>
+                <g class="map-pin green" transform="translate(995 700)"><circle r="28"/><text y="8">02</text></g>
+                <g class="map-label-box hotel-label" transform="translate(745 470)"><rect width="208" height="43" rx="12"/><text x="14" y="28">天和美术馆酒店</text></g>
+                <g class="map-label-box" transform="translate(1018 680)"><rect width="130" height="43" rx="12"/><text x="14" y="28">威海站</text></g>
+              </svg>
+            </div>
+          </div>
+          <div class="map-schedule"><div class="map-schedule-row"><b>D3进站｜蓝色</b><span>18:40从金海湾收手 → 先回01取行李 → 约20:00到02威海站 → 22:06乘K8262。不是威海北站。</span></div></div>
+          <figcaption>这张市域底图专门解决旧图把威海北站误写成威海站的问题。实际叫车终点固定复制“威海站”，不要只选搜索结果里的“高铁站”。</figcaption>
+        </figure>
+
+        <figure class="card route-map-card" data-plan-only="a" hidden>
+          <h3>D4—D6｜开封站、全季汴西湖、御河与万岁山</h3>
+          <div class="route-map-viewport" data-mobile-center=".5" tabindex="0" aria-label="开封高德地图路线图，可左右滑动">
+            <div class="amap-route-stage">
+              <img src="../assets/images/maps/kaifeng-amap-official-base.png" alt="高德地图全季开封汴西湖店、开封站、御河码头与万岁山真实道路底图">
+              <svg class="amap-route-overlay" viewBox="0 0 1920 1080" role="img" aria-label="蓝线为D4到店与御河，红线为D5万岁山，橙线为D6返程方向">
+                <defs>
+                  <marker id="arrowKaifengBlue" markerWidth="34" markerHeight="34" refX="31" refY="17" orient="auto" markerUnits="userSpaceOnUse" viewBox="0 0 34 34"><path d="M0,2 L34,17 L0,32 Z" fill="#196da6"/></marker>
+                  <marker id="arrowKaifengRed" markerWidth="34" markerHeight="34" refX="31" refY="17" orient="auto" markerUnits="userSpaceOnUse" viewBox="0 0 34 34"><path d="M0,2 L34,17 L0,32 Z" fill="#e64e43"/></marker>
+                  <marker id="arrowKaifengOrange" markerWidth="34" markerHeight="34" refX="31" refY="17" orient="auto" markerUnits="userSpaceOnUse" viewBox="0 0 34 34"><path d="M0,2 L34,17 L0,32 Z" fill="#ee9712"/></marker>
+                </defs>
+                <path class="route-halo" d="M1142 657 Q1000 600 899 526 Q1000 470 1086 469 Q995 490 899 526"/>
+                <path class="route-line" style="stroke:#196da6" marker-end="url(#arrowKaifengBlue)" d="M1142 657 Q1000 600 899 526 Q1000 470 1086 469 Q995 490 899 526"/>
+                <path class="route-halo" d="M899 526 Q1005 440 1124 416 Q1010 470 899 526"/>
+                <path class="route-line red" marker-end="url(#arrowKaifengRed)" d="M899 526 Q1005 440 1124 416 Q1010 470 899 526"/>
+                <path class="route-halo dashed" d="M899 526 Q720 650 560 830"/>
+                <path class="route-line orange dashed" marker-end="url(#arrowKaifengOrange)" d="M899 526 Q720 650 560 830"/>
+                <g class="map-pin green" transform="translate(1142 657)"><circle r="28"/><text y="8">01</text></g>
+                <g class="map-pin hotel" transform="translate(899 526)"><circle r="31"/><text y="8">02</text></g>
+                <g class="map-pin green" transform="translate(1086 469)"><circle r="28"/><text y="8">03</text></g>
+                <g class="map-pin red" transform="translate(1124 416)"><circle r="28"/><text y="8">04</text></g>
+                <g class="map-label-box" transform="translate(1168 640)"><rect width="130" height="43" rx="12"/><text x="14" y="28">开封站</text></g>
+                <g class="map-label-box hotel-label" transform="translate(710 540)"><rect width="218" height="43" rx="12"/><text x="14" y="28">全季开封汴西湖店</text></g>
+                <g class="map-label-box" transform="translate(1108 478)"><rect width="180" height="43" rx="12"/><text x="14" y="28">清园御河码头</text></g>
+                <g class="map-label-box" transform="translate(1148 380)"><rect width="160" height="43" rx="12"/><text x="14" y="28">万岁山武侠城</text></g>
+                <g class="map-label-box" transform="translate(430 842)"><rect width="204" height="43" rx="12"/><text x="14" y="28">新郑机场方向</text></g>
+              </svg>
+            </div>
+          </div>
+          <p class="map-swipe-hint">手机提示：蓝色D4，红色D5，橙色虚线为D6送机方向。</p>
+          <div class="map-schedule"><div class="map-schedule-row"><b>D4｜蓝色</b><span>01开封站 → 02全季酒店放行李 → 03清明上河园御河码头 → 回02</span></div><div class="map-schedule-row red"><b>D5｜红色</b><span>02酒店 → 04万岁山完整日 → 回02</span></div><div class="map-schedule-row orange"><b>D6｜橙色</b><span>02退房寄存 → 04补节目 → 取行李 → 新郑机场方向</span></div></div>
+          <figcaption>酒店真实地址为集英街与晋安路交叉口文锦大厦1号；K15到的是开封站，不是开封北站。地图红色“1”是高德搜索到的酒店点位。</figcaption>
         </figure>
       </div>
     </section>
@@ -190,7 +244,7 @@
       <div class="section-title"><h2>30秒看懂｜今天去哪、今晚住哪</h2><p class="lead">疲劳指数：轻松 ⭐｜正常 ⭐⭐｜较累 ⭐⭐⭐。</p></div>
       <div class="day-overview" data-plan-only="a" hidden>
         <article class="day-tile"><div class="overview-day-no">D1</div><div class="overview-copy"><strong>05:31到青岛 + 晚转威海</strong><p>啤酒博物馆 → 八大关/二浴 → 小麦岛 → C6511</p><div class="overview-meta"><span class="overview-stay">今晚：天和美术馆酒店｜第1晚/共2晚</span><span class="fatigue">较累 ⭐⭐⭐</span><span class="overview-key">关键：19:17青岛北发车</span></div></div></article>
-        <article class="day-tile"><div class="overview-day-no">D2</div><div class="overview-copy"><strong>威海东海岸</strong><p>海源公园 → 半月湾 → 猫头山观光车 → 酒店午休</p><div class="overview-meta"><span class="overview-stay">今晚：天和美术馆酒店｜第2晚/共2晚</span><span class="fatigue">正常 ⭐⭐</span><span class="overview-key">关键：观光车替代徒步</span></div></div></article>
+        <article class="day-tile"><div class="overview-day-no">D2</div><div class="overview-copy"><strong>威海东海岸</strong><p>海源 → 半月湾 → 大项链 → 猫头山 → “喂，海！”公园沿线</p><div class="overview-meta"><span class="overview-stay">今晚：天和美术馆酒店｜第2晚/共2晚</span><span class="fatigue">正常 ⭐⭐</span><span class="overview-key">关键：同一趟观光巴士，不额外折返</span></div></div></article>
         <article class="day-tile"><div class="overview-day-no">D3</div><div class="overview-copy"><strong>威海西海岸整日 + 夜车</strong><p>葡萄滩 → 火炬八街 → 国际海水浴场 → 金海湾 → K8262</p><div class="overview-meta"><span class="overview-stay">今晚：K8262软卧｜列车夜宿</span><span class="fatigue">正常 ⭐⭐</span><span class="overview-key">关键：18:40离海边，22:06发车</span></div></div></article>
         <article class="day-tile"><div class="overview-day-no">D4</div><div class="overview-copy"><strong>济南换K15直达开封</strong><p>K8262 → K15 → 全季汴西湖 → 御河夜游</p><div class="overview-meta"><span class="overview-stay">今晚：全季汴西湖｜第1晚/共2晚</span><span class="fatigue">较累 ⭐⭐⭐</span><span class="overview-key">关键：同站换乘1小时38分</span></div></div></article>
         <article class="day-tile"><div class="overview-day-no">D5</div><div class="overview-copy"><strong>万岁山完整日</strong><p>核心实景演出 → 午间遮阴休息 → 夜场</p><div class="overview-meta"><span class="overview-stay">今晚：全季汴西湖｜第2晚/共2晚</span><span class="fatigue">正常 ⭐⭐</span><span class="overview-key">关键：按节目单走，不横穿赶场</span></div></div></article>
@@ -218,7 +272,7 @@
     <section id="quick">
       <div class="section-title"><h2>旅行现场快捷执行卡</h2><p class="lead">路上先看这一组，想看细节再展开当天。</p></div>
       <div class="quick-grid" data-plan-only="a" hidden>
-        <article class="quick-card"><b>D1 青岛四处 + C6511｜较累 ⭐⭐⭐</b><p>05:31到青岛北；17:15前离开小麦岛，19:17乘C6511，21:11到威海。</p><a href="#sd-a-d1">查看 D1 详细版</a></article><article class="quick-card"><b>D2 威海东海岸｜正常 ⭐⭐</b><p>海源可删，半月湾和猫头山优先；中午回酒店，今晚继续住原房。</p><a href="#sd-a-d2">查看 D2 详细版</a></article><article class="quick-card"><b>D3 威海西海岸整日｜正常 ⭐⭐</b><p>白天完整看海，18:40左右离海边；取行李后20:00到威海站，22:06乘K8262。</p><a href="#sd-a-d3">查看 D3 详细版</a></article><article class="quick-card"><b>D4 K15直达开封 + 御河｜较累 ⭐⭐⭐</b><p>06:17到济南，07:55同站换K15，15:17到开封；入住全季后晚上只夜游。</p><a href="#sd-a-d4">查看 D4 详细版</a></article><article class="quick-card"><b>D5 万岁山完整日｜正常 ⭐⭐</b><p>按节目单锁定核心实景演出，正午遮阴，晚上看夜场。</p><a href="#sd-a-d5">查看 D5 详细版</a></article><article class="quick-card"><b>D6 补节目 + ZH8365｜轻松 ⭐</b><p>上午补2—3项，14:15前离开开封，19:05起飞、21:25到广州。</p><a href="#sd-a-d6">查看 D6 详细版</a></article>
+        <article class="quick-card"><b>D1 青岛四处 + C6511｜较累 ⭐⭐⭐</b><p>05:31到青岛北；17:15前离开小麦岛，19:17乘C6511，21:11到威海。</p><a href="#sd-a-d1">查看 D1 详细版</a></article><article class="quick-card"><b>D2 威海环海线｜正常 ⭐⭐</b><p>海源后从半月湾坐巴士，重点停大项链和猫头山，顺看“喂，海！”公园沿线。</p><a href="#sd-a-d2">查看 D2 详细版</a></article><article class="quick-card"><b>D3 威海西海岸整日｜正常 ⭐⭐</b><p>白天完整看海，18:40左右离海边；取行李后20:00到威海站，22:06乘K8262。</p><a href="#sd-a-d3">查看 D3 详细版</a></article><article class="quick-card"><b>D4 K15直达开封 + 御河｜较累 ⭐⭐⭐</b><p>06:17到济南，07:55同站换K15，15:17到开封；入住全季后晚上只夜游。</p><a href="#sd-a-d4">查看 D4 详细版</a></article><article class="quick-card"><b>D5 万岁山完整日｜正常 ⭐⭐</b><p>按节目单锁定核心实景演出，正午遮阴，晚上看夜场。</p><a href="#sd-a-d5">查看 D5 详细版</a></article><article class="quick-card"><b>D6 补节目 + ZH8365｜轻松 ⭐</b><p>上午补2—3项，14:15前离开开封，19:05起飞、21:25到广州。</p><a href="#sd-a-d6">查看 D6 详细版</a></article>
       </div>
       <div class="quick-grid" data-plan-only="b" hidden>
         <article class="quick-card"><b>D1 睡前｜轻松 ⭐</b><p>确认青岛酒店和机场接驳，晚到就直接休息。</p><a href="#sd-d1">查看 D1 详细版</a></article><article class="quick-card"><b>D2 重点｜正常 ⭐⭐</b><p>啤酒博物馆、八大关、二浴和小麦岛，正午回酒店。</p><a href="#sd-d2">查看 D2 详细版</a></article><article class="quick-card"><b>D3 重点｜轻松 ⭐</b><p>08:00起床，选10:20后车次；抵威海先入住休息。</p><a href="#sd-d3">查看 D3 详细版</a></article><article class="quick-card"><b>D4 东海岸休整｜轻松 ⭐</b><p>海源与半月湾短线，午后回酒店休息，不重复看普通沙滩。</p><a href="#sd-d4">查看 D4 详细版</a></article><article class="quick-card"><b>D5 海岬晚霞｜正常 ⭐⭐</b><p>猫头山观光车后午休，傍晚金海湾看晚霞、欧乐坊吃饭。</p><a href="#sd-b-d5">查看 D5 详细版</a></article><article class="quick-card"><b>D6 转场｜正常 ⭐⭐</b><p>08:00起床，去威海北坐上午车，傍晚进万岁山夜场。</p><a href="#sd-b-d6">查看 D6 详细版</a></article><article class="quick-card"><b>D7 主景点｜正常 ⭐⭐</b><p>完整一天只围绕万岁山节目单执行。</p><a href="#sd-b-d7">查看 D7 详细版</a></article><article class="quick-card"><b>D8 返程｜轻松 ⭐</b><p>上午补节目，中午收手，下午送机。</p><a href="#sd-b-d8">查看 D8 详细版</a></article>
@@ -237,7 +291,7 @@
           <tr><td>7月25日｜青岛啤酒博物馆</td><td>建议提前1—3天</td><td>官方公众号“青岛啤酒博物馆”</td><td>成人60元、学生50元；优先预约08:30—09:00附近时段，带身份证和学生证。</td><td>预约太晚则缩短八大关/二浴；卧铺后太累就删除小麦岛。</td></tr>
           <tr><td>7月25日｜C6511 青岛北 → 威海</td><td><b>已出票｜两人186元</b></td><td>12306订单</td><td>19:17发车、21:11到威海；08车07D号等。17:15离开小麦岛，回青岛北取行李并预留进站时间。</td><td>临时晚点只顺延到店时间；酒店已按晚到入住准备，D2仍从08:00后开始。</td></tr>
           <tr><td>7月25—27日｜威海酒店</td><td><b>已确定｜连续2晚</b></td><td>酒店订单</td><td>威海天和美术馆酒店（葡萄滩海水浴场店）：25日入住、27日退房；确认21:40左右到店、退房后可寄存至晚间。</td><td>若房型异常，优先同店协调，不临时搬去远离海岸的区域。</td></tr>
-          <tr><td>7月26日｜D2东海岸</td><td>D1睡前确认</td><td>高德 + 半月湾景区/威海公交公告</td><td>确认猫头山观光车运营；海源40分钟、半月湾短停、猫头山用观光车，不徒步穿越。</td><td>大风或观光车停运就删猫头山，回酒店午休；不挤占D3西海岸。</td></tr>
+          <tr><td>7月26日｜D2东海岸</td><td>D1睡前确认</td><td>高德 + “环晟文旅”公众号/现场二维码</td><td>确认环海路17站观光巴士或全景巴士的当日票种；重点为3号大项链、10号猫头山，并顺看“喂，海！”公园沿线。</td><td>停运就只保海源和半月湾；票种若为“原客原回”就不擅自中途下车。</td></tr>
           <tr><td>7月27日｜D3西海岸 + K8262</td><td><b>K8262已出票｜两人504元</b></td><td>高德 + 12306订单</td><td>白天走葡萄滩、火炬八街、国际海水浴场、金海湾；18:40左右离海边，回酒店取行李，20:00左右到威海站。K8262 22:06发车，09车11号下铺等。</td><td>天气差或延误先删火炬八街，保金海湾短停和列车；晚霞永远让位于进站。</td></tr>
           <tr><td>7月28日｜K15 济南 → 开封</td><td><b>改签后有效｜两人296元</b></td><td>12306当前有效订单</td><td>K8262于06:17到济南；同站预留1小时38分，07:55乘K15，02车19号中铺等，15:17直达开封。</td><td>K8262晚点时立即联系铁路工作人员并查K15后续处理；不去济南西、不绕郑州东。</td></tr>
           <tr><td>7月28—30日｜开封酒店</td><td><b>已确定｜连续2晚</b></td><td>酒店订单</td><td>全季酒店（开封汴西湖店）：28日入住、30日退房；确认15:45左右到店、可寄存行李。</td><td>到店晚就删除御河夜游，D5万岁山完整日不动。</td></tr>
@@ -261,7 +315,7 @@
         <tr data-plan-only="b"><td><b>幸福门外广场、威海公园、悦海公园</b></td><td>0元</td><td>公共空间无需预约。</td><td>0天</td><td>门形地标、大相框、灯塔和海草房外观。</td><td>幸福门登高、停车及商业项目若开放则另付；本路线只在地面拍照，不购买登高票。</td></tr>
         <tr><td><b>海源公园/一战华工纪念馆</b></td><td>0元</td><td>公园无需预约；纪念馆个人参观规则以现场及官方公告为准。</td><td>0天；纪念馆出发前复核</td><td>合庆码头渔船、礁石岸线、木栈道和纪念馆建筑外观。</td><td>公园全天公共区域免费；纪念馆公开参考旺季8:30—18:00、周一闭馆。本路线限40分钟，默认看外观与渔港，不为入馆排队。</td></tr>
         <tr><td><b>半月湾</b></td><td>0元</td><td>公共沙滩无需预约。</td><td>0天</td><td>弧形海湾和公共岸线。</td><td>停车、餐饮另付；本路线采用分段打车，不产生停车费。</td></tr>
-        <tr><td><b>猫头山观景线</b></td><td>景观0元<br><b>观光车两人40元</b></td><td>到半月湾北岸停车场/景区站点扫描现场官方二维码购票；班次和线路看“半月湾景区”及威海公交当天公告。</td><td>前1天查运营；车票当天买</td><td>当前公开参考20元/人，可按线路站点上下车；最终以现场二维码为准。</td><td>2026年4月25日至10月7日部分辅线限制社会车辆进入，打车只到外围换乘点；全景观光巴士等其他线路可能价格不同。</td></tr>
+        <tr><td><b>环海路观景线</b><br>大项链 / 猫头山 / 喂海公园</td><td>景观0元<br><b>基础观光巴士暂按两人40元</b></td><td>半月湾北岸停车场或沿线官方站点扫码；也可查“环晟文旅”公众号。若选全景巴士，使用“威海千里山海观光巴士”公众号/小程序。</td><td>前1天查运营；车票当天买</td><td>17站基础线公开为随上随下；全景巴士约60—90分钟、原客原回。两者不是同一种产品，最终票价和停靠规则只认当天购票页。</td><td>当前40元仅保留原基础巴士预算位；若付款页更高，只替换差额。部分辅线限制社会车辆进入，打车到外围换乘。</td></tr>
         <tr><td><b>火炬八街、国际海水浴场、金海湾栈桥</b></td><td>0元</td><td>公共街区/海滩/栈桥无需预约；临时管制以现场为准。</td><td>0天</td><td>坡路入海、开阔沙滩、海上栈桥与晚霞。</td><td>停车、冲淋、餐饮和水上项目另付；本路线不下水、不买项目，风浪大或栈桥封闭就在岸边看晚霞。</td></tr>
         <tr data-plan-only="a" hidden><td><b>大宋御河夜游</b></td><td><b>108元</b><br>成人往返68元 + 学生现场优惠参考40元</td><td>先通过“大宋御河”官方渠道或正规票务页核对当日航线、开航时间、上船码头和返程码头；本路线优先清明上河园御河码头。学生带身份证和有效学生证，优惠是否适用以当天核验为准。</td><td>建议出发前1—3天核对；天气不稳时当天再确认开航</td><td>按当前公开页面的往返游船参考价列账；不是万岁山联票，也不与其他景区一票通。</td><td>包厢、指定座位、摄影、餐饮等若页面单独标价则另付；雷雨、停航或太累可无损删除。</td></tr>
         <tr data-plan-only="a,b"><td><b>万岁山武侠城</b></td><td><b>150元</b><br>成人100元 + 学生50元</td><td>优先微信搜索官方公众号“开封万岁山武侠城”进入购票；也可用景区官方合作OTA。学生带身份证和有效全日制学生证；入园后立即查看当天电子/纸质节目单并预约热门场次。</td><td>门票建议3—5天；热门演出入园后立即约</td><td>当前常规票为三日内万岁山、中国翰园碑林、开封城墙三景区不限次入园；常规演出随门票观看。学生半价资格、法定节假日和特殊活动以当期购票页为准。</td><td>汉服妆造、摄影、餐饮、游戏、纪念品和官方标注的独立收费体验另付。本路线不买套票、不加游乐项目，优先保核心演出。</td></tr>
@@ -306,21 +360,21 @@
               <div class="time-row"><time class="time">21:11—22:00</time><div><h4>到威海 → 酒店入住</h4><p>打车去威海天和美术馆酒店（葡萄滩海水浴场店），不再加夜景。</p><p class="keyword"><span>导航：威海天和美术馆酒店 葡萄滩海水浴场店</span><button class="copy-btn" data-copy="威海天和美术馆酒店 葡萄滩海水浴场店">复制</button></p></div></div>
             </div>
             <div class="notice good"><b>D1用车账｜约70公里、210元：</b>青岛市内约61公里183元；威海站到酒店约9公里27元，均按3元/公里列账。</div>
-            <div class="stay-grid"><div><b>今晚住哪里</b>威海天和美术馆酒店，第1晚/共2晚；25日入住、27日退房。</div><div><b>明天怎么走</b>08:00后起床，轻装分段打车去海源、半月湾和猫头山，正午回原酒店休息。</div></div>
+            <div class="stay-grid"><div><b>今晚住哪里</b>威海天和美术馆酒店，第1晚/共2晚；25日入住、27日退房。</div><div><b>明天怎么走</b>08:00后起床，轻装去海源；到半月湾换环海巴士，同线看大项链、猫头山和喂海。</div></div>
           </div>
         </details>
 
         <details class="day-card" id="sd-a-d2">
-          <summary><img class="day-summary-img" src="../assets/images/weihai-maotoushan.jpg" alt="威海猫头山层叠海岬实景"><div class="day-summary-copy"><strong>7月26日 D2｜威海东海岸慢游</strong><p>海源、半月湾与猫头山分段看；用观光车替代山路，正午回酒店。</p><div class="summary-meta"><span>天和美术馆酒店｜第2晚/共2晚</span><span>正常 ⭐⭐</span><span>打车63元</span></div></div><span class="day-toggle">展开</span></summary>
+          <summary><img class="day-summary-img" src="../assets/images/weihai-maotoushan.jpg" alt="威海猫头山层叠海岬实景"><div class="day-summary-copy"><strong>7月26日 D2｜威海环海巴士慢游</strong><p>海源后接半月湾、大项链、猫头山与“喂，海！”公园沿线；不爬山、不横穿城市。</p><div class="summary-meta"><span>天和美术馆酒店｜第2晚/共2晚</span><span>正常 ⭐⭐</span><span>打车63元</span></div></div><span class="day-toggle">展开</span></summary>
           <div class="day-inner">
-            <div class="mini"><div><span>今日一句话</span><b>只看渔港、弧形海湾与层叠海岬，不把东西海岸塞在同一天。</b></div><div><span>今晚住</span><b>同一家威海酒店｜第2晚/共2晚</b></div><div><span>今日重点</span><b>半月湾 + 猫头山观光车</b></div><div><span>可删</span><b>晚起或闷热先删海源</b></div></div>
+            <div class="mini"><div><span>今日一句话</span><b>一趟环海巴士补齐大项链、猫头山和喂海，不增加长距离折返。</b></div><div><span>今晚住</span><b>同一家威海酒店｜第2晚/共2晚</b></div><div><span>今日重点</span><b>3号大项链 + 10号猫头山</b></div><div><span>可删</span><b>晚起先删海源；喂海只顺看</b></div></div>
             <div class="timeline">
-              <div class="time-row"><time class="time">08:00—09:00</time><div><h4>起床早餐 → 海源公园</h4><p>海源限40分钟，只看合庆码头渔船、礁石岸和纪念馆建筑外观。</p></div></div>
-              <div class="time-row"><time class="time">09:50—12:00</time><div><h4>半月湾 → 猫头山观光车</h4><p>半月湾看弧形湾口和浪线；从官方换乘点乘观光车看层叠海岬，不走山路、不穿越管制路段。</p><p class="keyword"><span>导航：半月湾景区 猫头山观光车换乘点</span><button class="copy-btn" data-copy="威海 半月湾景区 猫头山观光车换乘点">复制</button></p></div></div>
-              <div class="time-row"><time class="time">12:00—16:30</time><div><h4>回酒店 → 午饭 → 午睡</h4><p>固定避开最热时段，手机和充电宝补满。</p></div></div>
+              <div class="time-row"><time class="time">08:00—09:00</time><div><h4>起床早餐 → 海源公园</h4><p>海源限40分钟，只看合庆码头渔船、礁石岸和纪念馆建筑外观；它仍是今天第一可删项。</p></div></div>
+              <div class="time-row"><time class="time">09:20—12:10</time><div><h4>半月湾北岸 → 环海路观光巴士</h4><p>先看半月湾弧形湾口，再坐官方巴士。<b>3号“大项链”</b>看海上链形装置与海岬构图，<b>10号猫头山</b>看层叠岬角；“喂，海！”公园的松林、礁石和滨海步道在同一线路上，若当日票种允许随上随下就短停15—20分钟，否则只车览。</p><p class="keyword"><span>导航：威海 半月湾北岸停车场</span><button class="copy-btn" data-copy="威海 半月湾北岸停车场">复制</button></p></div></div>
+              <div class="time-row"><time class="time">12:10—16:30</time><div><h4>按票种返回半月湾 → 打车回酒店 → 午睡</h4><p>基础17站线可按当天规则上下车；全景巴士通常原客原回。无论哪一种，正午回酒店避晒，手机和充电宝补满。</p></div></div>
               <div class="time-row"><time class="time">17:00—20:00</time><div><h4>酒店附近晚饭 + 葡萄滩短走</h4><p>只在酒店圈轻松活动，20:00前回房；核对D3天气、K8262和退房后寄存。</p></div></div>
             </div>
-            <div class="notice good"><b>D2用车账｜约21公里、63元：</b>酒店→海源/半月湾→观光车换乘点→酒店，按3元/公里；猫头山观光车两人40元另列。</div>
+            <div class="notice good"><b>D2用车账｜约21公里、63元：</b>酒店→海源→半月湾北岸、巴士结束后→酒店，按3元/公里；大项链、猫头山与喂海都在同一巴士线路内，不新增打车。观光巴士暂按两人40元预算位，最终以当天购票页为准。</div>
             <div class="stay-grid"><div><b>今晚住哪里</b>同一家威海酒店，第2晚/共2晚，不搬行李。</div><div><b>明天怎么走</b>08:00起床，退房后行李寄存；D3白天完整游西海岸，18:40左右离海边。</div></div>
           </div>
         </details>
@@ -410,7 +464,7 @@
         <summary><img class="day-summary-img" src="../assets/images/weihai-xingfumen.jpg" alt="威海幸福门海滨实景"><div class="day-summary-copy"><strong>D3｜睡足后青岛 → 威海</strong><p>08:00起床，坐上午较晚车次；傍晚串联三处城市海岸地标。</p><div class="summary-meta"><span data-plan-only="a">威高/幸福门｜第1晚/共2晚</span><span data-plan-only="b" hidden>威高/幸福门｜第1晚/共3晚</span><span>轻松</span><span>接驳打车144元</span></div></div><span class="day-toggle">展开</span></summary>
         <div class="day-inner"><div class="mini"><div><span>今日一句话</span><b>不赶早班，睡足后转场。</b></div><div><span>今晚住</span><b data-plan-only="a">威高广场/幸福门｜第1晚/共2晚</b><b data-plan-only="b" hidden>威高广场/幸福门｜第1晚/共3晚</b></div><div><span>今日重点</span><b>城市地标，不去远郊</b></div><div><span>可删</span><b>悦海灯塔</b></div></div>
           <div class="timeline"><div class="time-row"><time class="time">08:00—09:00</time><div><h4>起床 → 早餐 → 退房</h4><p>最早08:00起床，行李收好后再去青岛北站，不赶早班。</p></div></div><div class="time-row"><time class="time">09:00—车次前</time><div><h4>酒店 → 青岛北站</h4><p><b>购票窗口：</b>优先查10:20—11:50从青岛北出发、约中午抵达威海的车次；近期公开时刻可见10:23和11:44左右班次，但最终只认12306付款订单。</p><p class="keyword"><span>导航：青岛北站</span><button class="copy-btn" data-copy="青岛北站">复制</button></p></div></div><div class="time-row"><time class="time">中午—15:30</time><div><h4>威海站 → 酒店 → 午饭/休息</h4><p>先放行李和吃饭，不把中午塞成景点。</p><p class="keyword"><span>导航：威海 幸福门 威高广场 酒店</span><button class="copy-btn" data-copy="威海 幸福门 威高广场 酒店">复制</button></p></div></div><div class="time-row"><time class="time">16:30—19:30</time><div><h4>幸福门 → 威海公园“大相框” → 悦海公园灯塔</h4><p><b>幸福门：</b>看威海城市门形地标与海湾；<b>大相框：</b>用巨型画框把海面和人框进照片；<b>悦海灯塔：</b>看白色灯塔、海草房和傍晚海岸。三点之间用打车连接，不沿海全程暴走。</p><p class="keyword"><span>导航：威海公园 大相框</span><button class="copy-btn" data-copy="威海公园 大相框">复制</button></p></div></div></div>
-          <div class="notice good"><b>D3用车账｜48公里，144元：</b>青岛酒店→青岛北站15公里45元；威海站→威高/幸福门酒店11公里33元；酒店→幸福门2公里6元；幸福门→威海公园5公里15元；威海公园→悦海公园5公里15元；悦海公园→酒店10公里30元。跨城火车票另计，不混入打车账。</div>
+          <div class="notice good"><b>D3用车账｜48公里，144元：</b>青岛酒店→青岛北站15公里45元；威海站→所选酒店11公里33元；酒店→幸福门2公里6元；幸福门→威海公园5公里15元；威海公园→悦海公园5公里15元；悦海公园→酒店10公里30元。跨城火车票另计，不混入打车账。</div>
           <div class="stay-grid"><div><b>今晚住哪里</b>威高广场/幸福门1—1.5公里圈，晚上好吃饭，去东西海岸分段打车都均衡；不住偏远海景房。</div><div><b>明天怎么走</b>08:00起床，海源和半月湾短停，正午回酒店午休；天气差就把上午缩成半月湾一站。</div></div>
           <div class="plan-grid"><div><b>正常版</b>幸福门 + 大相框 + 悦海灯塔。</div><div><b>晚点/下雨版</b>只保幸福门和威高晚饭。</div></div></div>
       </details>
@@ -427,7 +481,7 @@
       <details class="day-card" id="sd-c-d3" data-plan-only="c" hidden>
         <summary><img class="day-summary-img" src="../assets/images/weihai-half-moon-bay.jpg" alt="威海半月湾弧形海岸实景"><div class="day-summary-copy"><strong>D3｜青岛 → 威海 → 东海岸短线</strong><p>08:00起床，坐09:59车次；抵威海先休息，只看海源渔港与半月湾。</p><div class="summary-meta"><span>威海｜第1晚/共2晚</span><span>正常 ⭐⭐</span><span>火车258元 + 打车120元</span></div></div><span class="day-toggle">展开</span></summary>
         <div class="day-inner"><div class="mini"><div><span>今日一句话</span><b>转场后只走轻量东海岸，把猫头山与晚霞留给D4。</b></div><div><span>今晚住</span><b>威高广场/幸福门｜第1晚/共2晚</b></div><div><span>今日重点</span><b>海源渔港 + 半月湾弧形海岸</b></div><div><span>可删</span><b>晚点先删海源，只保入住与半月湾</b></div></div>
-          <div class="timeline"><div class="time-row"><time class="time">08:00—09:00</time><div><h4>起床 → 早餐 → 退房去青岛北</h4><p>09:00前从五四广场/浮山所酒店出发，给进站留足时间；不安排早于08:00起床。</p><p class="keyword"><span>导航：青岛北站</span><button class="copy-btn" data-copy="青岛北站">复制</button></p></div></div><div class="time-row"><time class="time">09:59—12:29</time><div><h4>青岛北 → 威海</h4><p>7月22日12306已核到D8159，二等座129元/人、两人258元；车次、余票和最终票价仍以付款订单为准。</p></div></div><div class="time-row"><time class="time">12:30—15:30</time><div><h4>威海站 → 酒店 → 午饭/短休</h4><p>先办理入住或寄存，不拖着行李看海；15:30前后再轻装出发。</p></div></div><div class="time-row"><time class="time">15:30—18:10</time><div><h4>海源公园 → 半月湾 → 酒店</h4><p>海源只看合庆码头与礁石40分钟；半月湾停30分钟看弧形海岸，不坐观光车、不跨城追晚霞。若列车晚点，直接从半月湾开始。</p><p class="keyword"><span>导航：威海 海源公园 → 半月湾</span><button class="copy-btn" data-copy="威海 海源公园 半月湾">复制</button></p></div></div><div class="time-row"><time class="time">晚上</time><div><h4>威高/幸福门酒店圈晚饭 → 早点休息</h4><p>核对D4猫头山观光车、金海湾风浪与分段叫车；今晚不再加灯塔、海水浴场或夜市。</p></div></div></div>
+          <div class="timeline"><div class="time-row"><time class="time">08:00—09:00</time><div><h4>起床 → 早餐 → 退房去青岛北</h4><p>09:00前从五四广场/浮山所酒店出发，给进站留足时间；不安排早于08:00起床。</p><p class="keyword"><span>导航：青岛北站</span><button class="copy-btn" data-copy="青岛北站">复制</button></p></div></div><div class="time-row"><time class="time">09:59—12:29</time><div><h4>青岛北 → 威海</h4><p>7月22日12306已核到D8159，二等座129元/人、两人258元；车次、余票和最终票价仍以付款订单为准。</p></div></div><div class="time-row"><time class="time">12:30—15:30</time><div><h4>威海站 → 酒店 → 午饭/短休</h4><p>先办理入住或寄存，不拖着行李看海；15:30前后再轻装出发。</p></div></div><div class="time-row"><time class="time">15:30—18:10</time><div><h4>海源公园 → 半月湾 → 酒店</h4><p>海源只看合庆码头与礁石40分钟；半月湾停30分钟看弧形海岸，不坐观光车、不跨城追晚霞。若列车晚点，直接从半月湾开始。</p><p class="keyword"><span>导航：威海 海源公园 → 半月湾</span><button class="copy-btn" data-copy="威海 海源公园 半月湾">复制</button></p></div></div><div class="time-row"><time class="time">晚上</time><div><h4>酒店附近晚饭 → 早点休息</h4><p>核对D4猫头山观光车、金海湾风浪与分段叫车；今晚不再加灯塔、海水浴场或夜市。</p></div></div></div>
           <div class="notice good"><b>D3交通账：</b>青岛北到威海两人258元；市内按青岛酒店→青岛北、威海站→酒店、酒店→海源→半月湾→酒店约40公里、120元列账。</div>
           <div class="stay-grid"><div><b>今晚住哪里</b>威高广场/幸福门1—1.5公里圈，第1晚/共2晚；D4东西海岸衔接和D5退房取行李都方便。</div><div><b>明天怎么走</b>08:00起床，上午猫头山观光车，回酒店午休；16:00后去火炬八街、国际海水浴场和金海湾。</div></div>
         </div>
@@ -435,7 +489,7 @@
 
       <details class="day-card" id="sd-c-d4" data-plan-only="c" hidden>
         <summary><img class="day-summary-img" src="../assets/images/weihai-international-beach-2026.jpg" alt="威海国际海水浴场与金海湾栈桥晚霞实景"><div class="day-summary-copy"><strong>D4｜猫头山 + 西海岸晚霞</strong><p>上午观光车看层叠海岬，正午回房，傍晚看坡路入海、栈桥和晚霞。</p><div class="summary-meta"><span>威海｜第2晚/共2晚</span><span>正常 ⭐⭐</span><span>市内打车135元</span></div></div><span class="day-toggle">展开</span></summary>
-        <div class="day-inner"><div class="mini"><div><span>今日一句话</span><b>用观光车替代徒步，把最好看的海岬和晚霞分两段完成。</b></div><div><span>今晚住</span><b>威高广场/幸福门｜第2晚/共2晚</b></div><div><span>今日重点</span><b>猫头山3号台 + 金海湾栈桥晚霞</b></div><div><span>可删</span><b>天气差先删晚霞，不压缩午休</b></div></div>
+        <div class="day-inner"><div class="mini"><div><span>今日一句话</span><b>用观光车替代徒步，把最好看的海岬和晚霞分两段完成。</b></div><div><span>今晚住</span><b>威高广场/幸福门｜第2晚/共2晚</b></div><div><span>今日重点</span><b>猫头山10号台 + 金海湾栈桥晚霞</b></div><div><span>可删</span><b>天气差先删晚霞，不压缩午休</b></div></div>
           <div class="timeline"><div class="time-row"><time class="time">08:00—11:40</time><div><h4>酒店 → 半月湾 → 猫头山观光车</h4><p>半月湾停20分钟看弧形海湾，再从官方换乘点坐观光车到开放观景点；只在护栏内拍层叠海岬与环海公路，不走山路。</p></div></div><div class="time-row"><time class="time">12:00—16:00</time><div><h4>回酒店 → 午饭 → 午睡</h4><p>固定避开正午暴晒；手机与充电宝补满，确认金海湾风浪和栈桥开放。</p></div></div><div class="time-row"><time class="time">16:00—19:20</time><div><h4>火炬八街 → 国际海水浴场 → 金海湾栈桥</h4><p>火炬八街只拍坡路入海主视角，海水浴场短看浪线，18:20前到金海湾。雷雨、风浪或栈桥封闭时不登桥，直接回酒店圈吃饭。</p></div></div><div class="time-row"><time class="time">19:20—21:10</time><div><h4>欧乐坊晚饭 → 回酒店</h4><p>先走一圈再选鲅鱼水饺、海菜包子或一份小海鲜；不喝酒、不点游客套餐。回房确认D5航班、送机和寄存。</p></div></div></div>
           <div class="notice good"><b>D4用车账｜约45公里、135元：</b>按酒店→半月湾/观光车换乘点→酒店→火炬八街→金海湾→欧乐坊→酒店的分段距离列账；猫头山观光车两人40元另列。</div>
           <div class="stay-grid"><div><b>今晚住哪里</b>继续住原酒店，第2晚/共2晚，不为海景搬行李。</div><div><b>明天怎么走</b>08:00起床，退房寄存；只在航班时间允许时走一段西海岸短线。</div></div>
@@ -456,7 +510,7 @@
           <div class="timeline">
             <div class="time-row"><time class="time">08:00—08:40</time><div><h4>起床 → 早餐 → 退房寄存行李</h4><p>把大件行李寄存在原酒店，只带证件、手机、充电宝和水；先确认G2076或同类车次、猫头山观光车和网约车接单情况。</p></div></div>
             <div class="time-row"><time class="time">08:40—09:00</time><div><h4>酒店 → 半月湾｜约7公里，按3元/公里计21元</h4><p>打车到半月湾开放下客区；看弧形海湾和向东开阔海面，不下水、不沿沙滩长走。</p><p class="keyword"><span>导航：威海 半月湾沙滩</span><button class="copy-btn" data-copy="威海 半月湾沙滩">复制</button></p></div></div>
-            <div class="time-row"><time class="time">09:00—10:20</time><div><h4>半月湾 → 猫头山3号观景台 → 返回换乘点</h4><p>按2026年旺季管制，社会车辆和网约车只到外围；从半月湾北岸停车场/官方站点换乘景区观光车。两人车票40元，线路、班次和停靠点以现场二维码为准。</p><p><b>看点：</b>海蚀岬角、前后叠开的海湾、礁石和环海公路贴着山海转弯的画面；只到开放观景台，不走徒步线。</p></div></div>
+            <div class="time-row"><time class="time">09:00—10:20</time><div><h4>半月湾 → 猫头山10号观景平台 → 返回换乘点</h4><p>按2026年旺季管制，社会车辆和网约车只到外围；从半月湾北岸停车场/官方站点换乘景区观光车。两人车票40元，线路、班次和停靠点以现场二维码为准。</p><p><b>看点：</b>海蚀岬角、前后叠开的海湾、礁石和环海公路贴着山海转弯的画面；只到开放观景台，不走徒步线。</p></div></div>
             <div class="time-row"><time class="time">10:20—11:00</time><div><h4>半月湾换乘点 → 火炬八街｜约17公里，计51元</h4><p>打车在合法下客点下车，步行进入坡路核心；看彩色街道直落大海的透视画面，人多只停20分钟。</p><p class="keyword"><span>导航：威海 火炬八街</span><button class="copy-btn" data-copy="威海 火炬八街">复制</button></p></div></div>
             <div class="time-row"><time class="time">11:00—11:40</time><div><h4>火炬八街 → 国际海水浴场｜步行连接</h4><p>看开阔沙滩、浪线和海岸天际线，本日不下水；11:40准时叫车回酒店，不为拍照误车。</p></div></div>
             <div class="time-row"><time class="time">11:40—12:15</time><div><h4>国际海水浴场 → 原酒店｜约14公里，计42元</h4><p>回酒店取寄存行李；堵车时取消海水浴场停留，直接从火炬八街叫车回酒店。</p></div></div>
@@ -525,7 +579,7 @@
       <div class="grid two" data-plan-only="a" hidden>
         <article class="traffic-card pad"><h3>7月23—25日｜T172 + K1138</h3><p><b>T172：</b>广州白云21:15 → 南昌09:18，加6车01/02上铺；<b>换乘：</b>南昌同站2小时09分；<b>K1138：</b>南昌11:27 → 青岛北05:31，14车30上铺/31下铺。</p><p><b>两人实付：</b>1407元。到青岛先洗漱早餐和寄存，体力不足删小麦岛。</p></article>
         <article class="traffic-card pad"><h3>7月25日 D1｜C6511 青岛北 → 威海</h3><p><b>已购：</b>19:17 → 21:11，08车07D号等，两人186元；17:15前离开小麦岛，回站取行李。</p><p><b>到站：</b>打车去威海天和美术馆酒店（葡萄滩海水浴场店），约21:40入住。</p></article>
-        <article class="traffic-card pad"><h3>7月26—27日 D2—D3｜威海分日打车</h3><p><b>D2东海岸：</b>酒店→海源→半月湾→猫头山观光车→酒店，约21公里63元。</p><p><b>D3西海岸：</b>酒店/葡萄滩→火炬八街→国际海水浴场→金海湾→酒店取行李→威海站，约27公里81元。</p></article>
+        <article class="traffic-card pad"><h3>7月26—27日 D2—D3｜威海分日交通</h3><p><b>D2东海岸：</b>天和酒店→海源→半月湾北岸；换官方巴士顺看大项链、猫头山、“喂，海！”公园沿线，再按票种返回半月湾并打车回酒店，市内约21公里63元。</p><p><b>D3西海岸：</b>酒店/葡萄滩→火炬八街→国际海水浴场→金海湾→酒店取行李→<b>威海站</b>，约27公里81元；不是威海北站。</p></article>
         <article class="traffic-card pad"><h3>7月27—28日｜K8262 威海 → 济南</h3><p><b>已购：</b>22:06 → 次日06:17，09车11号下铺等；同行铺位以订单详情为准，两人504元。</p><p><b>进站：</b>18:40左右离开海边、20:00左右到站；到济南后不出站。</p></article>
         <article class="traffic-card pad"><h3>7月28日｜K15 济南 → 开封</h3><p><b>改签后有效：</b>07:55 → 15:17，02车19号中铺等；同行铺位以订单详情为准，两人296元。</p><p><b>换乘：</b>济南同站留1小时38分；不去济南西、不绕郑州东。K8262晚点时立即找铁路工作人员。</p></article>
         <article class="traffic-card pad"><h3>7月30日 D6｜开封 → 新郑机场 → 广州</h3><p><b>送机：</b>14:15前从全季汴西湖出发，固定120元列账。</p><p><b>ZH8365：</b>19:05郑州新郑 → 21:25广州白云，深圳航空、已出票，两人682元；尚未值机选座。</p></article>
@@ -579,8 +633,9 @@
       <details class="spot-card" data-plan-only="b"><summary><img src="../assets/images/weihai-yuehai-park.jpg" alt="威海悦海公园灯塔实景"><div><h3>悦海公园｜白色灯塔与海草房</h3><p class="lead">D3傍晚后段｜用一个清楚地标收住城市海岸日。</p></div></summary><div class="spot-body"><p><b>安排：</b>从威海公园打车前往，停25—35分钟；只走灯塔与海草房附近的平缓步道，不沿岸线长走。</p><p><b>重点：</b>白色灯塔、古朴海草房、蓝色海面和远岸城市共同形成“胶东海边”辨识度；不是再看一片普通沙滩。</p><p><b>拍照：</b>从灯塔侧前方拍灯塔全身与海面，转身再拍海草房；风大时远离临水边缘。</p><p><b>可删：</b>D3到威海晚、下雨或风大就删，直接回威高晚饭，不影响后续海岸主线。</p><p class="keyword"><span>导航：威海 悦海公园 灯塔</span><button class="copy-btn" data-copy="威海 悦海公园 灯塔">复制</button></p></div></details>
       <details class="spot-card"><summary><img src="../assets/images/qingdao-beer-museum.jpg" alt="青岛啤酒博物馆红色厂房实景"><div><h3>青岛啤酒博物馆｜百年厂房与真实生产线</h3><p class="lead">方案A D1 / 方案B、C D2｜青岛最有辨识度的工业文化体验。</p></div></summary><div class="spot-body"><p><b>入馆：</b>导航登州路56号，优先在“青岛啤酒博物馆”官方微信公众号预约基础票；7月暑期建议选08:30—09:00附近时段。</p><p><b>怎么走：</b>A馆看品牌历史与老厂房，B馆看酿造设备、生产流程与灌装线；基础票约90分钟足够，不加购沉浸酒局。</p><p><b>门票：</b>成人基础票60元，符合条件的学生基础票50元；开放、票种、证件范围与赠饮以官方当日购票页为准。</p><p><b>可删/注意：</b>不饮酒也能看工业建筑和生产线；转场日不喝第二杯，试饮后不开车。排队超过20分钟就压缩文创区，不压缩后续八大关。</p><p class="keyword"><span>导航：青岛啤酒博物馆 登州路56号</span><button class="copy-btn" data-copy="青岛啤酒博物馆 登州路56号">复制</button></p></div></details>
       <details class="spot-card"><summary><img src="../assets/images/weihai-haiyuan-park.jpg" alt="威海海源公园礁石海岸、一战华工纪念馆与海上渔船航拍实景"><div><h3>海源公园｜渔港、礁石与纪念馆建筑</h3><p class="lead">顺路加入，但只停40分钟。</p></div></summary><div class="spot-body"><p><b>值不值得：</b>值得短停，不值得单独占半天。合庆码头百余艘渔船和礁石岸线带来真实渔港生活感，和半月湾沙滩、猫头山海岬不重复。</p><p><b>走法：</b>下车后看合庆码头渔船 → 沿近处礁石岸线短走 → 一战华工纪念馆建筑外观；不走完整木栈道，不为进馆排队。</p><p><b>时间：</b>建议限时40分钟。公开参考纪念馆旺季8:30—18:00、周一闭馆；出发前仍以官方公告为准。</p><p><b>可删：</b>当天晚起、31—32℃闷热、下雨或猫头山观光车班次紧时，第一顺位删除；午休、猫头山和晚霞不为它让路。</p><p><b>安全：</b>礁石湿滑、堤坝临水，始终留在开放步道与护栏内；不下礁石、不靠渔船作业区。</p><p class="keyword"><span>导航：威海 海源公园</span><button class="copy-btn" data-copy="威海 海源公园">复制</button></p></div></details>
-      <details class="spot-card"><summary><img src="../assets/images/weihai-half-moon-bay.jpg" alt="威海半月湾海岸实景"><div><h3>半月湾｜弧形海湾与向东开阔海面</h3><p class="lead">方案A D2 / 方案B D5 / 方案C D4｜不追日出，也能看清海湾形状。</p></div></summary><div class="spot-body"><p><b>安排：</b>从威高/幸福门酒店打车到半月湾开放下客区，停15—20分钟；随后步行到官方观光车换乘点。</p><p><b>重点：</b>湾口向东、弧形岸线、近岸浪线与城市背山面海的关系；不用下水，也不沿整片沙滩长走。</p><p><b>拍照：</b>在岸边平缓位置拍海湾弧线，广角带入沙滩和远山；太阳强时以看海为主，不久晒。</p><p><b>接驳：</b>打车只到合法下客点，不让司机停弯道；现场找不到观光车站点就询问景区工作人员。</p></div></details>
-      <details class="spot-card"><summary><img src="../assets/images/weihai-maotoushan.jpg" alt="威海猫头山海蚀岬角实景"><div><h3>猫头山3号观景台｜层叠海岬与环海公路</h3><p class="lead">方案A D2 / 方案B D5 / 方案C D4｜用官方观光车看“山海公路感”。</p></div></summary><div class="spot-body"><p><b>安排：</b>2026年4月25日至10月7日部分环海辅线限制社会车辆、出租车和网约车进入；从半月湾北岸停车场/官方站点换乘观光车，只去开放观景点，不走徒步线。</p><p><b>重点：</b>像猫探入海面的岬角轮廓、前后叠开的海湾、礁石和环海公路贴着山海转弯的视角。</p><p><b>拍照：</b>在护栏内用广角拍近处礁石与远处岬角；不要跨护栏、下礁石或站在车道弯道处。</p><p><b>管制/天气：</b>运营、线路和停靠点以现场二维码为准；浓雾、大雨或停运时直接跳过，回换乘点打车去火炬八街。</p></div></details>
+      <details class="spot-card"><summary><img src="../assets/images/weihai-half-moon-bay.jpg" alt="威海半月湾海岸实景"><div><h3>半月湾｜弧形海湾与向东开阔海面</h3><p class="lead">方案A D2 / 方案B D5 / 方案C D4｜不追日出，也能看清海湾形状。</p></div></summary><div class="spot-body"><p><b>安排：</b>方案A从统一北路80号的天和酒店先去海源，再到半月湾开放下客区；其他方案从当晚酒店按高德叫车。岸边停15—20分钟，随后到半月湾北岸官方巴士换乘点。</p><p><b>重点：</b>湾口向东、弧形岸线、近岸浪线与城市背山面海的关系；不用下水，也不沿整片沙滩长走。</p><p><b>拍照：</b>在岸边平缓位置拍海湾弧线，广角带入沙滩和远山；太阳强时以看海为主，不久晒。</p><p><b>接驳：</b>打车只到合法下客点，不让司机停弯道；现场找不到巴士站点就询问景区工作人员。</p></div></details>
+      <details class="spot-card"><summary><img src="../assets/images/weihai-daxianglian-aerial.png" alt="威海环海路三号大项链观景平台与海岬航拍实景"><div><h3>3号“大项链” + “喂，海！”公园｜顺路新增</h3><p class="lead">方案A D2｜一个看海岬标志机位，一个补松林礁石步道；都在环海巴士线上。</p></div></summary><div class="spot-body"><p><b>为什么值得：</b>大项链比普通沙滩更有辨识度，航拍视角可看出海岬、礁岸和环海公路的完整关系；“喂，海！”公园则是松林、礁石和滨海步道组合，与D3火炬八街的坡路入海不重复。</p><p><b>怎么塞：</b>半月湾上车后，3号大项链为优先下车点；猫头山之后经过“喂，海！”公园。若买的是17站随上随下票，可在喂海短停15—20分钟；若为全景巴士原客原回票，只按车方安排停靠。</p><p><b>可删顺序：</b>当天晚起或巴士排队时，先把喂海改为车览，仍保大项链和猫头山；不压缩正午回酒店午休。</p><p><b>安全：</b>2026年旺季辅线限制网约车和社会车辆进入，只在官方站点、开放平台和护栏内活动，不下湿滑礁石。</p><p class="keyword"><span>导航：威海 半月湾北岸停车场</span><button class="copy-btn" data-copy="威海 半月湾北岸停车场 环海路三号观景平台 喂海公园">复制</button></p></div></details>
+      <details class="spot-card"><summary><img src="../assets/images/weihai-maotoushan.jpg" alt="威海猫头山海蚀岬角实景"><div><h3>猫头山｜环海路10号观景平台</h3><p class="lead">方案A D2 / 方案B D5 / 方案C D4｜用官方观光车看“山海公路感”。</p></div></summary><div class="spot-body"><p><b>安排：</b>2026年4月25日至10月7日部分环海辅线限制社会车辆、出租车和网约车进入；从半月湾北岸停车场/官方站点换乘观光车，只去开放观景点，不走徒步线。</p><p><b>重点：</b>像猫探入海面的岬角轮廓、前后叠开的海湾、礁石和环海公路贴着山海转弯的视角。</p><p><b>拍照：</b>在护栏内用广角拍近处礁石与远处岬角；不要跨护栏、下礁石或站在车道弯道处。</p><p><b>管制/天气：</b>运营、线路和停靠点以现场二维码为准；浓雾、大雨或停运时直接跳过，按原路返回酒店休息。</p></div></details>
       <details class="spot-card"><summary><img src="../assets/images/weihai-torch-eighth-street.jpg" alt="威海火炬八街坡路入海实景"><div><h3>火炬八街｜彩色坡路尽头就是海</h3><p class="lead">方案A D3 / 方案B D5 / 方案C D4｜看一眼最知名城市机位，不在人潮里耗时间。</p></div></summary><div class="spot-body"><p><b>安排：</b>在高德当天显示的合法下客区下车，步行进入核心坡路；停20分钟，随后步行去国际海水浴场。</p><p><b>重点：</b>街道自然坡度、两侧彩色建筑与道路尽头整片海面形成的透视画面；这是它区别于普通商业街的核心。</p><p><b>拍照：</b>在人行区靠边取景，用中长焦压缩坡路与海；绝不站车道中央，也不让同行人在车流中摆拍。</p><p><b>避坑：</b>人多时只拍街口全景，不排店铺机位、不买强制套餐；拥堵时直接步行去海水浴场。</p></div></details>
       <details class="spot-card"><summary><img src="../assets/images/weihai-international-beach-2026.jpg" alt="威海国际海水浴场与金海湾栈桥方向晚霞实景"><div><h3>国际海水浴场 → 金海湾栈桥｜沙滩、海上栈桥和晚霞</h3><p class="lead">方案A D3 / 方案B D5 / 方案C D4｜把威海看海段收在晚霞里。</p></div></summary><div class="spot-body"><p><b>安排：</b>火炬八街短停后看国际海水浴场浪线，再打车到金海湾栈桥；7月下旬约19:05—19:10日落，18:20前到位，19:20左右离开去欧乐坊。</p><p><b>重点：</b>开阔沙滩、连续浪线、伸向海面的栈桥和夕阳落海方向；栈桥是独立于普通沙滩的明确地标。</p><p><b>拍照：</b>在岸上先拍栈桥完整轮廓，再在安全开放区域拍人物剪影与金色海面；手机和相机注意防风防沙。</p><p><b>可删/安全：</b>阴天仍可看栈桥结构；雷雨、浪大、临时封桥或体力不足时不登桥，只在岸边停20分钟后去欧乐坊。</p><p class="keyword"><span>导航：威海 金海湾栈桥</span><button class="copy-btn" data-copy="威海 金海湾栈桥">复制</button></p></div></details>
       <details class="spot-card"><summary><img src="../assets/images/kaifeng-wansui.jpg" alt="开封万岁山武侠城实景"><div><h3>万岁山武侠城｜按节目单追演出，不走遍园区</h3><p class="lead">方案A D5全天 + D6上午 / 方案B D7全天 + D8上午｜主景点留足1.5天。</p></div></summary><div class="spot-body"><p><b>进园第一步：</b>拿到当天纸质/电子节目单，先标出需预约的大型实景剧，再选两场次级节目，按开演时间倒推移动，不从入口商业街开始漫无目的逛。</p><p><b>完整日上午：</b>优先一场城寨/武侠实景演出；<b>12:00—15:00：</b>午饭、补水和遮阴休息；<b>完整日下午与夜间：</b>接主舞台节目和夜场大秀。</p><p><b>官方当前重点：</b>官网票务说明提到《三打祝家庄》《沙场打铁花》需预约入场；具体场次、预约方式和当天是否演出，以公众号/现场节目单为准。</p><p><b>返程日上午：</b>只补昨天冲突或没排到的2—3项，12:00前离园，不再塞鼓楼、书店街等附加景点。</p><p><b>高温/排队：</b>排队超过可接受时间就换场；正午不横穿园区，带水、充电宝、小风扇和轻便雨具。</p><p class="keyword"><span>公众号/导航：开封万岁山武侠城</span><button class="copy-btn" data-copy="开封万岁山武侠城">复制</button></p></div></details>
@@ -602,7 +657,7 @@
       <div class="section-title"><h2>景点内部执行攻略</h2><p class="lead">进门前带什么、先看哪里、累了删什么，全部按不爬山和避高温安排。</p></div>
       <details class="card exec-card"><summary><b>青岛四处精华怎么走？</b></summary><h3>啤酒博物馆 → 八大关 → 二浴洞口/堤坝 → 午休 → 小麦岛</h3><p><b>出发前：</b>身份证、预约码、防晒、水、舒服鞋、充电宝；方案A清晨抵达后先寄存行李。</p><p><b>上午：</b>啤酒博物馆只走A+B馆；八大关走林荫建筑主线，再从花石楼方向下到二浴，洞口与堤坝只在开放且潮位安全时靠近。</p><p><b>下午：</b>固定午休后去小麦岛，只走入口草坪、西侧天际线和近海平缓步道。</p><p><b>可删：</b>晚到先删小麦岛；所有建筑内部、太平角、石老人和晚间加项全部不塞。</p></details>
       <details class="card exec-card"><summary><b>威海城市地标怎么走？</b></summary><h3>幸福门 → 威海公园大相框 → 悦海灯塔</h3><p><b>出发：</b>到威海后先入住、吃饭和休息，16:30再开始；三点之间打车，不沿海全程步行。</p><p><b>必看：</b>幸福门的门形地标与海湾、大相框把人和海框进画面、悦海公园白色灯塔和海草房。</p><p><b>可删：</b>到威海晚、下雨或风大就先删悦海，再删大相框；只保幸福门和威高晚饭。</p><p><b>结束：</b>19:30前收，回酒店确认次日海岸天气与观光车。</p></details>
-      <details class="card exec-card"><summary><b>威海海岸怎么拆成两段？</b></summary><h3>上午海源/半月湾/猫头山，正午午休，傍晚火炬八街/海水浴场/金海湾</h3><p><b>上午看什么：</b>海源看渔港礁石，半月湾看弧形海岸，猫头山用官方观光车看层叠海岬，不走徒步线。</p><p><b>傍晚看什么：</b>火炬八街看坡路入海，国际海水浴场看浪线，金海湾看栈桥轮廓与晚霞。</p><p><b>可删：</b>晚起先删海源；风雨时删金海湾晚霞；午休和转场时间永远不删。</p><p><b>安全：</b>只在开放步道、护栏和合法下客点活动，不跨护栏、不下湿滑礁石。</p></details>
+      <details class="card exec-card"><summary><b>威海海岸怎么拆成两段？</b></summary><h3>D2环海巴士看海岬，D3西海岸看坡路与晚霞</h3><p><b>D2看什么：</b>海源看渔港礁石，半月湾看弧形海岸；3号“大项链”是最有辨识度的新机位，10号猫头山看层叠海岬，“喂，海！”公园补松林、礁石和海边步道。后三处由同一条官方观光巴士串联，不走山路。</p><p><b>D3看什么：</b>火炬八街看坡路入海，国际海水浴场看浪线，金海湾看栈桥轮廓与晚霞。</p><p><b>可删：</b>D2晚起先删海源、再把喂海改车览；D3风雨时删金海湾晚霞；午休、取行李和夜车缓冲永远不删。</p><p><b>安全：</b>只在开放步道、护栏和合法下客点活动，不跨护栏、不下湿滑礁石；是否可中途下车按所购巴士票种执行。</p></details>
       <details class="card exec-card"><summary><b>D5威海沿海分段打车怎么走？</b></summary><h3>酒店寄存 → 半月湾 → 猫头山观光车 → 火炬八街 → 国际海水浴场 → 酒店取行李 → 威海站</h3><p><b>出发前：</b>大件行李寄存在酒店并取凭证；确认猫头山观光车运营、G2076方向车次、网约车接单和天气。</p><p><b>执行：</b>半月湾看弧形岸线，猫头山看层叠海岬，火炬八街看坡路入海，国际海水浴场看开阔沙滩；每站15—25分钟。</p><p><b>费用：</b>四段车程约49公里，按3元/公里为147元；猫头山观光车两人40元另列。</p><p><b>离开：</b>11:40从海水浴场叫车回酒店，取行李后13:20前到威海站，下午只保跨城转场。</p></details>
       <details class="card exec-card"><summary><b>万岁山1.5天怎么安排？</b></summary><h3>D6完整日看核心演出与夜场，D7上午补冲突节目</h3><p><b>入园前：</b>身份证、充电宝、水、小风扇、纸巾、轻便雨具；先看官方节目单、预约场次和入园规则。</p><p><b>D6：</b>上午锁一场核心实景剧，12:00—15:00遮阴休息，下午接第二组节目和夜场；官网当前提示《三打祝家庄》《沙场打铁花》需预约，实际以当天为准。</p><p><b>D7：</b>09:00后补2—3项，12:00前离园取行李；不再加鼓楼夜市或开封老城。</p><p><b>可删：</b>边缘区、排队过长项目和与主节目冲突的小演出；高温时宁可坐着等下一场。</p></details>
     </section>
@@ -611,7 +666,7 @@
       <div class="section-title"><h2>每天吃什么｜不绕路、不排过度网红店</h2><p class="lead">具体店铺营业和排队会变，优先用关键词找路线内评分稳定的店。</p></div>
       <div class="grid">
         <article class="card pad" data-plan-only="b,c"><h3>青岛｜D1—D2</h3><p><b>吃：</b>鲅鱼水饺、海鲜水饺、家常海鲜。</p><p><b>搜：</b>“浮山所 海鲜水饺 评分4.5以上”。</p></article>
-        <article class="card pad" data-plan-only="a" hidden><h3>青岛D1 + 威海D2—D3</h3><p><b>青岛：</b>啤酒博物馆后不喝酒局，午休段在香港中路/浮山所吃鲅鱼水饺或清淡家常菜；晚饭在青岛北站附近解决。</p><p><b>威海：</b>D1到店已晚，只在酒店附近补一份轻食；D2看东海岸后继续住原酒店；D3西海岸晚霞后回酒店取行李，再去威海站，不为吃饭误K8262。</p><p class="keyword"><span>搜索：青岛北站 简餐；威高广场 鲅鱼水饺 评分4.5以上</span><button class="copy-btn" data-copy="青岛北站 简餐 威高广场 鲅鱼水饺 评分4.5以上">复制</button></p></article>
+        <article class="card pad" data-plan-only="a" hidden><h3>青岛D1 + 威海D2—D3</h3><p><b>青岛：</b>啤酒博物馆后不喝酒局，午休段在香港中路/浮山所吃鲅鱼水饺或清淡家常菜；晚饭在青岛北站附近解决。</p><p><b>威海：</b>D1到店已晚，只在酒店附近补一份轻食；D2看东海岸后继续住原酒店；D3西海岸晚霞后回酒店取行李，再去威海站，不为吃饭误K8262。</p><p class="keyword"><span>搜索：青岛北站 简餐；葡萄滩/统一北路 鲅鱼水饺 评分4.5以上</span><button class="copy-btn" data-copy="青岛北站 简餐 葡萄滩 统一北路 鲅鱼水饺 评分4.5以上">复制</button></p></article>
         <article class="card pad" data-plan-only="b,c"><h3><span data-plan-only="b">威海｜D3—D5</span><span data-plan-only="c" hidden>威海｜D3—D5</span></h3><p><b>晚霞日晚饭：</b>19:20左右从金海湾栈桥打车去欧乐坊零点夜市，先走一圈再选鲅鱼水饺、海菜包子、烤鱿鱼或一份小海鲜。</p><p><b>其他餐：</b>搜“威高广场 鲅鱼水饺”；欧乐坊摊位多，不在第一家吃饱、不点游客套餐，转场前一晚不喝酒。</p><p class="keyword"><span>导航：威海 欧乐坊 零点夜市</span><button class="copy-btn" data-copy="威海 欧乐坊 零点夜市">复制</button></p></article>
         <article class="card pad" data-plan-only="a,b"><h3><span data-plan-only="a" hidden>开封｜D4—D6</span><span data-plan-only="b">开封｜D6—D8</span></h3><p><b>吃：</b>灌汤包、桶子鸡、羊肉炕馍、杏仁茶、炒凉粉。</p><p><b>原则：</b>跨省转场在车上准备轻食；到开封若太晚不吃宵夜，万岁山完整日在园内/附近少量多次，返程日午饭后送机。</p></article>
         <article class="card pad"><h3>餐饮原则</h3><p>正餐以家常菜、小吃搭配为主，海鲜只做一顿小尝鲜；每次不点太满，转场日以轻食和面食为主。</p></article>
@@ -622,7 +677,7 @@
     <section id="pack">
       <div class="section-title"><h2>出发前准备清单</h2><p class="lead">按类别收进一个轻便背包，转场时不反复翻行李。</p></div>
       <div class="grid">
-        <article class="card exec-card"><h3>证件与订单</h3><ul><li>身份证、航班订单、12306订单、酒店订单。</li><li>青岛啤酒博物馆预约码、猫头山观光车信息<span data-plan-only="a,b">、万岁山票务/节目单截图</span>。</li><li><span data-plan-only="a" hidden>青岛、威海、开封三城</span><span data-plan-only="b">青岛、威海、开封三城</span><span data-plan-only="c" hidden>青岛、威海两城</span>酒店前台电话与寄存行李说明。</li></ul></article>
+        <article class="card exec-card"><h3>证件与订单</h3><ul><li>身份证、航班订单、12306订单、酒店订单。</li><li>青岛啤酒博物馆预约码、环海巴士购票与停靠规则截图<span data-plan-only="a,b">、万岁山票务/节目单截图</span>。</li><li><span data-plan-only="a" hidden>青岛、威海、开封三城</span><span data-plan-only="b">青岛、威海、开封三城</span><span data-plan-only="c" hidden>青岛、威海两城</span>酒店前台电话与寄存行李说明。</li></ul></article>
         <article class="card exec-card"><h3>海边与打车</h3><ul><li>防晒霜、帽子、墨镜、舒服鞋。</li><li>水、纸巾、湿巾、充电宝和备用数据线。</li><li>沿海慢游只带随身小包；大件行李留在酒店房间。</li></ul></article>
         <article class="card exec-card"><h3>高温与下雨</h3><ul><li>折叠伞/雨衣、薄外套、充电宝。</li><li>防暑用品、创可贴、晕车药和常用药。</li><li>每个海边点只带小包，别背大行李。</li></ul></article>
       </div>
@@ -660,7 +715,7 @@
       <div class="check-grid" data-plan-only="a" hidden>
         <article class="check"><b>大交通</b>核对T172、K1138、C6511、K8262、K15和ZH8365全部当前有效；重点确认车厢/铺位、南昌与济南同站换乘、K15改签状态及航班值机选座。</article>
         <article class="check"><b>住宿</b>威海天和美术馆酒店订7月25—27日两晚；全季开封汴西湖店订7月28—30日两晚。确认两店晚到入住、退房寄存和门口叫车位置。</article>
-        <article class="check"><b>青岛与威海</b>核对啤酒博物馆预约、青岛北寄存；确认D2猫头山观光车、D3金海湾开放、天气、18:40离海边和20:00到威海站的边界。</article>
+        <article class="check"><b>青岛与威海</b>核对啤酒博物馆预约、青岛北寄存；确认D2环海巴士票种、3号/10号停靠规则，D3金海湾开放、天气、18:40离海边和20:00到威海站的边界。</article>
         <article class="check"><b>开封两段</b>核对D4御河航线、码头和学生优惠；核对D5完整日、D6上午补节目的万岁山票种、学生资格、节目单与预约。</article>
       </div>
       <div class="check-grid" data-plan-only="b">
@@ -693,6 +748,11 @@
         <li data-plan-only="b"><a href="https://trains.ctrip.com/TrainBooking/weihai-zhengzhou/gaotie/" target="_blank" rel="noopener">威海—郑州公开高铁参考</a>：可见G3170等上午出发车次；最终站点、票价和时刻只认12306。</li>
         <li><a href="https://www.weihai.gov.cn/art/2026/4/20/art_58956_6296646.html" target="_blank" rel="noopener">威海猫头山旺季交通管制</a>：部分环海辅线限制社会车辆、出租车和网约车进入，海岸慢游日按外围换乘执行。</li>
         <li><a href="https://www.weihai.gov.cn/art/2024/4/16/art_58956_4494146.html" target="_blank" rel="noopener">威海政府环海路观光巴士说明</a>：公开参考20元/人、17个停靠站；2026实际票价、线路与班次仍以现场二维码为准。</li>
+        <li><a href="https://www.weihai.gov.cn/art/2024/4/7/art_58820_4462946.html" target="_blank" rel="noopener">威海市政府17站环海巴士乘坐指南</a>：核对半月湾、大项链、猫头山与喂海公园同线，以及随上随下、一票通行规则；2026当天运营以购票页为准。</li>
+        <li><a href="https://www.weihai.gov.cn/art/2024/8/14/art_58817_4813508.html" target="_blank" rel="noopener">威海市政府全景环海巴士说明</a>：核对60—90分钟、3号与10号停靠、喂海公园沿线及原客原回规则。</li>
+        <li><a href="https://www.weihai.gov.cn/szdt/web/mapIndex/3?area=&amp;mapClassificationId=&amp;mapClassificationPid=26&amp;name=" target="_blank" rel="noopener">威海市数字便民地图</a>：核对大项链、猫头山、喂海公园等官方站点名称与环海路方位。</li>
+        <li><a href="https://www.qiantaohotel.com/homeweb/NewHomeWeb/M10095514.html" target="_blank" rel="noopener">威海天和美术馆酒店资料</a>：核对已订酒店地址为环翠区统一北路80号，路线图不再按威高广场起点绘制。</li>
+        <li data-plan-only="a" hidden><a href="https://hotels.ctrip.com/hotel/71961179.html" target="_blank" rel="noopener">全季酒店（开封汴西湖店）资料</a>：核对酒店位于集英街与晋安路交叉口文锦大厦1号；开封路线图按该实际点位绘制。</li>
         <li><a href="https://www.tsingtaomuseum.com/articleTitleCus/1790371205849559041?viewName=newCanguanDetail" target="_blank" rel="noopener">青岛啤酒博物馆官方参观须知</a>、<a href="https://www.tsingtaomuseum.com/articleTitleCus/1823961726126940161?viewName=newPiaowu2Detail" target="_blank" rel="noopener">官方基础票说明</a>：核对暑期开放、预约入口、成人60元与学生50元基础票；最终以官方购票页为准。</li>
         <li><a href="https://m.qdxin.cn/detail/388535.html" target="_blank" rel="noopener">青岛第二海水浴场2026开放信息</a>：公开参考7月1日至9月25日、09:00—17:30；洞口、礁石和堤坝仍以现场围挡、潮汐和救生员要求为准。</li>
         <li><a href="https://m.ctrip.com/html5/trains/qingdaobei-weihaibei-d/" target="_blank" rel="noopener">青岛北—威海车次查询参考</a>：C6511当前参考19:17—21:11、二等座93元/人；最终只认7月25日12306付款订单。</li>
@@ -789,7 +849,7 @@
       var spotCards=Array.prototype.slice.call(document.querySelectorAll('#spots .spot-card'));
       spotCards.slice(0,3).forEach(function(card){card.setAttribute('data-plan-only','a,b,c');});
       spotCards.slice(3,5).forEach(function(card){card.setAttribute('data-plan-only','b');});
-      if(spotCards[11])spotCards[11].setAttribute('data-plan-only','a,b');
+      if(spotCards[12])spotCards[12].setAttribute('data-plan-only','a,b');
       var playbookCards=Array.prototype.slice.call(document.querySelectorAll('#spot-playbook .exec-card'));
       if(playbookCards[0])playbookCards[0].setAttribute('data-plan-only','a,b,c');
       if(playbookCards[1])playbookCards[1].setAttribute('data-plan-only','b');
@@ -831,16 +891,16 @@
       function applyAdaptiveCopy(plan){
         if(spotCards.length<12)return;
         var leads=spotCards.map(function(card){return card.querySelector('.lead');});
-        var copyA=['D1上午｜林荫建筑与海岸顺路连接。','D1上午｜洞口与堤坝只在安全开放时靠近。','D1傍晚｜只走草坪和西侧海景，按时回青岛北。','方案A不安排城市地标长线。','方案A不安排灯塔长线。','D1第一站｜百年厂房与真实生产线，基础票即可。','D2顺路站｜渔港与礁石岸线，限时40分钟。','D2第二站｜不早起追日出，也能看清海湾形状。','D2第三站｜用官方观光车看层叠海岬。','D3上午｜看一眼坡路入海主视角。','D3傍晚｜海水浴场后去金海湾栈桥等晚霞。','D5完整日 + D6上午｜本次主景点，分两段玩。'];
-        var copyB=['D2上午｜八大关林荫建筑主线。','D2上午｜洞口与堤坝只在安全开放时靠近。','D2傍晚｜草坪、花海与城市海岸短线。','D3傍晚前段｜两处威海城市名片，各拍一张就走。','D3傍晚后段｜用一个清楚地标收住城市海岸日。','D2第一站｜百年厂房与真实生产线。','D4顺路站｜渔港与礁石岸线，限时40分钟。','D4第二站｜短停弧形海湾，正午前返回。','D5上午｜用官方观光车看层叠海岬。','D5傍晚｜看坡路入海主视角。','D5傍晚｜海水浴场后去金海湾栈桥等晚霞。','D7全天 + D8上午｜本次主景点，留足1.5天。'];
-        var copyC=['D2上午｜八大关林荫建筑主线。','D2上午｜洞口与堤坝只在安全开放时靠近。','D2傍晚｜草坪、花海与城市海岸短线。','方案C不安排城市地标长线。','方案C不安排灯塔长线。','D2第一站｜百年厂房与真实生产线。','D3东海岸｜渔港礁石短停，晚点可删。','D3东海岸｜短停弧形海湾，不追日出。','D4上午｜官方观光车代替徒步。','D4傍晚｜看坡路入海主视角。','D4傍晚｜栈桥晚霞；D5返程不等日落。','方案C无河南段。'];
+        var copyA=['D1上午｜林荫建筑与海岸顺路连接。','D1上午｜洞口与堤坝只在安全开放时靠近。','D1傍晚｜只走草坪和西侧海景，按时回青岛北。','方案A不安排城市地标长线。','方案A不安排灯塔长线。','D1第一站｜百年厂房与真实生产线，基础票即可。','D2顺路站｜渔港与礁石岸线，限时40分钟。','D2第二站｜不早起追日出，也能看清海湾形状。','D2顺路新增｜大项链与喂海同一趟巴士完成。','D2巴士主线｜10号猫头山看层叠海岬。','D3上午｜看一眼坡路入海主视角。','D3傍晚｜海水浴场后去金海湾栈桥等晚霞。','D5完整日 + D6上午｜本次主景点，分两段玩。'];
+        var copyB=['D2上午｜八大关林荫建筑主线。','D2上午｜洞口与堤坝只在安全开放时靠近。','D2傍晚｜草坪、花海与城市海岸短线。','D3傍晚前段｜两处威海城市名片，各拍一张就走。','D3傍晚后段｜用一个清楚地标收住城市海岸日。','D2第一站｜百年厂房与真实生产线。','D4顺路站｜渔港与礁石岸线，限时40分钟。','D4第二站｜短停弧形海湾，正午前返回。','D4顺路新增｜大项链与喂海同线，不额外折返。','D5上午｜用官方观光车看层叠海岬。','D5傍晚｜看坡路入海主视角。','D5傍晚｜海水浴场后去金海湾栈桥等晚霞。','D7全天 + D8上午｜本次主景点，留足1.5天。'];
+        var copyC=['D2上午｜八大关林荫建筑主线。','D2上午｜洞口与堤坝只在安全开放时靠近。','D2傍晚｜草坪、花海与城市海岸短线。','方案C不安排城市地标长线。','方案C不安排灯塔长线。','D2第一站｜百年厂房与真实生产线。','D3东海岸｜渔港礁石短停，晚点可删。','D3东海岸｜短停弧形海湾，不追日出。','D3/D4可选｜巴士顺看大项链与喂海。','D4上午｜官方观光车代替徒步。','D4傍晚｜看坡路入海主视角。','D4傍晚｜栈桥晚霞；D5返程不等日落。','方案C无河南段。'];
         var activeCopy=plan==='a'?copyA:(plan==='c'?copyC:copyB);
         activeCopy.forEach(function(value,index){if(value&&leads[index])leads[index].textContent=value;});
         var cityPs=spotCards[3].querySelectorAll('.spot-body p');
         if(cityPs[3])cityPs[3].innerHTML='<b>可删：</b>D3到威海晚、下雨或风大就删悦海，再删大相框；只保幸福门和威高晚饭。';
         var lighthousePs=spotCards[4].querySelectorAll('.spot-body p');
         if(lighthousePs[3])lighthousePs[3].innerHTML='<b>可删：</b>D3到威海晚、下雨或风大就删，直接回威高晚饭。';
-        var beachPs=spotCards[10].querySelectorAll('.spot-body p');
+        var beachPs=spotCards[11].querySelectorAll('.spot-body p');
         if(plan==='a'){
           if(beachPs[0])beachPs[0].innerHTML='<b>安排：</b>D3火炬八街短停后看国际海水浴场，再到金海湾栈桥；18:20前到位，19:10无论是否出霞都离开，回原酒店取行李后去威海站。';
           if(beachPs[2])beachPs[2].innerHTML='<b>拍照：</b>在岸上先拍栈桥完整轮廓，再在安全开放区域拍人物剪影与金色海面；19:10停止拍摄，返程和K8262优先。';
@@ -854,20 +914,20 @@
           if(beachPs[2])beachPs[2].innerHTML='<b>拍照：</b>在岸上先拍栈桥完整轮廓，再在安全开放区域拍人物剪影与金色海面；手机和相机注意防风防沙。';
           if(beachPs[3])beachPs[3].innerHTML='<b>可删/安全：</b>雷雨、浪大、临时封桥或体力不足时不登桥，只在岸边短停后去欧乐坊。';
         }
-        var wansuiPs=spotCards[11].querySelectorAll('.spot-body p');
+        var wansuiPs=spotCards[12].querySelectorAll('.spot-body p');
         if(wansuiPs[1])wansuiPs[1].innerHTML=plan==='a'?'<b>D5完整日：</b>上午先锁一场核心实景演出；12:00—15:00午饭、补水和遮阴休息；下午接第二组主节目与夜场大秀。':'<b>D7完整日：</b>优先城寨/武侠实景演出；12:00—15:00午饭、补水和遮阴休息；下午接主舞台节目与夜场大秀。';
         if(wansuiPs[3])wansuiPs[3].innerHTML='<b>'+(plan==='a'?'D6':'D8')+'上午：</b>只补昨天冲突或没排到的2—3项，12:00前离园，不再塞鼓楼、书店街等附加景点。';
         if(playbookCards.length>=5){
           playbookCards[1].innerHTML='<summary><b>威海城市地标怎么走？</b></summary><h3>幸福门 → 威海公园大相框 → 悦海灯塔</h3><p><b>出发：</b>到威海后先入住、吃饭和休息，16:30再开始；三点之间打车，不沿海全程步行。</p><p><b>必看：</b>幸福门的门形地标与海湾、大相框把人和海框进画面、悦海公园白色灯塔和海草房。</p><p><b>可删：</b>列车晚点或风雨明显时先删悦海，再删大相框；只保幸福门和威高晚饭。</p><p><b>结束：</b>19:30前收，回酒店确认次日海岸天气和观光车。</p>';
           playbookCards[2].innerHTML=plan==='a'
-            ?'<summary><b>威海两个完整白天怎么拆？</b></summary><h3>D2东海岸海岬，D3西海岸晚霞与夜车</h3><p><b>D2：</b>海源看渔港礁石，半月湾看弧形海岸，猫头山用官方观光车看层叠海岬；中午回酒店休息。</p><p><b>D3：</b>葡萄滩、火炬八街、国际海水浴场和金海湾分段游玩；19:10收手，回酒店取行李后去威海站。</p><p><b>可删：</b>晚起先删海源；风雨时删金海湾等晚霞；午休和K8262绝不压缩。</p><p><b>安全：</b>只在开放步道与护栏内活动，不跨护栏、不下湿滑礁石。</p>'
+            ?'<summary><b>威海两个完整白天怎么拆？</b></summary><h3>D2环海巴士看海岬，D3西海岸晚霞与夜车</h3><p><b>D2：</b>海源看渔港礁石，半月湾上车；3号“大项链”看海岬机位，10号猫头山看层叠岬角，“喂，海！”公园补松林礁石。后三处同一巴士串联，中午回酒店。</p><p><b>D3：</b>葡萄滩、火炬八街、国际海水浴场和金海湾分段游玩；18:40左右收手，回酒店取行李后去威海站。</p><p><b>可删：</b>晚起先删海源、喂海改车览；风雨时删金海湾晚霞；午休和K8262绝不压缩。</p><p><b>安全：</b>只在开放步道与护栏内活动；全景巴士若为原客原回，不擅自中途下车。</p>'
             :'<summary><b>威海海岸怎么拆成两段？</b></summary><h3>上午海源/半月湾/猫头山，正午午休，傍晚火炬八街/海水浴场/金海湾</h3><p><b>上午：</b>海源看渔港礁石，半月湾看弧形海岸，猫头山用官方观光车看层叠海岬，不走徒步线。</p><p><b>傍晚：</b>火炬八街看坡路入海，国际海水浴场看浪线，金海湾看栈桥轮廓与晚霞。</p><p><b>可删：</b>晚起先删海源；风雨时删晚霞；午休和跨城转场永远不删。</p><p><b>安全：</b>只在开放步道与护栏内活动，不跨护栏、不下湿滑礁石。</p>';
           if(plan==='c'){
             playbookCards[3].innerHTML='<summary><b>方案C威海海岸怎么拆成两段？</b></summary><h3>D3东海岸与可选晚霞 + D5返程前西海岸短线</h3><p><b>D3：</b>到店休息后走海源→半月湾→猫头山；列车准点且天气好才去金海湾与欧乐坊，打车按66公里198元列账。</p><p><b>D5：</b>退房寄存后只走火炬八街→国际海水浴场→酒店取行李；11:30前收手，市内按28公里84元。</p><p><b>可删：</b>D3先删海源、再删晚霞；D5航班早于15:30就删除全部景点。</p><p><b>原则：</b>返程优先，绝不为了补海岸误机。</p>';
           }else{
             var coastDay=plan==='a'?'D2':'D5';
             playbookCards[3].innerHTML=plan==='a'
-              ?'<summary><b>D2—D3威海分日打车怎么走？</b></summary><h3>D2酒店 → 海源 → 半月湾 → 猫头山 → 酒店；D3酒店/葡萄滩 → 火炬八街 → 国际海水浴场 → 金海湾 → 酒店取行李 → 威海站</h3><p><b>D2：</b>海源限40分钟，半月湾短停，猫头山只坐官方观光车；中午回酒店休息，约21公里63元。</p><p><b>D3：</b>退房后寄存，上午从葡萄滩起步；18:20前到金海湾，19:10收手，约27公里81元。</p><p><b>费用：</b>两天打车共144元；猫头山观光车两人40元另列。</p><p><b>结束：</b>回原酒店只取行李，20:00左右到威海站候乘K8262；不临时追加远点。</p>'
+              ?'<summary><b>D2—D3威海分日交通怎么走？</b></summary><h3>D2天和酒店 → 海源 → 半月湾北岸 → 环海巴士 → 酒店；D3酒店/葡萄滩 → 火炬八街 → 国际海水浴场 → 金海湾 → 酒店取行李 → 威海站</h3><p><b>D2：</b>海源限40分钟；在半月湾换巴士，同线完成大项链、猫头山和喂海沿线，再按票种返回，市内约21公里63元。</p><p><b>D3：</b>退房后寄存，上午从葡萄滩起步；18:40左右从海边收手，约27公里81元。</p><p><b>费用：</b>两天打车共144元；观光巴士暂按两人40元预算位，付款页更高时只替换差额。</p><p><b>结束：</b>回统一北路80号原酒店取行李，约20:00到实际威海站候乘K8262；不是威海北站。</p>'
               :'<summary><b>'+coastDay+'威海沿海分段打车怎么走？</b></summary><h3>酒店 → 海源公园 → 半月湾 → 猫头山观光车 → 酒店午休 → 火炬八街 → 国际海水浴场 → 金海湾栈桥 → 欧乐坊 → 酒店</h3><p><b>出发前：</b>不用带大件行李；确认猫头山观光车、金海湾栈桥开放、网约车接单和天气。</p><p><b>执行：</b>海源只停40分钟，再看半月湾和猫头山；12:15—16:00午休；18:20前到金海湾，约19:20去欧乐坊。</p><p><b>费用：</b>整日按45公里135元；猫头山观光车两人40元另列。</p><p><b>结束：</b>21:10左右回酒店，休息并确认下一天交通。</p>';
           }
           var returnDay=plan==='a'?'D6':'D8';
