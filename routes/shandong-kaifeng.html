@@ -38,11 +38,12 @@
     body:not(.plans-ready) [data-plan-only]{display:none!important}body[data-plan="a"]:not(.plans-ready) [data-plan-only*="a"],body[data-plan="b"]:not(.plans-ready) [data-plan-only*="b"],body[data-plan="c"]:not(.plans-ready) [data-plan-only*="c"]{display:revert!important}.topnav a:first-child:not(.active){background:#eaf5f3;color:#155b5b}.topnav a.active{background:var(--teal);color:#fff}.map-zoom-button{display:inline-flex;align-items:center;justify-content:center;min-height:42px;margin:0 0 9px auto;padding:8px 13px;border:1px solid #9bc9c4;border-radius:999px;background:#eaf7f5;color:#0b6c61;font:800 13px inherit;cursor:pointer}
     @media(max-width:620px){.all-ticket-grid{grid-template-columns:1fr}.poster-link-card{grid-template-columns:1fr}.poster-link-card a{width:100%}}
     @media(max-width:620px){.trip-actions{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.trip-action{min-height:72px;padding:10px}.trip-action-icon{width:34px;height:34px}.trip-action small{line-height:1.4}.topnav{top:0!important;bottom:auto!important;border-top:0!important;border-bottom:1px solid var(--line)!important}section{scroll-margin-top:62px!important}}
+    .rain-plan-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.rain-plan-card{padding:16px;border-top:5px solid var(--blue)}.rain-plan-card:nth-child(2n){border-top-color:var(--teal)}.rain-plan-head{display:flex;align-items:center;gap:9px;margin-bottom:10px}.rain-day{display:grid;place-items:center;flex:0 0 46px;height:46px;border-radius:13px;background:#eaf4fb;color:var(--blue);font-size:18px;font-weight:950}.rain-plan-card:nth-child(2n) .rain-day{background:#e8f7f3;color:var(--teal)}.rain-plan-head h3{margin:0;font-size:19px;line-height:1.35}.rain-plan-card p{margin:7px 0}.rain-rule{padding:9px 11px;border-radius:11px;background:#fff7e9;color:#784a12;font-weight:800}.rain-route{color:#17695f;font-weight:900}.rain-source-note{margin-top:12px;padding:12px 14px;border-left:5px solid var(--blue);border-radius:12px;background:#eef6fb;color:#3d5c6c}.rain-plan-card .keyword{margin-top:10px}@media(max-width:720px){.rain-plan-grid{grid-template-columns:1fr}}
   </style>
 </head>
 <body data-plan="a" data-route-id="shandong-kaifeng">
   <script>(function(){try{var p=new URL(location.href).searchParams.get('plan')||localStorage.getItem('shandong-kaifeng-plan-v4');if(p==='a'||p==='b'||p==='c')document.body.dataset.plan=p;}catch(e){}})();</script>
-  <nav class="topnav" aria-label="路线快捷导航"><a href="#one-screen">30秒总控</a><a href="#plans">版本选择</a><a href="#outbound-ticket">已购交通</a><a href="#quick">今日执行</a><a href="#weihai-map">路线图</a><a href="#days">详细行程</a><a href="#route-weather">天气</a><a href="#emergency">应急</a><a href="#budget">费用</a></nav>
+  <nav class="topnav" aria-label="路线快捷导航"><a href="#one-screen">30秒总控</a><a href="#plans">版本选择</a><a href="#outbound-ticket">已购交通</a><a href="#quick">今日执行</a><a href="#weihai-map">路线图</a><a href="#days">详细行程</a><a href="#route-weather">天气</a><a href="#rain-plan" data-plan-only="a">雨天备选</a><a href="#emergency">应急</a><a href="#budget">费用</a></nav>
   <main class="wrap">
     <a class="back" href="../index.html">← 返回路线选择</a>
     <header class="hero">
@@ -701,6 +702,67 @@
       </div>
     </section>
 
+    <section id="rain-plan" data-plan-only="a" hidden>
+      <div class="section-title"><h2>D1—D6下雨应急去哪里</h2><p class="lead">只看这一块：先判断雨势，再按当天卡片替换，不动已购大交通。</p></div>
+      <div class="notice danger"><b>雷电、大风或暴雨时：</b>海边、临海栈道、礁石、游船和露天演出全部取消，不因“已经到了”继续冒险。小雨才执行卡内的短距离户外衔接；最终以气象预警、景区公告和现场封控为准。</div>
+      <div class="rain-plan-grid">
+        <article class="card rain-plan-card">
+          <div class="rain-plan-head"><span class="rain-day">D1</span><h3>7月25日｜青岛：青啤 + 海底世界</h3></div>
+          <p class="rain-rule">替换：取消八大关、第二海水浴场和小麦岛；保留青岛啤酒博物馆。</p>
+          <p><b>怎么走：</b>青岛北存包 → 台东早餐 → 07:30青啤 → 打车到青岛海底世界 → 午后去万象城吃饭、休息和充电 → 回青岛北取行李。</p>
+          <p><b>看什么：</b>青啤保留工业文化主线；海底世界看水下演艺、珊瑚展馆和海底隧道，雨天仍有青岛海洋辨识度。</p>
+          <p class="rain-route">硬边界：16:30离开万象城，17:20前回青岛北；19:17的C6511不动。</p>
+          <p class="keyword"><span>导航：青岛啤酒博物馆 → 青岛海底世界 → 青岛万象城</span><button class="copy-btn" data-copy="青岛啤酒博物馆 青岛海底世界 青岛万象城">复制</button></p>
+        </article>
+
+        <article class="card rain-plan-card">
+          <div class="rain-plan-head"><span class="rain-day">D2</span><h3>7月26日｜威海：市博物馆 + 科幻海世界</h3></div>
+          <p class="rain-rule">替换：取消海源、半月湾、环海巴士、猫头山和“喂，海！”沿线。</p>
+          <p><b>怎么走：</b>天和美术馆酒店 → 威海市博物馆 → 午饭 → 至海港湾·科幻海世界 → 晚饭后回酒店。</p>
+          <p><b>为什么选：</b>威海市博物馆周日开放、免费且不需个人预约；科幻海世界是威海本地海洋数字科普项目，有VR、全息投影和270°环幕，比逛普通商场更像“来过威海”。</p>
+          <p class="rain-route">硬边界：当天不补海边；睡前只复核D3天气、K8262和酒店寄存。</p>
+          <p class="keyword"><span>导航：威海市博物馆；至海港湾 科幻海世界</span><button class="copy-btn" data-copy="威海市博物馆 至海港湾 科幻海世界">复制</button></p>
+        </article>
+
+        <article class="card rain-plan-card">
+          <div class="rain-plan-head"><span class="rain-day">D3</span><h3>7月27日｜威海：科幻海世界 + 威高广场</h3></div>
+          <p class="rain-rule">替换：取消葡萄滩、火炬八街、国际海水浴场和金海湾；周一不要去威海市博物馆。</p>
+          <p><b>怎么走：</b>退房寄存 → 至海港湾·科幻海世界 → 威高广场午饭、电影或咖啡休息 → 18:00前回酒店取行李 → 威海站。</p>
+          <p><b>为什么这样排：</b>周一博物馆常规闭馆；数字海洋馆保留海滨主题，威高广场负责吃饭、充电和避雨，避免拖着行李跨城折返。</p>
+          <p class="rain-route">硬边界：18:40前离开酒店区域，20:00左右到威海站；22:06的K8262永远优先。</p>
+          <p class="keyword"><span>导航：至海港湾 科幻海世界 → 威高广场 → 威海站</span><button class="copy-btn" data-copy="至海港湾 科幻海世界 威高广场 威海站">复制</button></p>
+        </article>
+
+        <article class="card rain-plan-card">
+          <div class="rain-plan-head"><span class="rain-day">D4</span><h3>7月28日｜开封：入住 + 万达休整</h3></div>
+          <p class="rain-rule">替换：取消大宋御河夜游，不改K8262、K15和开封酒店。</p>
+          <p><b>怎么走：</b>15:17到开封站 → 全季开封汴西湖店放行李、洗漱 → 开封大宏万达广场吃饭、补给 → 回酒店早点睡。</p>
+          <p><b>为什么不硬塞景点：</b>这天已经连续夜车与长途换乘；雨天御河可能调整航线，室内吃饭休整比再跨城追景点更符合慢游原则。</p>
+          <p class="rain-route">硬边界：D5万岁山主景点不前移；睡前查看万岁山官方节目单和次日停演公告。</p>
+          <p class="keyword"><span>导航：全季酒店（开封汴西湖店）→ 开封大宏万达广场</span><button class="copy-btn" data-copy="全季酒店 开封汴西湖店 开封大宏万达广场">复制</button></p>
+        </article>
+
+        <article class="card rain-plan-card">
+          <div class="rain-plan-head"><span class="rain-day">D5</span><h3>7月29日｜开封：小雨照常，暴雨转市博</h3></div>
+          <p class="rain-rule">小雨：万岁山按官方节目单走；雷暴/持续大雨：取消露天园区，改开封市博物馆 + 万达。</p>
+          <p><b>小雨版：</b>穿雨衣入园，只锁官方确认正常演出的核心节目；不坐湿地、不横穿赶场，任何临时停演立即接受。</p>
+          <p><b>暴雨版：</b>09:00后去开封市博物馆，16:00前入馆；看完转开封大宏万达广场吃饭休息。博物馆免费，但须从官方微信公众号/小程序预约。</p>
+          <p class="rain-route">硬边界：不在雷电、大风中等待露天夜场；D6能否补万岁山只看官方恢复通知。</p>
+          <p class="keyword"><span>导航：开封市博物馆 → 开封大宏万达广场</span><button class="copy-btn" data-copy="开封市博物馆 开封大宏万达广场">复制</button></p>
+        </article>
+
+        <article class="card rain-plan-card">
+          <div class="rain-plan-head"><span class="rain-day">D6</span><h3>7月30日｜返程：不追景点，提前去机场</h3></div>
+          <p class="rain-rule">小雨且万岁山确认开放才补节目；雷暴或暴雨直接取消上午景点。</p>
+          <p><b>小雨版：</b>只补1—2个官方确认正常的节目，11:30收手，回全季取行李。</p>
+          <p><b>强降雨版：</b>酒店休息、整理行李和吃午饭；根据道路积水与航司提示，把原14:15离开开封提前到13:15左右。</p>
+          <p class="rain-route">硬边界：ZH8365为19:05起飞；先保去新郑机场的公路缓冲，不拿返程航班换一个雨天景点。</p>
+          <p class="keyword"><span>导航：全季酒店（开封汴西湖店）→ 郑州新郑国际机场T2</span><button class="copy-btn" data-copy="全季酒店 开封汴西湖店 郑州新郑国际机场 T2">复制</button></p>
+        </article>
+      </div>
+      <p class="rain-source-note"><b>现场核对：</b>D1青岛海底世界票种与演出以景区当天页面为准；D2/D3科幻海世界营业时间与票价出发前在高德/OTA复核；威海市博物馆常规为周二至周日09:00—16:30、周一闭馆；开封市博物馆常规为周二至周日09:00—17:00、16:00停止入馆，并通过官方预约入口实名预约。</p>
+    </section>
+
     <section id="emergency">
       <div class="section-title"><h2>应急替代方案</h2><p class="lead">晚点、下雨、太累时直接删改，不临场硬扛。</p></div>
       <div data-plan-only="a" hidden>
@@ -758,6 +820,9 @@
       <ul class="source-list">
         <li><a href="https://www.weather.com.cn/weather/101120201.shtml" target="_blank" rel="noopener">中国天气网·青岛官方预报</a>、<a href="https://www.weather.com.cn/weather/101121301.shtml" target="_blank" rel="noopener">威海官方预报</a>、<a href="https://www.weather.com.cn/weather/101180801.shtml" target="_blank" rel="noopener">开封官方预报</a>：未来7天按城市预报展示；第8—15天只作趋势参考，临近出发必须复核。</li>
         <li><a href="https://www.nmc.cn/publish/typhoon/warning_index.html" target="_blank" rel="noopener">中央气象台台风预警</a>：用于判断华南出发交通及青岛、威海沿海行程是否需要调整。</li>
+        <li data-plan-only="a" hidden><a href="https://qingdao.dzwww.com/tour/lyzx/202607/t20260706_17906453.htm" target="_blank" rel="noopener">青岛海底世界2026暑期信息</a>：核对日间/夜场票种、水下演艺与临时天气调整；雨天卡只把它作为D1室内替代，最终以景区当日公告为准。</li>
+        <li data-plan-only="a" hidden><a href="https://www.weihai.gov.cn/art/2023/8/22/art_59723_3901928.html" target="_blank" rel="noopener">威海市博物馆开放答复</a>、<a href="https://www.weihai.gov.cn/art/2026/1/8/art_131876_6070506.html" target="_blank" rel="noopener">威海科幻海世界政府报道</a>：前者常规周二至周日开放、周一闭馆；后者核对至海港湾数字海洋体验的性质与位置。</li>
+        <li data-plan-only="a" hidden><a href="https://www.kaifeng.gov.cn/kfsrmzfwz/whty/pc/content/content_1873557496836997120.html" target="_blank" rel="noopener">开封市博物馆官方预约提醒</a>：雨天替代只走官方微信公众号/小程序、携程或现场身份证取票，不购买非官方收费预约。</li>
         <li><a href="https://www.12306.cn/" target="_blank" rel="noopener">12306</a>：跨城车票、车次、席别和实时票价核对。</li>
         <li data-plan-only="a" hidden><a href="https://www.12306.cn/" target="_blank" rel="noopener">方案A已购交通订单</a>：T172、K1138、C6511、K8262与改签后仍有效的K15均按当前订单写入时间、车厢和席位；页面不展示乘车人、证件号或订单号。</li>
         <li data-plan-only="a" hidden><a href="https://www.gaotie.com.cn/checi/K8262.html" target="_blank" rel="noopener">K8262公开时刻参考</a>、<a href="https://www.12306.cn/" target="_blank" rel="noopener">12306订单核对</a>：27日22:06从威海出发，28日06:17到济南；同站等待1小时38分后，07:55乘K15，15:17直达开封。网页不列重复候补订单。</li>
