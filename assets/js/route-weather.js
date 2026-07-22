@@ -3,6 +3,10 @@
 
   var config = window.ROUTE_WEATHER_CONFIG;
   var snapshot = window.ROUTE_WEATHER_SNAPSHOT || {};
+  var scriptUrl = document.currentScript && document.currentScript.src;
+  var snapshotUrl = scriptUrl
+    ? new URL("weather-snapshot.js", scriptUrl).href
+    : "../assets/js/weather-snapshot.js";
   if (!config || !config.routes) return;
 
   var weatherNames = {
@@ -67,6 +71,34 @@
     if (value == null || value === "") return fallback;
     var number = Number(value);
     return Number.isFinite(number) ? number : fallback;
+  }
+
+  function setRefreshStatus(panel, text, status) {
+    var node = panel && panel.querySelector(".weather-auto-status");
+    if (!node) return;
+    node.textContent = text;
+    node.dataset.status = status || "loading";
+  }
+
+  function refreshPublishedSnapshot(routeId, route, start, panel) {
+    setRefreshStatus(panel, "正在读取最新官方天气…", "loading");
+    var loader = document.createElement("script");
+    loader.src = snapshotUrl + (snapshotUrl.indexOf("?") >= 0 ? "&" : "?") + "refresh=" + Date.now();
+    loader.async = true;
+    loader.onload = function () {
+      snapshot = window.ROUTE_WEATHER_SNAPSHOT || snapshot;
+      renderPanel(routeId, route, snapshot.locations || {}, start);
+      var generated = snapshot.generatedAt
+        ? new Date(snapshot.generatedAt).toLocaleString("zh-CN", { hour12: false })
+        : "时间待核";
+      setRefreshStatus(panel, "已读取最新官方快照｜" + generated, "ok");
+      loader.remove();
+    };
+    loader.onerror = function () {
+      setRefreshStatus(panel, "网络暂不可用，已显示网页内置官方快照", "cached");
+      loader.remove();
+    };
+    document.head.appendChild(loader);
   }
 
   function readDay(location, date) {
@@ -261,11 +293,11 @@
       '<div class="weather-head"><div><h2>天气与台风官方判断</h2><p>' +
       escapeHtml(route.name) +
       (route.dateLabel ? "｜" + escapeHtml(route.dateLabel) : "") +
-      '｜先看能不能去，再决定是否调整。</p></div><span class="weather-live-badge">官方快照</span></div>';
+      '｜先看能不能去，再决定是否调整。</p><span class="weather-auto-status" data-status="loading">打开页面自动读取最新快照</span></div><span class="weather-live-badge">官方快照</span></div>';
     var controls =
       '<div class="weather-controls"><label>推算出发日期<input class="weather-date" type="date" value="' +
       start +
-      '"></label><button class="weather-refresh" type="button">按此日期查看</button><a class="weather-official-link" href="https://www.weather.com.cn/" target="_blank" rel="noopener">中国天气网</a><a class="weather-official-link" href="https://www.nmc.cn/publish/typhoon/warning_index.html" target="_blank" rel="noopener">中央气象台台风</a></div>' +
+      '"></label><button class="weather-refresh" type="button">重新读取最新快照</button><a class="weather-official-link" href="https://www.weather.com.cn/" target="_blank" rel="noopener">中国天气网</a><a class="weather-official-link" href="https://www.nmc.cn/publish/typhoon/warning_index.html" target="_blank" rel="noopener">中央气象台台风</a></div>' +
       '<div class="weather-days"></div>' +
       '<div class="typhoon-card"><div class="typhoon-copy"><h3>台风预报</h3><p>读取中央气象台发布快照。</p></div><a class="weather-official-link" href="https://www.nmc.cn/publish/typhoon/warning_index.html" target="_blank" rel="noopener">打开官方预警</a></div><p class="weather-foot"></p>';
     var verdict = '<div class="weather-overall" data-status="unknown"><div class="weather-verdict">正在判断</div><div class="weather-reason">读取官方快照中。</div></div>';
@@ -283,6 +315,7 @@
         localStorage.setItem("route-weather-date-" + routeId, value);
       } catch (error) {}
       renderPanel(routeId, route, snapshot.locations || {}, value);
+      refreshPublishedSnapshot(routeId, route, value, panel);
     });
     return panel;
   }
@@ -316,8 +349,9 @@
       stored = localStorage.getItem("route-weather-date-" + routeId) || "";
     } catch (error) {}
     var start = stored || route.fixedStart || tomorrow();
-    makePanel(routeId, route, start);
+    var panel = makePanel(routeId, route, start);
     renderPanel(routeId, route, snapshot.locations || {}, start);
+    refreshPublishedSnapshot(routeId, route, start, panel);
   } else if (document.body.hasAttribute("data-weather-index")) {
     renderIndex();
   }
